@@ -1,4 +1,4 @@
-#Follina Detection
+Follina Detection
 ----------
     // Sources: https://www.reddit.com/r/blueteamsec/comments/v0wgqh/sentinel_kql_detections_for_microsoft_word_zero/ & https://github.com/reprise99/Sentinel-Queries/blob/main/Defender%20for%20Endpoint/Device-msdtPotentialExploit.kql
     (union isfuzzy=true
