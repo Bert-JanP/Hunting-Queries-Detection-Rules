@@ -25,3 +25,4 @@ Quickstart Azure Sentinel
 ## Currently the following rules have been added:
 
 - Follina Detection
+- Abuse.ch Botnet C2 IP Blacklist to detect external C2 connections
