@@ -26,3 +26,5 @@ Quickstart Azure Sentinel
 
 - Follina Detection
 - Abuse.ch Botnet C2 IP Blacklist to detect external C2 connections
+- Abuse.ch Malware Submissions (MD5)
+- Blocklist.de All IP addresses that have attacked one of our customers/servers in the last 48 hours
