@@ -1,4 +1,4 @@
-# Welcome!
+# Welcome! [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Threat%20Hunting%20and%20Analytics%20Rules!%20DFE%20and%20Sentinel!&url=https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules)
 
 ## Threat Hunting and Detection rules for Defender For Endpoint & Azure Sentinel
 This repository will be used to publish Hunting Queries or Detection rules that can be used within Azure Sentinel or Defender For Endpoint. The queries are written in KQL they can be used within Sentinel to build Analytics Rules or in Defender For Endpoint (with minor adjustments). If you have any questions feel free to reach out to me on twitter @BertJanCyber. 
