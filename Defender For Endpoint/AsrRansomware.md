@@ -26,7 +26,7 @@ Sentinel
 -----
 	DeviceEvents
 	| where TimeGenerated > ago(30d)
-	| where ActionType == 'AsrRansomwareBlocked'
+	| where ActionType has_any ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
 	| summarize
 		 arg_max(TimeGenerated, *),
 		 TotalEvents = count(),
