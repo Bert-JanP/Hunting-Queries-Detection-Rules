@@ -1,5 +1,6 @@
 Find which devices have been accessed by a compromised device and which protocol was used to connect
 #Defender For Endpoint
+```
 		let CompromisedDevice = "laptop.contoso.com"
 		let SearchWindow = 48h; //Customizable h = hours, d = days
 		IdentityLogonEvents
@@ -10,9 +11,9 @@ Find which devices have been accessed by a compromised device and which protocol
  		   DevicesAccessed = make_set(DestinationDeviceName),
   		   ProtocolsUsed = make_set(Protocol)
   		   by DeviceName
-
-
+```
 #Sentinel
+```
 		let CompromisedDevice = "laptop.contoso.com"
 		let SearchWindow = 48h;
 		IdentityLogonEvents
@@ -23,7 +24,7 @@ Find which devices have been accessed by a compromised device and which protocol
   		   DevicesAccessed = make_set(DestinationDeviceName),
   		   ProtocolsUsed = make_set(Protocol)
    		   by DeviceName
-
+```
 
 
 
