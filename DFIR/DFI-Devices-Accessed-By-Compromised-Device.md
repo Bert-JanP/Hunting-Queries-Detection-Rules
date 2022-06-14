@@ -18,7 +18,7 @@ IdentityLogonEvents
 ### Sentinel
 ```
 let CompromisedDevice = "laptop.contoso.com"
-let SearchWindow = 48h;
+let SearchWindow = 48h; //Customizable h = hours, d = days
 IdentityLogonEvents
 | where TimeGenerated > (now() - SearchWindow)
 | where DeviceName == CompromisedDevice
