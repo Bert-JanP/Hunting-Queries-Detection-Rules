@@ -1,4 +1,4 @@
-# Find which devices have been accessed by a list of compromised accounts which protocol was used to connect
+# Find which devices have been accessed by a list of compromised accounts and which protocol was used to connect
 ----
 ### Defender For Endpoint
 
