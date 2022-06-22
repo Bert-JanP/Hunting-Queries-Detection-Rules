@@ -9,7 +9,7 @@ DeviceEvents
 | where Timestamp > ago(SearchWindow)
 | where DeviceName has_any (CompromisedDevices)
 | where ActionType == "AntivirusDetection"
-| extend FileInfo = bag_pack("FileName", FileName, "FileLocation", FolderPath, "SHA1", SHA1, "SHA256", SHA256, "MD5", MD5)
+| extend FileInfo = pack_dictionary("FileName", FileName, "FileLocation", FolderPath, "SHA1", SHA1, "SHA256", SHA256, "MD5", MD5)
 | summarize TotalDetections = count(), MaliciousFiles = make_set(FileInfo) by DeviceName
 ```
 ### Sentinel
