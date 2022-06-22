@@ -1,4 +1,4 @@
-# Forensics on Registry Run keys in Windows. Registry Run keys can be used to establish persistence in a device. 
+# Forensics on Registry Run keys in Windows. Registry Run keys can be used to establish persistence on a device. 
 ----
 ### Defender For Endpoint
 
