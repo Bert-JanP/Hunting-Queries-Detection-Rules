@@ -1,4 +1,4 @@
-# Find all attachments that have been send with compromised mailbox and which devices have opened that attachment.  
+# Find all attachments that have been send from a compromised mailbox and which devices have opened that attachment.  
 ----
 ### Defender For Endpoint
 
