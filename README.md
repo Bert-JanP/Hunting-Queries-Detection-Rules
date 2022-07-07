@@ -9,6 +9,7 @@ This repository will be used to publish Hunting Queries or Detection rules that 
 - [Zero Day Detection](./Zero%20Day%20Detection)
 - [Threat Hunting](./Threat%20Hunting)
 - [Defender For Endpoint detection rules](./Defender%20For%20Endpoint)
+- [Defender For Identity detection rules](./Defender%20For%20Identity)
 - [Vulnerability Management](./Vulnerability%20Management)
 - [DFIR (Digital Forensics and Incident Response)](./DFIR)
 
