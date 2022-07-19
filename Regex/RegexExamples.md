@@ -1,5 +1,16 @@
 # KQL Regex List
 
+This page will be used as a quick reference guide for KQL regex queries. Those regular expressions can be used within your detection rules. For additional information see the  [Regex RE2 Library from Microsoft](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/re2-library). 
+
+To be able to easaly test your regeluar expressions the query below can be used:
+```
+let RegexTest = @'\W*((?i)Admin(?-i))\W*';
+let DataSet = materialize (range numbers from 1 to 10 step 1);
+DataSet
+| extend StringTest = iff(numbers % 2  == 0, 'Admin', 'User') // Change Admin to a string that should match the RegexTest, change User to a string that should not match the RegexTest
+| where StringTest matches regex RegexTest
+```
+
 ## IP
 ```
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
