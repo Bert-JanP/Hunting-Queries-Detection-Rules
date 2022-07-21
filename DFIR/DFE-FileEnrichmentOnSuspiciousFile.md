@@ -11,8 +11,7 @@ DeviceFileEvents
      DeviceList = make_set(DeviceName),
      FileLocations = make_set(FolderPath)
      by SHA1
-// Add file details, for more details see: 
-https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-fileprofile-function?view=o365-worldwide
+// Add file details, for more details see: https://docs.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-fileprofile-function?view=o365-worldwide
 | invoke FileProfile(SHA1, 1000)
 | project-reorder
      Timestamp,
