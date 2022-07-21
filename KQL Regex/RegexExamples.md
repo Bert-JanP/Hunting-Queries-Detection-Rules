@@ -51,6 +51,26 @@ DeviceProcessEvents
 | where ProcessCommandLine matches regex BetweenTwoStrings
 ```
 
+## Regex Between Last Char and String
+```
+let BetweenTwoStrings = @'.*/(.*)HTTP'; Between the last '/' and 'HTTP'. 
+```
+Example query: [Executable File Extentions downloaded via HTTP GET (Line 11)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Endpoint/HTTPExecutableFilesDownloaded.md)
+
+## Regex Capture Everything After Char/String
+```
+let AfterChar = @'.*\.(.*)$'; // Capture all after last '.'. To collect file extentions.
+let AfterString = @'.*test(.*)$';
+```
+Example query:
+```
+let BetweenTwoStrings = @'findstr(.*)password'; // Replace findstr and password with the strings you would like to match on
+DeviceProcessEvents
+| where ProcessCommandLine matches regex BetweenTwoStrings
+```
+
+Example query: [Executable File Extentions downloaded via HTTP GET (Line 12)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Endpoint/HTTPExecutableFilesDownloaded.md)
+
 ## File Hash
 
 ### MD5
