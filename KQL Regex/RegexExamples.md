@@ -62,13 +62,6 @@ Example query: [Executable File Extentions downloaded via HTTP GET (Line 11)](ht
 let AfterChar = @'.*\.(.*)$'; // Capture all after last '.'. To collect file extentions.
 let AfterString = @'.*test(.*)$';
 ```
-Example query:
-```
-let BetweenTwoStrings = @'findstr(.*)password'; // Replace findstr and password with the strings you would like to match on
-DeviceProcessEvents
-| where ProcessCommandLine matches regex BetweenTwoStrings
-```
-
 Example query: [Executable File Extentions downloaded via HTTP GET (Line 12)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Endpoint/HTTPExecutableFilesDownloaded.md)
 
 ## File Hash
