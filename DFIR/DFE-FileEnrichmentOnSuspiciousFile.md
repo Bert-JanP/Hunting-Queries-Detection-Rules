@@ -3,9 +3,9 @@
 ### Defender For Endpoint
 
 ```
-let MaliciousFileDownloadName = 'GoogleUpdateSetup.exe';
+let SuspiciousDownloadName = 'GoogleUpdateSetup.exe';
 DeviceFileEvents
-| where FileName == MaliciousFileDownloadName
+| where FileName == SuspiciousDownloadName
 | summarize
      arg_max(Timestamp, *),
      DeviceList = make_set(DeviceName),
