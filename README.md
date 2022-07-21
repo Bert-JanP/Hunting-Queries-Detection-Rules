@@ -14,6 +14,7 @@ This repository will be used to publish Hunting Queries or Detection rules that 
 - [Vulnerability Management](./Vulnerability%20Management)
 - [DFIR (Digital Forensics and Incident Response)](./DFIR)
 - [Azure Active Directory](./Azure%20Active%20Directory)
+- [Office 365](./Office%20365)
 - [Regex Example List](./Regex/RegexExamples.md)
 
 ## How to use KQL in Defender For Endpoint & Sentinel?
