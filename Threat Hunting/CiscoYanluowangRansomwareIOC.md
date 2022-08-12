@@ -106,7 +106,7 @@ let Domain_IOC = dynamic(['cisco-help.cf',
      (DeviceFileEvents
      | where SHA256 has_any (SHA256_IOC)),
      (DeviceNetworkEvents
-     | where RemoteUrl has_any (IP_IOC)),
+     | where RemoteIP has_any (IP_IOC)),
      (DeviceNetworkEvents
      | where RemoteUrl has_any (Domain_IOC))
 )
@@ -216,7 +216,7 @@ let Domain_IOC = dynamic(['cisco-help.cf',
      (DeviceFileEvents
      | where SHA256 has_any (SHA256_IOC)),
      (DeviceNetworkEvents
-     | where RemoteUrl has_any (IP_IOC)),
+     | where RemoteIP has_any (IP_IOC)),
      (DeviceNetworkEvents
      | where RemoteUrl has_any (Domain_IOC))
 )
