@@ -84,3 +84,8 @@ Quickstart Azure Sentinel
     | take 10
 ----------------------
 
+## KQL Usefull Documentation
+* [KQL Quick Reference Guide](https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)
+* [KQL Tutorial](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
+* [KQL Cheat Sheet PDF](https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet.pdf)
+
