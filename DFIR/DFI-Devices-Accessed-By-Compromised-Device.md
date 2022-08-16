@@ -3,7 +3,7 @@
 ### Defender For Endpoint
 
 ```
-let CompromisedDevice = "laptop.contoso.com"
+let CompromisedDevice = "laptop.contoso.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days
 IdentityLogonEvents
 | where Timestamp > (now() - SearchWindow)
@@ -17,7 +17,7 @@ IdentityLogonEvents
 ```
 ### Sentinel
 ```
-let CompromisedDevice = "laptop.contoso.com"
+let CompromisedDevice = "laptop.contoso.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days
 IdentityLogonEvents
 | where TimeGenerated > (now() - SearchWindow)
