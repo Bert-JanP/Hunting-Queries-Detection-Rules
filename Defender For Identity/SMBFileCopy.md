@@ -7,9 +7,10 @@ let WhitelistedAccounts = dynamic(['account1', 'account2']);
 IdentityDirectoryEvents
 | where ActionType == 'SMB file copy'
 | where not(AccountName has_any (WhitelistedAccounts))
-| extend SMBFileCopyCount = parse_json(AdditionalFields).Count
-| extend FilePath = parse_json(AdditionalFields).FilePath
-| extend FileName = parse_json(AdditionalFields).FileName
+| extend 
+     SMBFileCopyCount = parse_json(AdditionalFields).Count,
+     FilePath = parse_json(AdditionalFields).FilePath,
+     FileName = parse_json(AdditionalFields).FileName
 | project-rename SourceDeviceName = DeviceName
 | project-reorder
      Timestamp,
@@ -20,15 +21,16 @@ IdentityDirectoryEvents
      FileName,
      SMBFileCopyCount
 ```
-### Sentinel
+### Sentinel 
 ```
 let WhitelistedAccounts = dynamic(['account1', 'account2']);
 IdentityDirectoryEvents
 | where ActionType == 'SMB file copy'
 | where not(AccountName has_any (WhitelistedAccounts))
-| extend SMBFileCopyCount = parse_json(AdditionalFields).Count
-| extend FilePath = parse_json(AdditionalFields).FilePath
-| extend FileName = parse_json(AdditionalFields).FileName
+| extend 
+     SMBFileCopyCount = parse_json(AdditionalFields).Count,
+     FilePath = parse_json(AdditionalFields).FilePath,
+     FileName = parse_json(AdditionalFields).FileName
 | project-rename SourceDeviceName = DeviceName
 | project-reorder
      TimeGenerated,
