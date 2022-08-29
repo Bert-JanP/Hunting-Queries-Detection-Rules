@@ -40,6 +40,12 @@ DeviceProcessEvents
 | where ProcessCommandLine matches regex DomainAdminRegex
 ```
 
+## Regex Parse Functionality 
+```
+let BetweenTwoStrings = @'"Path":"([^"]*)"'; //Extract from "Path:""C:\Users\XX\File.txt" to collect C:\Users\XX\File.txt
+```
+Example query: [Visualisation of the users with the most HardDelete actions performed (Line 8)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Cloud%20Apps/Visualization%20-%20HardDeletionsByUser.md)
+
 ## Regex Between Two Strings
 ```
 let BetweenTwoStrings = @'findstr(.*)password';
