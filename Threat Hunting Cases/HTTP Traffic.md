@@ -141,3 +141,6 @@ DeviceFileEvents
      DeviceList,
      FileLocations
 ```
+## Found Something Interesting?
+
+If you found malicious activities take a look at the [DFIR Queries](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/DFIR) they can help by the investigation of an incident.
