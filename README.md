@@ -8,6 +8,7 @@ This repository will be used to publish Hunting Queries or Detection rules that 
 
 - [Zero Day Detection](./Zero%20Day%20Detection)
 - [Threat Hunting](./Threat%20Hunting)
+- [Full Threat Hunting Cases](./Threat%20Hunting%20Cases)
 - [Defender For Endpoint detection rules](./Defender%20For%20Endpoint)
 - [Defender For Identity detection rules](./Defender%20For%20Identity)
 - [Defender For Cloud Apps detection rules](./Defender%20For%20Cloud%20Apps)
