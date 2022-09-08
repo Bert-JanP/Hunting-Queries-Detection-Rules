@@ -8,7 +8,7 @@ In this step we list the devices that execute Powershell by the amount of encode
 
 ### Defender For Endpoint
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where Timestamp > ago(TimeFrame)
@@ -22,7 +22,7 @@ DeviceProcessEvents
 ```
 ### Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where TimeGenerated > ago(TimeFrame)
@@ -41,7 +41,7 @@ This is done by decoding the commands in order to be investigated. This is then 
 
 ### Defender For Endpoint
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where Timestamp > ago(TimeFrame)
@@ -58,10 +58,10 @@ DeviceProcessEvents
 ```
 ### Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
-| where Timestamp > ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where ProcessCommandLine contains "powershell" or InitiatingProcessCommandLine contains "powershell"
 | where ProcessCommandLine has_any (EncodedList) or InitiatingProcessCommandLine has_any (EncodedList)
 | extend base64String = extract(@'\s+([A-Za-z0-9+/]{20}\S+$)', 1, ProcessCommandLine)
@@ -80,7 +80,7 @@ The next step is to investigate if reconnaissance commands have been executed. T
 
 ### Defender For Endpoint
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
@@ -105,7 +105,7 @@ DeviceProcessEvents
 ```
 ### Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
@@ -134,7 +134,7 @@ The last step is to investigate the connections that have been made via the enco
 
 ### Defender For Endpoint
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
@@ -158,7 +158,7 @@ DeviceProcessEvents
 ```
 ### Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
