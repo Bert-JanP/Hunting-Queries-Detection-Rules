@@ -1,5 +1,6 @@
 # MS Exchange Zero Day (Sept 2022)
 
+Blog about the (unconfirmed) zero day in Exchange: [Link](https://www.gteltsc.vn/blog/canh-bao-chien-dich-tan-cong-su-dung-lo-hong-zero-day-tren-microsoft-exchange-server-12714.html)
 
 ### Defender For Endpoint
 ```
