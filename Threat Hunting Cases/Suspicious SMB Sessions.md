@@ -1,8 +1,8 @@
-# Suspicious SMB Connections
+# Suspicious SMB Sessions
 
 SMB can be used in various ways by attackers, such as accessing remote shares, transfering files, interacting with systems using RPC calls and remote code execution. Actors are known to use SMB to perform reconnaissance on open systems in order to perform lateral movement. The goal of this Threat Hunting case is to find suspicious SMB activities within the network. Defender For Endpoint logging will be used to hunt for the activities (and optionally Defender For Identity). 
 
-## Step 1: List the devices that have the most SMB connections
+## Step 1: List the devices that have the most SMB Sessions
 
 The first step is to get intsight in the devices that have the most unique SMB connections. There is a filter on Domain Controllers, because they normaly generate a lot of noise (via MDI), the filter can be removed if you want to include your Domain Controllers. 
 
