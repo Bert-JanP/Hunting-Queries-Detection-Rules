@@ -4,7 +4,7 @@ Blog about the (unconfirmed) zero day in Exchange: [Link](https://www.gteltsc.vn
 
 ### Defender For Endpoint
 ```
-let C2IP = '137.184.67. 33';
+let C2IP = '137.184.67.33';
 let DownloadIP = "206.188.196.77";
 let RelatedIP = dynamic(['125.212.220.48', '5.180.61.17', '47.242.39.92', '61.244.94.85', '86.48.6.69', '94.140.8.48', '86.48.12.64', '94.140.8.113', '103.9.76.208', '103.9.76.211', '104.244.79.6', '112.118.48.186', '122.155.174.188', '125.212.241.134', '185.220.101.182', '194.150.167.88','212.119.34.11']); //These can be left out, they can generate a lot of false positives.
 let SHA256IOC = dynamic(['c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd34429f70831ec1', '65a002fe655dc1751add167cf00adf284c080ab2e97cd386881518d3a31d27f5', 'b5038f1912e7253c7747d2f0fa5310ee8319288f818392298fd92009926268ca', 'c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd34429f70831ec1', 
@@ -30,7 +30,7 @@ let SHA256IOC = dynamic(['c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd3442
 ```
 ### Sentinel
 ```
-let C2IP = '137.184.67. 33';
+let C2IP = '137.184.67.33';
 let DownloadIP = "206.188.196.77";
 let RelatedIP = dynamic(['125.212.220.48', '5.180.61.17', '47.242.39.92', '61.244.94.85', '86.48.6.69', '94.140.8.48', '86.48.12.64', '94.140.8.113', '103.9.76.208', '103.9.76.211', '104.244.79.6', '112.118.48.186', '122.155.174.188', '125.212.241.134', '185.220.101.182', '194.150.167.88','212.119.34.11']); //These can be left out, they can generate a lot of false positives.
 let SHA256IOC = dynamic(['c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd34429f70831ec1', '65a002fe655dc1751add167cf00adf284c080ab2e97cd386881518d3a31d27f5', 'b5038f1912e7253c7747d2f0fa5310ee8319288f818392298fd92009926268ca', 'c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd34429f70831ec1', 
