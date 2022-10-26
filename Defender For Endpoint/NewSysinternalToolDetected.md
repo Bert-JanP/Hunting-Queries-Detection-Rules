@@ -1,0 +1,48 @@
+# Detect the use of a new sysinternal tool that has not been used in the last 90 days
+----
+### Defender For Endpoint
+
+```
+let SysInternalSuite = dynamic(["accesschk.exe","accesschk64.exe","AccessEnum.exe", "AdExplorer.exe","ADExplorer.exe","ADExplorer64.exe","ADInsight.chm","ADInsight.exe","ADInsight64.exe","adrestore.exe","adrestore64.exe","Autologon.exe","Autologon64.exe","autoruns.chm","Autoruns.exe","Autoruns64.exe","autorunsc.exe","autorunsc64.exe","Bginfo.exe","Bginfo64.exe","Cacheset.exe","Cacheset64.exe","Clockres.exe","Clockres64.exe","Contig.exe","Contig64.exe","Coreinfo.exe","Coreinfo64.exe","CPUSTRES.exe","CPUSTRES64.exe","ctrl2cap.amd.sys","ctrl2cap.exe","Dbgview.chm","Dbgview.exe","dbgview64.exe","Desktops.exe","Desktops64.exe","Disk2vhd.chm","disk2vhd.exe","disk2vhd64.exe","diskext.exe","diskext64.exe","Diskmon.exe","Diskmon64.exe","DiskView.exe","DiskView64.exe","du.exe","du64.exe","efsdump.exe","Eula.txt","FindLinks.exe","FindLinks64.exe","handle.exe","handle64.exe","hex2dec.exe","hex2dec64.exe","junction.exe","junction64.exe","ldmdump.exe","Listdlls.exe","Listdlls64.exe","livekd.exe","livekd64.exe","LoadOrd.exe","LoadOrd64.exe","LoadOrdC.exe","LoadOrdC64.exe","logonsessions.exe","logonsessions64.exe","movefile.exe","movefile64.exe","notmyfault.exe","notmyfault64.exe","notmyfaultc.exe","notmyfaultc64.exe","ntfsinfo.exe","ntfsinfo64.exe","pendmoves.exe","pendmoves64.exe","pipelist.exe","pipelist64.exe","portmon.exe","procdump.exe","procdump64.exe","procexp.chm","procexp.exe","procexp64.exe","procmon.chm","Procmon.exe","Procmon64.exe","PsExec.exe","PsExec64.exe","psfile.exe","psfile64.exe","PsGetsid.exe","PsGetsid64.exe","PsInfo.exe","PsInfo64.exe","pskill.exe","pskill64.exe","pslist.exe","pslist64.exe","PsLoggedon.exe","PsLoggedon64.exe","psloglist.exe","psloglist64.exe","pspasswd.exe","pspasswd64.exe","psping.exe","psping64.exe","PsService.exe","PsService64.exe","psshutdown.exe","psshutdown64.exe","pssuspend.exe","pssuspend64.exe","Pstools.chm","psversion.txt","RAMMap.exe","RAMMap64.exe","RDCMan.exe","readme.txt","RegDelNull.exe","RegDelNull64.exe","regjump.exe","ru.exe","ru64.exe","sdelete.exe","sdelete64.exe","ShareEnum.exe","ShareEnum64.exe","ShellRunas.exe","sigcheck.exe","sigcheck64.exe","streams.exe","streams64.exe","strings.exe","strings64.exe","sync.exe","sync64.exe","Sysmon.exe","Sysmon64.exe","tcpvcon.exe","tcpvcon64.exe","tcpview.chm","tcpview.exe","tcpview64.exe","Testlimit.exe","Testlimit64.exe","Vmmap.chm","vmmap.exe","vmmap64.exe","Volumeid.exe","Volumeid64.exe","whois.exe","whois64.exe","Winobj.exe","Winobj64.exe","ZoomIt.exe","ZoomIt64.exe"]);
+let knownsysinternaltools = DeviceProcessEvents
+     | where FileName in~ (SysInternalSuite)
+     | where Timestamp between (ago(90d) .. ago(2d))
+     | distinct FileName;
+DeviceProcessEvents
+| where Timestamp > ago(2d)
+| where FileName in~ (SysInternalSuite) and FileName !in~ 
+(knownsysinternaltools)
+| project
+     Timestamp,
+     DeviceName,
+     AccountDomain,
+     AccountName,
+     FileName,
+     ProcessCommandLine,
+     InitiatingProcessCommandLine,
+     FolderPath
+```
+### Sentinel
+```
+let SysInternalSuite = dynamic(["accesschk.exe","accesschk64.exe","AccessEnum.exe", "AdExplorer.exe","ADExplorer.exe","ADExplorer64.exe","ADInsight.chm","ADInsight.exe","ADInsight64.exe","adrestore.exe","adrestore64.exe","Autologon.exe","Autologon64.exe","autoruns.chm","Autoruns.exe","Autoruns64.exe","autorunsc.exe","autorunsc64.exe","Bginfo.exe","Bginfo64.exe","Cacheset.exe","Cacheset64.exe","Clockres.exe","Clockres64.exe","Contig.exe","Contig64.exe","Coreinfo.exe","Coreinfo64.exe","CPUSTRES.exe","CPUSTRES64.exe","ctrl2cap.amd.sys","ctrl2cap.exe","Dbgview.chm","Dbgview.exe","dbgview64.exe","Desktops.exe","Desktops64.exe","Disk2vhd.chm","disk2vhd.exe","disk2vhd64.exe","diskext.exe","diskext64.exe","Diskmon.exe","Diskmon64.exe","DiskView.exe","DiskView64.exe","du.exe","du64.exe","efsdump.exe","Eula.txt","FindLinks.exe","FindLinks64.exe","handle.exe","handle64.exe","hex2dec.exe","hex2dec64.exe","junction.exe","junction64.exe","ldmdump.exe","Listdlls.exe","Listdlls64.exe","livekd.exe","livekd64.exe","LoadOrd.exe","LoadOrd64.exe","LoadOrdC.exe","LoadOrdC64.exe","logonsessions.exe","logonsessions64.exe","movefile.exe","movefile64.exe","notmyfault.exe","notmyfault64.exe","notmyfaultc.exe","notmyfaultc64.exe","ntfsinfo.exe","ntfsinfo64.exe","pendmoves.exe","pendmoves64.exe","pipelist.exe","pipelist64.exe","portmon.exe","procdump.exe","procdump64.exe","procexp.chm","procexp.exe","procexp64.exe","procmon.chm","Procmon.exe","Procmon64.exe","PsExec.exe","PsExec64.exe","psfile.exe","psfile64.exe","PsGetsid.exe","PsGetsid64.exe","PsInfo.exe","PsInfo64.exe","pskill.exe","pskill64.exe","pslist.exe","pslist64.exe","PsLoggedon.exe","PsLoggedon64.exe","psloglist.exe","psloglist64.exe","pspasswd.exe","pspasswd64.exe","psping.exe","psping64.exe","PsService.exe","PsService64.exe","psshutdown.exe","psshutdown64.exe","pssuspend.exe","pssuspend64.exe","Pstools.chm","psversion.txt","RAMMap.exe","RAMMap64.exe","RDCMan.exe","readme.txt","RegDelNull.exe","RegDelNull64.exe","regjump.exe","ru.exe","ru64.exe","sdelete.exe","sdelete64.exe","ShareEnum.exe","ShareEnum64.exe","ShellRunas.exe","sigcheck.exe","sigcheck64.exe","streams.exe","streams64.exe","strings.exe","strings64.exe","sync.exe","sync64.exe","Sysmon.exe","Sysmon64.exe","tcpvcon.exe","tcpvcon64.exe","tcpview.chm","tcpview.exe","tcpview64.exe","Testlimit.exe","Testlimit64.exe","Vmmap.chm","vmmap.exe","vmmap64.exe","Volumeid.exe","Volumeid64.exe","whois.exe","whois64.exe","Winobj.exe","Winobj64.exe","ZoomIt.exe","ZoomIt64.exe"]);
+let knownsysinternaltools = DeviceProcessEvents
+     | where FileName in~ (SysInternalSuite)
+     | where TimeGenerated between (ago(90d) .. ago(2d))
+     | distinct FileName;
+DeviceProcessEvents
+| where TimeGenerated > ago(2d)
+| where FileName in~ (SysInternalSuite) and FileName !in~ 
+(knownsysinternaltools)
+| project
+     TimeGenerated,
+     DeviceName,
+     AccountDomain,
+     AccountName,
+     FileName,
+     ProcessCommandLine,
+     InitiatingProcessCommandLine,
+     FolderPath
+```
+
+
+
