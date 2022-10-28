@@ -1,4 +1,4 @@
-## Detects KillNets Ransomware note and the file extentions that have been used to encrypt files
+## Detects KillNets Ransomware note and the file extension that has been used to encrypt files
 
 Source: https://www.virustotal.com/gui/file/db1c8ddcdfea93031a565001366ffa9fdb41a689bddab46aec7611a46bb4dc50/detection
 
