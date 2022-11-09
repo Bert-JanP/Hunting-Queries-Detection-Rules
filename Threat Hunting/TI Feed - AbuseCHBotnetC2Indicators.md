@@ -1,5 +1,9 @@
 # AbuseCH Botnet C2 Indicators Of Compromise
 
+#### Source: AbuseCH
+#### Feed information: https://feodotracker.abuse.ch/blocklist/
+#### Feed link: https://feodotracker.abuse.ch/downloads/ipblocklist.txt
+
 ### Defender For Endpoint
 ```
 let BotnetIP = externaldata(IP: string)[@"https://feodotracker.abuse.ch/downloads/ipblocklist.txt"] with (format="txt", ignoreFirstRecord=True);
