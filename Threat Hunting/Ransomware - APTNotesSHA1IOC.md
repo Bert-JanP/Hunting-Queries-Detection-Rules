@@ -3,10 +3,7 @@
 ### Defender For Endpoint
 
 ```
-let APTInfo = externaldata(Filename: string, Title: string, Source: 
-string, Link: string, SHA1: string, Date: datetime, Year: int)
-     
-[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 
+let APTInfo = externaldata(Filename: string, Title: string, Source: string, Link: string, SHA1: string, Date: datetime, Year: int)[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 
 with (format="csv", ignoreFirstRecord=True);
 let SHA1IOC = APTInfo
      | where Year > 2015 //first IOC reported in 2008
@@ -25,9 +22,7 @@ DeviceFileEvents
 ```
 ### Sentinel
 ```
-let APTInfo = externaldata(Filename: string, Title: string, Source: 
-string, Link: string, SHA1: string, Date: datetime, Year: int)
-[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 
+let APTInfo = externaldata(Filename: string, Title: string, Source: string, Link: string, SHA1: string, Date: datetime, Year: int)[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 
 with (format="csv", ignoreFirstRecord=True);
 let SHA1IOC = APTInfo
      | where Year > 2015 //first IOC reported in 2008

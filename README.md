@@ -14,6 +14,7 @@ This repository will be used to publish Hunting Queries or Detection rules that 
 - [Defender For Cloud Apps detection rules](./Defender%20For%20Cloud%20Apps)
 - [Vulnerability Management](./Vulnerability%20Management)
 - [DFIR (Digital Forensics and Incident Response)](./DFIR)
+- [Sentinel](./Sentinel)
 - [Azure Active Directory](./Azure%20Active%20Directory)
 - [Office 365](./Office%20365)
 - [KQL Regex Example List](./KQL%20Regex/RegexExamples.md)
