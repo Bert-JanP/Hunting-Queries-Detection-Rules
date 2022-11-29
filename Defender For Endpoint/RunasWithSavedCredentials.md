@@ -6,7 +6,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1134.002 | Access Token Manipulation: Create Process with Token |Access Token Manipulation: Create Process with Token|
+| T1134.002 | Access Token Manipulation: Create Process with Token |https://attack.mitre.org/techniques/T1134/002/|
 
 #### Description
 Adversaries may create a new process with a different token to escalate privileges and bypass access controls. Processes can be created with the token and resulting security context of another user using features such as runas. This query detects all commands that have been executed while using saved credentials. With savedcred the password only needs to be inserted once, after that the password can reused (for malicious purposes).
