@@ -1,8 +1,13 @@
-# Sign Ins by Operating System
+# Total Sign In actions by Operating System
 
+## Query Information
+
+#### Description
 This query can be used to detect rare operating systems that are used to sign into your tenant. For example your company only has Windows company devices and you have sign ins with MacOS, those can ben intersting to investigate.
 
-### Sentinel
+The query can be extended by filtering on failed or succesful sign ins.
+
+## Sentinel
 ```
 SigninLogs
 | extend
