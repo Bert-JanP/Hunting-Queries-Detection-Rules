@@ -31,7 +31,6 @@ SigninLogs
 | where not(AppDisplayName in~ (KnownApps))
 // If the AppID is empty then it is a third party App.
 | extend IsExternalApp = iff(isempty(AppId), "True", "False")
-| project-reorder IsExternalApp, AppDisplayName, Identity, IPAddress, 
-ClientAppUsed
-// For ResultType Refernce see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
+| project-reorder IsExternalApp, AppDisplayName, Identity, IPAddress, ClientAppUsed
+// For ResultType Reference see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
 ```
