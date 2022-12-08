@@ -1,6 +1,11 @@
 # Devices that initiate the most clear text LDAP authentications 
 
-### Defender For Endpoint
+## Query Information
+
+#### Description
+This query visualises the top 100 Devices that initiate the most clear text LDAP authentications. You preferably want to use an encrypted form of LDAP instead of cleartext.
+
+## Defender For Endpoint
 
 ```
 IdentityLogonEvents
@@ -11,7 +16,7 @@ IdentityLogonEvents
 | top 100 by TotalUniqueClearTextLDAPAuthentications
 | render columnchart with (title="Top 100 Devices with the most Clear Text LDAP sign ins")
 ```
-### Sentinel
+## Sentinel
 ```
 IdentityLogonEvents
 | where LogonType == 'LDAP cleartext'
