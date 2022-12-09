@@ -6,7 +6,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1090 | Proxy | https://attack.mitre.org/techniques/T1090/|
+| T1090 | Proxy | https://attack.mitre.org/techniques/T1090 |
 
 #### Description
 Adversaries may create a proxy to avoid direct connections to a specific environment, the proxies can be used to disguise the source of the malicious activities. In this case it contains all CloudAppEvents where a device was connected to a proxy. This query returns all activities that have been performed while connected to a proxy. 
