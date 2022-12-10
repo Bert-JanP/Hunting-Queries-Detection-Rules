@@ -1,7 +1,14 @@
 # Encoded Powershell Executions by Device
-----
-### Defender For Endpoint
 
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1027 | Obfuscated Files or Information |https://attack.mitre.org/techniques/T1027/ |
+
+## Defender For Endpoint
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
@@ -15,7 +22,7 @@ DeviceProcessEvents
 | summarize TotalEncodedExecutions = count() by DeviceName
 | sort by TotalEncodedExecutions
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']);
 let TimeFrame = 48h; //Customizable h = hours, d = days

@@ -1,6 +1,11 @@
 # Devices with the most SMB connections
 
-### Defender For Endpoint
+## Query Information
+
+#### Description
+List all devices with the amount of SMB sessions they have.
+
+## Defender For Endpoint
 
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
@@ -16,7 +21,7 @@ DeviceNetworkEvents
 | summarize TotalRemoteConnections = dcount(RemoteIP) by DeviceName
 | sort by TotalRemoteConnections
 ```
-### Sentinel
+## Sentinel
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let AllDomainControllers =

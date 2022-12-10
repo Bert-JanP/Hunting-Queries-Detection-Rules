@@ -1,9 +1,16 @@
-# BloodHound Detection based on processes
+# BloodHound Detection
 
-Based on Threat Report by RedCanary: [link](https://redcanary.com/threat-detection-report/threats/bloodhound/)
+## Query Information
 
-### Defender For Endpoint
+#### Description
+This query detects the use of bloodhound based on the processes it creates. This detection is based on Threat Report by RedCanary.
+
+#### References
+- https://redcanary.com/threat-detection-report/threats/bloodhound/
+
+## Defender For Endpoint
 ```
+// List with known bloodhound executions
 let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound' ,'get-bloodHounddata']);
 DeviceProcessEvents
 | where ProcessCommandLine has_any (BloodhoundCommands)
@@ -17,8 +24,9 @@ DeviceProcessEvents
      InitiatingProcessCommandLine,
      InitiatingProcessFileName
 ```
-### Sentinel
+## Sentinel
 ```
+// List with known bloodhound executions
 let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound' ,'get-bloodHounddata']);
 DeviceProcessEvents
 | where ProcessCommandLine has_any (BloodhoundCommands)

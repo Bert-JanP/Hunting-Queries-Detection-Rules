@@ -1,5 +1,13 @@
-# Encoded Powershell Commands That Have Been Executed
-----
+# All Encoded Powershell Commands
+
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1027 | Obfuscated Files or Information |https://attack.mitre.org/techniques/T1027/ |
+
 ### Defender For Endpoint
 
 ```

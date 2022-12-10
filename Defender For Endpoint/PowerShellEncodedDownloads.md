@@ -1,7 +1,25 @@
-# Encoded Powershell Commands That Have Potentially Downloaded a File
-----
-### Defender For Endpoint
+# Encoded Powershell Commands With Web Request
 
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1134.002 | Access Token Manipulation: Create Process with Token |Access Token Manipulation: Create Process with Token|
+
+#### Description
+PowerShell can be used to retrieve the payload of malware. This can also be done with encoded powershell commands to evade detection. This query lists all encoded powershell executions that contain web requests. 
+
+#### Risk
+An advasary uses an encoded PowerShell command to collect a payload. 
+
+#### References
+- https://unit42.paloaltonetworks.com/unit42-pulling-back-the-curtains-on-encodedcommand-powershell-attacks/
+- https://community.sophos.com/sophos-labs/b/blog/posts/decoding-malicious-powershell
+- https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/tracking-detecting-and-thwarting-powershell-based-malware-and-attacks
+
+## Defender For Endpoint
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']);
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
@@ -25,7 +43,7 @@ DeviceProcessEvents
      AccountName,
      AccountDomain
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']);
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);

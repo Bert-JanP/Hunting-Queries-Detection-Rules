@@ -1,7 +1,24 @@
-# Rule triggers when a known ransomware command is used to delete shadowcopies
-----
-### Defender For Endpoint
+# Known Shadow Copy Delete command executed
 
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1490 | Inhibit System Recovery |https://attack.mitre.org/techniques/T1490|
+
+#### Description
+This rule triggers when a known ransomware command is used to delete shadowcopies. A shadow copy is a backup or snapshot of a system. When this is deleted and a ransomware actor deploys ransomware it will not be possible to return to a previous stage.
+
+#### Risk
+An advasary removes the shadow copy before deploying ransomware to ensure that you cannot go back to a previous state.
+
+#### References
+- https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin-delete-shadows
+- https://redcanary.com/blog/its-all-fun-and-games-until-ransomware-deletes-the-shadow-copies
+
+## Defender For Endpoint
 ```
 let CommonRansomwareExecutionCommands = dynamic([@'vssadmin.exe delete shadows /all /quiet', 
 @'wmic.exe shadowcopy delete', @'wbadmin delete catalog -quiet', 
@@ -22,7 +39,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any (CommonRansomwareExecutionCommands)
 | project-reorder Timestamp, ProcessCommandLine, DeviceName, AccountName
 ```
-### Sentinel
+## Sentinel
 ```
 let CommonRansomwareExecutionCommands = dynamic([@'vssadmin.exe delete shadows /all /quiet', 
 @'wmic.exe shadowcopy delete', @'wbadmin delete catalog -quiet', 

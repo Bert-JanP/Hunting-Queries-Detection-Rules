@@ -1,5 +1,13 @@
 # Detect when AnyDesk makes a remote connection
 
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1219 | Remote Access Software | https://attack.mitre.org/techniques/T1219/ |
+
 ### Defender For Endpoint
 
 ```

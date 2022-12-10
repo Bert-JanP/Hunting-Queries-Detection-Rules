@@ -1,9 +1,31 @@
-## Detects possible ransomware file changes by adding a custom extension to the encrypted files, such as ".docx.encrypted" or ".pdf.ezz"
+## Ransomware Double Extention
 
-### Defender For Endpoint
+## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1486 | Data Encrypted for Impact |https://attack.mitre.org/techniques/T1486/ |
+
+#### Description
+Detects possible ransomware file changes by adding a custom extension to the encrypted files, such as ".docx.encrypted" or ".pdf.ezz". This is a technique that is used by multiple Ransomware groups, they do not change the currenct extention, but they add a new one to the current file.
+
+A false positive could be a administrator that changes a lot of files.
+
+#### Risk
+Ransomware is being deployed in your environment. 
+
+#### References
+- https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_rename/file_rename_win_ransomware.yml
+- https://blog.cyble.com/2022/08/10/onyx-ransomware-renames-its-leak-site-to-vsop/
+- https://app.any.run/tasks/d66ead5a-faf4-4437-93aa-65785afaf9e5/
+
+
+## Defender For Endpoint
 ```
-// Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file_rename/file_rename_win_ransomware.yml
+// Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_rename/file_rename_win_ransomware.yml
+// Add your most common file extentions in this list
 let OriginalExtension = dynamic(['.pdf', '.docx', '.jpg', '.xlsx', '.pptx', '.txt']);
 DeviceFileEvents
 | where ActionType == "FileRenamed"
@@ -29,7 +51,7 @@ DeviceFileEvents
      DeviceName,
      InitiatingProcessAccountName
 ```
-### Sentinel
+## Sentinel
 ```
 // Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file_rename/file_rename_win_ransomware.yml
 let OriginalExtension = dynamic(['.pdf', '.docx', '.jpg', '.xlsx', '.pptx', '.txt']);
