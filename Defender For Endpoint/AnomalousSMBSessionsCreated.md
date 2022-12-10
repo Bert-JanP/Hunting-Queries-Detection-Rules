@@ -1,8 +1,20 @@
-# BloodHound Detection based on SMB Sessions
+# Anomalous amount of SMB sessions created (BloodHound)
 
-This detection rule is aimed to detect a host that performs SMB reconnaissance by alerting if a device creates more then 100 unique SMB sessions within 15 minutes. That is one of the characteristics of bloodhound.
+## Query Information
 
-### Defender For Endpoint
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1018 | Remote System Discovery | https://attack.mitre.org/techniques/T1018|
+
+#### Description
+This detection rule is aimed to detect a host that performs SMB Discovery by alerting if a device creates more then 100 unique SMB sessions within 15 minutes. That is one of the characteristics of bloodhound. The SMB sessions can be used to identify remote systems.
+
+#### Risk
+A actor has gotten access to a system en performs a scan to identify possible lateral movement paths.
+
+## Defender For Endpoint
 ```
 DeviceNetworkEvents
 | where Timestamp < ago(1h)
@@ -21,7 +33,7 @@ DeviceNetworkEvents
      InitiatingProcessCommandLine,
      InitiatingProcessFolderPath
 ```
-### Sentinel
+## Sentinel
 ```
 DeviceNetworkEvents
 | where TimeGenerated < ago(1h)

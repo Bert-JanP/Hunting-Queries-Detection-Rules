@@ -24,6 +24,7 @@ to be implemented
 | ---  | --- | --- |
 | T1078.002 | Valid Accounts: Domain Accounts|[UserAddedToSensitiveGroup](../Defender%20For%20Identity/UserAddedToSensitiveGroup.md)|
 | T1134.002 | Access Token Manipulation: Create Process with Token | [RunasWithSavedCredentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
+| T1548.003 | Abuse Elevation Control Mechanism: Sudo and Sudo Caching|[UsersAddedToSudoersGroup](../Defender%20For%20Endpoint/Linux/Linux%20-%20UsersAddedToSudoersGroup.md))|
 
 ## Defense Evasion
 
@@ -36,6 +37,7 @@ to be implemented
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
+| T1018 | Remote System Discovery | [AnomalousSMBSessionsCreated](../Defender%20For%20Endpoint/AnomalousSMBSessionsCreated.md)|
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [AzureADDownloadAllUsers](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
 | T1087.004 | Account Discovery: Cloud Account |[AzureADDownloadAllUsers](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1615 | Group Policy Discovery |[AnomalousGroupPolicyDiscovery](../Defender%20For%20Identity/AnomalousGroupPolicyDiscovery.md)|
@@ -60,4 +62,6 @@ to be implemented
 ## Exfiltration
 to be implemented
 ## Impact
-to be implemented
+| Technique ID | Title    | Query    |
+| ---  | --- | --- |
+| T1486 | Data Encrypted for Impact |[AsrRansomware](../Defender%20For%20Endpoint/AsrRansomware.md)|
