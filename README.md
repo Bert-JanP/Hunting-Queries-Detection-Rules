@@ -17,7 +17,7 @@
 
 
 # KQL for Defender For Endpoint & Microsoft Sentinel
-This repository is used to share Hunting Queries and Detection rules that can be used within Microsoft Sentinel or Defender For Endpoint. The queries are written in KQL they can be used within Sentinel to build Analytics Rules or in Defender For Endpoint (with minor adjustments). If you have any questions feel free to reach out to me on twitter @BertJanCyber. 
+The purpose of this repository is to share KQL queries that can be used by anyone and are understandable. These queries are intended to increase detection coverage through the logs of Microsoft Security products. Not all suspicious activities generate an alert by default, but many of those activities can be made detectable through the logs. These queries include Detection Rules, Hunting Queries and Visualisations. Anyone is free to use the queries. If you have any questions feel free to reach out to me on twitter [@BertJanCyber](https://twitter.com/BertJanCyber). 
 
 # KQL Categories
 
