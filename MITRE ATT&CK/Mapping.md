@@ -20,7 +20,7 @@ to be implemented
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
-| T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md)] |
+| T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
 
 ## Privilege Escalation
 
@@ -28,7 +28,7 @@ to be implemented
 | ---  | --- | --- |
 | T1078.002 | Valid Accounts: Domain Accounts|[User Added To Sensitive Group](../Defender%20For%20Identity/UserAddedToSensitiveGroup.md)|
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
-| T1548.003 | Abuse Elevation Control Mechanism: Sudo and Sudo Caching|[Users Added To Sudoers Group](../Defender%20For%20Endpoint/Linux/Linux%20-%20UsersAddedToSudoersGroup.md))|
+| T1548.003 | Abuse Elevation Control Mechanism: Sudo and Sudo Caching|[Users Added To Sudoers Group](../Defender%20For%20Endpoint/Linux/Linux%20-%20UsersAddedToSudoersGroup.md)|
 
 ## Defense Evasion
 
