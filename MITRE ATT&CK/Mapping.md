@@ -41,6 +41,7 @@ to be implemented
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Security Log Cleared](../Defender%20For%20Endpoint/SecurityLogCleared.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
+| T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 
 ## Credential Access
 to be implemented
