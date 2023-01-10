@@ -34,6 +34,8 @@ A actor uses a macro file to gain initial access in the network. This macro must
 let RareSenderThreshold = 10;
 let LookupPeriod = 7d;
 let MacroExtensions = dynamic(['xlsm', 'xstm', 'docm', 'dotm', 'pptm', 'ppsm', 'xll', 'xlsb']);
+// If you also want to include older attachments use
+// let MacroExtensions = dynamic(['xlsm', 'xstm', 'docm', 'dotm', 'pptm', 'ppsm', 'xll', 'xlsb', 'doc', 'xsl', 'svg']);
 // Step 1
 let RareMacroSenders = EmailAttachmentInfo
 | where Timestamp > ago(30d)
@@ -78,6 +80,8 @@ DeviceFileEvents
 let RareSenderThreshold = 10;
 let LookupPeriod = 7d;
 let MacroExtensions = dynamic(['xlsm', 'xstm', 'docm', 'dotm', 'pptm', 'ppsm', 'xll', 'xlsb']);
+// If you also want to include older attachments use
+// let MacroExtensions = dynamic(['xlsm', 'xstm', 'docm', 'dotm', 'pptm', 'ppsm', 'xll', 'xlsb', 'doc', 'xsl', 'svg']);
 // Step 1
 let RareMacroSenders = EmailAttachmentInfo
 | where TimeGenerated > ago(30d)
