@@ -48,7 +48,7 @@ The queries in this repository are split into different categories. The MITRE AT
 
 - [KQL Regex Example List](./KQL%20Regex/RegexExamples.md)
 
-# How to use KQL in Defender For Endpoint & Sentinel?
+# Where to use KQL in Defender For Endpoint & Sentinel?
 
 ## Defender For Endpoint
 * Open  [security.microsoft.com](https://www.security.microsoft.com)

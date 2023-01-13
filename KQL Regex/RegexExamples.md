@@ -15,19 +15,19 @@ DataSet
 ```
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 ```
-Example query: [AbuseCH IP Blacklist](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/AbuseCHIPBlacklistFeed.md)
+Example query: [AbuseCH IP Blacklist](../Threat%20Hunting/TI%20Feed%20-%20AbuseCHIPBlacklistFeed.md)
 
 ## Domain
 ```
 let DomainRegex = @"([a-z0-9|-]+\.)*[a-z0-9|-]+\.[a-z]+";
 ```
-Example query: [Most Unusal Connections Made By office](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/RareConnectionsMadeByOffice.md)
+Example query: [Most Unusal Connections Made By office](../Defender%20For%20Endpoint/RareConnectionsMadeByOffice.md)
 
 ## File Extension
 ```
 let FileExtensionRegex = "\\.([a-z])*";
 ```
-Example query: [Most Unusal Connections Made By office](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/RareConnectionsMadeByOffice.md)
+Example query: [Most Unusal Connections Made By office](../Defender%20For%20Endpoint/RareConnectionsMadeByOffice.md)
 
 ## Regex search for string
 ```
@@ -44,7 +44,7 @@ DeviceProcessEvents
 ```
 let BetweenTwoStrings = @'"Path":"([^"]*)"'; //Extract from "Path:""C:\Users\XX\File.txt" to collect C:\Users\XX\File.txt
 ```
-Example query: [Visualisation of the users with the most HardDelete actions performed (Line 8)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Cloud%20Apps/Visualization%20-%20HardDeletionsByUser.md)
+Example query: [Visualisation of the users with the most HardDelete actions performed (Line 8)](../Defender%20For%20Cloud%20Apps/HardUserDelete.md)
 
 ## Regex Between Two Strings
 ```
@@ -69,6 +69,18 @@ let AfterChar = @'.*\.(.*)$'; // Capture all after last '.'. To collect file ext
 let AfterString = @'.*test(.*)$';
 ```
 Example query: [Executable File Extentions downloaded via HTTP GET (Line 12)](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Endpoint/HTTPExecutableFilesDownloaded.md)
+
+## Regex Between word and special char
+```
+let Regex = @'Role.DisplayName(.*?)"}'; Between Role.DisplayName until "}. 
+```
+Example query: [List Role Additions (Line 5)](../Azure%20Active%20Directory/ADRoleAdditions.md)
+
+## Regex Between two forward slashes 
+```
+let Regex = @'\\(.*?)\\'; Between \ extra \ to escape and until \ and again an extra \ to excape. 
+```
+Example query: [List Role Additions (Line 6)](../Azure%20Active%20Directory/ADRoleAdditions.md)
 
 ## File Hash
 
