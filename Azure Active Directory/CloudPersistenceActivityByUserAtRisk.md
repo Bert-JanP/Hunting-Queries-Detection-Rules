@@ -29,7 +29,7 @@ A user at risk that also performs persistence events is more likely to be compro
 ## Sentinel
 ```
 // Define PersistenceEvents, list can be appended with other events or your choosing
-let PersistenceEvents = dynamic(["add member", "add device", "register device", "add service principle", "add user", "enable account", "add group", "Invite external user", "Add application", "add app"]);
+let PersistenceEvents = dynamic(["add member", "add device", "register device", "add service principal", "add user", "enable account", "add group", "Invite external user", "Add application", "add app"]);
 let RiskyUsers = AADRiskyUsers
      | where TimeGenerated > ago(90d)
      // Only user active risky users. If you want to look for all users that have been risky, remove the line below.
