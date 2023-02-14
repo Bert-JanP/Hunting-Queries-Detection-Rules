@@ -1,0 +1,30 @@
+# Detect the usage of weak SSH sessions
+----
+### Defender For Endpoint
+
+```
+DeviceNetworkEvents
+| where ActionType == "NetworkSignatureInspected"
+| extend
+     SignatureName = tostring(parse_json(AdditionalFields).SignatureName),
+     SignatureMatchedContent = tostring(parse_json(AdditionalFields).SignatureMatchedContent),
+     SamplePacketContent = tostring(parse_json(AdditionalFields).SamplePacketContent)
+| where SignatureName == "SSH"
+| where SignatureMatchedContent == 'SSH-1'
+| project-reorder Timestamp, DeviceName, RemoteIP, LocalIP
+```
+### Sentinel
+```
+DeviceNetworkEvents
+| where ActionType == "NetworkSignatureInspected"
+| extend
+     SignatureName = tostring(parse_json(AdditionalFields).SignatureName),
+     SignatureMatchedContent = tostring(parse_json(AdditionalFields).SignatureMatchedContent),
+     SamplePacketContent = tostring(parse_json(AdditionalFields).SamplePacketContent)
+| where SignatureName == "SSH"
+| where SignatureMatchedContent == 'SSH-1'
+| project-reorder TimeGenerated, DeviceName, RemoteIP, LocalIP
+```
+
+
+
