@@ -59,6 +59,7 @@ to be implemented
 | ---  | --- | --- |
 | T1018 | Remote System Discovery | [Anomalous SMB Sessions Created](../Defender%20For%20Endpoint/AnomalousSMBSessionsCreated.md)|
 | T1040 | Network Sniffing | [Windows Network Sniffing](../Defender%20For%20Endpoint/WindowsNetworkSniffing.md) |
+| T1046 | Network Service Discovery | [Database Discovery](../Defender%20For%20Endpoint/Discovery%20-%20DatabaseServices.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
