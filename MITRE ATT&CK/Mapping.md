@@ -27,7 +27,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
 | T1136.003 | Create Account: Cloud Account | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md) |
 |  T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
-| T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/AsrExecutableOfficeContent.md) |
+| T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/ASR%20Rules/AsrExecutableOfficeContent.md) |
 
 ## Privilege Escalation
 
@@ -88,6 +88,6 @@ to be implemented
 ## Impact
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
-| T1486 | Data Encrypted for Impact |[AsrRansomware](../Defender%20For%20Endpoint/AsrRansomware.md)|
+| T1486 | Data Encrypted for Impact |[AsrRansomware](../Defender%20For%20Endpoint/ASR%20Rules/AsrRansomware.md)|
 | T1486 | Data Encrypted for Impact | [Ransomware Double Extention](../Defender%20For%20Endpoint/RansomwareDoubleExtention.md) |
 | T1490 | Inhibit System Recovery | [Shadow Copy Deletion](../Defender%20For%20Endpoint/ShadowCopyDeletion.md)|
