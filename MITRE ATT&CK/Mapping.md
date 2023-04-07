@@ -19,7 +19,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1047 | Windows Management Instrumentation | [WMIC Remote Command Execution](../Defender%20For%20Endpoint/WMICRemoteCommand.md) |
-| T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)/ |
+| T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md) |
 
 ## Persistence
 
