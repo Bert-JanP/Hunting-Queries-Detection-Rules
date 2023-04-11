@@ -26,8 +26,9 @@ A user at risk that also performs discovery events is more likely to be compromi
 let DiscoveryEvents = dynamic(["Export", "Download group members", "Get tenant details", "Download Users", "Download Devices"]);
 let RiskyUsers = AADRiskyUsers
      | where TimeGenerated > ago(90d)
+     | summarize arg_max(TimeGenerated, *) by Id
      // Only user active risky users. If you want to look for all users that have been risky, remove the line below.
-     | where RiskState == 'atRisk'
+     | where RiskState in~ ('atRisk', 'confirmedCompromised')
      | distinct UserDisplayName;
 AuditLogs
 // Filter only on the RiskyUsers defined
@@ -37,3 +38,8 @@ AuditLogs
 | project TimeGenerated, Identity, OperationName, Category, 
 ResultDescription, Result
 ```
+#### Versions
+| Version | Comment |
+| ---  | --- |
+| 1.0 | Initial commit |
+| 1.1 | addition confirmedCompromised to risk state & collect last event from risky user |
