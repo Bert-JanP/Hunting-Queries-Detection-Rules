@@ -15,7 +15,7 @@ let AllDomainControllers =
      | where LocalIPType == "FourToSixMapping"
      | summarize make_set(DeviceId);
 DeviceNetworkEvents
-| where Timestamp  < ago(TimeFrame)
+| where Timestamp  > ago(TimeFrame)
 | where RemotePort == 445
 | where not(DeviceId in (AllDomainControllers)) // THis is to reduce FP because of e.g. MDI, if you do not have MDI do not use this filter.
 | summarize TotalRemoteConnections = dcount(RemoteIP) by DeviceName
@@ -30,7 +30,7 @@ let AllDomainControllers =
      | where LocalIPType == "FourToSixMapping"
      | summarize make_set(DeviceId);
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where not(DeviceId in (AllDomainControllers)) // This is to reduce FP because of e.g. MDI, if you do not have MDI do not use this filter.
 | summarize TotalRemoteConnections = dcount(RemoteIP) by DeviceName
@@ -45,7 +45,7 @@ In Windows some files are known to set up benign SMB sessions or to map shares. 
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
-| where Timestamp < ago(TimeFrame)
+| where Timestamp > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName <> "Microsoft.Tri.Sensor.exe" // MDI Sensor
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery
@@ -55,7 +55,7 @@ DeviceNetworkEvents
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName <> "Microsoft.Tri.Sensor.exe" // MDI Sensor
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery
@@ -73,7 +73,7 @@ Based on the output of step 2, the files that seem suspicious can be added to th
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let FileNames = dynamic(['nmap.exe', 'bloodhound.exe']); // Add your own findings in the list, these are examples
 DeviceNetworkEvents
-| where Timestamp < ago(TimeFrame)
+| where Timestamp > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName in~ (FileNames)
 | summarize CommandsExecuted = make_set(InitiatingProcessCommandLine) by DeviceName, InitiatingProcessAccountDomain, InitiatingProcessAccountName
@@ -84,7 +84,7 @@ DeviceNetworkEvents
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let FileNames = dynamic(['nmap.exe', 'bloodhound.exe']); // Add your own findings in the list, these are examples
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName in~ (FileNames)
 | summarize CommandsExecuted = make_set(InitiatingProcessCommandLine) by DeviceName, InitiatingProcessAccountDomain, InitiatingProcessAccountName
@@ -99,7 +99,7 @@ This step investigates all connections made by the devices that have created sus
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
-| where Timestamp < ago(TimeFrame)
+| where Timestamp > ago(TimeFrame)
 | where RemotePort == 445
 | where ActionType  == "ConnectionSuccess"
 | where DeviceName in~ (SuspiciousDevices)
@@ -110,7 +110,7 @@ DeviceNetworkEvents
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where ActionType == "ConnectionSuccess"
 | where DeviceName in~ (SuspiciousDevices)

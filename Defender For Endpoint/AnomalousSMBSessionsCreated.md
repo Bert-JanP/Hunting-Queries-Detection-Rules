@@ -17,7 +17,7 @@ A actor has gotten access to a system en performs a scan to identify possible la
 ## Defender For Endpoint
 ```
 DeviceNetworkEvents
-| where Timestamp < ago(1h)
+| where Timestamp > ago(1h)
 | where RemotePort == 445
 | summarize
      TotalIpsAccessed = dcount(RemoteIP),
@@ -36,7 +36,7 @@ DeviceNetworkEvents
 ## Sentinel
 ```
 DeviceNetworkEvents
-| where TimeGenerated < ago(1h)
+| where TimeGenerated > ago(1h)
 | where RemotePort == 445
 | summarize
      TotalIpsAccessed = dcount(RemoteIP),
