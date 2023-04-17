@@ -4,7 +4,7 @@
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
-| where Timestamp < ago(TimeFrame)
+| where Timestamp > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName <> "Microsoft.Tri.Sensor.exe" // MDI Sensor
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery
@@ -14,7 +14,7 @@ DeviceNetworkEvents
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where InitiatingProcessFileName <> "Microsoft.Tri.Sensor.exe" // MDI Sensor
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery

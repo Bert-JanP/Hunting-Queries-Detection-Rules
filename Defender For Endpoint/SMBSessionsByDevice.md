@@ -5,7 +5,7 @@
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
-| where Timestamp < ago(TimeFrame)
+| where Timestamp > ago(TimeFrame)
 | where RemotePort == 445
 | where ActionType  == "ConnectionSuccess"
 | where DeviceName in~ (SuspiciousDevices)
@@ -16,7 +16,7 @@ DeviceNetworkEvents
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
-| where TimeGenerated < ago(TimeFrame)
+| where TimeGenerated > ago(TimeFrame)
 | where RemotePort == 445
 | where ActionType == "ConnectionSuccess"
 | where DeviceName in~ (SuspiciousDevices)
