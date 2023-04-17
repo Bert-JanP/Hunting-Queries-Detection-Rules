@@ -14,7 +14,7 @@ let PreviousRDPConnections = materialize (
 PreviousRDPConnections
 | where Timestamp > ago(2d)
 | join kind=leftanti (PreviousRDPConnections
-     | where Timestamp < ago(1d))
+     | where Timestamp > ago(1d))
      on DeviceName, InitiatingProcessAccountName
 | project
      Timestamp,
@@ -39,7 +39,7 @@ let PreviousRDPConnections = materialize (
 PreviousRDPConnections
 | where TimeGenerated > ago(2d)
 | join kind=leftanti (PreviousRDPConnections
-     | where TimeGenerated < ago(1d))
+     | where TimeGenerated > ago(1d))
      on DeviceName, InitiatingProcessAccountName
 | project
      TimeGenerated,
@@ -50,8 +50,11 @@ PreviousRDPConnections
      RemoteUrl,
      RemoteIP
 | sort by TimeGenerated
-
 ```
 
-
+#### Versions
+| Version | Comment |
+| ---  | --- |
+| 1.0 | Initial commit |
+| 1.1 | Timespan update |
 
