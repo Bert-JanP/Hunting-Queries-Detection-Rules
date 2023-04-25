@@ -50,3 +50,9 @@ must have an attachment.
 | where FileExtension in~ (ExecutableFileExtentions)
 | summarize ['Target Mailboxes'] = make_set(RecipientEmailAddress), ['Sender Addresses'] = make_set(SenderFromAddress), ['Email Subject'] = make_set(Subject) by SHA256, FileName
 ```
+
+#### Versions
+| Version | Comment |
+| ---  | --- |
+| 1.0 | Initial commit |
+| 1.1 | Fix DLL in dynamic list |
