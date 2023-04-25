@@ -21,12 +21,11 @@ An actor gains initial access via a attachment that is send to a mailbox, which 
 
 ## Defender For Endpoint
 ```
-let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'dll, 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
+let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'dll', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
 EmailEvents
 // Only display inbound emails
 | where EmailDirection == 'Inbound'
-// Join the email events with the attachment information, that the email 
-must have an attachment.
+// Join the email events with the attachment information, that the email must have an attachment.
 | join kind=inner EmailAttachmentInfo on NetworkMessageId
 // extract the file extension from the filename
 | extend FileExtension = tostring(extract(@'.*\.(.*)', 1, FileName))
