@@ -58,8 +58,7 @@ DeviceEvents
 | where ActionType == 'UserAccountCreated'
 // Extract the DeviceName without the domain name
 | extend DeviceNameWithoutDomain = extract(@'(.*?)\.', 1, DeviceName)
-// Filter on local additions, then the AccountDomain is equal on the 
-DeviceName
+// Filter on local additions, then the AccountDomain is equal on the DeviceName
 | where AccountDomain =~ DeviceNameWithoutDomain
 | project TimeGenerated, DeviceName, ActionType, AccountDomain, AccountName, AccountSid
 ```
