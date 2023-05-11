@@ -88,7 +88,7 @@ union isfuzzy=true
 | where SHA256 in (SHA256Entries)
 | lookup kind=inner (TweetFeedLastMonth) on $left.SHA256 == $right.IOC)
 // Reorder columns to first get info on IOC
-| project-reorder IOCType, IOCTimestamp, IOCCatagory, TweetLink, RemoteIP, RemoteUrl, MD5, SHA256
+| project-reorder IOCType, Total, IOCTimestamp, IOCCatagory, TweetLink, RemoteIP, RemoteUrl, MD5, SHA256
 ```
 
 ### Sentinel
@@ -158,5 +158,5 @@ union isfuzzy=true
 | where SHA256 in (SHA256Entries)
 | lookup kind=inner (TweetFeedLastMonth) on $left.SHA256 == $right.IOC)
 // Reorder columns to first get info on IOC
-| project-reorder IOCType, IOCTimeGenerated, IOCCatagory, TweetLink, RemoteIP, RemoteUrl, MD5, SHA256
+| project-reorder IOCType, Total, IOCTimeGenerated, IOCCatagory, TweetLink, RemoteIP, RemoteUrl, MD5, SHA256
 ```
