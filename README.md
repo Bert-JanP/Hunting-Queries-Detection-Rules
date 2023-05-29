@@ -19,6 +19,8 @@
 # KQL for Defender For Endpoint & Microsoft Sentinel
 The purpose of this repository is to share KQL queries that can be used by anyone and are understandable. These queries are intended to increase detection coverage through the logs of Microsoft Security products. Not all suspicious activities generate an alert by default, but many of those activities can be made detectable through the logs. These queries include Detection Rules, Hunting Queries and Visualisations. Anyone is free to use the queries. If you have any questions feel free to reach out to me on twitter [@BertJanCyber](https://twitter.com/BertJanCyber). 
 
+**Presenting this material as your own is illegal and forbidden. A reference to Twitter [@BertJanCyber](https://twitter.com/BertJanCyber) or Github [@Bert-JanP](https://github.com/Bert-JanP) is much appriciated when sharing or using the content.**
+
 # KQL Categories
 
 The queries in this repository are split into different categories. The MITRE ATT&CK category contains a list of queries mapped to the tactics of the MITRE Framwork. The product section contains queries specific to Microsoft security products. The Processes section contains several queries that can be used in common cyber processes to make things easier for security analysts. In addition, there is a special category for Zero Day detections. Lastly, there is an informational section that explains the use of KQL using examples. 
