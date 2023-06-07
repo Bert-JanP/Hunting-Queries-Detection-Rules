@@ -7,6 +7,13 @@ This query can be used to detect rare operating systems that are used to sign in
 
 The query can be extended by filtering on failed or succesful sign ins.
 
+## Defender For Endpoint
+```
+AADSignInEventsBeta
+| summarize count() by OSPlatform
+| sort by count_
+```
+
 ## Sentinel
 ```
 SigninLogs

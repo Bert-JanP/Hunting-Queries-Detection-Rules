@@ -10,6 +10,17 @@ False positives can be new browser updates that trigger new UserAgents, this wil
 #### Risk
 A malicious actor signs in to your tenant with a user agent that is not user in your environment. It can also be a script that uses (leaked) credentials on your tentant.
 
+## Defender For Endpoint
+```
+let KnownUserAgents = AADSignInEventsBeta
+  | where Timestamp > ago(30d) and Timestamp < ago(3d)
+  | distinct UserAgent;
+AADSignInEventsBeta
+| where Timestamp > ago(3d)
+| where UserAgent !in (KnownUserAgents)
+| project Timestamp, UserAgent, ErrorCode, AccountObjectId,AccountDisplayName, IPAddress
+```
+
 ## Sentinel
 ```
 let KnownUserAgents = SigninLogs

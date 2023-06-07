@@ -20,6 +20,21 @@ A malicious actor installs a malicious app in your environment. This app can the
 - https://learn.microsoft.com/en-us/security/compass/incident-response-playbook-compromised-malicious-app
 - https://www.lares.com/blog/malicious-azure-ad-application-registrations/
 
+## Defender For Endpoint
+```
+let KnownApps = AADSignInEventsBeta
+// Adjust the timerange depending on the retention period
+| where Timestamp  between (ago(30d) .. ago(2d))
+| distinct Application;
+AADSignInEventsBeta
+| where Timestamp > ago(2d)
+| where not(Application in~ (KnownApps))
+// If the AppID is empty then it is a third party App.
+| extend IsExternalApp = iff(isempty(ApplicationId), "True", "False")
+| project-reorder IsExternalApp, Application, AccountObjectId, IPAddress, ClientAppUsed
+// For ResultType Reference see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
+```
+
 ## Sentinel
 ```
 let KnownApps = SigninLogs

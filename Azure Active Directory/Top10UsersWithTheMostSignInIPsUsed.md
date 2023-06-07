@@ -10,6 +10,15 @@ False positives can be a VPN that changes IP addresses, which results in a high 
 #### Risk
 The risk is that an actor uses an rare IP address to sign into your tenant.
 
+## Defender For Endpoint
+```
+AADSignInEventsBeta
+| summarize IPsUsed = make_set(IPAddress), locations = make_set(Country) by AccountObjectId
+| extend CountIP = array_length(IPsUsed)
+| project-reorder CountIP
+| top 10 by CountIP
+```
+
 ## Sentinel
 ```
 SigninLogs
