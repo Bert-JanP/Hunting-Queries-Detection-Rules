@@ -68,7 +68,9 @@ union isfuzzy=true
 (DeviceNetworkEvents
 | where Timestamp > ago(TimeRange)
 | where RemoteIP in (IPEntries)
-| lookup kind=inner (TweetFeedLastMonth) on $left.RemoteIP == $right.IOC),
+| lookup kind=inner (TweetFeedLastMonth) on $left.RemoteIP == $right.IOC
+| extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
+| extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)),
 // List domain IOC matches if they exsists.
 (DeviceNetworkEvents
 | where Timestamp > ago(TimeRange)
@@ -138,7 +140,9 @@ union isfuzzy=true
 (DeviceNetworkEvents
 | where TimeGenerated > ago(TimeRange)
 | where RemoteIP in (IPEntries)
-| lookup kind=inner (TweetFeedLastMonth) on $left.RemoteIP == $right.IOC),
+| lookup kind=inner (TweetFeedLastMonth) on $left.RemoteIP == $right.IOC
+| extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
+| extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)),
 // List domain IOC matches if they exsists.
 (DeviceNetworkEvents
 | where TimeGenerated > ago(TimeRange)
