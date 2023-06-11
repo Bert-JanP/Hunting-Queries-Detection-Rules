@@ -1,53 +1,53 @@
 ### SOURCE:
 ### https://lots-project.com/
 ### Developed By @mrd0x
-Website;Tags;ServiceProvider
-raw.githubusercontent.com;"Phishing; C&C; Download";Github
-github.com;"Phishing; Download";Github
-1drv.ms;"Phishing";Microsoft
-1drv.com;"Phishing; Download";Microsoft
-docs.google.com;"Phishing; C&C";Google
-drive.google.com;"Phishing; Download; Exfiltration";Google
-.azurewebsites.net;"Phishing; Download; Exfiltration; C&C";Microsoft
-dropbox.com;"Phishing; Download; Exfiltration; C&C";Dropbox
-mega.nz;"Phishing; Download; Exfiltration";Mega Limited
-pcloud.com;"Phishing; Download; Exfiltration";pCloud
-.amazonaws.com;"Phishing; Download; Exfiltration; C&C";Amazon Web Services
-twitter.com;C&C;Twitter
-.web.core.windows.net;"Phishing; Download; Exfiltration; C&C";Microsoft
-.blob.core.windows.net;"Phishing; Download; Exfiltration";Microsoft
-box.com;"Phishing; Download; Exfiltration";Box
-sites.google.com;Phishing;Google
-.cloudfront.net;"Phishing; C&C; Download";Amazon Web Services
-bitbucket.io;Phishing;Atlassian
-bitbucket.org;"Phishing; Download; Exfiltration; C&C";Atlassian
-firebasestorage.googleapis.com;"Phishing; Exfiltration; C&C; Download";Google
-storage.googleapis.com;"Phishing; Download; Exfiltration; C&C";Google
-herokuapp.com;"Phishing; Download; Exfiltration; C&C";Heroku
-zendesk.com;"Phishing; Download";Zendesk
-.cloudwaysapps.com;"Phishing; Download; Exfiltration; C&C";Cloudways
-netlify.app;Phishing;Netlify
-.cloudapp.azure.com;"Phishing; Download; Exfiltration; C&C";Microsoft
-.cloudapp.net;"Phishing; Download; Exfiltration; C&C";Microsoft
-gitlab.com;"Phishing; Download";GitLab
-filetransfer.io;"Phishing; Download; Exfiltration";Filetransfer.io
-sendspace.com;"Phishing; Download; Exfiltration";Sendspace
-wetransfer.com;"Phishing; Download; Exfiltration";WeTransfer B.V
-cdn.fbsbx.com;"Phishing";Facebook
-mediafire.com;"Phishing; Download; Exfiltration";Mediafire
-cdn.discordapp.com;"Phishing; Download";Discord
-.workers.dev;"Phishing; Download; Exfiltration; C&C";Cloudflare
-slack-files.com;"Phishing";Slack
-youtube.com;"Phishing; C&C";Google
-reddit.com;C&C;Reddit
-pastebin.com;"Download; Exfiltration; C&C";Pastebin
-.sharepoint.com;"Phishing; Download";Microsoft
-onedrive.live.com;"Phishing";Microsoft
-app.milanote.com;"Phishing";Milanote
-.appspot.com;"Phishing; Download; C&C";Google
-.wordpress.com;"Phishing; Download; C&C; Exfiltration";Wordpress Foundation
-.azureedge.net;"Phishing; C&C";Microsoft
-.tumblr.com;"Phishing; C&C";Tumblr
-.backblazeb2.com;"Phishing; Download; Exfiltration";BackBlaze
-.blogspot.com;"Phishing; C&C";Google
-.translate.goog;"Phishing; Download";Google
+Website,Tags,ServiceProvider
+raw.githubusercontent.com,"Phishing, C&C, Download",Github
+github.com,"Phishing, Download",Github
+1drv.ms,"Phishing",Microsoft
+1drv.com,"Phishing, Download",Microsoft
+docs.google.com,"Phishing, C&C",Google
+drive.google.com,"Phishing, Download, Exfiltration",Google
+.azurewebsites.net,"Phishing, Download, Exfiltration, C&C",Microsoft
+dropbox.com,"Phishing, Download, Exfiltration, C&C",Dropbox
+mega.nz,"Phishing, Download, Exfiltration",Mega Limited
+pcloud.com,"Phishing, Download, Exfiltration",pCloud
+.amazonaws.com,"Phishing, Download, Exfiltration, C&C",Amazon Web Services
+twitter.com,C&C,Twitter
+.web.core.windows.net,"Phishing, Download, Exfiltration, C&C",Microsoft
+.blob.core.windows.net,"Phishing, Download, Exfiltration",Microsoft
+box.com,"Phishing, Download, Exfiltration",Box
+sites.google.com,Phishing,Google
+.cloudfront.net,"Phishing, C&C, Download",Amazon Web Services
+bitbucket.io,Phishing,Atlassian
+bitbucket.org,"Phishing, Download, Exfiltration, C&C",Atlassian
+firebasestorage.googleapis.com,"Phishing, Exfiltration, C&C, Download",Google
+storage.googleapis.com,"Phishing, Download, Exfiltration, C&C",Google
+herokuapp.com,"Phishing, Download, Exfiltration, C&C",Heroku
+zendesk.com,"Phishing, Download",Zendesk
+.cloudwaysapps.com,"Phishing, Download, Exfiltration, C&C",Cloudways
+netlify.app,Phishing,Netlify
+.cloudapp.azure.com,"Phishing, Download, Exfiltration, C&C",Microsoft
+.cloudapp.net,"Phishing, Download, Exfiltration, C&C",Microsoft
+gitlab.com,"Phishing, Download",GitLab
+filetransfer.io,"Phishing, Download, Exfiltration",Filetransfer.io
+sendspace.com,"Phishing, Download, Exfiltration",Sendspace
+wetransfer.com,"Phishing, Download, Exfiltration",WeTransfer B.V
+cdn.fbsbx.com,"Phishing",Facebook
+mediafire.com,"Phishing, Download, Exfiltration",Mediafire
+cdn.discordapp.com,"Phishing, Download",Discord
+.workers.dev,"Phishing, Download, Exfiltration, C&C",Cloudflare
+slack-files.com,"Phishing",Slack
+youtube.com,"Phishing, C&C",Google
+reddit.com,C&C,Reddit
+pastebin.com,"Download, Exfiltration, C&C",Pastebin
+.sharepoint.com,"Phishing, Download",Microsoft
+onedrive.live.com,"Phishing",Microsoft
+app.milanote.com,"Phishing",Milanote
+.appspot.com,"Phishing, Download, C&C",Google
+.wordpress.com,"Phishing, Download, C&C, Exfiltration",Wordpress Foundation
+.azureedge.net,"Phishing, C&C",Microsoft
+.tumblr.com,"Phishing, C&C",Tumblr
+.backblazeb2.com,"Phishing, Download, Exfiltration",BackBlaze
+.blogspot.com,"Phishing, C&C",Google
+.translate.goog,"Phishing, Download",Google
