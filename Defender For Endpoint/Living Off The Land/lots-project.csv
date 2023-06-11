@@ -1,6 +1,4 @@
-### Source:
-### https://lots-project.com/
-website,tags,service provider
+Website,Tags,ServiceProvider,Source:https://lots-project.com/
 raw.githubusercontent.com,"Phishing, C&C, Download",Github
 github.com,"Phishing, Download",Github
 1drv.ms,"Phishing",Microsoft
