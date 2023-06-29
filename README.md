@@ -48,6 +48,7 @@ The queries in this repository are split into different categories. The MITRE AT
 
 ## Informational 
 
+- [KQL helful functions](./Functions/)
 - [KQL Regex Example List](./KQL%20Regex/RegexExamples.md)
 
 # Where to use KQL in Defender For Endpoint & Sentinel?
