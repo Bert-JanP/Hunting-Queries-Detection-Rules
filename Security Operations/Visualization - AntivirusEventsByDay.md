@@ -1,8 +1,10 @@
 # Antivirus Detections by day
 
+#### Description
+This query visualizes the daily antivirus detections, which can give an indication in anomalous amount of activities that are performed in your environment. 
 
-### Defender For Endpoint
 
+## Defender For Endpoint
 ```
 DeviceEvents
 | where Timestamp > ago(30d)
@@ -10,7 +12,7 @@ DeviceEvents
 | summarize count() by bin(Timestamp, 1d)
 | render linechart with(title="Antivirus Detections by Day")
 ```
-### Sentinel
+## Sentinel
 ```
 DeviceEvents
 | where TimeGenerated > ago(30d)
