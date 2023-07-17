@@ -11,12 +11,27 @@ Before you start implementing this solution think about your needs and the value
 
 # Implementation
 The queries in this folder are divided into two categories:
-- Sentinel (& Log Analytics)
-- Defender For Endpoint
+- [Sentinel (& Log Analytics)](./Sentinel/)
+- [Defender For Endpoint](./Defender%20For%20Endpoint/)
 
 The files in each folder represent the queries that can be used to leverage a MISP feed, the query can be copied an be used to create a detection on to hunt for specific activities. The reason why there are two different categories is the difference between the KQL syntax in Sentinel and MDE and the different tables that to search for IOCs. 
 
-# Table usage
+# MISP For KQL
+The MISP queries in this repository are standardised to provide the best results. This is explained with the [Abuse.CH Malware Bazaar MD5 Feed](./Defender%20For%20Endpoint/MISP-MD5-AbuseCH-MalwareMD5.txt) as showed below. First the content is collected using the [externaldata()](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/externaldata-operator?pivots=azuredataexplorer) function. Then the results are validated, in this case is the content a MD5 hash as expected? This is done similarly for different IOC categories such as IP addresses. Then the validated content is used to search the DeviceEvents for the MD5 hash, if a malicious hash is found the results will be returned. 
+
+```
+let MISPFeed = externaldata(MD5: string)[@"https://bazaar.abuse.ch/export/txt/md5/recent"] with (format="txt", ignoreFirstRecord=True);
+let MD5Regex = '[a-f0-9]{32}';
+let MaliciousMD5 = materialize (
+          MISPFeed 
+          | where MD5 matches regex MD5Regex
+          | distinct MD5
+          );
+DeviceFileEvents
+| where MD5 has_any (MaliciousMD5)
+```
+
+# Used Tables
 
 Sentinel and Defender For Endpoint use different tables. In Defender For Endpoint, only tables within the MDE licence are used. In Sentinel more tables are used. If you do not have a table you can simply delete the section of that table and the query will run. The section below lists all tables that are used. 
 

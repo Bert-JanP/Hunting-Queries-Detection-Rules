@@ -36,6 +36,7 @@ The queries in this repository are split into different categories. The MITRE AT
 - [Defender For Office 365](./Office%20365)
 - [Azure Active Directory](./Azure%20Active%20Directory)
 - [Microsoft Sentinel](./Sentinel)
+- [MISP](./MISP)
 
 ## Security Processes
 - [Digital Forensics and Incident Response](./DFIR)
