@@ -33,7 +33,7 @@ DeviceFileEvents
 
 # Used Tables
 
-Sentinel and Defender For Endpoint use different tables. In Defender For Endpoint, only tables within the MDE licence are used. In Sentinel more tables are used. If you do not have a table you can simply delete the section of that table and the query will run. The section below lists all tables that are used. 
+Sentinel and Defender For Endpoint can use different tables. In Defender For Endpoint, only tables within the MDE licence are used. In Sentinel more tables are used. If you do not have a table you can simply delete the section of that table and the query will run. The section below lists all tables that are used. 
 
 ## Sentinel
 - DeviceNetworkEvents
