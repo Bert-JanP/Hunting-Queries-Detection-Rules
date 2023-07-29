@@ -17,7 +17,7 @@ Alerts on a user at risk may indicate that the useraccount has been compromised.
 let RiskyUsers = AADRiskyUsers
      | where TimeGenerated > ago(90d)
      // Only user active risky users. If you want to look for all users that have been risky, remove the line below.
-     | where RiskState == 'atRisk'
+     | where RiskState in~ ('atRisk', 'confirmedCompromised')
      | distinct UserPrincipalName;
 SecurityAlert
 // Only get the latest status of each alert
