@@ -52,9 +52,14 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1218 | System Binary Proxy Execution| [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
+| T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Credential Access
-to be implemented
+
+| Technique ID | Title    | Query    |
+| ---  | --- | --- |
+| T1558.003 | Steal or Forge Kerberos Tickets: Kerberoasting | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
+
 ## Discovery
 
 | Technique ID | Title    | Query    |
