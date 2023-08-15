@@ -64,6 +64,7 @@ to be implemented
 | T1046 | Network Service Discovery | [Database Discovery](../Defender%20For%20Endpoint/Discovery%20-%20DatabaseServices.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
+| T1087.002 | Account Discovery: Domain Account | [Anomalous LDAP Traffic](../Defender%20For%20Identity/AnomalousLDAPTraffic.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 | T1518.001 | Software Discovery: Security Software Discovery| [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)|
