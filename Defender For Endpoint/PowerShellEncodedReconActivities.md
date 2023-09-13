@@ -23,7 +23,9 @@ An advasary uses an encoded PowerShell command to collect information on of othe
 ## Defender For Endpoint
 
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
@@ -48,7 +50,9 @@ DeviceProcessEvents
 ```
 ## Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents

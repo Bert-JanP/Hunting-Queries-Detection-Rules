@@ -11,7 +11,9 @@
 ### Defender For Endpoint
 
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where Timestamp > ago(TimeFrame)
@@ -28,7 +30,9 @@ DeviceProcessEvents
 ```
 ### Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where Timestamp > ago(TimeFrame)

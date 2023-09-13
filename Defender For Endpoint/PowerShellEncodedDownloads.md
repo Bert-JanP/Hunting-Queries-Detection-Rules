@@ -21,7 +21,9 @@ An advasary uses an encoded PowerShell command to collect a payload.
 
 ## Defender For Endpoint
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
@@ -45,7 +47,9 @@ DeviceProcessEvents
 ```
 ## Sentinel
 ```
-let EncodedList = dynamic(['-encodedcommand', '-enc']);
+let EncodedList = dynamic(['-encodedcommand', '-enc']); 
+// For more results use line below en filter one above. This will also return more FPs.
+// let EncodedList = dynamic(['-encodedcommand', '-enc', '-e']);
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
 let TimeFrame = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
