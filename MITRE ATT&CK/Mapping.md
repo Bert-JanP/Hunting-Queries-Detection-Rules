@@ -21,6 +21,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | ---  | --- | --- |
 | T1047 | Windows Management Instrumentation | [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
 | T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md) |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
 
 ## Persistence
 
