@@ -35,7 +35,7 @@ DeviceProcessEvents
 | extend DecodedCommandLineReplaceEmptyPlaces = replace_string(DecodedCommandLine, '\u0000', '')
 | where isnotempty(base64String) and isnotempty(DecodedCommandLineReplaceEmptyPlaces)
 | where DecodedCommandLineReplaceEmptyPlaces has_any (DownloadVariables)
-| project
+| project-reorder 
      Timestamp,
      ActionType,
      DecodedCommandLineReplaceEmptyPlaces,

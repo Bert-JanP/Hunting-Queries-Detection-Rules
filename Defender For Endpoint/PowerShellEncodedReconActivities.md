@@ -38,7 +38,7 @@ DeviceProcessEvents
 | where isnotempty(base64String) and isnotempty(DecodedCommandLineReplaceEmptyPlaces)
 // Search in the decoded commandline for Recon variables
 | where DecodedCommandLineReplaceEmptyPlaces has_any (ReconVariables)
-| project
+| project-reorder 
      Timestamp,
      ActionType,
      DecodedCommandLineReplaceEmptyPlaces,
