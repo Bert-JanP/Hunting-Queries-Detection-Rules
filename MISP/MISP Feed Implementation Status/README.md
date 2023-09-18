@@ -2,7 +2,7 @@
 
 | Feed Name | Provider | Feed Format | Sentinel | Defender For Endpoint | Notes
 | --- | --- | --- | --- | --- | --- |
-| [abuse.ch SSL IPBL](https://sslbl.abuse.ch/blacklist/sslblacklist.csv) | abuse.ch | csv | |||
+| [abuse.ch SSL IPBL](https://sslbl.abuse.ch/blacklist/sslblacklist.csv) | abuse.ch | csv | :heavy_check_mark: | :heavy_check_mark: ||
 | [blocklist.de/lists/all.txt](https://lists.blocklist.de/lists/all.txt) | blocklist.de |  freetext | :heavy_check_mark: | :heavy_check_mark: ||
 | [blockrules of rules.emergingthreats.net](https://rules.emergingthreats.net/blockrules/compromised-ips.txt) | rules.emergingthreats.net | csv | :heavy_check_mark: | :heavy_check_mark: ||
 | [ci-badguys.txt](https://cinsscore.com/list/ci-badguys.txt) | cinsscore.com | freetext |  :heavy_check_mark: | :heavy_check_mark: ||
@@ -40,7 +40,6 @@
 | [SMTP data](https://dataplane.org/smtpdata.txt) | dataplane.org | csv | |||
 | [SMTP greet](https://dataplane.org/smtpgreet.txt) | dataplane.org | csv | |||
 | [SSH Bruteforce IPs](https://feeds.honeynet.asia/bruteforce/latest-sshbruteforce-unique.csv) | APNIC Community Honeynet Project | csv | |||
-| [sshpwauth.txt](https://dataplane.org/sshpwauth.txt) | dataplane.org | csv | |||
 | [Telnet Bruteforce IPs](https://feeds.honeynet.asia/bruteforce/latest-telnetbruteforce-unique.csv) | APNIC Community Honeynet Project | csv | |||
 | [TELNET login](https://dataplane.org/telnetlogin.txt) | dataplane.org | csv | |||
 | [The Botvrij.eu Data](https://www.botvrij.eu/data/feed-osint) | Botvrij.eu | misp | |||
@@ -72,6 +71,7 @@ Some feeds that are mentioned on [MISPs Feed page](https://www.misp-project.org/
 | [IPs from High-Confidence DGA-Based C&amp;Cs Actively Resolving - requires a valid license](https://osint.bambenekconsulting.com/feeds/c2-ipmasterlist-high.txt) | osint.bambenekconsulting.com | Commercial licence requried for the feed |
 | [mirai.security.gives](https://mirai.security.gives/data/ip_list.txt) | security.gives | Externaldata() timeout. |
 | [Panels Tracker](https://benkow.cc/export.php) | Benkow.cc | Externaldata(), does not support this datatype.|
+| [sshpwauth.txt](https://dataplane.org/sshpwauth.txt) | dataplane.org | csv | Partial query failure: Unable to perform requested operation. (message: 'Error with persistent storage path '' (operation ''). Extended error information: 'Uri does not provide a blob name: 'https://dataplane.org/sshpwauth.txt'' |
 | [This list contains all browser mining domains - A list to prevent browser mining only](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_browser.txt?inline=false) | ZeroDot1 - CoinBlockerLists | Read from IStreamSource failed |
 | [This list contains all domains - A list for administrators to prevent mining in networks](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt?inline=false) | ZeroDot1 - CoinBlockerLists | Read from IStreamSource failed |
 | [This list contains all optional domains - An additional list for administrators](https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list_optional.txt?inline=false) | ZeroDot1 - CoinBlockerLists | Read from IStreamSource failed |

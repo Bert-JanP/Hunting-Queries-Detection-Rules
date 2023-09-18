@@ -1,0 +1,4 @@
+let MISPFeed = externaldata(Listingdate: string, SHA1: string, Listingreason: string  )[@"https://sslbl.abuse.ch/blacklist/sslblacklist.csv"] with (format="csv", ignoreFirstRecord=True);
+MISPFeed
+| take 100
+// With the current MDE Logs there is no usecase for this MISP feed, but maybe you ingest other logs which can be enriched with this MISP feed.
