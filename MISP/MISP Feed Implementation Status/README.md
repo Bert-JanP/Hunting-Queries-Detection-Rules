@@ -6,7 +6,6 @@
 | [blocklist.de/lists/all.txt](https://lists.blocklist.de/lists/all.txt) | blocklist.de |  freetext | :heavy_check_mark: | :heavy_check_mark: ||
 | [blockrules of rules.emergingthreats.net](https://rules.emergingthreats.net/blockrules/compromised-ips.txt) | rules.emergingthreats.net | csv | :heavy_check_mark: | :heavy_check_mark: ||
 | [ci-badguys.txt](https://cinsscore.com/list/ci-badguys.txt) | cinsscore.com | freetext |  :heavy_check_mark: | :heavy_check_mark: ||
-| [CIRCL OSINT Feed](https://www.circl.lu/doc/misp/feed-osint) | CIRCL | misp | |||
 | [diamondfox_panels](https://raw.githubusercontent.com/pan-unit42/iocs/master/diamondfox/diamondfox_panels.txt) | pan-unit42 | freetext | :heavy_check_mark: | :heavy_check_mark: ||
 | [DigitalSide Threat-Intel OSINT Feed](https://osint.digitalside.it/Threat-Intel/digitalside-misp-feed/) | osint.digitalside.it | misp | |||
 | [DNS CH TXT version.bind](https://dataplane.org/dnsversion.txt) | dataplane.org | csv | |||
@@ -64,6 +63,7 @@ Some feeds that are mentioned on [MISPs Feed page](https://www.misp-project.org/
 | [CyberCure - Blocked URL Feed](https://api.cybercure.ai/feed/get_url?type=csv) | www.cybercure.ai | The remote server returned an error: (405) Method Not Allowed. |
 | [CyberCure - Hash Feed](https://api.cybercure.ai/feed/get_hash?type=csv) | www.cybercure.ai | The remote server returned an error: (405) Method Not Allowed. |
 | [CyberCure - IP Feed](https://api.cybercure.ai/feed/get_ips?type=csv) | www.cybercure.ai | The remote server returned an error: (405) Method Not Allowed. |
+| [CIRCL OSINT Feed](https://www.circl.lu/doc/misp/feed-osint) | CIRCL | Results exeed the allowed query limits|
 | [Domains from High-Confidence DGA-based C&amp;C Domains Actively Resolving](https://osint.bambenekconsulting.com/feeds/c2-dommasterlist-high.txt) | osint.bambenekconsulting.com | Commercial licence requried for the feed |
 | [http://cybercrime-tracker.net gatelist](https://cybercrime-tracker.net/ccamgate.php) | http://cybercrime-tracker.net | Externaldata(), does not support this datatype.|
 | [http://cybercrime-tracker.net hashlist](https://cybercrime-tracker.net/ccamlist.php) | [http://cybercrime-tracker.net](http://cybercrime-tracker.net) | Externaldata(), does not support this datatype.|
