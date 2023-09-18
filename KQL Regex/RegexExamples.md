@@ -17,6 +17,21 @@ let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 ```
 Example query: [AbuseCH IP Blacklist](../Threat%20Hunting/TI%20Feed%20-%20AbuseCHIPBlacklistFeed.md)
 
+## Subnet
+```
+let IPv4SubnetRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/[0-9]{1,3}';
+```
+
+Example query:
+```
+let MISPFeed = externaldata(Subnet: string)[@"https://raw.githubusercontent.com/ktsaou/blocklist-ipsets/master/firehol_level1.netset"] with (format="txt", ignoreFirstRecord=True);
+let IPv4SubnetRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}/[0-9]{1,3}';
+let x = MISPFeed 
+| where Subnet matches regex IPv4SubnetRegex
+| distinct Subnet;
+x
+```
+
 ## Domain
 ```
 let DomainRegex = @"([a-z0-9|-]+\.)*[a-z0-9|-]+\.[a-z]+";
