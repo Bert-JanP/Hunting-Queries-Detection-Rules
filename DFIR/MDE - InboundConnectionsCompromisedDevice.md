@@ -24,7 +24,10 @@ DeviceNetworkEvents
 | extend RemoteIPIsPrivate = iff(ipv4_is_private(RemoteIP), 1, iff(ipv4_is_private(FourToSixPrivate), 1, 0))
 // Remove comment below if you only want to see inbound connections from public IP addresses.
 //| where RemoteIPIsPrivate == 0
-| project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort
+// Enrich IP information
+| extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
+| extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
+| project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort, country, state
 ```
 ## Sentinel
 ```
@@ -42,6 +45,9 @@ DeviceNetworkEvents
 | extend RemoteIPIsPrivate = iff(ipv4_is_private(RemoteIP), 1, iff(ipv4_is_private(FourToSixPrivate), 1, 0))
 // Remove comment below if you only want to see inbound connections from public IP addresses.
 //| where RemoteIPIsPrivate == 0
-| project TimeGenerated, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort
+// Enrich IP information
+| extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
+| extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
+| project TimeGenerated, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort, country, state
 ```
 
