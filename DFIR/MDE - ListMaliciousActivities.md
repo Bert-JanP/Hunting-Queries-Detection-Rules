@@ -49,7 +49,7 @@ let TamperingAttempts = DeviceEvents
      | where DeviceName == CompromisedDevice
      | where ActionType == "TamperingAttempt"
      | extend TamperingAction = tostring(parse_json(AdditionalFields).TamperingAction), Status = tostring(parse_json(AdditionalFields).Status), Target = tostring(parse_json(AdditionalFields).Target)
-     | project Timestamp, DeviceName, ActionType, TamperingAction, Status;
+     | project Timestamp, DeviceName, ActionType, TamperingAction, Status, Target, InitiatingProcessCommandLine;
 // List all exploit guard events
 let ExploitGuardEvents = DeviceEvents
      | where Timestamp > ago(SearchWindow)
@@ -105,7 +105,7 @@ let TamperingAttempts = DeviceEvents
      | where DeviceName == CompromisedDevice
      | where ActionType == "TamperingAttempt"
      | extend TamperingAction = tostring(parse_json(AdditionalFields).TamperingAction), Status = tostring(parse_json(AdditionalFields).Status), Target = tostring(parse_json(AdditionalFields).Target)
-     | project TimeGenerated, DeviceName, ActionType, TamperingAction, Status;
+     | project Timestamp, DeviceName, ActionType, TamperingAction, Status, Target, InitiatingProcessCommandLine;
 // List all exploit guard events
 let ExploitGuardEvents = DeviceEvents
      | where TimeGenerated > ago(SearchWindow)
