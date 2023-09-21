@@ -65,7 +65,7 @@ let MaliciousIP = materialize (
         );
 // Collect the last information from each device which is internet facing.
 let InternetFacingInformation = DeviceInfo
-| extend InternetFacingInfo  = AdditionalFields
+| extend InternetFacingInfo  = dynamic_to_json(AdditionalFields)
 // Parse all additional fields to queryable columns
 | extend  InternetFacingReason = extractjson("$.InternetFacingReason", InternetFacingInfo, typeof(string)), InternetFacingLocalPort = extractjson("$.InternetFacingLocalPort", InternetFacingInfo, typeof(int)), InternetFacingScannedPublicPort = extractjson("$.InternetFacingScannedPublicPort", InternetFacingInfo, typeof(int)), InternetFacingScannedPublicIp = extractjson("$.InternetFacingScannedPublicIp", InternetFacingInfo, typeof(string)), InternetFacingLocalIp = extractjson("$.InternetFacingLocalIp", InternetFacingInfo, typeof(string)),    InternetFacingTransportProtocol=extractjson("$.InternetFacingTransportProtocol", InternetFacingInfo, typeof(string)), InternetFacingLastSeen = extractjson("$.InternetFacingLastSeen", InternetFacingInfo, typeof(datetime))
 // Collect the max argument for each internet facing port
