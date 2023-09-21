@@ -52,6 +52,7 @@ The queries in this repository are split into different categories. The MITRE AT
 
 - [KQL helful functions](./Functions/)
 - [KQL Regex Example List](./KQL%20Regex/RegexExamples.md)
+- [Azure Resource Graph](./Azure%20Resource%20Graph/)
 
 # Where to use KQL in Defender For Endpoint & Sentinel?
 
