@@ -1,4 +1,4 @@
-# Top N Accounts with the longest outstanding password reset
+# Top N Accounts Longest Period Without Password Reset
 
 ## Query Information
 
