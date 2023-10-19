@@ -32,6 +32,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1136.003 | Create Account: Cloud Account | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md) |
 | T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
 | T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/ASR%20Rules/AsrExecutableOfficeContent.md) |
+| T1556 | Modify Authentication Process | [Deletion Conditional Access Policy](../Azure%20Active%20Directory/ConditionalAccess%20-%20DeletePolicy.md) |
 
 ## Privilege Escalation
 
