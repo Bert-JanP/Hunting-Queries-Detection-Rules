@@ -26,7 +26,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 
 # KQL Categories
 
-The queries in this repository are split into different categories. The MITRE ATT&CK category contains a list of queries mapped to the tactics of the MITRE Framwork. The product section contains queries specific to Microsoft security products. The Processes section contains several queries that can be used in common cyber processes to make things easier for security analysts. In addition, there is a special category for Zero Day detections. Lastly, there is an informational section that explains the use of KQL using examples. 
+The queries in this repository are split into different categories. The MITRE ATT&CK category contains a list of queries mapped to the tactics of the MITRE Framework. The product section contains queries specific to Microsoft security products. The Processes section contains several queries that can be used in common cyber processes to make things easier for security analysts. In addition, there is a special category for Zero Day detections. Lastly, there is an informational section that explains the use of KQL using examples. 
 
 ## MITRE ATT&CK
 
