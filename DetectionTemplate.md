@@ -16,19 +16,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 #### Risk
 Explain what risk this detection tries to cover
 
+#### Author <Optional>
+- **Name:**
+- **Github:**
+- **Twitter:**
+- **LinkedIn:**
+- **Website:**
+
 #### References
 - https://kqlquery.com/
 - https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules
 - example link 3
 
 ## Defender For Endpoint
-```
+```KQL
 // Paste your query here
 DeviceProcessEvents
 | where FileName == "Example.File"
 ```
 ## Sentinel
-```
+```KQL
 // Paste your query here
 DeviceProcessEvents
 | where FileName == "Example.File"
