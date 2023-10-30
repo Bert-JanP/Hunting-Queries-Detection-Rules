@@ -31,6 +31,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | ---  | --- | --- |
 | T1098 | Account Manipulation | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md)|
 | T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
+| T1136.001 | Create Account: Local Account | [Local Administrator Account Creations](../Defender%20For%20Endpoint/LocalAdminAdditions.md) |
 | T1136.003 | Create Account: Cloud Account | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md) |
 | T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
 | T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/ASR%20Rules/AsrExecutableOfficeContent.md) |
