@@ -22,7 +22,11 @@ The purpose of this repository is to share KQL queries that can be used by anyon
 **Presenting this material as your own is illegal and forbidden. A reference to Twitter [@BertJanCyber](https://twitter.com/BertJanCyber) or Github [@Bert-JanP](https://github.com/Bert-JanP) is much appreciated when sharing or using the content.**
 
 ## KQL Blogs
-More detailed KQL information can be found on my blog page: https://kqlquery.com
+More detailed KQL information can be found on my blog page: https://kqlquery.com. Some KQL related blogs:
+- [KQL Functions For Security Operations](https://kqlquery.com/posts/kql-for-security-operations/)
+- [KQL Functions For Network Operations](https://kqlquery.com/posts/kql-for-network-operations/)
+- [Incident Response Part 1: IR on Microsoft Security Incidents (KQL edition)](https://kqlquery.com/posts/kql-incident-response/)
+- [Incident Response Part 2: What about the other logs?](https://kqlquery.com/posts/kql-incident-response-everything-else/)
 
 # KQL Categories
 
@@ -55,6 +59,14 @@ The queries in this repository are split into different categories. The MITRE AT
 - [KQL helpful functions](./Functions/)
 - [KQL Regex Example List](./KQL%20Regex/RegexExamples.md)
 - [Azure Resource Graph](./Azure%20Resource%20Graph/)
+
+# Contributions
+Everyone can submit contributions to this repository via a Pull Request. If you want to contribute the [Detection Template](#detection-template) needs to be used. Besides that the query needs to be able to run and be readable. To give credit where credit is due the top contributors are listed in the [Top Contributors section](#top-contributors).
+
+## Top contributors
+| Name | Queries added | GitHub | Twitter |
+|------|---------------|--------|---------|
+|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      |
 
 ### Detection Template
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:
