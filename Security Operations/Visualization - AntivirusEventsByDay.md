@@ -5,7 +5,7 @@ This query visualizes the daily antivirus detections, which can give an indicati
 
 
 ## Defender For Endpoint
-```
+```KQL
 DeviceEvents
 | where Timestamp > ago(30d)
 | where ActionType == 'AntivirusDetection'
@@ -13,7 +13,7 @@ DeviceEvents
 | render linechart with(title="Antivirus Detections by Day")
 ```
 ## Sentinel
-```
+```KQL
 DeviceEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == 'AntivirusDetection'
