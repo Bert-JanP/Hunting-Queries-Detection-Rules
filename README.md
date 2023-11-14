@@ -64,9 +64,9 @@ The queries in this repository are split into different categories. The MITRE AT
 Everyone can submit contributions to this repository via a Pull Request. If you want to contribute the [Detection Template](#detection-template) needs to be used. Besides that the query needs to be able to run and be readable. To give credit where credit is due the top contributors are listed in the [Top Contributors section](#top-contributors).
 
 ## Top contributors
-| Name | Queries added | GitHub | Twitter |
-|------|---------------|--------|---------|
-|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      |
+| Name | Queries added | GitHub | Twitter | Query Links |
+|------|---------------|--------|---------| ---------|
+|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
 
 ### Detection Template
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:
