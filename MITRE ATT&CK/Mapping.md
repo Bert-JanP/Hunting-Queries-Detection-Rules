@@ -82,6 +82,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 | T1518.001 | Software Discovery: Security Software Discovery| [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)|
+| T1518.001 | Software Discovery: Security Software Discovery| [Defender Discovery Activities](../Defender%20For%20Endpoint/DefenderDiscoveryActivities.md)|
 | T1615 | Group Policy Discovery |[Anomalous Group Policy Discovery](../Defender%20For%20Identity/AnomalousGroupPolicyDiscovery.md)|
 
 ## Lateral Movement
