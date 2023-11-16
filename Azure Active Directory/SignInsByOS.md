@@ -1,25 +1,32 @@
-# Total Sign In actions by Operating System
+# Total Succesful Sign-Ins by Operating System
 
 ## Query Information
 
 #### Description
 This query can be used to detect rare operating systems that are used to sign into your tenant. For example your company only has Windows company devices and you have sign ins with MacOS, those can ben intersting to investigate.
 
-The query can be extended by filtering on failed or succesful sign ins.
+This query can also be used to determine with Operting Systems need to be added to your Conditional Access Policies.
 
 ## Defender For Endpoint
 ```
 AADSignInEventsBeta
-| summarize count() by OSPlatform
-| sort by count_
+| where isnotempty(UserAgent)
+// Filter for successful sign ins only
+| where ErrorCode == 0
+| extend ParsedAgent = parse_json(parse_user_agent(UserAgent, "os"))
+| extend OperatingSystem = strcat(tostring(ParsedAgent.OperatingSystem.Family), " ", tostring(ParsedAgent.OperatingSystem.MajorVersion))
+| summarize Total = count() by OperatingSystem
+| sort by Total
 ```
 
 ## Sentinel
-```
+```KQL
 SigninLogs
-| extend
-     Browser = tostring(parse_json(DeviceDetail).browser),
-     OS = tostring(parse_json(DeviceDetail).operatingSystem)
-| summarize count() by OS
-| sort by count_
+| where isnotempty(UserAgent)
+// Filter for successful sign ins only
+| where ResultType == 0
+| extend ParsedAgent = parse_json(parse_user_agent(UserAgent, "os"))
+| extend OperatingSystem = strcat(tostring(ParsedAgent.OperatingSystem.Family), " ", tostring(ParsedAgent.OperatingSystem.MajorVersion))
+| summarize Total = count() by OperatingSystem
+| sort by Total
 ```
