@@ -9,7 +9,7 @@ This query list all role additions that have been performed in your tenant. See 
 - https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference
 
 ## Sentinel
-```
+```KQL
 AuditLogs
 | where OperationName == 'Add member to role'
 // If you do want to show PIM activations remove this filter

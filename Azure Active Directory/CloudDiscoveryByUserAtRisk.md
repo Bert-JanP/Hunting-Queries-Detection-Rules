@@ -21,7 +21,7 @@ A user at risk that also performs discovery events is more likely to be compromi
 - https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa
 
 ## Sentinel
-```
+```KQL
 // Define DiscoveryEvents, list can be appended with other events or your choosing
 let DiscoveryEvents = dynamic(["Export", "Download group members", "Get tenant details", "Download Users", "Download Devices"]);
 let RiskyUsers = AADRiskyUsers

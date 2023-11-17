@@ -12,7 +12,7 @@ If a password has not been changed for years, it might be that the account does 
 - https://learn.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide
 
 ## Defender For Endpoint
-```
+```KQL
 let LatestNChanges = 100;
 AADSignInEventsBeta
 | where Timestamp > ago(30d)
@@ -26,3 +26,4 @@ AADSignInEventsBeta
 // Select the top n accounts
 | top LatestNChanges by DaysSinceLastPasswordChange
 ```
+

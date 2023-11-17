@@ -14,7 +14,7 @@ This visualization can give insight in the amount of risky events that have happ
 - https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/aaduserriskevents
 
 ## Sentinel
-```
+```KQL
 AADUserRiskEvents
 | where TimeGenerated > ago(90d)
 | summarize count() by bin(TimeGenerated, 1d), RiskEventType

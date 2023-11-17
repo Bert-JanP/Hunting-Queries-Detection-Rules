@@ -39,3 +39,4 @@ SigninLogs
 | where Location !in (KnownCountries)
 | project TimeGenerated, Location, UserAgent, ResultType, Identity, UserPrincipalName, IPAddress
 ```
+

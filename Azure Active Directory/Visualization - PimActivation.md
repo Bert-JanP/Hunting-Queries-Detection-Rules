@@ -9,10 +9,11 @@ This query visualises the PIM activation performed by accounts. A user who has u
 - https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/
 
 ## Sentinel
-```
+```KQL
 AuditLogs
 | where OperationName == "Add member to role completed (PIM activation)"
 | summarize count() by Identity
 | sort by count_
 | render columnchart
 ```
+

@@ -7,8 +7,7 @@ This query lists all the different browsers that are used to succesfully sign in
 
 
 ## Defender For Endpoint
-```
-AADSignInEventsBeta
+```KQLAADSignInEventsBeta
 | where isnotempty(UserAgent)
 // Filter for successful sign ins only
 | where ErrorCode == 0
@@ -29,3 +28,4 @@ SigninLogs
 | summarize Total = count() by Browser
 | sort by Total
 ```
+

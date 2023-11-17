@@ -21,7 +21,7 @@ A malicious actor installs a malicious app in your environment. This app can the
 - https://www.lares.com/blog/malicious-azure-ad-application-registrations/
 
 ## Defender For Endpoint
-```
+```KQL
 let KnownApps = AADSignInEventsBeta
 // Adjust the timerange depending on the retention period
 | where Timestamp  between (ago(30d) .. ago(2d))
@@ -36,7 +36,7 @@ AADSignInEventsBeta
 ```
 
 ## Sentinel
-```
+```KQL
 let KnownApps = SigninLogs
 // Adjust the timerange depending on the retention period
 | where TimeGenerated between (ago(90d) .. ago(2d))
@@ -49,3 +49,4 @@ SigninLogs
 | project-reorder IsExternalApp, AppDisplayName, Identity, IPAddress, ClientAppUsed
 // For ResultType Reference see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
 ```
+

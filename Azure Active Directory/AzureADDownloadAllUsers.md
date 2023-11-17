@@ -19,10 +19,11 @@ A malicious actor downloads Azure Active Directory to gain valuable information 
 - https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-download
 
 ## Sentinel
-```
+```KQL
 AuditLogs
 | where OperationName contains "Download users"
 | extend InitiatedByInfo = parse_json(InitiatedBy).['user']
 | extend InitiatedByUser = InitiatedByInfo.userPrincipalName
 | project-reorder OperationName, ResultDescription, InitiatedByUser, TimeGenerated
 ```
+

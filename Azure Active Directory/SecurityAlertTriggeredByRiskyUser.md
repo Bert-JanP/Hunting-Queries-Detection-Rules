@@ -13,7 +13,7 @@ Alerts on a user at risk may indicate that the useraccount has been compromised.
 - https://learn.microsoft.com/en-us/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa
 
 ## Sentinel
-```
+```KQL
 let RiskyUsers = AADRiskyUsers
      | where TimeGenerated > ago(90d)
      // Only user active risky users. If you want to look for all users that have been risky, remove the line below.

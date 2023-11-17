@@ -15,7 +15,7 @@ A Guest user has High privliges and could perform more actions then needed.
 
 
 ## Sentinel
-```
+```KQL
 IdentityInfo
 | where UserType == "Guest"
 // Collect the most recent information for each Guest user

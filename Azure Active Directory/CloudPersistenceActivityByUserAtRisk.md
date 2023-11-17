@@ -27,7 +27,7 @@ A user at risk that also performs persistence events is more likely to be compro
 - https://www.microsoft.com/en-us/security/blog/2022/03/22/dev-0537-criminal-actor-targeting-organizations-for-data-exfiltration-and-destruction/
 
 ## Sentinel
-```
+```KQL
 // Define PersistenceEvents, list can be appended with other events or your choosing
 let PersistenceEvents = dynamic(["add member", "add device", "register device", "add service principal", "update service principal", "add user", "enable account", "add group", "Invite external user", "Add application", "add app"]);
 let RiskyUsers = AADRiskyUsers
