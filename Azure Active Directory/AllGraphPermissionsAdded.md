@@ -29,7 +29,7 @@ AuditLogs
 | extend InitiatedByUserPrincipalName = InitiatedBy.user.userPrincipalName
 | extend AddedPermission = replace_string(tostring(TargetResources_modifiedProperties.newValue),'"','')
 | extend IP = todynamic(InitiatedBy).user.ipAddress
-| extend ServicePrincipalAppId = todynamic(TargetResources).modifiedProperties[6].newValue
+| extend ServicePrincipalAppId = replace_string(tostring(todynamic(TargetResources).modifiedProperties[5].newValue),'"','')
 | where AddedPermission endswith ".All"
 | project-reorder TimeGenerated, InitiatedByUserPrincipalName, ActivityDisplayName, AddedPermission, IP, ServicePrincipalAppId
 ```
