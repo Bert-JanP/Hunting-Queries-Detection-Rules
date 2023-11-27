@@ -111,4 +111,5 @@ to be implemented
 | ---  | --- | --- |
 | T1486 | Data Encrypted for Impact |[ASR Ransomware](../Defender%20For%20Endpoint/ASR%20Rules/AsrRansomware.md)|
 | T1486 | Data Encrypted for Impact | [Ransomware Double Extention](../Defender%20For%20Endpoint/Ransomware/RansomwareDoubleExtention.md) |
+| T1489 | Service Stop | [Kill SQL Processes](../Threat%20Hunting/Behaviour%20-%20KillSQLProcesses.md) |
 | T1490 | Inhibit System Recovery | [Shadow Copy Deletion](../Defender%20For%20Endpoint/ShadowCopyDeletion.md)|
