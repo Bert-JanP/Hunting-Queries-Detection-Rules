@@ -27,6 +27,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 - [KQL Functions For Network Operations](https://kqlquery.com/posts/kql-for-network-operations/)
 - [Incident Response Part 1: IR on Microsoft Security Incidents (KQL edition)](https://kqlquery.com/posts/kql-incident-response/)
 - [Incident Response Part 2: What about the other logs?](https://kqlquery.com/posts/kql-incident-response-everything-else/)
+- [From Threat Report to (KQL) Hunting Query](https://kqlquery.com/posts/from-threat-report-to-hunting-query/)
 
 # KQL Categories
 
