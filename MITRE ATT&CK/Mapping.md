@@ -4,6 +4,22 @@ This page includes the mapping of KQL queries to the [MITRE ATT&CK](https://atta
 
 This section only includes references to queries that can be mapped in the MITRE ATT&CK Framework. Reconnaissance and Resource Development are out of scope. 
 
+# Statistics
+| Tactic | Entry Count |
+| --- | --- |
+| Initial Access | 11 |
+| Execution | 3 |
+| Persistence | 8 |
+| Privilege Escalation | 4 |
+| Defense Evasion | 11 |
+| Credential Access | 2 |
+| Discovery | 11 |
+| Lateral Movement | 1 |
+| Collection | 1 |
+| Command and Control | 3 |
+| Exfiltration | 1 |
+| Impact | 4 |
+
 ## Initial Access
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
