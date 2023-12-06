@@ -6,7 +6,7 @@
 
 ### Defender For Endpoint
 
-```
+```KQL
 let MD5_IOCs = dynamic(['861738dd15eb7fb50568f0e39a69e107', '9f60dd752e7692a2f5c758de4eab3e6f', '09bc47d7bc5e40d40d9729cec5e39d73', 
 'f5ef5142f044b94ac5010fd883c09aa7', '84e3b5fe3863d25bb72e25b10760e861', '9f2309285e8a8471fce7330fcade8619', '6c6c46bdac6713c94debbd454d34efd9', 
 'e7ee8ea6fb7530d1d904cdb2d9745899', '815bb1b0c5f0f35f064c55a1b640fca5', '6c2874169fdfb30846fe7ffe34635bdb', '20855475d20d252dda21287264a6d860', 
@@ -24,17 +24,17 @@ let IP_IOCs = dynamic (['89.44.9.243', '142.234.157.246', '45.134.20.66', '185.2
      '94.232.41.155']);
 (union isfuzzy=true
      (DeviceNetworkEvents
-     | where RemoteIP has_any (IP_IOCs)),
+     | where RemoteIP in (IP_IOCs)),
      (DeviceFileEvents
-     | where MD5 has_any (MD5_IOCs)),
+     | where MD5 in (MD5_IOCs)),
      (DeviceFileEvents
-     | where SHA1 has_any (SHA1_IOCs)),
+     | where SHA1 in (SHA1_IOCs)),
      (DeviceFileEvents
-     | where SHA256 has_any (SHA256_IOCs))
+     | where SHA256 in (SHA256_IOCs))
 )
 ```
 ### Sentinel
-```
+```KQL
 let MD5_IOCs = dynamic(['861738dd15eb7fb50568f0e39a69e107', '9f60dd752e7692a2f5c758de4eab3e6f', '09bc47d7bc5e40d40d9729cec5e39d73', 
 'f5ef5142f044b94ac5010fd883c09aa7', '84e3b5fe3863d25bb72e25b10760e861', '9f2309285e8a8471fce7330fcade8619', '6c6c46bdac6713c94debbd454d34efd9', 
 'e7ee8ea6fb7530d1d904cdb2d9745899', '815bb1b0c5f0f35f064c55a1b640fca5', '6c2874169fdfb30846fe7ffe34635bdb', '20855475d20d252dda21287264a6d860', 
@@ -52,15 +52,14 @@ let IP_IOCs = dynamic (['89.44.9.243', '142.234.157.246', '45.134.20.66', '185.2
      '94.232.41.155']);
 (union isfuzzy=true
      (DeviceNetworkEvents
-     | where RemoteIP has_any (IP_IOCs)),
+     | where RemoteIP in (IP_IOCs)),
      (DeviceFileEvents
-     | where MD5 has_any (MD5_IOCs)),
+     | where MD5 in (MD5_IOCs)),
      (DeviceFileEvents
-     | where SHA1 has_any (SHA1_IOCs)),
+     | where SHA1 in (SHA1_IOCs)),
      (DeviceFileEvents
-     | where SHA256 has_any (SHA256_IOCs))
+     | where SHA256 in (SHA256_IOCs))
 )
-
 ```
 
 
