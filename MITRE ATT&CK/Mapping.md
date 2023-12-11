@@ -13,7 +13,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Privilege Escalation | 4 |
 | Defense Evasion | 11 |
 | Credential Access | 2 |
-| Discovery | 15 |
+| Discovery | 18 |
 | Lateral Movement | 1 |
 | Collection | 1 |
 | Command and Control | 3 |
@@ -96,17 +96,21 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1040 | Network Sniffing | [Windows Network Sniffing](../Defender%20For%20Endpoint/WindowsNetworkSniffing.md) |
 | T1046 | Network Service Discovery | [Database Discovery](../Defender%20For%20Endpoint/Discovery%20-%20DatabaseServices.md) |
 | T1069 | Permission Groups Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
+| T1069 | Permission Groups Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
 | T1069.001 | Permission Groups Discovery: Local Groups | [Local Group Discovery](../Defender%20For%20Endpoint/LocalGroupDiscovery.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
 | T1087 | Account Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
+| T1087 | Account Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
 | T1087.002 | Account Discovery: Domain Account | [Anomalous LDAP Traffic](../Defender%20For%20Identity/AnomalousLDAPTraffic.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 | T1518.001 | Software Discovery: Security Software Discovery| [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)|
 | T1518.001 | Software Discovery: Security Software Discovery| [Defender Discovery Activities](../Defender%20For%20Endpoint/DefenderDiscoveryActivities.md)|
 | T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
+| T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
 | T1615 | Group Policy Discovery |[Anomalous Group Policy Discovery](../Defender%20For%20Identity/AnomalousGroupPolicyDiscovery.md)|
+
 
 ## Lateral Movement
 
