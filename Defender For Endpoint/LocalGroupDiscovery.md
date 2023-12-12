@@ -1,4 +1,4 @@
-# *Detection Title*
+# Local Group Discovery
 
 ## Query Information
 
