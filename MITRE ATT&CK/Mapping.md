@@ -12,7 +12,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Persistence | 8 |
 | Privilege Escalation | 4 |
 | Defense Evasion | 11 |
-| Credential Access | 2 |
+| Credential Access | 3 |
 | Discovery | 18 |
 | Lateral Movement | 1 |
 | Collection | 1 |
@@ -86,6 +86,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1110 | Brute Force | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md) |
+| T1557 | Adversary-in-the-Middle | [STORM-0539 URL Paths Email](../Threat%20Hunting/STORM-0539%20URLPathsEmail.md) |
 | T1558.003 | Steal or Forge Kerberos Tickets: Kerberoasting | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Discovery
