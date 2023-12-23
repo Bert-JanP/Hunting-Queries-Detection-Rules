@@ -28,6 +28,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 - [Incident Response Part 1: IR on Microsoft Security Incidents (KQL edition)](https://kqlquery.com/posts/kql-incident-response/)
 - [Incident Response Part 2: What about the other logs?](https://kqlquery.com/posts/kql-incident-response-everything-else/)
 - [From Threat Report to (KQL) Hunting Query](https://kqlquery.com/posts/from-threat-report-to-hunting-query/)
+- [Prioritize Vulnerabilities Using The CISA Known Exploited Vulnerabilities Catalog](https://kqlquery.com/posts/prioritize-vulnerabilities-cisa/)
 
 # KQL Categories
 
