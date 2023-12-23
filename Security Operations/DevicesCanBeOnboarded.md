@@ -26,6 +26,6 @@ let RecentDetection = 10d;
 DeviceInfo
 | where OnboardingStatus == "Can be onboarded"
 | summarize arg_max(TimeGenerated, *) by DeviceId
-| where Timestamp > ago(RecentDetection)
+| where TimeGenerated > ago(RecentDetection)
 | summarize TotalDevices = dcount(DeviceId), DeviceNames = make_set(DeviceName) by OSPlatform, DeviceType
 ```
