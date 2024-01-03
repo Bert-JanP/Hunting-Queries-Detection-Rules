@@ -15,17 +15,17 @@ Devices that are not onboarded can be misused without detection.
 ```KQL
 let RecentDetection = 10d;
 DeviceInfo
-| where OnboardingStatus == "Can be onboarded"
-| summarize arg_max(Timestamp, *) by DeviceId
 | where Timestamp > ago(RecentDetection)
+| summarize arg_max(Timestamp, *) by DeviceId
+| where OnboardingStatus == "Can be onboarded"
 | summarize TotalDevices = dcount(DeviceId), DeviceNames = make_set(DeviceName) by OSPlatform, DeviceType
 ```
 ## Sentinel
 ```KQL
 let RecentDetection = 10d;
 DeviceInfo
-| where OnboardingStatus == "Can be onboarded"
-| summarize arg_max(TimeGenerated, *) by DeviceId
 | where TimeGenerated > ago(RecentDetection)
+| summarize arg_max(TimeGenerated, *) by DeviceId
+| where OnboardingStatus == "Can be onboarded"
 | summarize TotalDevices = dcount(DeviceId), DeviceNames = make_set(DeviceName) by OSPlatform, DeviceType
 ```
