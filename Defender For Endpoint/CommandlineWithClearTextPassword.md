@@ -16,11 +16,6 @@ To limit false positives a filter can be used to only filter if both a username 
 #### Risk
 Cleartext passwords can be logged and used by attackers to gain access to accounts.
 
-#### References
-- https://kqlquery.com/
-- https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules
-- example link 3
-
 ## Defender For Endpoint
 ```KQL
 DeviceProcessEvents
