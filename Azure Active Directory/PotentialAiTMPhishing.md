@@ -29,7 +29,7 @@ AADSignInEventsBeta
 | where isempty(AadDeviceId)
 | summarize RiskLevels = make_set(RiskLevelDuringSignIn), ResultTypes = make_set(ErrorCode), IPs = make_set(IPAddress) by CorrelationId, AccountUpn
 // Optional to only filter on events with a RiskLevel during the sign-in
-| where RiskLevels has_any (10, 50, 100)
+//| where RiskLevels has_any (10, 50, 100)
 ```
 ## Sentinel
 ```KQL
