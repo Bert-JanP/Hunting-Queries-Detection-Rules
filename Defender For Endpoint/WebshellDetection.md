@@ -15,26 +15,22 @@ Attackers can run arbitrary code on a server by exploiting a vulnerable web appl
 #### References
 - https://www.microsoft.com/en-us/security/blog/2021/02/11/web-shell-attacks-continue-to-rise/
 
-#### Query 1
-Look for suspicious process that IIS worker process (w3wp.exe), Apache HTTP server processes (httpd.exe, visualsvnserver.exe), etc. do not typically initiate (e.g., cmd.exe and powershell.exe)
+#### Scenario 1
+Look for suspicious process that IIS worker process (w3wp.exe), nginx, Apache HTTP server processes (httpd.exe, visualsvnserver.exe), etc. do not typically initiate (e.g., cmd.exe, powershell.exe and /bin/bash)
 
-```
-DeviceProcessEvents
-| where InitiatingProcessCommandLine has_any("beasvc.exe","coldfusion.exe","httpd.exe","owstimer.exe","visualsvnserver.exe","w3wp.exe") or InitiatingProcessCommandLine contains 'tomcat'
-| where FileName != "csc.exe" // exclude csharp compiler
-| where FileName != "php-cgi.exe" //exclude php group, fast cgi
-| where FileName != "vbc.exe" //exclude Visual Basic Command Line Compiler
-| summarize by FileName
-
-```
-
-#### Query 2 
+#### Scenario 2 
 Look for suspicious web shell execution, this can identify processes that are associated with remote execution and reconnaissance activity (example: “arp”, “certutil”, “cmd”, “echo”, “ipconfig”, “gpresult”, “hostname”, “net”, “netstat”, “nltest”, “nslookup”, “ping”, “powershell”, “psexec”, “qwinsta”, “route”, “systeminfo”, “tasklist”, “wget”, “whoami”, “wmic”, etc.)
 
 ```
+let webservers = dynamic(["beasvc.exe", "coldfusion.exe", "httpd.exe", "owstimer.exe", "visualsvnserver.exe", "w3wp.exe", "tomcat", "apache2", "nginx"]);
+let linuxShells = dynamic(["/bin/bash", "/bin/sh", "python", "python3"]);
+let windowsShells = dynamic(["powershell.exe", "powershell_ise.exe", "cmd.exe"]);
+let exclusions = dynamic(["csc.exe", "php-cgi.exe", "vbc.exe", "conhost.exe"]);
 DeviceProcessEvents
-| where InitiatingProcessParentFileName in~("beasvc.exe","coldfusion.exe","httpd.exe","owstimer.exe","visualsvnserver.exe","w3wp.exe") or InitiatingProcessParentFileName startswith "tomcat"
-| where InitiatingProcessFileName in~("powershell.exe","powershell_ise.exe","cmd.exe")
-| where FileName != 'conhost.exe'
+| where (InitiatingProcessParentFileName in~(webservers) or InitiatingProcessCommandLine in~(webservers))
+| where (InitiatingProcessFileName in~(windowsShells) or InitiatingProcessCommandLine has_any(linuxShells))
+| where FileName !in~ (exclusions)
+| extend Reason = iff(InitiatingProcessParentFileName in~ (webservers), "Suspicious web shell execution", "Suspicious webserver process")
+| summarize by FileName, DeviceName, Reason, InitiatingProcessParentFileName, InitiatingProcessCommandLine
 ```
 
