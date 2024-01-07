@@ -88,6 +88,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1110 | Brute Force | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md) |
 | T1552 | Unsecured Credentials | [Commandline with cleartext password](../Defender%20For%20Endpoint/CommandlineWithClearTextPassword.md) |
 | T1557 | Adversary-in-the-Middle | [STORM-0539 URL Paths Email](../Threat%20Hunting/STORM-0539%20URLPathsEmail.md) |
+| T1557 | Adversary-in-the-Middle | [Potential Adversary in The Middle Phishing](../Azure%20Active%20Directory/PotentialAiTMPhishing.md) |
 | T1558.003 | Steal or Forge Kerberos Tickets: Kerberoasting | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Discovery
