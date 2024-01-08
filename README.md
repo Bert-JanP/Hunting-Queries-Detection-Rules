@@ -68,7 +68,8 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 ## Top contributors
 | Name | Queries added | GitHub | Twitter | Query Links |
 |------|---------------|--------|---------| ---------|
-|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
+|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li> |
+|  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    1           |   [@babakmhz](https://github.com/babakmhz)     | -      | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
 
 ### Detection Template
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:

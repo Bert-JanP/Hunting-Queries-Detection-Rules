@@ -4,7 +4,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1505.003 | Web Shell | https://attack.mitre.org/techniques/T1505/003|
+| T1505.003 | Web Shell | https://attack.mitre.org/techniques/T1505/003 |
 
 #### Description 
 Attackers install web shells on servers by taking advantage of security gaps, typically vulnerabilities in web applications, in internet-facing servers. These attackers scan the internet, often using public scanning interfaces like shodan.io, to locate servers to target. They may use previously fixed vulnerabilities that unfortunately remain unpatched in many servers, but they are also known to quickly take advantage of newly disclosed vulnerabilities.
@@ -14,6 +14,11 @@ Attackers can run arbitrary code on a server by exploiting a vulnerable web appl
 
 #### References
 - https://www.microsoft.com/en-us/security/blog/2021/02/11/web-shell-attacks-continue-to-rise/
+
+#### Author
+- **Name: Babak Mahmoodizadeh**
+- **Github: https://github.com/babakmhz**
+- **LinkedIn: https://www.linkedin.com/in/babak-mhz/**
 
 #### Scenario 1
 Look for suspicious process that IIS worker process (w3wp.exe), nginx, Apache HTTP server processes (httpd.exe, visualsvnserver.exe), etc. do not typically initiate (e.g., cmd.exe, powershell.exe and /bin/bash)
