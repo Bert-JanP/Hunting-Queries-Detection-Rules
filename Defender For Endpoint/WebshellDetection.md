@@ -4,7 +4,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1505.003 | Web Shell | <a href="https://attack.mitre.org/techniques/T1505/003">T1505.003: Web Shell</a>|
+| T1505.003 | Web Shell | https://attack.mitre.org/techniques/T1505/003|
 
 #### Description 
 Attackers install web shells on servers by taking advantage of security gaps, typically vulnerabilities in web applications, in internet-facing servers. These attackers scan the internet, often using public scanning interfaces like shodan.io, to locate servers to target. They may use previously fixed vulnerabilities that unfortunately remain unpatched in many servers, but they are also known to quickly take advantage of newly disclosed vulnerabilities.
@@ -21,7 +21,9 @@ Look for suspicious process that IIS worker process (w3wp.exe), nginx, Apache HT
 #### Scenario 2 
 Look for suspicious web shell execution, this can identify processes that are associated with remote execution and reconnaissance activity (example: “arp”, “certutil”, “cmd”, “echo”, “ipconfig”, “gpresult”, “hostname”, “net”, “netstat”, “nltest”, “nslookup”, “ping”, “powershell”, “psexec”, “qwinsta”, “route”, “systeminfo”, “tasklist”, “wget”, “whoami”, “wmic”, etc.)
 
-```
+
+## Defender For Endpoint
+```KQL
 let webservers = dynamic(["beasvc.exe", "coldfusion.exe", "httpd.exe", "owstimer.exe", "visualsvnserver.exe", "w3wp.exe", "tomcat", "apache2", "nginx"]);
 let linuxShells = dynamic(["/bin/bash", "/bin/sh", "python", "python3"]);
 let windowsShells = dynamic(["powershell.exe", "powershell_ise.exe", "cmd.exe"]);
@@ -33,4 +35,16 @@ DeviceProcessEvents
 | extend Reason = iff(InitiatingProcessParentFileName in~ (webservers), "Suspicious web shell execution", "Suspicious webserver process")
 | summarize by FileName, DeviceName, Reason, InitiatingProcessParentFileName, InitiatingProcessCommandLine
 ```
-
+## Sentinel
+```KQL
+let webservers = dynamic(["beasvc.exe", "coldfusion.exe", "httpd.exe", "owstimer.exe", "visualsvnserver.exe", "w3wp.exe", "tomcat", "apache2", "nginx"]);
+let linuxShells = dynamic(["/bin/bash", "/bin/sh", "python", "python3"]);
+let windowsShells = dynamic(["powershell.exe", "powershell_ise.exe", "cmd.exe"]);
+let exclusions = dynamic(["csc.exe", "php-cgi.exe", "vbc.exe", "conhost.exe"]);
+DeviceProcessEvents
+| where (InitiatingProcessParentFileName in~(webservers) or InitiatingProcessCommandLine in~(webservers))
+| where (InitiatingProcessFileName in~(windowsShells) or InitiatingProcessCommandLine has_any(linuxShells))
+| where FileName !in~ (exclusions)
+| extend Reason = iff(InitiatingProcessParentFileName in~ (webservers), "Suspicious web shell execution", "Suspicious webserver process")
+| summarize by FileName, DeviceName, Reason, InitiatingProcessParentFileName, InitiatingProcessCommandLine
+```
