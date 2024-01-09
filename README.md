@@ -68,7 +68,8 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 ## Top contributors
 | Name | Queries added | GitHub | Twitter | Query Links |
 |------|---------------|--------|---------| ---------|
-|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    1           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li> |
+|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    2           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
+| | | |  | <ul><li>[Detect Known RAT RMM Process Patterns](../Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md)</li>| 
 |  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    1           |   [@babakmhz](https://github.com/babakmhz)     | -      | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
 
 ### Detection Template

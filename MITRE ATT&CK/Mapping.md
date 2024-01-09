@@ -16,7 +16,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Discovery | 18 |
 | Lateral Movement | 1 |
 | Collection | 1 |
-| Command and Control | 3 |
+| Command and Control | 4 |
 | Exfiltration | 1 |
 | Impact | 4 |
 
@@ -131,6 +131,7 @@ to be implemented
 | T1071.001 | Application Layer Protocol: Web Protocols | [Behavior - TelegramC2](../Threat%20Hunting/Behavior%20-%20TelegramC2.md) |
 | T1090 | Proxy | [Anonymous Proxy Events Cloud App](../Defender%20For%20Cloud%20Apps/AnonymousProxyEvents.md) |
 | T1219 | Remote Access Software | [AnyDesk Remote Connections](../Defender%20For%20Endpoint/Network%20-%20AnyDeskConnectionToPublicIP.md) |
+| T1219 | Remote Access Software | [Detect Known RAT RMM Process Patterns](../Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md) |
 
 
 ## Exfiltration
