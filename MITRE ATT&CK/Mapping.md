@@ -8,15 +8,15 @@ This section only includes references to queries that can be mapped in the MITRE
 | Tactic | Entry Count |
 | --- | --- |
 | Initial Access | 11 |
-| Execution | 3 |
+| Execution | 4 |
 | Persistence | 9 |
 | Privilege Escalation | 4 |
-| Defense Evasion | 11 |
-| Credential Access | 4 |
+| Defense Evasion | 14 |
+| Credential Access | 5 |
 | Discovery | 18 |
 | Lateral Movement | 1 |
 | Collection | 1 |
-| Command and Control | 4 |
+| Command and Control | 5 |
 | Exfiltration | 1 |
 | Impact | 4 |
 
@@ -41,6 +41,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | ---  | --- | --- |
 | T1047 | Windows Management Instrumentation | [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
 | T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md) |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
 
 ## Persistence
@@ -74,12 +75,15 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1027 | Obfuscated Files or Information | [All encoded Powershell Executions](../Defender%20For%20Endpoint/PowerShellEncodedCommandsExecuted.md)|
 | T1027 | Obfuscated Files or Information | [Encoded PowerShell with WebRequest](../Defender%20For%20Endpoint/PowerShellEncodedDownloads.md)|
 | T1027 | Obfuscated Files or Information | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
+|  T1127.001 | Trusted Developer Utilities Proxy Execution: MSBuild | [Suspicious network connection from MSBuild](../Defender%20For%20Endpoint/ttp_t1127-001_suspNetworkConnMSBuild.md)|
+| T1027.010 | Obfuscated Files or Information: Command Obfuscation | [PowerShell Encoded Command](../Defender%20For%20Endpoint/ttp_t1027-010_powershellEncodedCommand.md)|
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Security Log Cleared](../Defender%20For%20Endpoint/SecurityLogCleared.md) |
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Wevutil Clear Windows Event Logs](../Defender%20For%20Endpoint/WevtutilClearLogs.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
 | T1218 | System Binary Proxy Execution| [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
+| T1562.001 | Impair Defenses: Disable or Modify Tools | [Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)|
 | T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Credential Access
@@ -132,6 +136,7 @@ to be implemented
 | T1090 | Proxy | [Anonymous Proxy Events Cloud App](../Defender%20For%20Cloud%20Apps/AnonymousProxyEvents.md) |
 | T1219 | Remote Access Software | [AnyDesk Remote Connections](../Defender%20For%20Endpoint/Network%20-%20AnyDeskConnectionToPublicIP.md) |
 | T1219 | Remote Access Software | [Detect Known RAT RMM Process Patterns](../Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md) |
+| T1219 | Remote Access Software | [NetSupport running from unexpected directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1219_netsupportrat_fin7.md)|
 
 
 ## Exfiltration
