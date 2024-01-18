@@ -69,8 +69,13 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 ## Top contributors
 | Name | Queries added | GitHub | Twitter | Query Links |
 |------|---------------|--------|---------| ---------|
+|  [Gavin Knapp](https://www.linkedin.com/in/grjk83/)    |    5           |   [@m4nbat](https://github.com/m4nbat)     | [@knappresearchlb](https://twitter.com/knappresearchlb)      | <ul><li>[NetSupport running from unexpected directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1219_netsupportrat_fin7.md)</li>
+| | | |  | <ul><li>[Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)</li>| 
+| | | |  | <ul><li>[Suspicious network connection from MSBuild](../Defender%20For%20Endpoint/ttp_t1127-001_suspNetworkConnMSBuild.md)</li>| 
+| | | |  | <ul><li>[PowerShell Encoded Command](../Defender%20For%20Endpoint/ttp_t1027-010_powershellEncodedCommand.md)</li>| 
+| | | |  | <ul><li>[PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)</li>| 
 |  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    2           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
-| | | |  | <ul><li>[Detect Known RAT RMM Process Patterns](../Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md)</li>| 
+| | | |  | <ul><li>[Detect Known RAT RMM Process Patterns](./Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md)</li>| 
 |  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    1           |   [@babakmhz](https://github.com/babakmhz)     | -      | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
 
 ### Detection Template
