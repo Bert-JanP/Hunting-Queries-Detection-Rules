@@ -40,8 +40,7 @@ let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'dll', 'ex',
 EmailEvents
 // Only display inbound emails
 | where EmailDirection == 'Inbound'
-// Join the email events with the attachment information, that the email 
-must have an attachment.
+// Join the email events with the attachment information, that the email must have an attachment.
 | join kind=inner EmailAttachmentInfo on NetworkMessageId
 // extract the file extension from the filename
 | extend FileExtension = tostring(extract(@'.*\.(.*)', 1, FileName))
