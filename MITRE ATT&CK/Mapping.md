@@ -9,9 +9,9 @@ This section only includes references to queries that can be mapped in the MITRE
 | --- | --- |
 | Initial Access | 11 |
 | Execution | 4 |
-| Persistence | 9 |
+| Persistence | 10 |
 | Privilege Escalation | 4 |
-| Defense Evasion | 14 |
+| Defense Evasion | 15 |
 | Credential Access | 5 |
 | Discovery | 18 |
 | Lateral Movement | 1 |
@@ -55,6 +55,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
 | T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/ASR%20Rules/AsrExecutableOfficeContent.md) |
 | T1505.003 | Server Software Component: Web Shell | [WebShell Detection](../Defender%20For%20Endpoint/WebshellDetection.md) |
+| T1543 | Create or Modify System Process  | [Azure ARC Related Persistence Detection](../Defender%20For%20Endpoint/nf_ttp_t1543_scattered-spider_azure_arc_persistence.md) |
 | T1556 | Modify Authentication Process | [Deletion Conditional Access Policy](../Azure%20Active%20Directory/ConditionalAccess%20-%20DeletePolicy.md) |
 | T1556 | Modify Authentication Process | [Change Conditional Access Policy](../Azure%20Active%20Directory/ConditionalAccess%20-%20ChangePolicy.md) |
 
@@ -84,6 +85,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)|
+| T1562.001 | Impair Defenses: Disable or Modify Tools | [Scattered Spider Defense Evasion via Conditional Access Policies Detection](../Azure%20Active%20Directory/nf_ttp_t1562.001_scattered-spider_abuse%20conditional_access_trusted_locations.md) |
 | T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Credential Access
