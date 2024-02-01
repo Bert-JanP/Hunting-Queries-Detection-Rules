@@ -29,7 +29,6 @@
 
 #### References
 - Microsoft TI (Closed)
-- [stuff](link)
 
 ## Advanced Hunting
 
