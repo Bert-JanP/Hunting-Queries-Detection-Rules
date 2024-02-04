@@ -1,0 +1,35 @@
+# *PowerShell Creating LNK Files within a Startup Directory Detection*
+
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title                       | Link                                    |
+|--------------|-----------------------------|-----------------------------------------|
+| T1547.001    | Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder | [Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder](https://attack.mitre.org/techniques/T1547/001/) |
+
+#### Description
+This detection rule identifies instances of PowerShell creating LNK (shortcut) files in a startup directory, a technique often used in malware distribution, such as with the Yellow Cockatoo malware. This behavior can be indicative of malicious activity, as malware often uses LNK files in startup locations to execute upon system boot. However, benign homegrown utilities or installers may also create .lnk files in these locations, necessitating further investigation to confirm the nature of the activity.
+
+#### Risk
+The risk addressed by this rule is the unauthorized or malicious use of autostart mechanisms to maintain persistence or execute malware. This technique can lead to prolonged unauthorized access or the execution of harmful scripts without user intervention.
+
+#### Author 
+- **Name:** Gavin Knapp
+- **Github:** [https://github.com/m4nbat](https://github.com/m4nbat)
+- **Twitter:** [https://twitter.com/knappresearchlb](https://twitter.com/knappresearchlb)
+- **LinkedIn:** [https://www.linkedin.com/in/grjk83/](https://www.linkedin.com/in/grjk83/)
+- **Website:**
+
+#### References
+- [Red Canary Intelligence Insights - December 2022](https://redcanary.com/blog/intelligence-insights-december-2022/)
+
+## Defender For Endpoint
+```KQL
+// PowerShell creating LNK files within a startup directory
+let trusedUtilsInstallingLnkInStartup = datatable (util:string)["mytrustedutility.exe"]; 
+DeviceFileEvents 
+| where ActionType =~ "FileCreated" 
+and InitiatingProcessFileName =~ "powershell.exe" 
+and FolderPath contains @"start menu\programs\startup" 
+and not(InitiatingProcessCommandLine has_any (trusedUtilsInstallingLnkInStartup))
