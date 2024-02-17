@@ -1,0 +1,9 @@
+Bar Chart:
+SignInLogs
+| where SessionType == "Unsuccessful sign-in"
+| extend Date = format_datetime(Time, 'yy-MM-dd')
+| summarize TotalAttempts = count() by Location, Date
+Pie Chart:
+SignInLogs
+| where SessionType == "Unsuccessful sign-in"
+| summarize TotalAttempts = count()
