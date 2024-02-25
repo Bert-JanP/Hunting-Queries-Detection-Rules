@@ -13,17 +13,13 @@ This query can be used to get a quick overview of all the inbound connections th
 // Add the device you are investigating in the CompromisedDevice variable
 let CompromisedDevice = "test.domain.tld";
 let SearchWindow = 10d; //Customizable h = hours, d = days
-let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 DeviceNetworkEvents
 | where Timestamp > ago(SearchWindow)
 | where DeviceName == CompromisedDevice
 // Only list accepted inbound connections
 | where ActionType == "InboundConnectionAccepted"
-// Add column wich displays if the remote IP is private
-| extend FourToSixPrivate = extract(IPRegex, 0, RemoteIP)
-| extend RemoteIPIsPrivate = iff(ipv4_is_private(RemoteIP), 1, iff(ipv4_is_private(FourToSixPrivate), 1, 0))
 // Remove comment below if you only want to see inbound connections from public IP addresses.
-//| where RemoteIPIsPrivate == 0
+//| where RemoteIPType == "Public"
 // Enrich IP information
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
@@ -34,17 +30,14 @@ DeviceNetworkEvents
 // Add the device you are investigating in the CompromisedDevice variable
 let CompromisedDevice = "test.domain.tld";
 let SearchWindow = 10d; //Customizable h = hours, d = days
-let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
+let SearchWindow = 10d; //Customizable h = hours, d = days
 DeviceNetworkEvents
-| where TimeGenerated > ago(SearchWindow)
+| where Timestamp > ago(SearchWindow)
 | where DeviceName == CompromisedDevice
 // Only list accepted inbound connections
 | where ActionType == "InboundConnectionAccepted"
-// Add column wich displays if the remote IP is private
-| extend FourToSixPrivate = extract(IPRegex, 0, RemoteIP)
-| extend RemoteIPIsPrivate = iff(ipv4_is_private(RemoteIP), 1, iff(ipv4_is_private(FourToSixPrivate), 1, 0))
 // Remove comment below if you only want to see inbound connections from public IP addresses.
-//| where RemoteIPIsPrivate == 0
+//| where RemoteIPType == "Public"
 // Enrich IP information
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
