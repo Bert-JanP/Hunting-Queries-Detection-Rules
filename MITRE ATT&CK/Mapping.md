@@ -8,7 +8,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Tactic | Entry Count |
 | --- | --- |
 | Initial Access | 11 |
-| Execution | 4 |
+| Execution | 5 |
 | Persistence | 10 |
 | Privilege Escalation | 4 |
 | Defense Evasion | 15 |
@@ -43,6 +43,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md) |
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
+| T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Invoke-Webrequest](../Defender%20For%20Endpoint/PowerShellInvokeWebrequest.md) |
 
 ## Persistence
 
