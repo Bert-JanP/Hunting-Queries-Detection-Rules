@@ -23,7 +23,7 @@ DeviceNetworkEvents
 // Enrich IP information
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
-| project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort, country, state
+| project Timestamp, DeviceName, RemoteIP, RemotePort, LocalIP, LocalPort, country, state
 ```
 ## Sentinel
 ```
@@ -41,6 +41,6 @@ DeviceNetworkEvents
 // Enrich IP information
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
-| project TimeGenerated, DeviceName, RemoteIP, RemotePort, RemoteIPIsPrivate, FourToSixPrivate, LocalIP, LocalPort, country, state
+| project Timestamp, DeviceName, RemoteIP, RemotePort, LocalIP, LocalPort, country, state
 ```
 
