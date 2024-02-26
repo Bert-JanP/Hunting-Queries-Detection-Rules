@@ -11,6 +11,8 @@
 #### Description
 Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system. The function Invoke-Webrequest can be abused to remotely download script to the local file system for execution. This query can be used to list the commandline downloads. Since this request can be expected for certain workloads in your environment a additional filter is added, to only alert on servers if this executed.
 
+There are additional filters build into this query to only filter on servers, or only filter if the commandline mentions a IPv4 address.
+
 #### Risk
 A malicious script is remotely downloaded and executed.
 
@@ -20,6 +22,7 @@ A malicious script is remotely downloaded and executed.
 
 ## Defender For Endpoint
 ```KQL
+let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 let AllowedDomains = dynamic(['google.com']);
 let Servers = DeviceInfo
     | where Timestamp > ago(30d)
@@ -28,16 +31,20 @@ let Servers = DeviceInfo
     | distinct DeviceId;
 DeviceNetworkEvents
 | where InitiatingProcessCommandLine has "Invoke-Webrequest"
+| extend CommandLineIpv4 = extract(IPRegex, 0, InitiatingProcessCommandLine)
+// If you only want to filter on Invoke-Webrequest that retrieve information direct from IPv4 addresses
+//| where isnotempty(CommandLineIpv4)
 | where not(RemoteUrl in (AllowedDomains))
 | where ActionType == "ConnectionSuccess"
 // Filter line below if you also want to return private requests
 | where RemoteIPType == "Public"
 // If you only want to include servers in this detection use line below
 //| where DeviceId in (Servers)
-| project-reorder Timestamp, InitiatingProcessCommandLine, RemoteUrl, ActionType
+| project-reorder Timestamp, InitiatingProcessCommandLine, RemoteUrl, ActionType, CommandLineIpv4
 ```
 ## Sentinel
 ```KQL
+let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 let AllowedDomains = dynamic(['google.com']);
 let Servers = DeviceInfo
     | where Timestamp > ago(30d)
@@ -46,11 +53,14 @@ let Servers = DeviceInfo
     | distinct DeviceId;
 DeviceNetworkEvents
 | where InitiatingProcessCommandLine has "Invoke-Webrequest"
+| extend CommandLineIpv4 = extract(IPRegex, 0, InitiatingProcessCommandLine)
+// If you only want to filter on Invoke-Webrequest that retrieve information direct from IPv4 addresses
+//| where isnotempty(CommandLineIpv4)
 | where not(RemoteUrl in (AllowedDomains))
 | where ActionType == "ConnectionSuccess"
 // Filter line below if you also want to return private requests
 | where RemoteIPType == "Public"
 // If you only want to include servers in this detection use line below
 //| where DeviceId in (Servers)
-| project-reorder TimeGenerated, InitiatingProcessCommandLine, RemoteUrl, ActionType
+| project-reorder TimeGenerated, InitiatingProcessCommandLine, RemoteUrl, ActionType, CommandLineIpv4
 ```
