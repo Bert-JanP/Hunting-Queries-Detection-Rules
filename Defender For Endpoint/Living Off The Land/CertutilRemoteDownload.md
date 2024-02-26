@@ -28,13 +28,13 @@ An adversary transfered tools to the local device for execution.
 ```KQL
 DeviceProcessEvents
 | where FileName == "certutil.exe"
-| where tolower(ProcessCommandLine) has_all ("http", "urlcache")
+| where tolower(ProcessCommandLine) has_all ("http", "urlcache", "-f")
 | project-reorder Timestamp, ProcessCommandLine, FileName, InitiatingProcessAccountUpn
 ```
 ## Sentinel
 ```KQL
 DeviceProcessEvents
 | where FileName == "certutil.exe"
-| where tolower(ProcessCommandLine) has_all ("http", "urlcache")
+| where tolower(ProcessCommandLine) has_all ("http", "urlcache", "-f")
 | project-reorder TimeGenerated, ProcessCommandLine, FileName, InitiatingProcessAccountUpn
 ```
