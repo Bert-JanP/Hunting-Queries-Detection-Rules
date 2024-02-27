@@ -10,7 +10,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Initial Access | 11 |
 | Execution | 5 |
 | Persistence | 10 |
-| Privilege Escalation | 4 |
+| Privilege Escalation | 5 |
 | Defense Evasion | 15 |
 | Credential Access | 6 |
 | Discovery | 18 |
@@ -65,6 +65,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1078.002 | Valid Accounts: Domain Accounts|[User Added To Sensitive Group](../Defender%20For%20Identity/UserAddedToSensitiveGroup.md)|
+| T1078.002 | Valid Accounts: Domain Accounts | [Multiple Sentitive Group Additions From Commandline](../Defender%20For%20Endpoint/MultipleSentitiveGroupAdditions.md) |
 | T1098 | Account Manipulation | [*.All Graph Permissions Added](../Azure%20Active%20Directory/AllGraphPermissionsAdded.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
 | T1548.003 | Abuse Elevation Control Mechanism: Sudo and Sudo Caching|[Users Added To Sudoers Group](../Defender%20For%20Endpoint/Linux/Linux%20-%20UsersAddedToSudoersGroup.md)|
