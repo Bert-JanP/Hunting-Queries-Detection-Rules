@@ -9,7 +9,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | --- | --- |
 | Initial Access | 11 |
 | Execution | 5 |
-| Persistence | 10 |
+| Persistence | 11 |
 | Privilege Escalation | 5 |
 | Defense Evasion | 15 |
 | Credential Access | 6 |
@@ -53,6 +53,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
 | T1136.001 | Create Account: Local Account | [Local Administrator Account Creations](../Defender%20For%20Endpoint/LocalAdminAdditions.md) |
 | T1136.003 | Create Account: Cloud Account | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md) |
+| T1136.002 | Create Account: Domain Account | [Commandline User Addition](../Defender%20For%20Endpoint/CommandlineUserAddition.md) |
 | T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
 | T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/ASR%20Rules/AsrExecutableOfficeContent.md) |
 | T1505.003 | Server Software Component: Web Shell | [WebShell Detection](../Defender%20For%20Endpoint/WebshellDetection.md) |
