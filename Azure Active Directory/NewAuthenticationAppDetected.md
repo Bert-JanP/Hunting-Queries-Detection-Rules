@@ -9,10 +9,10 @@
 | T1078.004 | Valid Accounts: Cloud Accounts | https://attack.mitre.org/techniques/T1078/004 |
 
 #### Description
-Detect a new app that is used to send authentication request to your tenant. The authentication requests do not have to be succesful. The app can eighter be an internal app, then the AppID is filled, if that is not the case then it is a external app. A false positive is a new app that is used within your organization. 
+Detect a new app that is used to send authentication request to your tenant. The authentication requests do not have to be successful. The app can eighter be an internal app, then the AppID is filled, if that is not the case then it is an external app. A false positive is a new app that is used within your organization. 
 
 #### Risk
-A malicious actor installs a malicious app in your environment. This app can then be used for malicious purposes, depending on the priviliges that the app has. Such as AD Recon, collecting tokens or internal spearphishing.
+A malicious actor installs a malicious app in your environment. This app can then be used for malicious purposes, depending on the privileges that the app has. Such as AD Recon, collecting tokens or internal spear phishing.
 
 #### References
 - https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
