@@ -6,7 +6,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1003 | Credential Access  | [Link](https://attack.mitre.org/techniques/T1003/003/) |
+| T1003 | OS Credential Dumping: NTDS  | [Link](https://attack.mitre.org/techniques/T1003/003/) |
 
 #### Description
 NTDS.DIT stands for New Technology Directory Services Directory Information Tree. It serves as the primary database file within Microsoft’s Active Directory Domain Services (AD DS). Adversaries may attempt to access or modify the Active Directory domain database in order to steal credential information or perform other types of attack. By default, the NTDS file (NTDS.dit) is located in %SystemRoot%\NTDS\Ntds.dit of a domain controller.
