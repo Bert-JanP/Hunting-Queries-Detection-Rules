@@ -7,6 +7,11 @@ Azure Resource Graph is an Azure service designed to extend Azure Resource Manag
 
 Source: [Resource Graph Docs](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview)
 
+# Quickstart
+To get started with using the Azure Resource Graph, you can navigate to the Azure Resource Graph Explorer in the Azure portal. This lists multiple example queries to get familiar with the syntax.
+
+![Azure Resource Graph Explorer](Images/QuickStart.png)
+
 # What about KQL?
 Good question! You can use the resource graph natively from your Sentinel, Log Analytics or ADX environment. 
 
