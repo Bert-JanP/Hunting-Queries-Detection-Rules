@@ -21,45 +21,17 @@ A actor has gained access to your network and tries to execute ransomware.
 ```
 DeviceEvents
 | where Timestamp > ago(30d)
-| where ActionType has_any ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
-| summarize
-		arg_max(Timestamp, *),
-		TotalEvents = count(),
-		TriggeredFiles = make_set(FileName),
-		FileHashes = make_set(SHA1),
-		IntiatingProcesses = make_set(InitiatingProcessCommandLine)
-		by DeviceName, AccountName
-| project
-	 Timestamp,
-	 DeviceName,
-	 AccountDomain,
-	 AccountName,
-	 TotalEvents,
-	 TriggeredFiles,
-	 FileHashes,
-	 IntiatingProcesses
+| where ActionType in ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
+| summarize arg_max(Timestamp, *), TotalEvents = count(), TriggeredFiles = make_set(FileName), FileHashes = make_set(SHA1), IntiatingProcesses = make_set(InitiatingProcessCommandLine) by DeviceName, AccountName
+| project Timestamp, DeviceName, AccountDomain, AccountName, TotalEvents, TriggeredFiles, FileHashes, IntiatingProcesses
 ```
 ## Sentinel
 ```
 DeviceEvents
 | where Timestamp > ago(30d)
-| where ActionType has_any ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
-| summarize
-		arg_max(Timestamp, *),
-		TotalEvents = count(),
-		TriggeredFiles = make_set(FileName),
-		FileHashes = make_set(SHA1),
-		IntiatingProcesses = make_set(InitiatingProcessCommandLine)
-		by DeviceName, AccountName
-| project
-	 TimeGenerated,
-	 DeviceName,
-	 AccountDomain,
-	 AccountName,
-	 TotalEvents,
-	 TriggeredFiles,
-	 FileHashes,
-	 IntiatingProcesses		 
+| where ActionType in ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
+| summarize arg_max(Timestamp, *), TotalEvents = count(), TriggeredFiles = make_set(FileName), FileHashes = make_set(SHA1), IntiatingProcesses = make_set(InitiatingProcessCommandLine) by DeviceName, AccountName
+| project Timestamp, DeviceName, AccountDomain, AccountName, TotalEvents, TriggeredFiles, FileHashes, IntiatingProcesses 
 ```
 
 
