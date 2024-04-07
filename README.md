@@ -48,6 +48,7 @@ The queries in this repository are split into different categories. The MITRE AT
 - [Azure Active Directory](./Azure%20Active%20Directory)
 - [Microsoft Sentinel](./Sentinel)
 - [MISP](./MISP)
+- [Windows Security Events](./Windows%20Security%20Events)
 
 ## Security Processes
 - [Digital Forensics and Incident Response](./DFIR)
@@ -83,7 +84,8 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 |  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    3           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
 | | | |  | <ul><li>[Detect Known RAT RMM Process Patterns](./Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md)</li>| 
 | | | |  | <ul><li>[NTDS.DIT File Modifications](./Defender%20For%20Endpoint/NTDSDitFileModifications.md)</li>| 
-|  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    1           |   [@babakmhz](https://github.com/babakmhz)     | -      | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
+|  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    2           |   [@babakmhz](https://github.com/babakmhz)     | -      | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
+| | | |  | <ul><li>[List AD Delegations](./Windows%20Security%20Events/ListADDelegations.md)</li>|
 
 ### Detection Template
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:
