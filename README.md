@@ -49,6 +49,7 @@ The queries in this repository are split into different categories. The MITRE AT
 - [Microsoft Sentinel](./Sentinel)
 - [MISP](./MISP)
 - [Windows Security Events](./Windows%20Security%20Events)
+- [Graph API](./Graph%20API/)
 
 ## Security Processes
 - [Digital Forensics and Incident Response](./DFIR)
