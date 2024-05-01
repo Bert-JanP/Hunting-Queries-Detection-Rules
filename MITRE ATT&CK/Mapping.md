@@ -13,7 +13,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Privilege Escalation | 5 |
 | Defense Evasion | 15 |
 | Credential Access | 7 |
-| Discovery | 18 |
+| Discovery | 20 |
 | Lateral Movement | 1 |
 | Collection | 1 |
 | Command and Control | 6 |
@@ -115,11 +115,13 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1069.001 | Permission Groups Discovery: Local Groups | [Local Group Discovery](../Defender%20For%20Endpoint/LocalGroupDiscovery.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
+| T1069.003| Permission Groups Discovery: Cloud Groups | [AzureHound](../Graph%20API/AzureHound.md) |
 | T1087 | Account Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
 | T1087 | Account Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
 | T1087.002 | Account Discovery: Domain Account | [Anomalous LDAP Traffic](../Defender%20For%20Identity/AnomalousLDAPTraffic.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
+| T1087.004 | Account Discovery: Cloud Account | [AzureHound](../Graph%20API/AzureHound.md) |
 | T1518.001 | Software Discovery: Security Software Discovery| [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)|
 | T1518.001 | Software Discovery: Security Software Discovery| [Defender Discovery Activities](../Defender%20For%20Endpoint/DefenderDiscoveryActivities.md)|
 | T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
