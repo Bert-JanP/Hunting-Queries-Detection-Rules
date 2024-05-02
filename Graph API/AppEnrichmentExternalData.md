@@ -8,6 +8,7 @@ This query enriches the *MicrosoftGraphActivityLogs* with Application informatio
 #### References
 - https://learn.microsoft.com/en-us/graph/microsoft-graph-activity-logs-overview#what-data-is-available-in-the-microsoft-graph-activity-logs
 - https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/aadnoninteractiveusersigninlogs
+- https://kqlquery.com/posts/graphactivitylogs/
 
 ## Sentinel
 ```KQL

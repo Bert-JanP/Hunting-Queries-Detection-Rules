@@ -23,6 +23,7 @@ This line splits the *GraphAPIPath* at each */*, resulting in an array of elemen
 
 #### References
 - https://learn.microsoft.com/en-us/graph/microsoft-graph-activity-logs-overview#what-data-is-available-in-the-microsoft-graph-activity-logs
+- https://kqlquery.com/posts/graphactivitylogs/
 
 ## Sentinel
 ```KQL

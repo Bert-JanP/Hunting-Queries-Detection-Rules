@@ -18,6 +18,7 @@ An adversary executes AzureHound to get insights into your Azure Tenant
 #### References
 - https://github.com/BloodHoundAD/AzureHound
 - https://www.cloudbrothers.info/detect-threats-microsoft-graph-logs-part-1/#azurehound
+- https://kqlquery.com/posts/graphactivitylogs/
 
 ## Sentinel
 ```KQL

@@ -31,6 +31,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 - [Prioritize Vulnerabilities Using The CISA Known Exploited Vulnerabilities Catalog](https://kqlquery.com/posts/prioritize-vulnerabilities-cisa/)
 - [KQL Security Sources - 2024 Update](https://kqlquery.com/posts/kql-sources-2024-update/)
 - [Detecting Post-Exploitation Behaviour](https://kqlquery.com/posts/detecting-post-exploitation-behaviour/)
+- [Investigating Microsoft Graph Activity Logs](https://kqlquery.com/posts/graphactivitylogs/)
 
 # KQL Categories
 

@@ -8,6 +8,7 @@ This query enriches the *MicrosoftGraphActivityLogs* with userinformation from t
 #### References
 - https://learn.microsoft.com/en-us/graph/microsoft-graph-activity-logs-overview#what-data-is-available-in-the-microsoft-graph-activity-logs
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identityinfo-table?view=o365-worldwide
+- https://kqlquery.com/posts/graphactivitylogs/
 
 ## Sentinel
 ```KQL
