@@ -11,7 +11,7 @@
 #### Description
 Adversaries can use LDAP to collect environment information. The query below can be used to detect anomalous amounts of LDAP queries from a originating device. This is done by baselining the normal amount of LDAP queries a device performs each hour. This query gives you input on which devices might need to be investigated.
 
-Once you found a device you are interested in, simply use the [Find all the executed LDAP queries from a compromised device](../DFIR/MDI%20-%20LDAPQueriesByCompromisedDevice.md) with the devicename as input to list all the LDAP details. The LDAP queries that list al devices and/or all users are interesting when executed from a workstation.
+Once you found a device you are interested in, simply use the [Find all the executed LDAP queries from a compromised device](../DFIR/Defender%20For%20Identity/MDI%20-%20LDAPQueriesByCompromisedDevice.md) with the devicename as input to list all the LDAP details. The LDAP queries that list al devices and/or all users are interesting when executed from a workstation.
 
 The query uses a variety of different variables which determine the result.
 - *starttime* - Determines the starting time of the search period
