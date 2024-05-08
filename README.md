@@ -89,6 +89,7 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 |  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    2           |   [@babakmhz](https://github.com/babakmhz)     | [@Babakmhz](https://twitter.com/Babakmhz)       | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
 | | | |  | <ul><li>[List AD Delegations](./Windows%20Security%20Events/ListADDelegations.md)</li>|
 |  [Deepak Kumar Ray](https://www.linkedin.com/in/deepak2/)    |    1           |      | [@roydeepakku](https://twitter.com/roydeepakku)      | <ul><li>[CEF MultiSource IP](./MISP/Sentinel/CEF-MultiSource-IP.txt)</li> |
+|  [Guy Sukerman](https://www.linkedin.com/in/guy-sukerman-2002451aa/)    |    1           |      |     | <ul><li>[Anomalous Amount of URLClickEvents](./Office%20365/AnomalousAmountofURLClickEvents.md)</li> |
 
 ### Detection Template
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:

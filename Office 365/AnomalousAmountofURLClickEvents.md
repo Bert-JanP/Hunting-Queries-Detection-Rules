@@ -1,4 +1,4 @@
-# UrlClickEvents Table in Microsoft Sentinel for Threat Hunting and Anomaly Detection
+# Anomalous Amount of URLClickEvents
 
 ## Query Information
 
@@ -23,6 +23,26 @@ In the dynamic world of cybersecurity, proactive threat hunting and anomaly dete
 
 #### Risk
 A user has clicked and opened a malicious link.
+
+#### Author
+- **Name: Guy Sukerman**
+- **Github: https://github.com/guys1444**
+- **LinkedIn: https://www.linkedin.com/in/guy-sukerman-2002451aa/**
+
+### Defender For Endpoint
+```
+let startDate = ago(30d);
+let endDate = now();
+UrlClickEvents
+| where ActionType != 'ClickAllowed'
+| where Timestamp between (startDate .. endDate)
+| make-series ClickCount=count() on Timestamp from startDate to endDate step 1d
+| extend (anomalies, score, baseline) = series_decompose_anomalies(ClickCount)
+| mv-expand Timestamp to typeof(datetime), ClickCount to typeof(long), anomalies to typeof(double), score to typeof(double), baseline to typeof(long)
+| where score > 0.1
+// Only If needed | where anomalies > 0
+| project Timestamp, ClickCount, anomalies, score, baseline
+```
 
 ### Sentinel
 ```
