@@ -25,23 +25,6 @@ AADSignInEventsBeta
      AccountObjectId,
      AccountUpn
 ```
-## Sentinel
-```
-AADSignInEventsBeta
-| where AccountDisplayName  == "Input display name of account here"
-| project AccountDisplayName,
-     Country,
-     IPAddress,
-     Timestamp,
-     Application,
-     DeviceName,
-     ReportId,
-     LogonType,
-     SessionId,
-     OSPlatform,
-     AccountObjectId,
-     AccountUpn
-```
 
 
 
