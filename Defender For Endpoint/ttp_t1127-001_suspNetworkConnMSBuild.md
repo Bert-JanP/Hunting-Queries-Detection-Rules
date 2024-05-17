@@ -24,7 +24,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 - **Website:**
 
 #### References
-- [https://kqlquery.com/](https://redcanary.com/blog/msix-installers/)
+- [MSIX installer malware delivery on the rise across multiple campaigns](https://redcanary.com/blog/msix-installers/)
 
 ## Defender For Endpoint
 ```KQL
