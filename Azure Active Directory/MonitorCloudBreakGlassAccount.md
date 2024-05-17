@@ -8,6 +8,9 @@ It is best practice to have break glass accounts, which are excluded from all co
 #### Risk
 If an attacker could get access to a break glass account, this account could be used to bypass all conditional access rules, and get unrestricted access to the environment.
 
+#### Author
+- **Github: https://github.com/erikgruetter**
+
 ## Defender For Endpoint
 ```
 AADSignInEventsBeta
@@ -26,5 +29,17 @@ AADSignInEventsBeta
      AccountUpn
 ```
 
+## Sentinel
+```
+SigninLogs
+| where UserDisplayName  == "Input display name of account here"
+| project UserDisplayName,
+     Location,
+     IPAddress,
+     TimeGenerated,
+     AppDisplayName,
+     DeviceDetail,
+     UserPrincipalName
+```
 
 
