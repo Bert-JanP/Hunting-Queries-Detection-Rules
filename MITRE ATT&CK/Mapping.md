@@ -77,7 +77,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | ---  | --- | --- |
 | T1027 | Obfuscated Files or Information | [PowerShell Encoded Commands Executed By Device](../Defender%20For%20Endpoint/PowerShellEncodedCommandsByDevice.md)|
 | T1027 | Obfuscated Files or Information | [All encoded Powershell Executions](../Defender%20For%20Endpoint/PowerShellEncodedCommandsExecuted.md)|
-| T1027 | Obfuscated Files or Information | [Encoded PowerShell with WebRequest](../Defender%20For%20Endpoint/PowerShellEncodedDownloads.md)|
+| T1027 | Obfuscated Files or Information | [Encoded PowerShell with WebRequest](../Defender%20For%20Endpoint/PowerShellEncodedWebRequests.md)|
 | T1027 | Obfuscated Files or Information | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 |  T1127.001 | Trusted Developer Utilities Proxy Execution: MSBuild | [Suspicious network connection from MSBuild](../Defender%20For%20Endpoint/ttp_t1127-001_suspNetworkConnMSBuild.md)|
 | T1027.010 | Obfuscated Files or Information: Command Obfuscation | [PowerShell Encoded Command](../Defender%20For%20Endpoint/ttp_t1027-010_powershellEncodedCommand.md)|
