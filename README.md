@@ -46,6 +46,7 @@ The queries in this repository are split into different categories. The MITRE AT
 - [Defender For Identity detection rules](./Defender%20For%20Identity)
 - [Defender For Cloud Apps detection rules](./Defender%20For%20Cloud%20Apps)
 - [Defender For Office 365](./Office%20365)
+- [Defender For XDR](./Defender%20For%20XDR)
 - [Azure Active Directory](./Azure%20Active%20Directory)
 - [Microsoft Sentinel](./Sentinel)
 - [MISP](./MISP)
