@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 5 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
-| Defense Evasion | 16 |
+| Defense Evasion | 17 |
 | Credential Access | 7 |
 | Discovery | 20 |
 | Lateral Movement | 1 |
@@ -81,7 +81,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1027 | Obfuscated Files or Information | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 |  T1127.001 | Trusted Developer Utilities Proxy Execution: MSBuild | [Suspicious network connection from MSBuild](../Defender%20For%20Endpoint/ttp_t1127-001_suspNetworkConnMSBuild.md)|
 | T1027.010 | Obfuscated Files or Information: Command Obfuscation | [PowerShell Encoded Command](../Defender%20For%20Endpoint/ttp_t1027-010_powershellEncodedCommand.md)|
-| T1070.001 | Indicator Removal| [Custom Detection Deletion](../Defender%20For%20XDR/CustomDetectionDeletion.md) |
+| T1070.001 | Indicator Removal| [Custom Detection Deletion](../Defender%20XDR/CustomDetectionDeletion.md) |
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Security Log Cleared](../Defender%20For%20Endpoint/SecurityLogCleared.md) |
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Wevutil Clear Windows Event Logs](../Defender%20For%20Endpoint/WevtutilClearLogs.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
@@ -90,6 +90,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Scattered Spider Defense Evasion via Conditional Access Policies Detection](../Azure%20Active%20Directory/nf_ttp_t1562.001_scattered-spider_abuse%20conditional_access_trusted_locations.md) |
+| T1562.001 | Impair Defenses: Disable or Modify Tools | [Defender For Endpoint Offboarding Package Downloaded](../Defender%20XDR/OffboardingPackageDownloaded.md) |
 | T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 
 ## Credential Access
