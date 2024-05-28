@@ -35,7 +35,7 @@ MicrosoftGraphActivityLogs
 | extend GraphAPIResource = tostring(split(GraphAPIPath, "/")[2])
 | where GraphAPIResource in (ReconResources)
 | extend ObjectId = coalesce(UserId, ServicePrincipalId)
-// Filer whitelist
+// Filter whitelist
 | where not(ObjectId in (WhitelistedObjects))
 | summarize TotalResponseSize = sum(ResponseSizeBytes), UniqueRequests = dcount(RequestId), Requests = make_set(RequestUri, 1000), Paths = make_set(GraphAPIPath), Resources = make_set(GraphAPIResource), UniqueResourceCount = dcount(GraphAPIResource) by UserId, bin(TimeGenerated, 1h), UserAgent, ObjectId
 | where UniqueRequests >= UniqueRequestThreshold and TotalResponseSize >= TotalResponseSizeTHreshold and UniqueResourceCount >= ResourceThreshold
