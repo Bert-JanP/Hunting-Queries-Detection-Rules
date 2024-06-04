@@ -167,7 +167,7 @@ Product Support:
 | Defender XDR | ✅ |
 | Unified XDR| ✅ | 
 
-### New sub-tables Defender For Endpoint
+### New sub-tables Sentinel
 
 ```KQL
 let TimeFrame = 180d;
