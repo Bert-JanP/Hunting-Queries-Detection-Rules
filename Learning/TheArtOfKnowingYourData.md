@@ -3,6 +3,7 @@
 This learning section was part of the Demo for ExpertsLive Netherlands 2024.
 
 Session Title: The art of knowing your SIEM & XDR data
+
 Session summary:
 The always-increasing amount of data that security professionals deal with on a daily basis can be challenging. Questions such as 'Do I have this evidence?' and 'Where can I find this data?' can be difficult to answer. This session will answer these questions by discussing the tables you have and the (subtypes of) data included in those tables. This session will explore how you can gather the most value from your data in Sentinel & Defender For XDR with (a little bit of) KQL magic.
 

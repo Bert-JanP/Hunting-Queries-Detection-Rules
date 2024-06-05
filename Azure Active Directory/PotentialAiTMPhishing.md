@@ -9,7 +9,7 @@
 | T1557 | Adversary-in-the-Middle | https://attack.mitre.org/techniques/T1557/ |
 
 #### Description
-List potential adversary in the middle phishing attempts that have been identified by the **OfficeHome** application in combination with an empty deviceid. The OfficeHome application is known to be the default of some AiTM phishing kits. An empty deviceid si the result of an device that is not onboarded/known to your organization. If only onboarded devices should sign in to your orgs cloud apps, an empty id should raise alarms, since it is an unknown device. If the resultype 0 is included in the results a successful sign-in is performed.  
+List potential adversary in the middle phishing attempts that have been identified by the **OfficeHome** application in combination with an empty deviceid. The OfficeHome application is known to be the default of some AiTM phishing kits. An empty deviceid is the result of an device that is not onboarded/known to your organization. If only onboarded devices should sign in to your orgs cloud apps, an empty id should raise alarms, since it is an unknown device. If the resultype 0 is included in the results a successful sign-in is performed.  
 
 The query can be futher refined by only filtering on sign-ins with a risklevel during the sign-in phase. 
 
