@@ -54,11 +54,11 @@ let thirdpartykeyword = datatable(supplier:string)["thirdparty1","thunderbirdcc"
 let victims = externaldata(country:string,
         description:string,
         Country:string,
-        discovered:string,
+        discovered:datetime,
         group_name:string,
         post_title:string,
         post_url:string,
-        published:string,
+        published:datetime,
         screenshot:string,
         website:string,
         infostealer:dynamic)
@@ -99,7 +99,7 @@ all_victims
 ```
 
 ```KQL
-//Query ransomware.live group data
+// Query group information
 let groups = externaldata(
     name: string,
     captcha: bool,
