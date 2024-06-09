@@ -29,6 +29,25 @@ Relevant third parties, suppliers, or clients could be compromised and present a
 
 ## Defender For Endpoint
 ```KQL
+//basic KQL to query recentvictims API
+let victims = externaldata(country:string,
+        activity:string,
+        description:string,
+        discovered:string,
+        group_name:string,
+        post_title:string,
+        post_url:string,
+        published:string,
+        screenshot:string,
+        website:string,
+        infostealer:dynamic)
+[h@"https://api.ransomware.live/recentvictims"]
+with(format="multijson",ignoreFirstRecord=false);
+victims
+```
+
+```KQL
+//query to detect possible third party compromise via leak site data
 let clientkeyword = datatable(name:string)["client1","client2","client3","axip","elutia"]; //add clients
 let supplierkeyword = datatable(supplier:string)["supplier1","supplier2","supplier3","merchant.id"]; //add suppliers
 let thirdpartykeyword = datatable(supplier:string)["thirdparty1","thunderbirdcc"]; //add third parties
@@ -41,9 +60,57 @@ let victims = externaldata(country:string,
         post_url:string,
         published:string,
         screenshot:string,
-        website:string)
+        website:string,
+        infostealer:dynamic)
 [h@"https://api.ransomware.live/recentvictims"]
 with(format="multijson",ignoreFirstRecord=false);
 victims
 | where post_title has_any (clientkeyword) or post_title has_any (supplierkeyword) or post_title has_any (thirdpartykeyword)
+```
+
+```KQL
+//Query to bring back all victims data from ransomware.live
+let all_victims = externaldata(["date"]:datetime,
+        victim:string,
+        domain:string,
+        country:string,
+        summary:string,
+        title:string,
+        url:string,
+        added:datetime)
+[h@"https://api.ransomware.live/allcyberattacks"]
+with(format="multijson",ignoreFirstRecord=false);
+all_victims
+```
+
+```KQL
+//Query to bring back all victims data from ransomware.live
+let all_victims = externaldata(["date"]:datetime,
+        victim:string,
+        domain:string,
+        country:string,
+        summary:string,
+        title:string,
+        url:string,
+        added:datetime)
+[h@"https://api.ransomware.live/allcyberattacks"]
+with(format="multijson",ignoreFirstRecord=false);
+all_victims
+```
+
+```KQL
+// Query group information
+let groups = externaldata(
+    name: string,
+    captcha: bool,
+    javascript_render: string,
+    locations: dynamic,
+    meta: string, 
+    parser: bool,
+    profile: dynamic)
+    [h@"https://api.ransomware.live/groups"]
+    with(format="multijson", ignoreFirstRecord=false);
+groups
+| mv-expand locations
+| where locations.available != false
 ```
