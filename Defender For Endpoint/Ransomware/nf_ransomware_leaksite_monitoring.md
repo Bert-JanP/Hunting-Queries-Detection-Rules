@@ -99,18 +99,19 @@ all_victims
 ```
 
 ```KQL
-// Query group information
+//Query ransomware.live group data
 let groups = externaldata(
     name: string,
     captcha: bool,
     javascript_render: string,
-    locations: dynamic,
-    meta: string, 
     parser: bool,
-    profile: dynamic)
+    profile: dynamic,
+    locations: dynamic,
+    meta: string,)
     [h@"https://api.ransomware.live/groups"]
     with(format="multijson", ignoreFirstRecord=false);
 groups
+| where name contains "abyss"
 | mv-expand locations
-| where locations.available != false
+| project name, locations.["title"], locations.available, locations.fqdn, ["url"]=locations.slug, locations.updated, locations.version, profile
 ```
