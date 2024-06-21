@@ -18,7 +18,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Collection | 1 |
 | Command and Control | 6 |
 | Exfiltration | 1 |
-| Impact | 4 |
+| Impact | 5 |
 
 ## Initial Access
 | Technique ID | Title    | Query    |
@@ -156,7 +156,9 @@ to be implemented
 ## Impact
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
+| T1485 | Data Destruction | [(Mass) Cloud Resource Deletion](../Cloud%20Audit%20Events/CloudResourceDeletion.md) |
 | T1486 | Data Encrypted for Impact |[ASR Ransomware](../Defender%20For%20Endpoint/ASR%20Rules/AsrRansomware.md)|
 | T1486 | Data Encrypted for Impact | [Ransomware Double Extention](../Defender%20For%20Endpoint/Ransomware/RansomwareDoubleExtention.md) |
 | T1489 | Service Stop | [Kill SQL Processes](../Threat%20Hunting/Behaviour%20-%20KillSQLProcesses.md) |
 | T1490 | Inhibit System Recovery | [Shadow Copy Deletion](../Defender%20For%20Endpoint/ShadowCopyDeletion.md)|
+
