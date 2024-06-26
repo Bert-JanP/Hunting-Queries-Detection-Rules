@@ -19,23 +19,41 @@ Right audience: Blue/Purple Teamers, Threat Hunters, Detection Engineers, Securi
 
 ### List all unique sentinel tables with events (last 90 days)
 
+#### Sentinel
+
 ```KQL
 union * 
 | where TimeGenerated > ago(90d) 
 | distinct Type 
 ```
+
+#### Defender XDR
+```KQL
+union withsource=TableName *
+| where Timestamp > ago(90d) 
+| distinct TableName
+```
+
 Product Support:
 | Product | Supported |
 |---------| ----------|
 | Sentinel | ✅ |
-| Defender XDR | ❌ |
+| Defender XDR | ✅ |
 | Unified XDR|✅  | 
 
 ### Count all events per table
 
+#### Sentinel
+
 ```KQL
 union *  
 | summarize TotalEvents = count() by Type 
+```
+
+#### Defender XDR
+```KQL
+union withsource=TableName *
+| summarize TotalEvents = count() by TableName 
 ```
 Product Support:
 | Product | Supported |
@@ -60,6 +78,9 @@ Product Support:
 
 ### Retrieve Sub-Tables
 This query returns all unique tables and their actions.
+
+#### Sentinel
+
 ```KQL
 union * 
 | where TimeGenerated > ago(90d) 
@@ -68,15 +89,28 @@ union *
 | distinct Type, Action
 | sort by Type
 ```
+
+#### Defender XDR
+```KQL
+union withsource=TableName *
+| where TimeGenerated > ago(90d) 
+| extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType) 
+| where isnotempty(Action) 
+| distinct TableName, Action
+| sort by TableName
+```
+
 Product Support:
 | Product | Supported |
 |---------| ----------|
 | Sentinel | ✅ |
-| Defender XDR | ❌ |
+| Defender XDR | ✅ |
 | Unified XDR|✅  | 
 
 ### Retrieve Sub-Tables
 This query returns all unique tables, actions and how often they appear in your environment.
+
+#### Sentinel
 
 ```KQL
 union *  
@@ -85,11 +119,21 @@ union *
 | where isnotempty(Action)
 | summarize TotalEvents = count() by Action, Type  
 ```
+
+#### Defender XDR
+```KQL
+union withsource=TableName *
+| where TimeGenerated > ago(90d)  
+| extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)  
+| where isnotempty(Action)
+| summarize TotalEvents = count() by Action, TableName   
+```
+
 Product Support:
 | Product | Supported |
 |---------| ----------|
 | Sentinel | ✅ |
-| Defender XDR | ❌ |
+| Defender XDR | ✅ |
 | Unified XDR| ✅ | 
 
 ### Retrieve top 10 most active tables
@@ -111,6 +155,8 @@ Product Support:
 
 ### Retrieve top 10 least active sub-tables
 
+##### Sentinel
+
 ```KQL
 union *
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)
@@ -120,14 +166,29 @@ union *
 | project Action, TotalEvents, DataType
 | top 10 by TotalEvents asc
 ```
+
+#### Defender XDR
+
+```KQL
+union withsource=TableName *
+| extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)
+| where isnotempty(Action)
+| summarize TotalEvents = count() by Action, TableName
+| project-rename DataType = TableName
+| project Action, TotalEvents, DataType
+| top 10 by TotalEvents asc
+```
+
 Product Support:
 | Product | Supported |
 |---------| ----------|
 | Sentinel | ✅ |
-| Defender XDR | ❌ |
+| Defender XDR | ✅ |
 | Unified XDR| ✅ | 
 
 ### Retrieve top 10 most active sub-tables
+
+#### Sentinel
 
 ```KQL
 union *
@@ -138,11 +199,23 @@ union *
 | project Action, TotalEvents, DataType
 | top 10 by TotalEvents desc 
 ```
+
+#### Defender XDR
+```KQL
+union withsource=TableName *
+| extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)
+| where isnotempty(Action)
+| summarize TotalEvents = count() by Action, TableName
+| project-rename DataType = TableName
+| project Action, TotalEvents, DataType
+| top 10 by TotalEvents desc 
+```
+
 Product Support:
 | Product | Supported |
 |---------| ----------|
 | Sentinel | ✅ |
-| Defender XDR | ❌ |
+| Defender XDR | ✅ |
 | Unified XDR| ✅ | 
 
 ### New sub-tables Defender For Endpoint
@@ -154,11 +227,11 @@ let KnownActions = union DeviceEvents, DeviceFileEvents, DeviceFileCertificateIn
 | where TimeGenerated between (startofday(ago(TimeFrame)) .. startofday(ago(Schedule))) 
 | where isnotempty(ActionType)
 | distinct ActionType;
-union DeviceEvents, DeviceFileEvents, DeviceFileCertificateInfo, DeviceInfo, DeviceLogonEvents, DeviceNetworkEvents, DeviceProcessEvents, DeviceRegistryEvents
+withsource=TableName DeviceEvents, DeviceFileEvents, DeviceFileCertificateInfo, DeviceInfo, DeviceLogonEvents, DeviceNetworkEvents, DeviceProcessEvents, DeviceRegistryEvents
 | where TimeGenerated > startofday(ago(Schedule)) 
 | where isnotempty(ActionType) and ActionType !in (KnownActions)
-| distinct Type, ActionType
-| project-rename DataType = Type
+| distinct TableName, ActionType
+| project-rename DataType = TableName
 | sort by DataType, ActionType
 ```
 Product Support:
@@ -178,12 +251,12 @@ let KnownActions = union *
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)
 | where isnotempty(Action)
 | distinct Action;
-union *
+union withsource=TableName *
 | where TimeGenerated > startofday(ago(Schedule)) 
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)
 | where isnotempty(Action) and Action !in (KnownActions)
-| distinct Type, Action
-| project-rename DataType = Type
+| distinct TableName, Action
+| project-rename DataType = TableName
 | sort by DataType, Action
 ```
 Product Support:
