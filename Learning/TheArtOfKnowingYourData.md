@@ -93,7 +93,7 @@ union *
 #### Defender XDR
 ```KQL
 union withsource=TableName *
-| where TimeGenerated > ago(90d) 
+| where Timestamp > ago(90d) 
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType) 
 | where isnotempty(Action) 
 | distinct TableName, Action
@@ -123,7 +123,7 @@ union *
 #### Defender XDR
 ```KQL
 union withsource=TableName *
-| where TimeGenerated > ago(90d)  
+| where Timestamp > ago(90d)  
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)  
 | where isnotempty(Action)
 | summarize TotalEvents = count() by Action, TableName   
@@ -224,11 +224,11 @@ Product Support:
 let TimeFrame = 180d;
 let Schedule = 7d;
 let KnownActions = union DeviceEvents, DeviceFileEvents, DeviceFileCertificateInfo, DeviceInfo, DeviceLogonEvents, DeviceNetworkEvents, DeviceProcessEvents, DeviceRegistryEvents
-| where TimeGenerated between (startofday(ago(TimeFrame)) .. startofday(ago(Schedule))) 
+| where Timestamp between (startofday(ago(TimeFrame)) .. startofday(ago(Schedule))) 
 | where isnotempty(ActionType)
 | distinct ActionType;
-withsource=TableName DeviceEvents, DeviceFileEvents, DeviceFileCertificateInfo, DeviceInfo, DeviceLogonEvents, DeviceNetworkEvents, DeviceProcessEvents, DeviceRegistryEvents
-| where TimeGenerated > startofday(ago(Schedule)) 
+union withsource=TableName DeviceEvents, DeviceFileEvents, DeviceFileCertificateInfo, DeviceInfo, DeviceLogonEvents, DeviceNetworkEvents, DeviceProcessEvents, DeviceRegistryEvents
+| where Timestamp > startofday(ago(Schedule)) 
 | where isnotempty(ActionType) and ActionType !in (KnownActions)
 | distinct TableName, ActionType
 | project-rename DataType = TableName
