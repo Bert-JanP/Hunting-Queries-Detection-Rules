@@ -97,7 +97,7 @@ This section only includes references to queries that can be mapped in the MITRE
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
-| T1003 |OS Credential Dumping: NTDS | [NTDS.DIT File Modifications](./Defender%20For%20Endpoint/NTDSDitFileModifications.md) |
+| T1003 |OS Credential Dumping: NTDS | [NTDS.DIT File Modifications](../Defender%20For%20Endpoint/NTDSDitFileModifications.md) |
 | T1110 | Brute Force | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md) |
 | T1110 | Brute Force | [Multiple Accounts Locked](../Azure%20Active%20Directory/MultipleAccountsLocked.md) |
 | T1552 | Unsecured Credentials | [Commandline with cleartext password](../Defender%20For%20Endpoint/CommandlineWithClearTextPassword.md) |
