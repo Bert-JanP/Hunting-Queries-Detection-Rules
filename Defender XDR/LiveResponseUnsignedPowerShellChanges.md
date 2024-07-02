@@ -8,6 +8,7 @@ This query lists all changes to the Live Response Unsigned Script settings in th
 ### References
 - https://kqlquery.com/posts/leveraging-live-response/
 - https://learn.microsoft.com/en-us/defender-endpoint/live-response
+- https://kqlquery.com/posts/audit-defender-xdr/
 
 
 ## Defender For Endpoint

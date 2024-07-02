@@ -7,6 +7,7 @@ This query lists all the device isolation activities that have been performed by
 
 ### References
 - https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts
+- https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender For Endpoint
 ```

@@ -32,6 +32,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 - [KQL Security Sources - 2024 Update](https://kqlquery.com/posts/kql-sources-2024-update/)
 - [Detecting Post-Exploitation Behaviour](https://kqlquery.com/posts/detecting-post-exploitation-behaviour/)
 - [Investigating Microsoft Graph Activity Logs](https://kqlquery.com/posts/graphactivitylogs/)
+- [Audit Defender XDR Activities](https://kqlquery.com/posts/audit-defender-xdr/)
 
 For Sentinel Automations see the Repository [Sentinel-Automation](https://github.com/Bert-JanP/Sentinel-Automation).
 

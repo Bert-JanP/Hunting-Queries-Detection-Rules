@@ -16,6 +16,7 @@ An actor has gotten access to an account that is able to delete custom detection
 
 ### References
 - https://learn.microsoft.com/en-us/defender-xdr/custom-detections-overview
+- https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender For Endpoint
 ```

@@ -8,6 +8,7 @@ The query below can be used to monitor RBAC changes in Defender XDR. This query 
 ### References
 - https://learn.microsoft.com/en-us/defender-xdr/m365d-permissions
 - https://learn.microsoft.com/en-us/defender-endpoint/rbac
+- https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender For Endpoint
 ```

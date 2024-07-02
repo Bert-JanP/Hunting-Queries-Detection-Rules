@@ -7,6 +7,7 @@ This query lists all manual (and playbook related) anvitius actions that are ini
 
 ### References
 - https://learn.microsoft.com/en-us/defender-endpoint/mdav-scan-best-practices
+- https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender For Endpoint
 ```
