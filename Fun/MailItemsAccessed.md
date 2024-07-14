@@ -1,3 +1,7 @@
+This query compares the *MailItemsAccessed* from OfficeActivity and CloudAppEvents and returns the column *EqualLogs* that shows if the logs have the same amount of entries. This should be the case, but does not seem to be the case in multiple environment. The CloudAppEvents table seems to log a few duplicate entries.
+
+Also see: https://x.com/BertJanCyber/status/1806350833505775775
+
 ```KQL
 union OfficeActivity, CloudAppEvents
 | where TimeGenerated > ago(30d)
