@@ -100,6 +100,7 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 The *[Detection Template](./DetectionTemplate.md)* can be used to standardize the detections in your own repository. This could help others to easily parse the content of the repository to collect the query and the metadata. The following repositories have already been standardized in this manner:
 - https://github.com/alexverboon/Hunting-Queries-Detection-Rules - By Alex Verboon
 - https://github.com/KustoKing/Hunting-Queries-Detection-Rules - By Gianni Castaldi
+- https://github.com/SlimKQL/Hunting-Queries-Detection-Rules - By Steven Lim
 
 If your repository is not yet listed, feel free to create a pull request (PR) or reach out via message to have it added.
 # Where to use KQL in Defender For Endpoint & Sentinel?
