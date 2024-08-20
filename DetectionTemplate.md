@@ -28,7 +28,7 @@ Explain what risk this detection tries to cover
 - https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules
 - example link 3
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Paste your query here
 DeviceProcessEvents
