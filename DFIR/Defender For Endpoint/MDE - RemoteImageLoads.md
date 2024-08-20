@@ -4,7 +4,6 @@
 
 #### Description
 This query can be used to summarize the remote image loads to a (potentially) compromised domain.
-```
 
 #### References
 - https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/detect-compromised-rdp-sessions-with-microsoft-defender-for/ba-p/4201003
