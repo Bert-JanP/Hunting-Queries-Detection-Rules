@@ -138,7 +138,11 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1021.002 | Remote Services: SMB/Windows Admin Shares | [SMB File Copy](../Defender%20For%20Identity/SMBFileCopy.md)|
 
 ## Collection
-to be implemented
+
+| Technique ID | Title    | Query    |
+| ---  | --- | --- |
+| T1530 | Data from Cloud Storage | [OneDrive Sync From Rare IP](../Defender%20For%20Cloud%20Apps/OneDriveSyncFromRareIP.md) |
+
 ## Command and Control
 
 | Technique ID | Title    | Query    |
