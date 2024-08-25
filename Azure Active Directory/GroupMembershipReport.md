@@ -14,6 +14,7 @@ IdentityInfo
 | where Timestamp > ago(TimeFrame)
 | summarize arg_max(TimeGenerated, *) by AccountObjectId
 | mv-expand GroupMembership
+| where isnotempty(GroupMembership)
 | summarize TotalMemberships = dcount(tostring(GroupMembership)), MemberOf = make_set(tostring(GroupMembership), 1000) by AccountObjectId, AccountDisplayName, AccountUPN
 | extend ReportDate = now()
 ```
@@ -24,6 +25,7 @@ IdentityInfo
 | where TimeGenerated > ago(TimeFrame)
 | summarize arg_max(TimeGenerated, *) by AccountObjectId
 | mv-expand GroupMembership
+| where isnotempty(GroupMembership)
 | summarize TotalMemberships = dcount(tostring(GroupMembership)), MemberOf = make_set(tostring(GroupMembership), 1000) by AccountObjectId, AccountDisplayName, AccountUPN
 | extend ReportDate = now()
 ```
