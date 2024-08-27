@@ -35,8 +35,7 @@ AuditLogs
 | where Identity in~ (RiskyUsers)
 // Filter on DiscoveryEvents
 | where OperationName has_any (DiscoveryEvents)
-| project TimeGenerated, Identity, OperationName, Category, 
-ResultDescription, Result
+| project TimeGenerated, Identity, OperationName, Category, ResultDescription, Result
 ```
 #### Versions
 | Version | Comment |

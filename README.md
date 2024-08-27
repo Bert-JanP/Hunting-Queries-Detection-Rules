@@ -55,6 +55,7 @@ The queries in this repository are split into different categories. The MITRE AT
 - [MISP](./MISP)
 - [Windows Security Events](./Windows%20Security%20Events)
 - [Graph API](./Graph%20API/)
+- [Windows Security Events](./SecurityEvents/)
 
 ## Security Processes
 - [Digital Forensics and Incident Response](./DFIR)
