@@ -13,11 +13,11 @@ This section only includes references to queries that can be mapped in the MITRE
 | Privilege Escalation | 5 |
 | Defense Evasion | 17 |
 | Credential Access | 7 |
-| Discovery | 21 |
+| Discovery | 22 |
 | Lateral Movement | 1 |
 | Collection | 1 |
 | Command and Control | 6 |
-| Exfiltration | 1 |
+| Exfiltration | 0 |
 | Impact | 5 |
 
 ## Initial Access
@@ -128,7 +128,8 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1518.001 | Software Discovery: Security Software Discovery| [Defender Discovery Activities](../Defender%20For%20Endpoint/DefenderDiscoveryActivities.md)|
 | T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
 | T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
-| T1482 | Domain Trust Discovery | [Nltest Discovery Activities](../SecurityEvents/NltestDiscovery.md) |
+| T1482 | Domain Trust Discovery | [Security Events - Nltest Discovery Activities](../SecurityEvents/NltestDiscovery.md) |
+| T1482 | Domain Trust Discovery | [MDE - Nltest Discovery Activities](../Defender%20For%20Endpoint/NltestDiscovery.md) |
 | T1615 | Group Policy Discovery |[Anomalous Group Policy Discovery](../Defender%20For%20Identity/AnomalousGroupPolicyDiscovery.md)|
 
 ## Lateral Movement

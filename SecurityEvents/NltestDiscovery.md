@@ -11,6 +11,8 @@
 #### Description
 The windows utility Nltest is known to be used by adversaries to enumerate domain trusts. This detection is based on Windows Security Event 4688 and triggers if more than 3 nltest queries are executed by a user on the same computer within 30 minutes. You can alter the variables yourself to tailor it to your environment.
 
+In case you want to detect this behaviour with Defender For Endpoint, using the *DeviceProcessEvents* table, see: [Nltest Discovery](../Defender%20For%20Endpoint/NltestDiscovery.md)
+
 #### Risk
 Adverseries perform discovery activities on your network.
 
