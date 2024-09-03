@@ -1,4 +1,4 @@
-# Unique Actions
+# Summary Rules - Unique Actions
 
 ## Query Information
 
@@ -8,6 +8,7 @@ This summary rule saves all unique actions and how often they appear in your env
 This allows for easy retrieval of statistics and trends on how many unique actions are found in the environment each day.
 
 **Recommended Schedule:** 24 hours.
+
 **Recommended Delay:** 60 minutes.
 #### References
 - https://learn.microsoft.com/en-us/azure/sentinel/summary-rules
