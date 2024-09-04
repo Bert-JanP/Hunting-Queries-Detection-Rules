@@ -15,8 +15,6 @@ This allows for easy retrieval of statistics and trends on how many unique actio
 
 ## Sentinel
 ```KQL
-let StartDate = startofday(ago(1d));
-let EndDate = startofday(now());
 union * 
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType) 
 | where isnotempty(Action) 
