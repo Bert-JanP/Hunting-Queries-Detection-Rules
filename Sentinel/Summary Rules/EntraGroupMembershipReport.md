@@ -10,6 +10,7 @@ This summary rule focusses on the group memberships of users. The results of the
 **Recommended Delay:** 60 minutes.
 #### References
 - https://learn.microsoft.com/en-us/azure/sentinel/summary-rules
+- https://kqlquery.com/posts/sentinel-summary-rules/
 
 ## Sentinel
 ```KQL

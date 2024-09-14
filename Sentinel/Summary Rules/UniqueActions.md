@@ -12,6 +12,7 @@ This allows for easy retrieval of statistics and trends on how many unique actio
 **Recommended Delay:** 60 minutes.
 #### References
 - https://learn.microsoft.com/en-us/azure/sentinel/summary-rules
+- https://kqlquery.com/posts/sentinel-summary-rules/
 
 ## Sentinel
 ```KQL
