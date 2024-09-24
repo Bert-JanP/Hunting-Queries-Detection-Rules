@@ -7,7 +7,7 @@ This section only includes references to queries that can be mapped in the MITRE
 # Statistics
 | Tactic | Entry Count |
 | --- | --- |
-| Initial Access | 11 |
+| Initial Access | 12 |
 | Execution | 5 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
@@ -17,7 +17,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Lateral Movement | 1 |
 | Collection | 1 |
 | Command and Control | 6 |
-| Exfiltration | 0 |
+| Exfiltration | 1 |
 | Impact | 5 |
 
 ## Initial Access
@@ -28,6 +28,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1078.004 | Valid Accounts: Cloud Accounts | [Conditional Access User Failures](../Azure%20Active%20Directory/ConditionalAccess%20-%20UserFailures.md)|
 | T1190 | Exploit Public-Facing Application| [Internet Facing Devices With Available Exploits](../Vulnerability%20Management/InternetFacingDevicesWithAvailableExploits.md) |
 | T1190 | Exploit Public-Facing Application | [New Active CISA Known Exploited Vulnerability Detected](../Vulnerability%20Management/NewActiveCISAKnownExploitedVulnerabilityDetected.md) |
+| T1566 | Phishing | [Typosquatted Email Received](../Office%20365/Email%20-%20TyposquattedEmailRecieved.md) |
 | T1566.001 | Phishing: Spearphishing Attachment |[Executable Email Attachment Recieved](../Office%20365/Email%20-%20ExecutableFileRecieved.md)|
 | T1566.001 | Phishing: Spearphishing Attachment | [Macro Attachment Opened From Rare Sender](../Office%20365/Email%20-%20MacroAttachmentOpenedFromRareSender.md)|
 | T1566.001 | Phishing: Spearphishing Attachment | [ASR Executable Content Triggered](../Office%20365/Email%20-%20ASRExecutableContentTriggered.md) |
