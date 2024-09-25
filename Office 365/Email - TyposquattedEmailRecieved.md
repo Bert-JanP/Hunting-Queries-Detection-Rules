@@ -16,6 +16,8 @@ An actor typosquats your domain to phish employees.
 
 ## Defender XDR
 ```KQL
+let Domain = tolower("kqlquery.com");
+let UnicodeDomain = unicode_codepoints_from_string(Domain);
 let TypoSquatMin = 0.75;
 let TypoSquatMax = 0.99; // If set to 1.0 it equals the domain.
 EmailEvents
@@ -23,11 +25,13 @@ EmailEvents
 | extend SenderDomainUnicode = unicode_codepoints_from_string(tolower(SenderFromDomain))
 | extend TypoSquadPercentage = jaccard_index(UnicodeDomain, SenderDomainUnicode)
 | where TypoSquadPercentage between (TypoSquatMin .. TypoSquatMax)
-| project-reorder TimeGenerated, SenderFromDomain, TypoSquadPercentage, RecipientEmailAddress, Subject
+| project-reorder Timestamp, SenderFromDomain, TypoSquadPercentage, RecipientEmailAddress, Subject
 ```
 
 ## Sentinel
 ```KQL
+let Domain = tolower("kqlquery.com");
+let UnicodeDomain = unicode_codepoints_from_string(Domain);
 let TypoSquatMin = 0.75;
 let TypoSquatMax = 0.99; // If set to 1.0 it equals the domain.
 EmailEvents
@@ -37,8 +41,3 @@ EmailEvents
 | where TypoSquadPercentage between (TypoSquatMin .. TypoSquatMax)
 | project-reorder TimeGenerated, SenderFromDomain, TypoSquadPercentage, RecipientEmailAddress, Subject
 ```
-
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
