@@ -16,7 +16,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Discovery | 22 |
 | Lateral Movement | 1 |
 | Collection | 1 |
-| Command and Control | 6 |
+| Command and Control | 7 |
 | Exfiltration | 1 |
 | Impact | 5 |
 
@@ -155,6 +155,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1219 | Remote Access Software | [AnyDesk Remote Connections](../Defender%20For%20Endpoint/Network%20-%20AnyDeskConnectionToPublicIP.md) |
 | T1219 | Remote Access Software | [Detect Known RAT RMM Process Patterns](../Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md) |
 | T1219 | Remote Access Software | [NetSupport running from unexpected directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1219_netsupportrat_fin7.md)|
+| T1219 | Remote Access Software | [Remote Monitoring and Management Tool with connections](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/RMMConnection.md) |
 
 
 ## Exfiltration
