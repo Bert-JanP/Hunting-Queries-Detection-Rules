@@ -89,9 +89,10 @@ Everyone can submit contributions to this repository via a Pull Request. If you 
 | | | |  | <ul><li>[Kerberos attacks](./Defender%20For%20Endpoint/nf_ttp_generic_kerberos_attacks.md)</li>|
 | | | |  | <ul><li>[PowerShell Creating LNK Files within a Startup Directory Detection](./Defender%20For%20Endpoint/nf_ttp_t1547-001_yellowcockatoo_powershell_create_link_in_startup)</li>| 
 | | | |  | <ul><li>[Ransomware Leaksite Monitoring](./Threat%20Hunting/Ransomware%20-%20LeaksiteMontitoring.md)</li>| 
-|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    3           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
+|  [Alex Teixeira](https://www.linkedin.com/in/inode/)    |    4           |   [@inodee](https://github.com/inodee)     | [@ateixei](https://twitter.com/ateixei)      | <ul><li>[Rare_Outgoing_IPv4_Connections](./Defender%20For%20Endpoint/Rare_Outgoing_IPv4_Connections.md)</li>
 | | | |  | <ul><li>[Detect Known RAT RMM Process Patterns](./Defender%20For%20Endpoint/Detect_Known_RAT_RMM_Process_Patterns.md)</li>| 
 | | | |  | <ul><li>[NTDS.DIT File Modifications](./Defender%20For%20Endpoint/NTDSDitFileModifications.md)</li>| 
+| | | |  | <ul><li>[Custom Detection Report](./Defender%20XDR/CustomDetectionReport.md)</li>| 
 |  [Babak Mahmoodizadeh](https://www.linkedin.com/in/babak-mhz/)    |    2           |   [@babakmhz](https://github.com/babakmhz)     | [@Babakmhz](https://twitter.com/Babakmhz)       | <ul><li>[WebShell Detection](./Defender%20For%20Endpoint/WebshellDetection.md)</li> |
 | | | |  | <ul><li>[List AD Delegations](./Windows%20Security%20Events/ListADDelegations.md)</li>|
 |  [Deepak Kumar Ray](https://www.linkedin.com/in/deepak2/)    |    1           |      | [@roydeepakku](https://twitter.com/roydeepakku)      | <ul><li>[CEF MultiSource IP](./MISP/Sentinel/CEF-MultiSource-IP.txt)</li> |

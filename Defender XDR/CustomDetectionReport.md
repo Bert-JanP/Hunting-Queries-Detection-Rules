@@ -21,12 +21,19 @@ Follow the steps below to track *existing* rules:
 
 While the query ignores all simple modifications (EditCustomDetection), it will consider the ones containing that flag in the rule's KQL query code. That might come in handy in case you want to ignore rules under development/testing. The query needs to be executed in a periodic interval, in my use case, it's executed via a Splunk scheduled search that leverages the Defender API integration.
 
+#### Author
+- **Name:** Alex Teixeira
+- **Github:** https://github.com/inodee
+- **Twitter:** https://x.com/ateixei
+- **LinkedIn:** https://www.linkedin.com/in/inode
+- **Website:** https://detect.fyi
+
 ### References
 - https://learn.microsoft.com/en-us/defender-xdr/custom-detections-overview
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender For Endpoint
-```
+```KQL
 search in(CloudAppEvents) 'Microsoft365Defender'
 | where Timestamp > ago(180d)    // How far back to check
 | where parse_json(RawEventData).Workload=='Microsoft365Defender'
@@ -56,7 +63,7 @@ search in(CloudAppEvents) 'Microsoft365Defender'
 //| project-away Query
 ```
 ## Sentinel
-```
+```KQL
 search in(CloudAppEvents) 'Microsoft365Defender'
 | where TimeGenerated > ago(180d)    // How far back to check
 | where parse_json(RawEventData).Workload=='Microsoft365Defender'
