@@ -33,6 +33,7 @@ More detailed KQL information can be found on my blog page: https://kqlquery.com
 - [Detecting Post-Exploitation Behaviour](https://kqlquery.com/posts/detecting-post-exploitation-behaviour/)
 - [Investigating Microsoft Graph Activity Logs](https://kqlquery.com/posts/graphactivitylogs/)
 - [Audit Defender XDR Activities](https://kqlquery.com/posts/audit-defender-xdr/)
+- [Use Cases For Sentinel Summary Rules](https://kqlquery.com/posts/sentinel-summary-rules/)
 - [Unleash The Power Of DeviceTvmInfoGathering](https://kqlquery.com/posts/devicetvminfogathering/)
 
 For Sentinel Automations see the Repository [Sentinel-Automation](https://github.com/Bert-JanP/Sentinel-Automation).
