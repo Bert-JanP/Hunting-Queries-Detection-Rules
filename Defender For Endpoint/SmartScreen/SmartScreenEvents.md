@@ -2,9 +2,9 @@
 ----
 ### Defender For Endpoint
 
-```
+```KQL
 DeviceEvents
-| where Timestamp > ago(7d)
+| where Timestamp > ago(30d)
 | where ActionType has_any('SmartScreenAppWarning', 
 'SmartScreenUrlWarning')
 | extend SmartScreenTrigger = iff(ActionType == "SmartScreenUrlWarning", 
@@ -19,9 +19,9 @@ RemoteUrl, FileName)
      InitiatingProcessCommandLine
 ```
 ### Sentinel
-```
+```KQL
 DeviceEvents
-| where TimeGenerated > ago(7d)
+| where TimeGenerated > ago(30d)
 | where ActionType has_any('SmartScreenAppWarning', 
 'SmartScreenUrlWarning')
 | extend SmartScreenTrigger = iff(ActionType == "SmartScreenUrlWarning", 

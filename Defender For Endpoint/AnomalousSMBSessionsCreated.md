@@ -15,9 +15,9 @@ This detection rule is aimed to detect a host that performs SMB Discovery by ale
 A actor has gotten access to a system en performs a scan to identify possible lateral movement paths.
 
 ## Defender For Endpoint
-```
+```KQL
 DeviceNetworkEvents
-| where Timestamp > ago(1h)
+| where ingestion_time() > ago(1h)
 | where RemotePort == 445
 | summarize
      TotalIpsAccessed = dcount(RemoteIP),
@@ -34,9 +34,9 @@ DeviceNetworkEvents
      InitiatingProcessFolderPath
 ```
 ## Sentinel
-```
+```KQL
 DeviceNetworkEvents
-| where TimeGenerated > ago(1h)
+| where ingestion_time() > ago(1h)
 | where RemotePort == 445
 | summarize
      TotalIpsAccessed = dcount(RemoteIP),

@@ -2,7 +2,7 @@
 ----
 ### Defender For Endpoint
 
-```
+```KQL
 let PreviousRDPConnections = materialize (
      DeviceNetworkEvents
      | where Timestamp > ago(20d)
@@ -27,7 +27,7 @@ PreviousRDPConnections
 | sort by Timestamp
 ```
 ### Sentinel
-```
+```KQL
 let PreviousRDPConnections = materialize (
      DeviceNetworkEvents
      | where TimeGenerated > ago(20d)

@@ -18,17 +18,17 @@ A actor has gained access to your network and tries to execute ransomware.
 - https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#use-advanced-protection-against-ransomware
 
 ## Defender For Endpoint
-```
+```KQL
 DeviceEvents
-| where Timestamp > ago(30d)
+| where ingestion_time() > ago(30d)
 | where ActionType in ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
 | summarize arg_max(Timestamp, *), TotalEvents = count(), TriggeredFiles = make_set(FileName), FileHashes = make_set(SHA1), IntiatingProcesses = make_set(InitiatingProcessCommandLine) by DeviceName, AccountName
 | project Timestamp, DeviceName, AccountDomain, AccountName, TotalEvents, TriggeredFiles, FileHashes, IntiatingProcesses
 ```
 ## Sentinel
-```
+```KQL
 DeviceEvents
-| where Timestamp > ago(30d)
+| where ingestion_time() > ago(30d)
 | where ActionType in ('AsrRansomwareBlocked', 'AsrRansomwareAudited')
 | summarize arg_max(Timestamp, *), TotalEvents = count(), TriggeredFiles = make_set(FileName), FileHashes = make_set(SHA1), IntiatingProcesses = make_set(InitiatingProcessCommandLine) by DeviceName, AccountName
 | project Timestamp, DeviceName, AccountDomain, AccountName, TotalEvents, TriggeredFiles, FileHashes, IntiatingProcesses 

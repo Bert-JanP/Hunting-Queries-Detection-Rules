@@ -28,14 +28,14 @@ An adversary has gained access into your network and tries to find lateral movem
 - https://securelist.com/malicious-tasks-in-ms-sql-server/92167/
 
 ## Defender For Endpoint
-```
+```KQL
 let DatabasePorts = dynamic([1433, 1434, 1583, 3050, 3306, 3351, 5432]);
 // Device List with devices that perform benign connections to SQL machines
 let BenignDeviceList = dynamic(['DeviceName1']);
 // Threshold for the amount of unique connections
 let AlertThreshold = 10;
 DeviceNetworkEvents
-| where Timestamp > ago(24h)
+| where ingestion_time() > ago(24h)
 // Filter Database ports
 | where RemotePort in (DatabasePorts)
 // Filter Benign Devices
@@ -46,14 +46,14 @@ DeviceNetworkEvents
 | project DeviceName, Timestamp, TotalIPsAccessed, IPList, PortList
 ```
 ## Sentinel
-```
+```KQL
 let DatabasePorts = dynamic([1433, 1434, 1583, 3050, 3306, 3351, 5432]);
 // Device List with devices that perform benign connections to SQL machines
 let BenignDeviceList = dynamic(['DeviceName1']);
 // Threshold for the amount of unique connections
 let AlertThreshold = 10;
 DeviceNetworkEvents
-| where TimeGenerated > ago(24h)
+| where ingestion_time() > ago(24h)
 // Filter Database ports
 | where RemotePort in (DatabasePorts)
 // Filter Benign Devices

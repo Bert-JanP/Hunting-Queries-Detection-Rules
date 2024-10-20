@@ -2,15 +2,15 @@
 ----
 ### Defender For Endpoint
 
-```
+```KQL
 DeviceEvents
-| where Timestamp > ago(7d)
+| where ingestion_time() > ago(7d)
 | where ActionType == "SmartScreenUserOverride"
 ```
 ### Sentinel
-```
+```KQL
 DeviceEvents
-| where TimeGenerated > ago(7d)
+| where ingestion_time() > ago(7d)
 | where ActionType == "SmartScreenUserOverride"
 ```
 
