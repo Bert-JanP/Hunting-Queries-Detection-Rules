@@ -10,7 +10,7 @@ Mainly important for Sentinel users is to get insight into the amount of traffic
 ### References
 - https://learn.microsoft.com/en-us/azure/sentinel/billing-monitor-costs
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let TimeRange = 10d;
 search *

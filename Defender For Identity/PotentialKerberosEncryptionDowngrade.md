@@ -26,7 +26,7 @@ An adversary has performed an downgrade attack to be able to perform kerberoasti
 #### References
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos
 
-## Defender For Endpoint
+## Defender XDR
 ```
 IdentityDirectoryEvents
 | where ActionType == "Account Supported Encryption Types changed"

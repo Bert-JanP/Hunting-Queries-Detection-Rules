@@ -1,6 +1,6 @@
 # Show the last 100 Powershell executions from a compromised device
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop.contoso.com";

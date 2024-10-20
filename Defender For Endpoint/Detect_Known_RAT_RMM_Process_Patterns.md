@@ -28,7 +28,7 @@ The results will contain a summary table, listint the following columns: Unique 
 - [RATs Race: Detecting remote access tools beyond pattern-based indicators](https://detect.fyi/rats-race-detecting-remote-access-tools-beyond-pattern-based-indicators-5c864b171892)
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Author: Alex Teixeira (alex@opstune.com)
 DeviceProcessEvents

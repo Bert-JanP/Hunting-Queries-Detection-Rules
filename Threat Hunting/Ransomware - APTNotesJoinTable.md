@@ -1,6 +1,6 @@
 # APTNotes table that can be used to join with other data connectors
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let APTInfo = externaldata(Filename: string, Title: string, Source: 

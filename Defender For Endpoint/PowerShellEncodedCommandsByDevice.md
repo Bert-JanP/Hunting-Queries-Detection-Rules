@@ -8,7 +8,7 @@
 | ---  | --- | --- |
 | T1027 | Obfuscated Files or Information |https://attack.mitre.org/techniques/T1027/ |
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); 
 // For more results use line below en filter one above. This will also return more FPs.

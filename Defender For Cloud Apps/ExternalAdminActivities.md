@@ -1,6 +1,6 @@
 # List the external admin activities
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

@@ -1,6 +1,6 @@
 # Find all the executed LDAP queries from a compromised device
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop1.com";

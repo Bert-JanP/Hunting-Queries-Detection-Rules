@@ -1,6 +1,6 @@
 # Hunt for SmartScreen events. What file was opened? Or which URL did they try to access?
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```KQL
 DeviceEvents

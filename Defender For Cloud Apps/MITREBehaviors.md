@@ -11,7 +11,7 @@ An actor has taken over an account and performes multiple techniques to reach hi
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-behaviorinfo-table?view=o365-worldwide
 - https://learn.microsoft.com/en-us/defender-cloud-apps/behaviors
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let AlertThreshold = 3;
 BehaviorInfo

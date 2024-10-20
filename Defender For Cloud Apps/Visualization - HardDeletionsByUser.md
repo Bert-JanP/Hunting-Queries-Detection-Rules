@@ -1,6 +1,6 @@
 # Visualisation of the users with the most HardDelete actions performed
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

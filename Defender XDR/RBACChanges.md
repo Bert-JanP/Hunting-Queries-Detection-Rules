@@ -10,7 +10,7 @@ The query below can be used to monitor RBAC changes in Defender XDR. This query 
 - https://learn.microsoft.com/en-us/defender-endpoint/rbac
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | extend Workload = tostring(parse_json(RawEventData).Workload)

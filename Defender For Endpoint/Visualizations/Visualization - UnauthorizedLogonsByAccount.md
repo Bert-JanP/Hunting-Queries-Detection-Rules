@@ -1,6 +1,6 @@
 # Unauthorized Logon actions by Domain and Account
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceLogonEvents

@@ -19,7 +19,7 @@ An adversary uses PowerShell to execute malicious scripts in which AMSI detects 
 #### References
 - https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType == "AmsiScriptDetection"

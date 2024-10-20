@@ -19,7 +19,7 @@ A phishing campaign using different email addresses is targetting your organisat
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let RareDomainThreshold = 20;
 let TotalSenderThreshold = 1;

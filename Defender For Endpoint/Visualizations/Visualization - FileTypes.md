@@ -1,6 +1,6 @@
 # Visualize FileTypes based on DeviceFileEvents
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let TimeFrame = 7d;

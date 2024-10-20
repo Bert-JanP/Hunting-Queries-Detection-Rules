@@ -8,7 +8,7 @@ This query detects the use of bloodhound based on the processes it creates. This
 #### References
 - https://redcanary.com/threat-detection-report/threats/bloodhound/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // List with known bloodhound executions
 let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound' ,'get-bloodHounddata']);

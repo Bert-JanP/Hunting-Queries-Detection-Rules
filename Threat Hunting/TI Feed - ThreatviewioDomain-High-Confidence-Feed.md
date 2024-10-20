@@ -4,7 +4,7 @@
 #### Feed information: https://threatview.io/
 #### Feed link: https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt
 
-### Defender For Endpoint
+### Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(Domain: string)[@"https://threatview.io/Downloads/DOMAIN-High-Confidence-Feed.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

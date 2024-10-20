@@ -18,7 +18,7 @@ An advasary removes the shadow copy before deploying ransomware to ensure that y
 - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin-delete-shadows
 - https://redcanary.com/blog/its-all-fun-and-games-until-ransomware-deletes-the-shadow-copies
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let CommonRansomwareExecutionCommands = dynamic([@'vssadmin.exe delete shadows /all /quiet', 
 @'wmic.exe shadowcopy delete', @'wbadmin delete catalog -quiet', 

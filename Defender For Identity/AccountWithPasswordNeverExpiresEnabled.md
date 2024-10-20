@@ -8,7 +8,7 @@ In Windows a password can be set so that it will never expire. This is normaly n
 #### Risk
 A account that has as password that never exprided on and it has a weak password. That makes it vulnerable for Brute Force attacks. 
 
-## Defender For Endpoint
+## Defender XDR
 ```
 IdentityDirectoryEvents
 | where ActionType == "Account Password Never Expires changed"

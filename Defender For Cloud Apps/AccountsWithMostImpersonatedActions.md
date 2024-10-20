@@ -1,6 +1,6 @@
 # List the top 100 accounts that have performed the most impersonated actions
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

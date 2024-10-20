@@ -1,6 +1,6 @@
 # File Enrichment on Suspicious File
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let SuspiciousDownloadName = 'GoogleUpdateSetup.exe';

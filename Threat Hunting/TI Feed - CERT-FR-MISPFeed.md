@@ -3,7 +3,7 @@
 #### Source: CERT-FR
 #### Feed link: https://misp.cert.ssi.gouv.fr/feed-misp/hashes.csv
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CERTFRFeed = externaldata (SHA1: string, threatid :string) ["https://misp.cert.ssi.gouv.fr/feed-misp/hashes.csv"];

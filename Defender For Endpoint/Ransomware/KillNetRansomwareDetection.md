@@ -2,7 +2,7 @@
 
 Source: https://www.virustotal.com/gui/file/db1c8ddcdfea93031a565001366ffa9fdb41a689bddab46aec7611a46bb4dc50/detection
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let killnetRansomNote = "ru.txt";

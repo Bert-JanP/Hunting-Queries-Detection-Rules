@@ -21,7 +21,7 @@ A malcious Office Application has run and resulted in a attacker that gained Per
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#block-office-applications-from-creating-executable-content
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // To prevent False Positives a FilePrevalanceThreshold is used.
 let FilePrevalanceThreshold = 100;

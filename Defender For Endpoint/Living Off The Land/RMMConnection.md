@@ -20,7 +20,7 @@ An actor uses RRM tools to gain remote access to your environment.
 - https://lolrmm.io/
 - https://x.com/Antonlovesdnb/status/1840823846720385482
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // First part based on tweet by: @Antonlovesdnb https://x.com/Antonlovesdnb/status/1840823846720385482
 let LOLRMM = externaldata(Name:string,Category:string,Description:string,Author:string,Date:datetime,LastModified:datetime,Website:string,Filename:string,OriginalFileName:string,PEDescription:string,Product:string,Privileges:string,Free:string,Verification:string,SupportedOS:string,Capabilities:string,

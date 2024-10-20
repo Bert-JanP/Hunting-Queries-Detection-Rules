@@ -9,7 +9,7 @@ This query lists all the supressions that have been added to Defender XDR. This 
 - https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-the-new-alert-suppression-experience/ba-p/3562719
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where Timestamp > ago(30d)

@@ -10,7 +10,7 @@ The database ports defined in the query:
 - 5432: PostgreSQL
 
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let databaseports = dynamic([1433, 1434, 1583, 3050, 3306, 3351, 5432]);

@@ -17,7 +17,7 @@ An actor deletes multiple cloud resources to create impact.
 #### References
 - https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-cloudauditevents-table
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let Threshold = 20;
 let BinSize = 1d;

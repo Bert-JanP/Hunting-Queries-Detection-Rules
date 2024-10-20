@@ -1,6 +1,6 @@
 # Detect new RDP connections to devices that have not been established in the past 20 days
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```KQL
 let PreviousRDPConnections = materialize (

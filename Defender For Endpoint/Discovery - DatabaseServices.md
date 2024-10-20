@@ -27,7 +27,7 @@ An adversary has gained access into your network and tries to find lateral movem
 - https://www2.fireeye.com/rs/848-DID-242/images/rpt-fin6.pdf
 - https://securelist.com/malicious-tasks-in-ms-sql-server/92167/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let DatabasePorts = dynamic([1433, 1434, 1583, 3050, 3306, 3351, 5432]);
 // Device List with devices that perform benign connections to SQL machines

@@ -26,7 +26,7 @@ These might of course include legit, rare outgoing connections but more importan
 - [Query walkthrough at Medium](https://ateixei.medium.com/f5bfdc0d55d6?source=friends_link&sk=7f5d56cf3a85c126992ce866dd864b86)
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Author: Alex Teixeira (alex@opstune.com)
 // Query walkthrough: https://ateixei.medium.com/f5bfdc0d55d6?source=friends_link&sk=7f5d56cf3a85c126992ce866dd864b86

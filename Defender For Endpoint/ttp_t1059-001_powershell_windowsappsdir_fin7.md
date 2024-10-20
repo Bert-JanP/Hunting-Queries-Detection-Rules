@@ -26,7 +26,7 @@ FIN7 have been observed performing this behaviour in recent intrusions. FIN7 act
 #### References
 - [https://kqlquery.com/](https://redcanary.com/blog/msix-installers/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceProcessEvents
 | where InitiatingProcessFolderPath contains "windowsapps" and FileName =~ "powershell.exe" and ProcessCommandLine has_all ("windowsapps","-file",".ps1")

@@ -21,7 +21,7 @@ Adversaries might use parameters that are not often used in your environment.
 #### References
 - https://learn.microsoft.com/en-us/windows/win32/winsock/net-exe-2
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let StartTime = 30d;
 let RareThresholdNetActionType = 10; // Determine how rare a command must be to be included in the results

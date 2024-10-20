@@ -7,7 +7,7 @@ This query can be used to detect rare UserAgents that are used to sign into your
 
 The query can be extended by filtering on succesful and failed sign ins. 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AADSignInEventsBeta
 | summarize count() by UserAgent

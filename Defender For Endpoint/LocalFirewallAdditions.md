@@ -1,6 +1,6 @@
 # Hunt for Local Firewall Additions
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceProcessEvents

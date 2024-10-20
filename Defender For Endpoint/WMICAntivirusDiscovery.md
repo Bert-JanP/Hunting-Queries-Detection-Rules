@@ -24,7 +24,7 @@ An actor uses WMIC to list the installed antivirus solutions
 - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/jrat-new-anti-parsing-techniques
 - https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/07195002/KL_AdwindPublicReport_2016.pdf
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceProcessEvents
 // Filter only on WMIC executions

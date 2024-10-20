@@ -1,6 +1,6 @@
 # Find all the ASR events that have triggered from a compromised device
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop1";

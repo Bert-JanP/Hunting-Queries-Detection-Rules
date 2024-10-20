@@ -1,6 +1,6 @@
 # Hunt for Local Firewall Deletions
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceProcessEvents

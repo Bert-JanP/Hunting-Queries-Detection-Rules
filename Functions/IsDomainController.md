@@ -9,7 +9,7 @@ This function validates if a device is a Domain Controller. It will return true 
 - https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/functions/user-defined-functions
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-custom-functions?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // This function validates if a device is a Domain Controller. It will return true when it is a domain controller, alternatively false is returned.
 let IsDeviceDomainController = (DeviceNameInput: string) {

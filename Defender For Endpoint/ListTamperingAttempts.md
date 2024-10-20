@@ -11,7 +11,7 @@ An adversary tries to disable security logging / monitoring to perform malicious
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType == "TamperingAttempt"

@@ -1,6 +1,6 @@
 # Hunt for activities where Hard Delete user was performed
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

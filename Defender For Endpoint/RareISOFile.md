@@ -24,7 +24,7 @@ A actor can use a malicious mounted ISO to gain initial access.
 - https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/automount
 - https://www.cisa.gov/uscert/ncas/alerts/aa20-266a
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let Threshold = 100;
 DeviceFileEvents

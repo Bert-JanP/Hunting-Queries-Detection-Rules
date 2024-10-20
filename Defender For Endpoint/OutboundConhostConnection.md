@@ -13,7 +13,7 @@ It is unexpected that conhost makes connections to external domains.
 - https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules
 - example link 3
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let ValidDomains = dynamic(['.microsoft.com', '.digicert.com']);
 DeviceNetworkEvents

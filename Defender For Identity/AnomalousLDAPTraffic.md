@@ -27,7 +27,7 @@ An adversary has gained access to your network and performes LDAP queries to per
 #### References
 - https://www.microsoft.com/en-us/security/blog/2021/05/28/breaking-down-nobeliums-latest-early-stage-toolset/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Variables to define the anomalous behaviour
 let starttime = 30d;

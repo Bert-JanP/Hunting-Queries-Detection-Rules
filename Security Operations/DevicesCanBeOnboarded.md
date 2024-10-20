@@ -11,7 +11,7 @@ Devices that are not onboarded can be misused without detection.
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-machines-onboarding?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let RecentDetection = 10d;
 DeviceInfo

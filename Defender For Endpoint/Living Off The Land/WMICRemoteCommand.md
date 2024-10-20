@@ -20,7 +20,7 @@ An actor uses WMIC to remotely execute malicious commands.
 - https://web.archive.org/web/20230728141353/https://research.nccgroup.com/2021/01/12/abusing-cloud-services-to-fly-under-the-radar/
 - https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmic
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 DeviceProcessEvents

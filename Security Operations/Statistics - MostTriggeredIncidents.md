@@ -5,7 +5,7 @@
 #### Description
 The results of this query provide insight in the top 10 incidents that have triggered in your selected *timeframe*, this can give indications on which incidents should be addressed to limit potential false positives.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Timeframe to collect incident statistics
 let timeframe = 7d;

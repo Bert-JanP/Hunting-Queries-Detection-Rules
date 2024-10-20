@@ -20,7 +20,7 @@ An malicious OneNote file was opened and resulted in running AsyncRAT
 - https://blog.osarmor.com/319/onenote-attachment-delivers-asyncrat-malware/
 - https://resources.infosecinstitute.com/topic/asyncrat-escapes-security-defenses/
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 EmailEvents

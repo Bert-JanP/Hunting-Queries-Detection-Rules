@@ -10,7 +10,7 @@ This query can be used to list the statistics of the entities that have been que
 - https://www.trendmicro.com/en_us/research/19/f/shifting-tactics-breaking-down-ta505-groups-use-of-html-rats-and-other-techniques-in-latest-campaigns.html
 - https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let StartTime = 30d;
 DeviceProcessEvents

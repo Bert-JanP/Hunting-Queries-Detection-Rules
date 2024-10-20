@@ -20,7 +20,7 @@ A malicious script is remotely downloaded and executed.
 - https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 let AllowedDomains = dynamic(['google.com']);

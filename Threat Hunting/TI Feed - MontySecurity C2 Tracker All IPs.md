@@ -4,7 +4,7 @@
 #### Feed information: https://github.com/montysecurity/C2-Tracker
 #### Feed link: https://raw.githubusercontent.com/montysecurity/C2-Tracker/main/data/all.txt
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/montysecurity/C2-Tracker/main/data/all.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

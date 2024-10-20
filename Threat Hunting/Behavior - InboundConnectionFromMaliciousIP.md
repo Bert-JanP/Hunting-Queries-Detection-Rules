@@ -18,7 +18,7 @@ An adversary which uses a already flagged IP go scan your network for point of i
 - https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/discovering-internet-facing-devices-using-microsoft-defender-for/ba-p/3778975
 - https://github.com/stamparm/ipsum
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 // Collect Threat Intel feed information from Ipsum (Level 4), more threat can be used. For examples see TI feeds on the page: https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/Threat%20Hunting

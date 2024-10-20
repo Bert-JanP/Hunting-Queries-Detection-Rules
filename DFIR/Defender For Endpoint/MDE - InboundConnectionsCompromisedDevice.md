@@ -8,7 +8,7 @@ This query can be used to get a quick overview of all the inbound connections th
 #### References
 - https://www.microsoft.com/en-us/security/blog/2020/12/28/using-microsoft-365-defender-to-coordinate-protection-against-solorigate/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Add the device you are investigating in the CompromisedDevice variable
 let CompromisedDevice = "test.domain.tld";

@@ -6,7 +6,7 @@ This Threat Hunting case is based on the DeviceNetworkEvents table. The goal is 
 
 The first step is to investigate the amount of HTTP requests and classify them by HTTP Method. This will give insights into the behaviour of your environment. 
 
-### Defender For Endpoint
+### Defender XDR
 ```
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
@@ -36,7 +36,7 @@ DeviceNetworkEvents
 
 The next step is to dive into the files that have been downloaded with HTTP GET requests. This is done by summarizing all file extensions that have been downloaded.
 
-### Defender For Endpoint
+### Defender XDR
 ```
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
@@ -77,7 +77,7 @@ DeviceNetworkEvents
 
 Based on a shortlist we dive into the executable files that may contain suspicious/malicious content by listing all executable files that have been downloaded using HTTP.
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
 DeviceNetworkEvents
@@ -118,7 +118,7 @@ DeviceNetworkEvents
 
 If you found a suspicious file you can use the filename to investigate this file, using the FileProfile function. This enables us to list the file information (ThreatName, GlobalPrevalence, Signer) and a list with devices and file locations.
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let SuspiciousDownloadName = 'GoogleUpdateSetup.exe';
 DeviceFileEvents

@@ -16,7 +16,7 @@ A false positive would be a aministrator that would perform legitimate SMB file 
 #### Risk
 A actor uses a SMB file copy to distrubute malware in your environment. 
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 let WhitelistedAccounts = dynamic(['account1', 'account2']);

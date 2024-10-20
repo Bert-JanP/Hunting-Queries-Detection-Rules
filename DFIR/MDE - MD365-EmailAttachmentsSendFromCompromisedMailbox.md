@@ -1,6 +1,6 @@
 # Find all attachments that have been send from a compromised mailbox and which devices have opened that attachment.  
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedMailbox = "test@test.com";

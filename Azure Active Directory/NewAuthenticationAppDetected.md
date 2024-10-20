@@ -20,7 +20,7 @@ A malicious actor installs a malicious app in your environment. This app can the
 - https://learn.microsoft.com/en-us/security/compass/incident-response-playbook-compromised-malicious-app
 - https://www.lares.com/blog/malicious-azure-ad-application-registrations/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let KnownApps = AADSignInEventsBeta
 // Adjust the timerange depending on the retention period

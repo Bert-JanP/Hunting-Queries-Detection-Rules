@@ -1,6 +1,6 @@
 # Triggers when a user performs a SmartScreen Override action
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```KQL
 DeviceEvents

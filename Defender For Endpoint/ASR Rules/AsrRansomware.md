@@ -17,7 +17,7 @@ A actor has gained access to your network and tries to execute ransomware.
 #### References
 - https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide#use-advanced-protection-against-ransomware
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where ingestion_time() > ago(30d)

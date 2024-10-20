@@ -1,6 +1,6 @@
 # Find all the processes a file has created and the associated FileNames, FileLocations and SHA1 hashes that the file has had. 
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 // For the best results use SHA1

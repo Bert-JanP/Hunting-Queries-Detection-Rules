@@ -8,7 +8,7 @@ This query lists how many devices have been onboarded per operating system.
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/onboard-configure?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceInfo
 | where OnboardingStatus == "Onboarded"

@@ -24,7 +24,7 @@ An adversary transfered tools to the local device for execution.
 - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceProcessEvents
 | where FileName == "certutil.exe"

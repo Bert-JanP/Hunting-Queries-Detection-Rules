@@ -4,7 +4,7 @@ Blog about the (unconfirmed) zero day in Exchange: [Link](https://www.gteltsc.vn
 
 
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let C2IP = '137.184.67.33';
 let DownloadIP = '206.188.196.77';

@@ -1,6 +1,6 @@
 # List the file extentions that have been used during a HTTP GET request
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

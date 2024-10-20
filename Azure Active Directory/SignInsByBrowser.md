@@ -6,7 +6,7 @@
 This query lists all the different browsers that are used to succesfully sign in to your Entra ID Tenant. This could be used to detect rare browsers that are used to sign into your tenant.
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQLAADSignInEventsBeta
 | where isnotempty(UserAgent)
 // Filter for successful sign ins only

@@ -23,7 +23,7 @@ These URLs lead to adversary-in-the-middle (AiTM) pages that allow Storm-0539 to
 #### References
 - https://twitter.com/MsftSecIntel/status/1735351713907773711
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let URLs = dynamic([@'/Udlaps/', @'/Usrlop/', @'/adls/index.html', @'/saml2/index.html']);
 EmailUrlInfo

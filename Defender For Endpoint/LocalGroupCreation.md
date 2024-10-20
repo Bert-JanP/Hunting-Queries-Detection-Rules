@@ -11,7 +11,7 @@ Local groups can be created in order to evade AD Group requirements and control 
 #### References
 - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/get-localgroup?view=powershell-5.1
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let AllDomainControllers =
     DeviceNetworkEvents

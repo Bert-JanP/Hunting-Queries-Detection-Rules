@@ -26,7 +26,7 @@ The risk targeted by this detection rule is the exploitation of IPFS in phishing
 - [Cisco-Talos IOCs](https://github.com/Cisco-Talos/IOCs/tree/main/2022/11)
 - [Volexity Threat Intel](https://raw.githubusercontent.com/volexity/threat-intel/main/2023/2023-06-28%20POWERSTAR/attachments/ipfs.txt)
 
-## Defender For Endpoint
+## Defender XDR
 
 ```KQL
 //check for phishing emails potentially using ipfs to host malicious content used in phishing campaigns.

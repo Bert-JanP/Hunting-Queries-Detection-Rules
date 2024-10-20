@@ -18,7 +18,7 @@ A compromised account performs discovery activities in your environment.
 - https://thedfirreport.com/2021/11/29/continuing-the-bazar-ransomware-story/
 - https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let WhitelistedDepartments = dynamic(["Service Desk", "It Admins"]);
 let StartTime = 30d;

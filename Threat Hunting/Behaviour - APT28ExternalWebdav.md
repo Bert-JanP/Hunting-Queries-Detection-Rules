@@ -19,7 +19,7 @@ APT28 has gotten access to one of your devices and executes malicious payloads.
 #### References
 - https://cert.gov.ua/article/6276894
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 DeviceProcessEvents

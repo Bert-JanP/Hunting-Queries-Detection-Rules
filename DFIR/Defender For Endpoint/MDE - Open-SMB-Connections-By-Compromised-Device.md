@@ -1,6 +1,6 @@
 # Show all successful SMB connections of a compromised device
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop1";

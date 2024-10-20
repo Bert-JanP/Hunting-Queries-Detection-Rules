@@ -4,7 +4,7 @@
 #### Feed information: https://osint.digitalside.it/
 #### Feed link: https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 
-### Defender For Endpoint
+### Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(Domain: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt"] with (format="txt", ignoreFirstRecord=True);
 DeviceNetworkEvents

@@ -4,7 +4,7 @@
 #### Feed information: https://osint.digitalside.it/
 #### Feed link: https://osint.digitalside.it/Threat-Intel/lists/latestips.txt
 
-### Defender For Endpoint
+### Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

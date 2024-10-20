@@ -16,7 +16,7 @@ An adversary creates payloads in the C:\Users\Public to stay undetected.
 - https://www.cisa.gov/uscert/ncas/analysis-reports/ar22-203a
 - https://securelist.com/server-side-attacks-cc-in-public-clouds-mdr-cases/107826/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // The start of the folderpath in the Public directory.
 let PublicFolder = @'C:\Users\Public';

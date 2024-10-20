@@ -18,7 +18,7 @@ An actor removes the security log to hide malicious activities.
 - https://content.fireeye.com/apt-41/rpt-apt41
 - https://www.welivesecurity.com/2016/01/03/blackenergy-sshbeardoor-details-2015-attacks-ukrainian-news-media-electric-industry/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType == 'SecurityLogCleared'

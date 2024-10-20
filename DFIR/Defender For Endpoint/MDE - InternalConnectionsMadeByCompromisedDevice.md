@@ -9,7 +9,7 @@ This query will most likely, depending on the setup of your organization always 
 
 This is query is aimed to be part of your inciden triage, to discover or exclude potential lateral movement in an efficient manner. 
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Add the device you are investigating in the CompromisedDevice variable
 let CompromisedDevice = "compromiseddevice";

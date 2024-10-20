@@ -19,7 +19,7 @@ An advasary uses an encoded PowerShell command to collect a payload.
 - https://community.sophos.com/sophos-labs/b/blog/posts/decoding-malicious-powershell
 - https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/tracking-detecting-and-thwarting-powershell-based-malware-and-attacks
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); 
 // For more results use line below en filter one above. This will also return more FPs.

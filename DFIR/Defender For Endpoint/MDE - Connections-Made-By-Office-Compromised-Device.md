@@ -1,6 +1,6 @@
 # Find all the connections that have been made by Office from a compromised device. 
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let ConnectionsMadeByOfficeRegKey = @'\SOFTWARE\Microsoft\Office\16.0\Common\Internet\Server Cache';

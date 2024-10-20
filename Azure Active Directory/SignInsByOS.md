@@ -7,7 +7,7 @@ This query can be used to detect rare operating systems that are used to sign in
 
 This query can also be used to determine with Operting Systems need to be added to your Conditional Access Policies.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AADSignInEventsBeta
 | where isnotempty(UserAgent)

@@ -1,6 +1,6 @@
 # HTTP Request Methods Statistics
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

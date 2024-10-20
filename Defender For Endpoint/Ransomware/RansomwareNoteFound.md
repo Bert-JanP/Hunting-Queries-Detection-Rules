@@ -1,6 +1,6 @@
 # Triggers when a know ransomware note is found
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let RansomwareNotes  = externaldata(RansomwareNote: string)[@"https://raw.githubusercontent.com/eshlomo1/Ransomware-NOTE/main/ransomware-notes.txt"] with (format="txt", ignoreFirstRecord=True);

@@ -4,7 +4,7 @@
 #### IOC Source: https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
 #### Publish Date: 10 August 2022
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 // based on https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html

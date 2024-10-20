@@ -1,6 +1,6 @@
 # Hunt for Local Admins with the most RemoteInteractive logins
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceLogonEvents

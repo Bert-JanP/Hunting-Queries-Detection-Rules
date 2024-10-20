@@ -27,7 +27,7 @@ Relevant third parties, suppliers, or clients could be compromised and present a
 - [Microsoft Sentinel External Data Operator](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/externaldata-operator?pivots=azuredataexplorer)
 - [Ransomware Live](https://ransomware.live/#/)
 
-## Defender For Endpoint & Sentinel
+## Defender XDR & Sentinel
 ```KQL
 //basic KQL to query recentvictims API
 let victims = externaldata(country:string,

@@ -17,7 +17,7 @@ An adversary got access to an account and tries to elevate permissions by adding
 #### References
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let BinTimeFrame = 1h;
 let AlertThreshold = 3;

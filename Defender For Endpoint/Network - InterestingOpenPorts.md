@@ -13,7 +13,7 @@ The interesting ports defined in the query:
 - 3306: MySQL
 - 8080: Alternative HTTP
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 let portlist = dynamic([21, 22, 25, 53, 80, 110, 443, 1433, 1434, 3306, 8080]); //Add relevant ports in the list if needed

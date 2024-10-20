@@ -20,7 +20,7 @@ Adversaries can use Get-MpPreference to list exclusions, those exclusions can be
 - https://learn.microsoft.com/en-us/powershell/module/defender/get-mppreference?view=windowsserver2022-ps
 - https://cloudbrothers.info/en/create-persistent-defender-av-exclusions-circumvent-defender-endpoint-detection/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let ProcessBased = DeviceProcessEvents
 | where ProcessCommandLine has "Get-MpPreference"

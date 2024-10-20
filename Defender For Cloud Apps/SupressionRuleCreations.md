@@ -1,6 +1,6 @@
 # Detect supression rule creations
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

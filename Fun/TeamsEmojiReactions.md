@@ -5,7 +5,7 @@
 #### Description
 This query lists the statistics of the Emoji reactions that have been send via Microsoft Teams
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 CloudAppEvents
 | where Application == "Microsoft Teams"

@@ -5,7 +5,7 @@
 #### Description
 This query visualises the top 100 Devices that initiate the most clear text LDAP authentications. You preferably want to use an encrypted form of LDAP instead of cleartext.
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 IdentityLogonEvents

@@ -4,7 +4,7 @@
 This query visualizes the daily antivirus detections, which can give an indication in anomalous amount of activities that are performed in your environment. 
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where Timestamp > ago(30d)

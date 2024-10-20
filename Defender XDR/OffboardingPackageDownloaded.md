@@ -18,7 +18,7 @@ An actor has gotten access to an account that is able to download an Defender Fo
 - https://learn.microsoft.com/en-us/defender-endpoint/offboard-machines
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where ActionType == "DownloadOffboardingPkg"

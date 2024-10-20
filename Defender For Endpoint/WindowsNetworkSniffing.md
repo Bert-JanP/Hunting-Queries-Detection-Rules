@@ -17,7 +17,7 @@ Actor can use network sniffing to capture information. If data (passwords) is se
 #### References
 - https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 DeviceProcessEvents

@@ -25,7 +25,7 @@ The risk addressed by this detection rule is the unauthorized installation of Az
 - [Azure ARC Agent Overview](https://learn.microsoft.com/en-us/azure/azure-arc/servers/agent-overview)
 - [Microsoft Security Blog on Azure ARC](https://www.microsoft.com/en-us/security/blog/2023/09/14/peach-sandstorm-password-spray-campaigns-enable-intelligence-collection-at-high-value-targets/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Unexpected installation of azure arc agent - service installation
 let ServiceNames = datatable(name:string)["himds.exe","gc_arc_service.exe","gc_extension_service.exe"];

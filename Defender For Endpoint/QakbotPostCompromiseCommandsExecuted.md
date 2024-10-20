@@ -1,6 +1,6 @@
 # Detect when multiple Qakbot post compromise commands have been executed
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let QakBotCommands = dynamic(['net view', 'cmd /c set', 'arp -a', 'ipconfig /all', 'nslookup-querytype=ALL -timeout=12', '_ldap._tcp.dc._msdcs.WORKGROUP', 'net share', 'net1 share', 'route print', 'net localgroup', 'whoami /all']); // source: https://twitter.com/1ZRR4H/status/1568395544359309312

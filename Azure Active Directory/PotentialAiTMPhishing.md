@@ -21,7 +21,7 @@ Adversary in the middle phishing has successfully been peformed on a user and th
 - https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/aitm-amp-bec-threat-hunting-with-kql/ba-p/3885166
 - https://jeffreyappel.nl/aitm-mfa-phishing-attacks-in-combination-with-new-microsoft-protections-2023-edt/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AADSignInEventsBeta
 | where Application == "OfficeHome"

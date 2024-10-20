@@ -9,7 +9,7 @@ The database ports defined in the query:
 - 5985: WinRM v2
 - 5986: WinRM
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let RemoteServices = dynamic([22, 139, 445, 3389, 5900, 5985, 5986]);

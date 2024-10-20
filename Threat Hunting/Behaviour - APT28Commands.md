@@ -11,7 +11,7 @@ APT28 has gotten access to one of your devices and executes malicious payloads.
 #### References
 - https://cert.gov.ua/article/6276894
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let APT28Commands = dynamic(['Get-Content', '-w hid -nop', '-windowstyle hidden -encodedCommand', 'start-process ssh.exe', 'Get-Content -Encoding', 'Compress-Archive', 'Get-WinEvent -FilterHashtable', 'net time', 'Get-ADDomainController', 'Get-DnsClientServerAddress', 'Get-NetAdapter', 'Get-NetAdapterBinding', 'Get-NetIPConfiguration', 'Resolve-DNSName', 'ipconfig /flushdns', 'net start dnscache', 'net stop dnscache']);
 let Threshold = 3;

@@ -10,7 +10,7 @@ This function returns the last x amount of powershell executions that have been 
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-custom-functions?view=o365-worldwide
 - https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/timespan
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Returns the last x amount of powershell executions based on a device and the timespan. Timespan examples can be seen in https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/scalar-data-types/timespan
 let LastPowerShellExecutions = (DeviceNameInput: string, Results: int, TimeFrame: timespan) {

@@ -1,6 +1,6 @@
 # Find the DFE Antivirus events on compromised devices. FileInfo is stored in JSON format.
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevices = dynamic (["laptop1", "server2"]);

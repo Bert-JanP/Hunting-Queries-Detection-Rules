@@ -8,7 +8,7 @@ This query detects successful signins from countries that have not been seen bef
 #### Risk
 An adversary signs in from a new country to your azure AD tenant.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let KnownCountries = AADSignInEventsBeta
     | where Timestamp > ago(30d) and Timestamp < ago(3d)

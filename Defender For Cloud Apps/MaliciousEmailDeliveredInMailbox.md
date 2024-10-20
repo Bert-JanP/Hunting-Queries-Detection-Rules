@@ -1,6 +1,6 @@
 # Malicious email delivered in Microsoft 365
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

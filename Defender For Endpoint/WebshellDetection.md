@@ -27,7 +27,7 @@ Look for suspicious process that IIS worker process (w3wp.exe), nginx, Apache HT
 Look for suspicious web shell execution, this can identify processes that are associated with remote execution and reconnaissance activity (example: “arp”, “certutil”, “cmd”, “echo”, “ipconfig”, “gpresult”, “hostname”, “net”, “netstat”, “nltest”, “nslookup”, “ping”, “powershell”, “psexec”, “qwinsta”, “route”, “systeminfo”, “tasklist”, “wget”, “whoami”, “wmic”, etc.)
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let webservers = dynamic(["beasvc.exe", "coldfusion.exe", "httpd.exe", "owstimer.exe", "visualsvnserver.exe", "w3wp.exe", "tomcat", "apache2", "nginx"]);
 let linuxShells = dynamic(["/bin/bash", "/bin/sh", "python", "python3"]);

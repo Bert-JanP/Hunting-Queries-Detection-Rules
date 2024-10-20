@@ -1,6 +1,6 @@
 # Find which devices have been accessed by a compromised device and which protocol was used to connect
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop.contoso.com";

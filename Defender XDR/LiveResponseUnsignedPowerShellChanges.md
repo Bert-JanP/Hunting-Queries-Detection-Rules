@@ -11,7 +11,7 @@ This query lists all changes to the Live Response Unsigned Script settings in th
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where ActionType == "SetAdvancedFeatures"

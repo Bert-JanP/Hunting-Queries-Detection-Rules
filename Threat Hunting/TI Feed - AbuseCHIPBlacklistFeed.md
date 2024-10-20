@@ -3,7 +3,7 @@
 #### Source: Abuse.ch
 #### Feed link: https://sslbl.abuse.ch/blacklist/sslipblacklist.txt
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://sslbl.abuse.ch/blacklist/sslipblacklist.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

@@ -17,7 +17,7 @@ Local Admin accounts have high priviliges on and can should be limited.
 #### References
 - https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/local-accounts#administrator
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where ActionType == "UserAccountAddedToLocalGroup"

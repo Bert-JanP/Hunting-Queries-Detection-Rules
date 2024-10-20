@@ -22,7 +22,7 @@ Ransomware is being deployed in your environment.
 - https://app.any.run/tasks/d66ead5a-faf4-4437-93aa-65785afaf9e5/
 
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_rename/file_rename_win_ransomware.yml
 // Add your most common file extentions in this list

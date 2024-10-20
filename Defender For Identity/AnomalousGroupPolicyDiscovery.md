@@ -16,7 +16,7 @@ Potential false positive is a new Administrator that has not performed group pol
 #### Risk
 An attacker queries Group Policy object to gain valuable information about the environment. 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let PreviousActivity = materialize (
      IdentityQueryEvents

@@ -1,6 +1,6 @@
 # Triggers when a known ransomware extension has been found
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let RansomwareExtensionsInput  = externaldata(Extension: string)[@"https://raw.githubusercontent.com/eshlomo1/Ransomware-NOTE/main/ransomware-extension-list.txt"] with (format="txt", ignoreFirstRecord=True);

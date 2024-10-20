@@ -11,7 +11,7 @@ If an attacker could get access to a break glass account, this account could be 
 #### Author
 - **Github: https://github.com/erikgruetter**
 
-## Defender For Endpoint
+## Defender XDR
 ```
 AADSignInEventsBeta
 | where AccountDisplayName  == "Input display name of account here"

@@ -1,6 +1,6 @@
 # Logon Failure Reasons
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceLogonEvents

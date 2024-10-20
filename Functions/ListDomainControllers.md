@@ -9,7 +9,7 @@ This function list all the domain controllers in your environment. Which might b
 - https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/functions/user-defined-functions
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-custom-functions?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // This function list all domain controllers that have been active in the last 7 days. 
 let ListDomainControllers =

@@ -8,7 +8,7 @@ This query returns a row for each device and states for every rule the configura
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceTvmInfoGathering
 | summarize arg_max(Timestamp, DeviceId, DeviceName, AdditionalFields) by DeviceId

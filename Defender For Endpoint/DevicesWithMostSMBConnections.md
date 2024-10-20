@@ -5,7 +5,7 @@
 #### Description
 This hunting query lists all the devices and the unique connections they have made with a remote SMB port. Devices with a large number of connected SMB sessions can be interesting to investigate.
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 DeviceNetworkEvents

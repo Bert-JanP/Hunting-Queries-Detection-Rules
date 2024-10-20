@@ -10,7 +10,7 @@ This function returns all public IPv4 addresses that have been seen on the comma
 - https://lolbas-project.github.io/lolbas/Binaries/Rundll32/
 - https://andreafortuna.org/2017/11/27/how-a-malware-can-download-a-remote-payload-and-execute-malicious-code-in-one-line/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
 // Returns all commandlines that contain a public IP addres from a specific device

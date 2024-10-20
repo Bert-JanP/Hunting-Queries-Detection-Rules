@@ -9,7 +9,7 @@ This query lists all manual (and playbook related) anvitius actions that are ini
 - https://learn.microsoft.com/en-us/defender-endpoint/mdav-scan-best-practices
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where ActionType == "RunAntiVirusScan"

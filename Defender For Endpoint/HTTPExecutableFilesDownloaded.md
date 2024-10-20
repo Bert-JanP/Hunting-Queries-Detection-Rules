@@ -1,6 +1,6 @@
 # Executable File Extentions downloaded via HTTP GET
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);

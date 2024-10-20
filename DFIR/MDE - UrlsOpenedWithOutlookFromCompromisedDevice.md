@@ -1,6 +1,6 @@
 # Find all the activities that launched a browser to open a URL from a compromised device.
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "laptop.contoso.com";

@@ -5,7 +5,7 @@
 #### Description
 This function returns the severity statistics of Sentinel or XDR.
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let CollectIncidentStatistics = (TimeSpan: timespan) {
     AlertInfo

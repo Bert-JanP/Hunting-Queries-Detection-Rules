@@ -8,7 +8,7 @@ This query returns a row for each device with a count for each Attack Surface Re
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType startswith 'ASR'

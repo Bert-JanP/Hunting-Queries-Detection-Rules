@@ -11,7 +11,7 @@ An adversary uses a loldriver to perform malicious activities.
 #### References
 - https://www.loldrivers.io/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let LolDriverSHA1 = externaldata(SHA1: string)[@"https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/detections/hashes/authentihash_samples.sha1"] with (format="txt", ignoreFirstRecord=False);
 // Combine results to get ImageLoads, FileActions and Process Events

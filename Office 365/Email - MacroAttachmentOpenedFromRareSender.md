@@ -28,7 +28,7 @@ A actor uses a macro file to gain initial access in the network. This macro must
 - https://www.crowdstrike.com/blog/timelining-grim-spiders-big-game-hunting-tactics/
 - https://redcanary.com/blog/how-one-hospital-thwarted-a-ryuk-ransomware-outbreak/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Adjust the threshold based on your organisation.
 let RareSenderThreshold = 10;

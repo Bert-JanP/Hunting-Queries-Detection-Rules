@@ -10,7 +10,7 @@ This function returns the RiskState of a UPN, if the results are empty then the 
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-custom-functions?view=o365-worldwide
 - https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/howto-export-risk-data
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Function returns the RiskState of a UPN, if the results are empty then the user did not have a risky state in the last 90 days.
 let UserRiskStatus = (UPN: string) {

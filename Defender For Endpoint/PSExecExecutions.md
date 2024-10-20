@@ -15,7 +15,7 @@ A actor uses PsExec to remotely run commands.
 - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7.3
 - https://www.cybereason.com/blog/research/operation-soft-cell-a-worldwide-campaign-against-telecommunications-providers
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceProcessEvents
 // Collect all executed psexec commands

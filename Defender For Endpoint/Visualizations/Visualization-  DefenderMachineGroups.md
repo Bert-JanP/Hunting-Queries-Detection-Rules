@@ -2,7 +2,7 @@
 
 In order to get results the device groups need to be defined: [MS Documentation](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/machine-groups?view=o365-worldwide)
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceInfo

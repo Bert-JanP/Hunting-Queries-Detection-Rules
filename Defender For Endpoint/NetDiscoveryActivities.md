@@ -25,7 +25,7 @@ The query calculates the amount of executions for each parameter together with t
 - https://www.trendmicro.com/en_us/research/19/f/shifting-tactics-breaking-down-ta505-groups-use-of-html-rats-and-other-techniques-in-latest-campaigns.html
 - https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let StartTime = 30d;
 DeviceProcessEvents

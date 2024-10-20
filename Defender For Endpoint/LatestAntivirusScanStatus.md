@@ -11,7 +11,7 @@ The Defender sensor is not working corretly and might not be able to idenfity su
 #### References
 - https://cloudbrothers.info/antivirus-scan-complete/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where ActionType == "AntivirusScanCompleted"

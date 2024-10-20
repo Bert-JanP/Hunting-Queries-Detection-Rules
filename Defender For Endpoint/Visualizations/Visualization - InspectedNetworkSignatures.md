@@ -1,7 +1,7 @@
 # Display the Inspected Network Signatures
 
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

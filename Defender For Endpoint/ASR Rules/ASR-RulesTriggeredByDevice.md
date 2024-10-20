@@ -8,7 +8,7 @@ This query gives an overview of the amount of ASR triggers for each device. A hi
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType startswith "Asr"

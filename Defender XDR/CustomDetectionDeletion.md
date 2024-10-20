@@ -18,7 +18,7 @@ An actor has gotten access to an account that is able to delete custom detection
 - https://learn.microsoft.com/en-us/defender-xdr/custom-detections-overview
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where Timestamp > ago(30d)

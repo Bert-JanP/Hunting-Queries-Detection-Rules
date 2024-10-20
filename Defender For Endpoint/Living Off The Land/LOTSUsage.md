@@ -18,7 +18,7 @@ An actor uses Living Off Trusted Sites to host their malicious infrastructure
 - https://lots-project.com/
 
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // THIS QUERY IS ONLY FOR HUNTING, NOT FOR DETECTION. IT WILL GENERATE TO MUCH FPs.
 // The query levarages the Living Off Trusted Sites from: https://lots-project.com/

@@ -24,7 +24,7 @@ An adversary has successfully performed a brute force on an account and changes 
 #### References
 - https://attack.mitre.org/datasources/DS0002/#User%20Account%20Modification
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let FailedLogonsThreshold = 20;
 let SuccessfulLogonsThreshold = 1;

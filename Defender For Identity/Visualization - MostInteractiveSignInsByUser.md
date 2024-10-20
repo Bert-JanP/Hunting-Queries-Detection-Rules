@@ -5,7 +5,7 @@
 #### Description
 Visualize the top 100 users that have performed the most interactive sign ins.
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 IdentityLogonEvents

@@ -8,7 +8,7 @@ This query uses a external csv that contains APT Ransomware note hashes. This li
 #### Risk
 An Threat Actor is deploying ransomware in your environment.
 
-## Defender For Endpoint
+## Defender XDR
 
 ```KQL
 let APTInfo = externaldata(Filename: string, Title: string, Source: string, Link: string, SHA1: string, Date: datetime, Year: int)[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 

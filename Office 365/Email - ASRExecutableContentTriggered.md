@@ -23,7 +23,7 @@ If this rule is on block mode the action is blocked, if the rul is on audit mode
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference?view=o365-worldwide
 - https://unit42.paloaltonetworks.com/ukraine-targeted-outsteel-saintbot/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceEvents
 | where ActionType in ("AsrExecutableEmailContentBlocked", "AsrExecutableEmailContentAudited")

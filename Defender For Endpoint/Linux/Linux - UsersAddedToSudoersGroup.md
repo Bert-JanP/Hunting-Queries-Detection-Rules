@@ -14,7 +14,7 @@ This query allows you to hunt for users that have been added to the sudo group. 
 #### Risk
 A advasary adds itself to the sudoers group and can perform actions with root privileges. 
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 let Commands = dynamic([@"usermod -aG sudo", @"usermod -a -G sudo"]);

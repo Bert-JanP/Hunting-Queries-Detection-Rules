@@ -8,7 +8,7 @@ This query list the 20 rarest file extentions that have been used in email attac
 #### Risk
 Rare file extensions may incidacte that an actor is trying trick users in opening malicious files.
 
-## Defender For Endpoint
+## Defender XDR
 ```
 EmailEvents
 // Only display inbound emails

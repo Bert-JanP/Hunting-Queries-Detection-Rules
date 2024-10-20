@@ -4,7 +4,7 @@
 #### IOC Source: https://www.ic3.gov/Media/News/2022/220420.pdf
 #### Publish Date: 19 April 2022
 
-### Defender For Endpoint
+### Defender XDR
 
 ```KQL
 let MD5_IOCs = dynamic(['861738dd15eb7fb50568f0e39a69e107', '9f60dd752e7692a2f5c758de4eab3e6f', '09bc47d7bc5e40d40d9729cec5e39d73', 

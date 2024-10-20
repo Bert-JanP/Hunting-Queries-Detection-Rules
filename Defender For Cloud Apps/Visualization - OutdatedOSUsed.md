@@ -1,6 +1,6 @@
 # Visualise the outdated Operating Systems used to connect to your cloud environment
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

@@ -26,7 +26,7 @@ FIN7 have been observed performing this behaviour in recent intrusions. FIN7 act
 #### References
 - [https://kqlquery.com/](https://redcanary.com/blog/msix-installers/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Detection opportunity 2: NetSupport running from unexpected directory
 DeviceProcessEvents

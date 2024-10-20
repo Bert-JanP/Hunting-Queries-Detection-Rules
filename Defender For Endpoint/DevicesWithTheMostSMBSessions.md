@@ -5,7 +5,7 @@
 #### Description
 List all devices with the amount of SMB sessions they have.
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days

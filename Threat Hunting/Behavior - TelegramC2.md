@@ -20,7 +20,7 @@ An actor can use telgram as a Command & Control channel, while the attackers dis
 - https://cyware.com/news/malware-authors-leveraging-telegram-based-command-and-control-7010f17b
 - https://twitter.com/adamtheanalyst/status/1592561452803829760?s=46&t=0s88GjPSLLjtgcGdFsC9XQ
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

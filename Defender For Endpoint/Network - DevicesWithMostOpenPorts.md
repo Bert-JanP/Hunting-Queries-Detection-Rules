@@ -1,6 +1,6 @@
 # List the devices with the most open ports
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

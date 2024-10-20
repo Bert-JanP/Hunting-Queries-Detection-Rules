@@ -9,7 +9,7 @@ This query can be used to list all Active Directory group additions. The query u
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identitydirectoryevents-table?view=o365-worldwide
 - https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-default-user-accounts
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let Groups = dynamic(['Domain Admins', 'GroupName2']); // Add your sensitive groups to this list
 let SearchWindow = 48h; //Customizable h = hours, d = days

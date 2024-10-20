@@ -18,7 +18,7 @@ An actor uses a local account to perform malicious activities. Those accounts ar
 - https://blog.carnal0wnage.com/2012/09/more-on-aptsim.html
 - https://www.mandiant.com/resources/blog/darkside-affiliate-supply-chain-software-compromise
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Collect all Server IDs for filter
 let Servers = DeviceInfo

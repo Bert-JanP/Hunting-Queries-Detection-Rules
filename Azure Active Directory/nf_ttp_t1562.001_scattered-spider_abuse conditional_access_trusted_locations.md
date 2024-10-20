@@ -25,7 +25,7 @@ The risk addressed here is the manipulation of access controls to evade detectio
 - [Microsoft Documentation on Conditional Access Policies](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/)
 - [MITRE ATT&CK on Defense Evasion](https://attack.mitre.org/tactics/TA0005/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AuditLogs
 | where OperationName =~ "Update conditional access policy" and TargetResources has_all ('locations','excludeLocations')

@@ -1,6 +1,6 @@
 # Total SMB Sessions Created by FileName
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents

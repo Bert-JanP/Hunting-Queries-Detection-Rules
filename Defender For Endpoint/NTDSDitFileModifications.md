@@ -28,7 +28,7 @@ To get all devices or all files, instead of adding those fields to the group by 
 - [Introducing ntdissector, a swiss army knife for your NTDS.dit files](https://www.synacktiv.com/publications/introducing-ntdissector-a-swiss-army-knife-for-your-ntdsdit-files.html)
 
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Author: Alex Teixeira (alex@opstune.com)
 search in(DeviceFileEvents) "ntds" and "dit" and ActionType:"FileModified"

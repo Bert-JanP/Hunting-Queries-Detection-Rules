@@ -20,7 +20,7 @@ A phishing campaign has started and a user has clicked the url, the URL is block
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/safe-links-about?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 UrlClickEvents
 | where ActionType == 'ClickBlocked'

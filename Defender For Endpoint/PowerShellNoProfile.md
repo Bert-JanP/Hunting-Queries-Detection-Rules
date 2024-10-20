@@ -29,7 +29,7 @@ APT28 has access to your environment and executes malicious commands.
 - https://attack.mitre.org/groups/G0007/
 - https://medium.com/cyberscribers-exploring-cybersecurity/apt28-from-initial-damage-to-domain-controller-threats-in-an-hour-cert-ua-8399-1944dd6edcdf
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceProcessEvents
 | where ProcessCommandLine has_all ("-nop", "powershell.exe")

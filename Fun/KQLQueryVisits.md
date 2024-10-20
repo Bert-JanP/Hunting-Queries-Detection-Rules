@@ -8,7 +8,7 @@ Visualize the visits to [KQLQuery.com](KQLQuery.com) in a columnchart.
 #### References
 - https://www.KQLQuery.com/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceNetworkEvents
 | where RemoteUrl has "kqlquery.com"

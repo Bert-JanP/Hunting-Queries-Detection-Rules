@@ -1,6 +1,6 @@
 # Total SMB Sessions Created by a suspicious device
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);

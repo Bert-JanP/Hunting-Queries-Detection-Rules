@@ -1,6 +1,6 @@
 # Detect risky IP activities
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

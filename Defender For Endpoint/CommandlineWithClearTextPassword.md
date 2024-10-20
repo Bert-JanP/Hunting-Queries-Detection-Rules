@@ -16,7 +16,7 @@ To limit false positives a filter can be used to only filter if both a username 
 #### Risk
 Cleartext passwords can be logged and used by attackers to gain access to accounts.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceProcessEvents
 | where ProcessCommandLine has_all ("-password", "*")

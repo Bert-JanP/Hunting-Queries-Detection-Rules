@@ -26,7 +26,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 #### References
 - [MSIX installer malware delivery on the rise across multiple campaigns](https://redcanary.com/blog/msix-installers/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Detection opportunity 5: MSBuild without commands
 DeviceNetworkEvents

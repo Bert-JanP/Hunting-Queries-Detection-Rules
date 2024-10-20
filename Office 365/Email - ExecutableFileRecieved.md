@@ -19,7 +19,7 @@ An actor gains initial access via a attachment that is send to a mailbox, which 
 - https://support.microsoft.com/en-us/topic/outlook-blocked-access-to-the-following-potentially-unsafe-attachments-c5c4a480-041e-2466-667f-e98d389ff822
 - https://www.bleepingcomputer.com/news/security/the-most-common-malicious-email-attachments-infecting-windows/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'dll', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
 EmailEvents

@@ -8,7 +8,7 @@ List the different Plug and Play (PnP) device types that are used in your organi
 #### References
 - https://learn.microsoft.com/en-us/powershell/module/pnpdevice/?view=windowsserver2022-ps
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where ActionType == "PnpDeviceConnected"

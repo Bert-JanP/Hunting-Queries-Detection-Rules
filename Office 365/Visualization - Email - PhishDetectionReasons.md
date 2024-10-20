@@ -8,7 +8,7 @@ This query visualizes the phishing detection reasons in a piechart. This is base
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailpostdeliveryevents-table?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 EmailPostDeliveryEvents
 | where ThreatTypes == "Phish"

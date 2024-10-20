@@ -1,6 +1,6 @@
 # List all net(1).exe activities on a host
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let CompromisedDevice = "azurewin2022";

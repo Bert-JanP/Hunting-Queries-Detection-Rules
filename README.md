@@ -110,7 +110,7 @@ The *[Detection Template](./DetectionTemplate.md)* can be used to standardize th
 If your repository is not yet listed, feel free to create a pull request (PR) or reach out via message to have it added.
 # Where to use KQL in Defender For Endpoint & Sentinel?
 
-## Defender For Endpoint
+## Defender XDR
 * Open  [security.microsoft.com](https://www.security.microsoft.com)
 * Hunting
 * Advanced Hunting

@@ -9,7 +9,7 @@ This query lists all the devices that are removed from isolation activities that
 - https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where Timestamp > ago(30d)

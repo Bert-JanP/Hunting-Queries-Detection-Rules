@@ -33,7 +33,7 @@ An adversary has gained access to an account and tries to disover the network to
 - https://www.trendmicro.com/en_us/research/19/f/shifting-tactics-breaking-down-ta505-groups-use-of-html-rats-and-other-techniques-in-latest-campaigns.html
 - https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let StartTime = 2d;
 let BinFormat = 1d;

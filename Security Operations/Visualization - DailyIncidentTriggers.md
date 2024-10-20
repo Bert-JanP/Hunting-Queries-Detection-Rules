@@ -5,7 +5,7 @@
 #### Description
 Visualize the daily triggers in MDE or Sentinel in a columnchart. This can give insight into spikes in the amount of triggers.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AlertInfo
 | where Timestamp > ago(30d)

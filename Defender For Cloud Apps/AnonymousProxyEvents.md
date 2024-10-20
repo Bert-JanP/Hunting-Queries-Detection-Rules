@@ -19,7 +19,7 @@ A attacker has taken control over an account and tries to mask its source.
 #### References
 - https://support.apple.com/en-us/HT212614
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where IsAnonymousProxy == 1

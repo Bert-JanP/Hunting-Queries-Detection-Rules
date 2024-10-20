@@ -1,6 +1,6 @@
 # Visualisation of operations that have been seen in the Cloud App logs in the last 30 days
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

@@ -1,6 +1,6 @@
 # Forensics on Registry Run keys in Windows. Registry Run keys can be used to establish persistence on a device. 
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let RegistryRunKeys = dynamic 

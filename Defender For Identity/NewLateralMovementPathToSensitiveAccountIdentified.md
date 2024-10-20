@@ -8,7 +8,7 @@ Defender For Identity identifies lateral movement paths to all sensitive account
 #### References
 - https://learn.microsoft.com/en-us/defender-for-identity/understand-lateral-movement-paths
 
-## Defender For Endpoint
+## Defender XDR
 
 ```
 IdentityDirectoryEvents

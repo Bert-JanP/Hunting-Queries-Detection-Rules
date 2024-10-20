@@ -26,7 +26,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 #### References
 - [https://kqlquery.com/](https://redcanary.com/blog/msix-installers/)
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 //this will be noisy and no good for a SIEM analytic
 DeviceProcessEvents

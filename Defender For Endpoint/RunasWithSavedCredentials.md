@@ -18,7 +18,7 @@ A actor can use saved credentials to gain privilige escallation.
 - https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771525(v=ws.11)
 - https://superuser.com/questions/581548/runas-savecred-ask-for-password-if-another-user-runs-the-same-batch-file/903881#903881
 
-## Defender For Endpoint
+## Defender XDR
 ```
 DeviceProcessEvents
 | where FileName == "runas.exe"

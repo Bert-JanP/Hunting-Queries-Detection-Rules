@@ -19,7 +19,7 @@ cmd.exe /c echo regsvr32.exe ^/s ^/u ^/i:https://raw.githubusercontent.com/redca
 - https://www.bleepingcomputer.com/news/security/windows-10-background-image-tool-can-be-abused-to-download-malware/
 - https://lolbas-project.github.io/lolbas/Binaries/Cmd/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 // Set the URL you are trying to lookup.
 // Lookup in this query is done with a contains, if this results in to many false positives add www. before the rest of the url.

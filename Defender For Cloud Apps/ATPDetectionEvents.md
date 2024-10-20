@@ -1,6 +1,6 @@
 # ATP Detection events triggered
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

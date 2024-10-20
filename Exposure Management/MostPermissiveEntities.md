@@ -8,7 +8,7 @@ This query lists the top 100 entities that have the most permissions to perform 
 #### References
 - https://learn.microsoft.com/en-us/security-exposure-management/microsoft-security-exposure-management
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Permission Statistics
 ExposureGraphEdges

@@ -11,7 +11,7 @@ This query lists all the Getfile activities that have been executed. This includ
 - https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-fileprofile-function
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```
 CloudAppEvents
 | where Timestamp > ago(30d)

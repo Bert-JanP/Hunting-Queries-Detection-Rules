@@ -14,7 +14,7 @@ You can filter on the description by adding:
 - https://learn.microsoft.com/en-us/powershell/module/pnpdevice/?view=windowsserver2022-ps
 - https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/advanced-hunting-updates-usb-events-machine-level-actions-and/ba-p/824152
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceEvents
 | where ActionType == "PnpDeviceConnected"

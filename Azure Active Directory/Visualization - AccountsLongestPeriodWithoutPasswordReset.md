@@ -11,7 +11,7 @@ If a password has not been changed for years, it might be that the account does 
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/admin/misc/password-policy-recommendations?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 AADSignInEventsBeta
 | where Timestamp > ago(30d)

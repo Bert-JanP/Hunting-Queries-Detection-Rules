@@ -1,6 +1,6 @@
 # Find which devices have been accessed by a list of compromised accounts and which protocol was used to connect
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let ComprimsedUsers = dynamic(['user1', 'user2']);

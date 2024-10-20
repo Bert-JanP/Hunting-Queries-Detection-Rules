@@ -32,7 +32,7 @@ While the query ignores all simple modifications (EditCustomDetection), it will 
 - https://learn.microsoft.com/en-us/defender-xdr/custom-detections-overview
 - https://kqlquery.com/posts/audit-defender-xdr/
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 search in(CloudAppEvents) 'Microsoft365Defender'
 | where Timestamp > ago(180d)    // How far back to check

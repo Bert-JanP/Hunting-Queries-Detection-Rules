@@ -8,7 +8,7 @@ The EmailClusterId which can be assigned to a mail is the identifier for the gro
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
 
-### Defender For Endpoint
+### Defender XDR
 ```
 let MaliciousEmailCluseriId = "3163234347533"; // Input the EmailClusterId here
 EmailEvents

@@ -11,7 +11,7 @@ An attacker got access to a system and added an account to a group.
 #### References
 - https://www.huntress.com/blog/slashandgrab-screen-connect-post-exploitation-in-the-wild-cve-2024-1709-cve-2024-1708
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 // Source Sensitive Groups: https://techcommunity.microsoft.com/t5/security-compliance-and-identity/alert-when-a-group-is-added-to-a-sensitive-active-directory/ba-p/3436868
 let SensitiveGroupName = pack_array(  // Declare Sensitive Group names. Add any groups that you manually tagged as sensitive

@@ -1,6 +1,6 @@
 # Triggers when a remote SBM connection has been found
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

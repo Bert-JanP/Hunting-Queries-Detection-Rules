@@ -1,6 +1,6 @@
 # List the top 10 accounts that have the most impersonators
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 CloudAppEvents

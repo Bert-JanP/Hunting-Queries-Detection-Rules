@@ -39,7 +39,7 @@ Sentinel and Defender For Endpoint can use different tables. In Defender For End
 - DeviceNetworkEvents
 - DeviceFileEvents
 
-## Defender For Endpoint
+## Defender XDR
 - DeviceNetworkEvents
 - DeviceFileEvents
 

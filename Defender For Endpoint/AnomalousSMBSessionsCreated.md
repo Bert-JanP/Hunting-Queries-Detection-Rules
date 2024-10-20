@@ -14,7 +14,7 @@ This detection rule is aimed to detect a host that performs SMB Discovery by ale
 #### Risk
 A actor has gotten access to a system en performs a scan to identify possible lateral movement paths.
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceNetworkEvents
 | where ingestion_time() > ago(1h)

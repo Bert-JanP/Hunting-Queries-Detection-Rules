@@ -15,7 +15,7 @@ Adversaries can get access trough open (vulnerable) services.
 #### References
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/internet-facing-devices?view=o365-worldwide
 
-## Defender For Endpoint
+## Defender XDR
 ```
 
 DeviceNetworkEvents

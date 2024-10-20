@@ -8,7 +8,7 @@
 | ---  | --- | --- |
 | T1219 | Remote Access Software | https://attack.mitre.org/techniques/T1219/ |
 
-### Defender For Endpoint
+### Defender XDR
 
 ```
 DeviceNetworkEvents

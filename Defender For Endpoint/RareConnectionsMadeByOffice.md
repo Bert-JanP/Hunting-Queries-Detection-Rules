@@ -1,6 +1,6 @@
 # Hunt for the 20 most unusual connections made by Office. 
 ----
-### Defender For Endpoint
+### Defender XDR
 
 ```
 let ConnectionsMadeByOfficeRegKey = @'\SOFTWARE\Microsoft\Office\16.0\Common\Internet\Server Cache';

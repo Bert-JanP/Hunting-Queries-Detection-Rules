@@ -24,7 +24,7 @@ An adversary kills all SQL processes before deploying ransomware on the servers
 #### References
 - https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-325a
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 let TotalKilledThreshold = 10;
 let TotalParametersThreshold = 10;

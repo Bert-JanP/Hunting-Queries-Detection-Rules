@@ -19,7 +19,7 @@ Multiple Threat Actors levarage this technique to hide from defenders
 #### References
 - https://www.cisa.gov/sites/default/files/publications/aa22-321a_joint_csa_stopransomware_hive.pdf
 
-## Defender For Endpoint
+## Defender XDR
 ```KQL
 DeviceProcessEvents
 | extend ProcessCommandLineToLower =  tolower(ProcessCommandLine)
