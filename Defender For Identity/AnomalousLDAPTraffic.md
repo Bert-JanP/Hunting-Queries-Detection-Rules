@@ -28,7 +28,7 @@ An adversary has gained access to your network and performes LDAP queries to per
 - https://www.microsoft.com/en-us/security/blog/2021/05/28/breaking-down-nobeliums-latest-early-stage-toolset/
 
 ## Defender For Endpoint
-```
+```KQL
 // Variables to define the anomalous behaviour
 let starttime = 30d;
 let endtime = 1d;
@@ -62,7 +62,7 @@ TimeSeriesAlerts
 | where PerHourCount > TotalEventsThreshold
 ```
 ## Sentinel
-```
+```KQL
 // Variables to define the anomalous behaviour
 let starttime = 90d;
 let endtime = 1d;

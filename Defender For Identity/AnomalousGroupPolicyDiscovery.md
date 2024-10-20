@@ -17,8 +17,7 @@ Potential false positive is a new Administrator that has not performed group pol
 An attacker queries Group Policy object to gain valuable information about the environment. 
 
 ## Defender For Endpoint
-
-```
+```KQL
 let PreviousActivity = materialize (
      IdentityQueryEvents
      | where Timestamp > ago(30d)
@@ -31,7 +30,7 @@ IdentityQueryEvents
 | where not(DeviceName has_any(PreviousActivity))
 ```
 ## Sentinel
-```
+```KQL
 let PreviousActivity = materialize (
      IdentityQueryEvents
      | where TimeGenerated > ago(30d)
