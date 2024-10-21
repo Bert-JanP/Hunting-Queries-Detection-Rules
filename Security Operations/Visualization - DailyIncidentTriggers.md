@@ -21,6 +21,6 @@ SecurityIncident
 | where TimeGenerated > ago(30d)
 // Collect the first entry of each alert
 | summarize arg_min(TimeGenerated, *) by IncidentNumber
-| summarize Total = count() by bin(TimeGenerated, 1d)
+| summarize Total = count() by bin(CreatedTime, 1d)
 | render columnchart with(title="Incident triggers last 30 days")
 ```
