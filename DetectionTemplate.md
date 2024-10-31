@@ -6,7 +6,7 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1134.002 | Access Token Manipulation: Create Process with Token |Access Token Manipulation: Create Process with Token|
+| T1134.002 | Access Token Manipulation: Create Process with Token | https://attack.mitre.org/techniques/T1134/002/ |
 
 #### Description
 Description of the detection rule.
