@@ -139,9 +139,28 @@ DeviceEvents
 | take 10
 ```
 
-# KQL Useful Documentation
-* [KQL Quick Reference Guide](https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)
-* [KQL Tutorial](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer)
-* [KQL Cheat Sheet PDF](https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet.pdf)
-* [KQL Security Sources](https://kqlquery.com/posts/kql_sources/)
+# KQL Sources
+
+## Documentation
+
+| Link | Description |
+| ------ | ----------- |
+| [KQL Quick Reference Guide](https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)  | KQL Quick Reference Guide |
+| [KQL Tutorial](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer) | KQL Tutorial | 
+| [KQL Cheat Sheet PDF](https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet.pdf) | KQL Cheat Sheet |
+
+## Respostiories
+The community respostiories are available [here](./Community%20Repositories.md)
+
+## Other
+
+| Link | Description |
+| ------ | ----------- |
+| [kqlsearch.com](https://www.kqlsearch.com/)  | KQL Search Engine |
+| [Kusto Insights Newsletter](https://kustoinsights.substack.com/) | Kusto Insights newsletter |
+| [The Definitive Guide to KQL](https://www.amazon.com/Definitive-Guide-KQL-Operations-Defending/dp/0138293384) | Using Kusto Query Language for Operations, Defending, and Threat Hunting |
+| [Kusto Query Internals](https://identityandsecuritydotcom.files.wordpress.com/2020/05/kql_internals_sentinel.pdf) | Hunting TTPs with Azure Sentinel |
+| [Microsoft Sentinel Analytics Rules](https://analyticsrules.exchange/) | Microsoft Sentinel Analytics Rules |
+| [KQL Internals](https://identityandsecuritydotcom.files.wordpress.com/2020/05/kql_internals_sentinel.pdf) | Kusto Query Internals: Hunting TTPs with Azure Sentinel |
+| [Advanced Hunting Expert Training](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-expert-training) | Advanced Hunting Expert Training |
 
