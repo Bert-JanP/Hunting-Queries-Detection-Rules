@@ -27,7 +27,7 @@ let FileInfoFileSHA1 = materialize (
      (FileInfoLocation), // Forensic information in set format available after last raw event
      (FileInfoFileSHA1), // Forensic information in set format available after last raw event
      (DeviceProcessEvents
-     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation))
+     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation) or InitiatingProcessSHA1 == MaliciousFileSHA1)
 | sort by Timestamp
 | project-reorder
      Filenames,
@@ -69,7 +69,7 @@ let FileInfoFileSHA1 = materialize (
      (FileInfoLocation), // Forensic information in set format available after last raw event
      (FileInfoFileSHA1), // Forensic information in set format available after last raw event
      (DeviceProcessEvents
-     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation))
+     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation) or InitiatingProcessSHA1 == MaliciousFileSHA1)
 | sort by TimeGenerated
 | project-reorder
      Filenames,

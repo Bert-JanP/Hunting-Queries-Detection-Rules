@@ -2,7 +2,7 @@
 ----
 ### Defender XDR
 
-```
+```KQL
 // For the best results use SHA1
 let MaliciousFileSHA1 = "e14f7ed43ab3ae9d31680eb74b043339eb6f87e7"; // Random generated SHA1 hash 9d833c959de5dd22d778c697cd0de8189c238b2e
 let MaliciousFileName = "maliciousfilename.exe";
@@ -27,7 +27,7 @@ let FileInfoFileSHA1 = materialize (
      (FileInfoLocation), // Forensic information in set format available after last raw event
      (FileInfoFileSHA1), // Forensic information in set format available after last raw event
      (DeviceProcessEvents
-     | where InitiatingProcessCommandLine has_any (FileInfoLocation))
+     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation) or InitiatingProcessSHA1 == MaliciousFileSHA1)
 | sort by Timestamp
 | project-reorder
      Filenames,
@@ -40,10 +40,9 @@ let FileInfoFileSHA1 = materialize (
      ProcessCommandLine,
      InitiatingProcessCommandLine
 )
-
 ```
 ### Sentinel
-```
+```KQL
 // For the best results use SHA1
 let MaliciousFileSHA1 = "e14f7ed43ab3ae9d31680eb74b043339eb6f87e7"; // Random generated SHA1 hash 9d833c959de5dd22d778c697cd0de8189c238b2e
 let MaliciousFileName = "maliciousfilename.exe";
@@ -70,7 +69,7 @@ let FileInfoFileSHA1 = materialize (
      (FileInfoLocation), // Forensic information in set format available after last raw event
      (FileInfoFileSHA1), // Forensic information in set format available after last raw event
      (DeviceProcessEvents
-     | where InitiatingProcessCommandLine has_any (FileInfoLocation))
+     | where tolower(InitiatingProcessCommandLine) has_any (FileInfoLocation) or InitiatingProcessSHA1 == MaliciousFileSHA1)
 | sort by TimeGenerated
 | project-reorder
      Filenames,
