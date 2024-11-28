@@ -20,6 +20,7 @@ An actor might have compromised the credentials of an useraccount and synchroniz
 
 #### References
 - https://www.cisa.gov/sites/default/files/2024-04/CSRB_Review_of_the_Summer_2023_MEO_Intrusion_Final_508c.pdf
+- https://kqlquery.com/posts/ual/
 
 ## Defender XDR
 ```KQL
