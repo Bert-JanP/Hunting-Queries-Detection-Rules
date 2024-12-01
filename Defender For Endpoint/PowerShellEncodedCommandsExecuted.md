@@ -8,7 +8,7 @@
 | ---  | --- | --- |
 | T1027 | Obfuscated Files or Information |https://attack.mitre.org/techniques/T1027/ |
 
-### Defender XDR
+## Defender XDR
 
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); 
@@ -28,7 +28,7 @@ DeviceProcessEvents
 | project DeviceName, TotalUniqueEncodedCommandsExecuted, UniqueExecutionsList
 | sort by TotalUniqueEncodedCommandsExecuted
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); 
 // For more results use line below en filter one above. This will also return more FPs.

@@ -4,7 +4,7 @@
 #### Feed information: https://github.com/drb-ra/C2IntelFeeds
 #### Feed link: https://github.com/drb-ra/C2IntelFeeds/blob/master/feeds/IPC2s-30day.csv
 
-### Defender XDR
+## Defender XDR
 ```
 let C2IntelFeeds = externaldata(IP: string, ioc:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv"] with (format="csv", ignoreFirstRecord=True);
 let IPList = C2IntelFeeds
@@ -18,7 +18,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 let C2IntelFeeds = externaldata(IP: string, ioc:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/IPC2s-30day.csv"] with (format="csv", ignoreFirstRecord=True);
 let IPList = C2IntelFeeds

@@ -1,6 +1,6 @@
 # Find all the ASR events that have triggered from a compromised device
 
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "laptop1";
@@ -19,7 +19,7 @@ DeviceEvents
      AccountDomain,
      AccountName
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop1";
 let SearchWindow = 48h; //Customizable h = hours, d = days

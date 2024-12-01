@@ -1,6 +1,6 @@
 # Visualise the outdated Operating Systems used to connect to your cloud environment
 
-### Defender XDR
+## Defender XDR
 
 ```
 CloudAppEvents
@@ -8,7 +8,7 @@ CloudAppEvents
 | summarize count() by OSPlatform
 | render piechart with(title="Outdated Operating Systems Used")
 ```
-### Sentinel
+## Sentinel
 ```
 CloudAppEvents
 | where UserAgentTags contains "Outdated operating system"

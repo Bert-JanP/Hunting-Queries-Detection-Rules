@@ -14,7 +14,7 @@ List devices from which AnyDesk makes a remote connection.
 #### References
 - https://redcanary.com/threat-detection-report/trends/rmm-tools/
 
-### Defender XDR
+## Defender XDR
 ```KQL
 DeviceNetworkEvents
 | where InitiatingProcessFileName == "AnyDesk.exe"
@@ -31,7 +31,7 @@ DeviceNetworkEvents
      RemoteUrl
 ```
 
-### Sentinel
+## Sentinel
 ```
 DeviceNetworkEvents
 | where InitiatingProcessFileName == "AnyDesk.exe"

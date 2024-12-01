@@ -1,6 +1,6 @@
 # Unauthorized Logon actions by Domain and Account
 
-### Defender XDR
+## Defender XDR
 
 ```
 DeviceLogonEvents
@@ -10,7 +10,7 @@ DeviceLogonEvents
 | sort by count_
 | render columnchart with(title="Unauthorized Logon by Domain and Account")
 ```
-### Sentinel
+## Sentinel
 ```
 DeviceLogonEvents
 | where isnotempty(FailureReason)

@@ -75,7 +75,7 @@ let AMSIEvents = DeviceEvents
 )
 ```
 
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop1";
 let SearchWindow = 48h; //Customizable h = hours, d = days

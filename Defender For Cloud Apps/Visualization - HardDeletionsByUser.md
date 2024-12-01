@@ -1,6 +1,6 @@
 # Visualisation of the users with the most HardDelete actions performed
 
-### Defender XDR
+## Defender XDR
 
 ```
 CloudAppEvents
@@ -17,7 +17,7 @@ CloudAppEvents
 | top 50 by count_
 | render columnchart with (title='HardDeletions by User')
 ```
-### Sentinel
+## Sentinel
 ```
 CloudAppEvents
 | where ActionType == 'HardDelete'

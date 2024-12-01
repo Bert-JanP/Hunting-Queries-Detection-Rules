@@ -1,6 +1,6 @@
 # List Lateral Movements Paths to Compromised Device
 
-### Sentinel
+## Sentinel
 ```KQL
 // List potential lateralmovement paths to compromised device
 let DeviceName = "testdevice.test.com";

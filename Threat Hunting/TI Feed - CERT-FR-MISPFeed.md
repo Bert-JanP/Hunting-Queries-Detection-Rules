@@ -3,7 +3,7 @@
 #### Source: CERT-FR
 #### Feed link: https://misp.cert.ssi.gouv.fr/feed-misp/hashes.csv
 
-### Defender XDR
+## Defender XDR
 
 ```
 let CERTFRFeed = externaldata (SHA1: string, threatid :string) ["https://misp.cert.ssi.gouv.fr/feed-misp/hashes.csv"];
@@ -13,7 +13,7 @@ DeviceFileEvents
 | extend ThreatInfoLink = strcat("https://misp.cert.ssi.gouv.fr/feed-misp/", threatid, ".json")
 | project-reorder Timestamp, SHA1, ThreatInfoLink, DeviceName
 ```
-### Sentinel
+## Sentinel
 ```
 let CERTFRFeed = externaldata (SHA1: string, threatid :string) ["https://misp.cert.ssi.gouv.fr/feed-misp/hashes.csv"];
 DeviceFileEvents

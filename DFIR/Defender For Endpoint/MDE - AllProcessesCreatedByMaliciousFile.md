@@ -1,6 +1,6 @@
 # Find all the processes a file has created and the associated FileNames, FileLocations and SHA1 hashes that the file has had. 
 ----
-### Defender XDR
+## Defender XDR
 
 ```KQL
 // For the best results use SHA1
@@ -41,7 +41,7 @@ let FileInfoFileSHA1 = materialize (
      InitiatingProcessCommandLine
 )
 ```
-### Sentinel
+## Sentinel
 ```KQL
 // For the best results use SHA1
 let MaliciousFileSHA1 = "e14f7ed43ab3ae9d31680eb74b043339eb6f87e7"; // Random generated SHA1 hash 9d833c959de5dd22d778c697cd0de8189c238b2e

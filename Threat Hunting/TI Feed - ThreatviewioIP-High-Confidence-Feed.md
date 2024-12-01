@@ -4,7 +4,7 @@
 #### Feed information: https://threatview.io/
 #### Feed link: https://threatview.io/Downloads/IP-High-Confidence-Feed.txt
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -21,7 +21,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```KQL
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://threatview.io/Downloads/IP-High-Confidence-Feed.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

@@ -1,6 +1,6 @@
 # Find which devices have been accessed by a compromised device and which protocol was used to connect
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "laptop.contoso.com";
@@ -15,7 +15,7 @@ IdentityLogonEvents
      by DeviceName
 
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop.contoso.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days

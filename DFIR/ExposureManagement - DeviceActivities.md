@@ -1,6 +1,6 @@
 # List Activities Compromised Device Can Perform as Source
 
-### Sentinel
+## Sentinel
 ```KQL
 // List activities device can do as source
 let DeviceName = "laptop.test.com";

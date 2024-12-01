@@ -1,6 +1,6 @@
 # List all Cloud Permissions of a Compromised User
 
-### Sentinel
+## Sentinel
 ```KQL
 // Cloud Permissions Compromised User
 let UserName = "Bert-Jan Pals";

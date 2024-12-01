@@ -1,6 +1,6 @@
 # Find the DFE Antivirus events on compromised devices. FileInfo is stored in JSON format.
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevices = dynamic (["laptop1", "server2"]);
@@ -12,7 +12,7 @@ DeviceEvents
 | extend FileInfo = pack_dictionary("FileName", FileName, "FileLocation", FolderPath, "SHA1", SHA1, "SHA256", SHA256, "MD5", MD5)
 | summarize TotalDetections = count(), MaliciousFiles = make_set(FileInfo) by DeviceName
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevices = dynamic (["laptop1", "server2"]);
 let SearchWindow = 48h; //Customizable h = hours, d = days

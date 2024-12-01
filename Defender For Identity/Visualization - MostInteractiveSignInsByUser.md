@@ -5,7 +5,7 @@
 #### Description
 Visualize the top 100 users that have performed the most interactive sign ins.
 
-### Defender XDR
+## Defender XDR
 ```KQL
 IdentityLogonEvents
 | where LogonType == 'Interactive'
@@ -16,7 +16,7 @@ IdentityLogonEvents
 | render columnchart with (title="Top 100 users that have the most interactive sign ins")
 ```
 
-### Sentinel
+## Sentinel
 ```KQL
 IdentityLogonEvents
 | where LogonType == 'Interactive'

@@ -1,6 +1,6 @@
 # Find all the connections that have been made by Office from a compromised device. 
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let ConnectionsMadeByOfficeRegKey = @'\SOFTWARE\Microsoft\Office\16.0\Common\Internet\Server Cache';
@@ -15,7 +15,7 @@ DeviceRegistryEvents
 | extend Domain = extract(@"([a-z0-9|-]+\.)*[a-z0-9|-]+\.[a-z]+", 0, RegistryKey)
 | project-reorder Domain, Connection
 ```
-### Sentinel
+## Sentinel
 ```
 let ConnectionsMadeByOfficeRegKey = @'\SOFTWARE\Microsoft\Office\16.0\Common\Internet\Server Cache';
 let CompromisedDevice = "laptop1";

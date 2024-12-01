@@ -21,7 +21,7 @@ Source: https://tweetfeed.live/
 
 Feed link: https://raw.githubusercontent.com/0xDanielLopez/TweetFeed/master/month.csv
 
-### Defender XDR
+## Defender XDR
 ```
 // Collect external data from @0xDanielLopez Github. There is a UI for TweetFeed, this can be accessed on https://tweetfeed.live/
 // TweetFeed collects Indicators of Compromise (IOCs) shared by the infosec community at Twitter. Here you will find malicious URLs, domains, IPs, and SHA256/MD5 hashes.
@@ -93,7 +93,7 @@ union isfuzzy=true
 | project-reorder IOCType, Total, IOCTimestamp, IOCCatagory, TweetLink, RemoteIP, RemoteUrl, MD5, SHA256
 ```
 
-### Sentinel
+## Sentinel
 ```
 // Collect external data from @0xDanielLopez Github. There is a UI for TweetFeed, this can be accessed on https://tweetfeed.live/
 // TweetFeed collects Indicators of Compromise (IOCs) shared by the infosec community at Twitter. Here you will find malicious URLs, domains, IPs, and SHA256/MD5 hashes.

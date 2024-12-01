@@ -4,7 +4,7 @@
 #### Feed information: https://feodotracker.abuse.ch/blocklist/
 #### Feed link: https://feodotracker.abuse.ch/downloads/ipblocklist.txt
 
-### Defender XDR
+## Defender XDR
 ```
 let BotnetIP = externaldata(IP: string)[@"https://feodotracker.abuse.ch/downloads/ipblocklist.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -30,7 +30,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 let BotnetIP = externaldata(IP: string)[@"https://feodotracker.abuse.ch/downloads/ipblocklist.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

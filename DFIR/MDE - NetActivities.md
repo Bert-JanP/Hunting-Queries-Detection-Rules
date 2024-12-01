@@ -1,6 +1,6 @@
 # List all net(1).exe activities on a host
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "azurewin2022";
@@ -18,7 +18,7 @@ DeviceProcessEvents
 | project-reorder Timestamp, ProcessCommandLine
 | sort by Timestamp
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "azurewin2022";
 let SearchWindow = 48h; //Customizable h = hours, d = days

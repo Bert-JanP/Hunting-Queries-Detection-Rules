@@ -19,7 +19,7 @@ A attacker has added themself to a sensitive group and can perform priviliges ac
 #### References
 - https://learn.microsoft.com/en-us/defender-for-identity/entity-tags#sensitive-entities
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let SensitiveGroups = dynamic(['Domain Admins', 'Enterprise Admins', 'Exchange Admins']); // Add your sensitive groups to this list
 IdentityDirectoryEvents
@@ -30,7 +30,7 @@ IdentityDirectoryEvents
 | project-reorder Group, GroupAdditionInitiatedBy
 | where Group has_any (SensitiveGroups)
 ```
-### Sentinel
+## Sentinel
 ```KQL
 let SensitiveGroups = dynamic(['Domain Admins', 'Enterprise Admins', 'Exchange Admins']); // Add your sensitive groups to this list
 IdentityDirectoryEvents

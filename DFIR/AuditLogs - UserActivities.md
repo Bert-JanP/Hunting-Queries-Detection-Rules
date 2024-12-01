@@ -1,6 +1,6 @@
 # List all AuditLog activities of a user
 
-### Sentinel
+## Sentinel
 ```KQL
 let AccountUPN = "test@kqlquery.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days

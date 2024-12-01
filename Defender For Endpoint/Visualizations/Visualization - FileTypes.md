@@ -1,6 +1,6 @@
 # Visualize FileTypes based on DeviceFileEvents
 
-### Defender XDR
+## Defender XDR
 
 ```
 let TimeFrame = 7d;
@@ -11,7 +11,7 @@ DeviceFileEvents
 | summarize Total = count() by FileType
 | render piechart with(title="FileTypes used")
 ```
-### Sentinel
+## Sentinel
 ```
 let TimeFrame = 7d;
 DeviceFileEvents

@@ -19,7 +19,7 @@ Right audience: Blue/Purple Teamers, Threat Hunters, Detection Engineers, Securi
 
 ### List all unique sentinel tables with events (last 90 days)
 
-#### Sentinel
+### Sentinel
 
 ```KQL
 union * 
@@ -27,7 +27,7 @@ union *
 | distinct Type 
 ```
 
-#### Defender XDR
+### Defender XDR
 ```KQL
 union withsource=TableName *
 | where Timestamp > ago(90d) 
@@ -43,14 +43,14 @@ Product Support:
 
 ### Count all events per table
 
-#### Sentinel
+### Sentinel
 
 ```KQL
 union *  
 | summarize TotalEvents = count() by Type 
 ```
 
-#### Defender XDR
+### Defender XDR
 ```KQL
 union withsource=TableName *
 | summarize TotalEvents = count() by TableName 
@@ -79,7 +79,7 @@ Product Support:
 ### Retrieve Sub-Tables
 This query returns all unique tables and their actions.
 
-#### Sentinel
+### Sentinel
 
 ```KQL
 union * 
@@ -90,7 +90,7 @@ union *
 | sort by Type
 ```
 
-#### Defender XDR
+### Defender XDR
 ```KQL
 union withsource=TableName *
 | where Timestamp > ago(90d) 
@@ -110,7 +110,7 @@ Product Support:
 ### Retrieve Sub-Tables
 This query returns all unique tables, actions and how often they appear in your environment.
 
-#### Sentinel
+### Sentinel
 
 ```KQL
 union *  
@@ -120,7 +120,7 @@ union *
 | summarize TotalEvents = count() by Action, Type  
 ```
 
-#### Defender XDR
+### Defender XDR
 ```KQL
 union withsource=TableName *
 | where Timestamp > ago(90d)  
@@ -155,7 +155,7 @@ Product Support:
 
 ### Retrieve top 10 least active sub-tables
 
-##### Sentinel
+## Sentinel
 
 ```KQL
 union *
@@ -167,7 +167,7 @@ union *
 | top 10 by TotalEvents asc
 ```
 
-#### Defender XDR
+### Defender XDR
 
 ```KQL
 union withsource=TableName *
@@ -188,7 +188,7 @@ Product Support:
 
 ### Retrieve top 10 most active sub-tables
 
-#### Sentinel
+### Sentinel
 
 ```KQL
 union *
@@ -200,7 +200,7 @@ union *
 | top 10 by TotalEvents desc 
 ```
 
-#### Defender XDR
+### Defender XDR
 ```KQL
 union withsource=TableName *
 | extend Action = coalesce(Operation, OperationName, OperationNameValue, ActionType)

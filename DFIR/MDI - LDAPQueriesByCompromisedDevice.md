@@ -1,6 +1,6 @@
 # Find all the executed LDAP queries from a compromised device
 
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "laptop1.com";
@@ -18,7 +18,7 @@ IdentityQueryEvents
      DestinationDeviceName,
      TargetAccountUpn
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop1.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days

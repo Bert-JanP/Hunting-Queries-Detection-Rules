@@ -4,7 +4,7 @@
 #### Feed information: https://github.com/stamparm/ipsum/
 #### Feed link: https://raw.githubusercontent.com/stamparm/ipsum/master/levels/8.txt
 
-### Defender XDR
+## Defender XDR
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/8.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -21,7 +21,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/8.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

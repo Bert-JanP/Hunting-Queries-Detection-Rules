@@ -1,6 +1,6 @@
 # Visualisation of operations that have been seen in the Cloud App logs in the last 30 days
 
-### Defender XDR
+## Defender XDR
 
 ```
 CloudAppEvents
@@ -10,7 +10,7 @@ CloudAppEvents
 | summarize count() by Operation
 | render piechart with(title="Operations last 30 days")
 ```
-### Sentinel
+## Sentinel
 ```
 CloudAppEvents
 | where TimeGenerated > ago(30d)

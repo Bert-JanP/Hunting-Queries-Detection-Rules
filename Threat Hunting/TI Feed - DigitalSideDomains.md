@@ -4,7 +4,7 @@
 #### Feed information: https://osint.digitalside.it/
 #### Feed link: https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(Domain: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt"] with (format="txt", ignoreFirstRecord=True);
 DeviceNetworkEvents
@@ -12,7 +12,7 @@ DeviceNetworkEvents
 | project Timestamp, RemoteUrl, RemoteIP, DeviceName, InitiatingProcessCommandLine, InitiatingProcessFileName, InitiatingProcessAccountDomain, InitiatingProcessAccountName
 ```
 
-### Sentinel
+## Sentinel
 ```KQL
 let ThreatIntelFeed = externaldata(Domain: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt"] with (format="txt", ignoreFirstRecord=True);
 DeviceNetworkEvents

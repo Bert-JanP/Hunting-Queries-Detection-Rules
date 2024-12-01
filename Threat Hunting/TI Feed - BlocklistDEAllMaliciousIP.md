@@ -4,7 +4,7 @@
 #### Feed information: https://www.blocklist.de/en/export.html
 #### Feed link: https://lists.blocklist.de/lists/all.txt
 
-### Defender XDR
+## Defender XDR
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://lists.blocklist.de/lists/all.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -20,7 +20,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://lists.blocklist.de/lists/all.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

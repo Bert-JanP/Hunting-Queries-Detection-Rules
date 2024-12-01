@@ -6,7 +6,7 @@ Powershell can be used encoded to obfucstate the commands that have been execute
 
 In this step we list the devices that execute Powershell by the amount of encoded PowerShell commands executed. This can give an indication on which device needs to be investigated further. 
 
-### Defender XDR
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
@@ -20,7 +20,7 @@ DeviceProcessEvents
 | summarize TotalEncodedExecutions = count() by DeviceName
 | sort by TotalEncodedExecutions
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
@@ -39,7 +39,7 @@ DeviceProcessEvents
 
 This is done by decoding the commands in order to be investigated. This is then listed by DeviceName the amount of unique queries that have been executed in the TimeFrame. 
 
-### Defender XDR
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
@@ -56,7 +56,7 @@ DeviceProcessEvents
 | project DeviceName, TotalUniqueEncodedCommandsExecuted, UniqueExecutionsList
 | sort by TotalUniqueEncodedCommandsExecuted
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let TimeFrame = 48h; //Customizable h = hours, d = days
@@ -78,7 +78,7 @@ DeviceProcessEvents
 
 The next step is to investigate if reconnaissance commands have been executed. The actor can hide the reconnaissance commands encoded to stay undetected. New items can be added to the ReconVariables list.
 
-### Defender XDR
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
@@ -103,7 +103,7 @@ DeviceProcessEvents
      AccountDomain
 
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let ReconVariables = dynamic(['Get-ADGroupMember', 'Get-ADComputer', 'Get-ADUser', 'Get-NetGPOGroup', 'net user', 'whoami', 'net group', 'hostname', 'netsh firewall', 'tasklist', 'arp', 'systeminfo']);
@@ -132,7 +132,7 @@ DeviceProcessEvents
 
 The last step is to investigate the connections that have been made via the encoded command. This can be C2 traffic or the download of a malicious tool that can be used by the actor. 
 
-### Defender XDR
+## Defender XDR
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);
@@ -156,7 +156,7 @@ DeviceProcessEvents
      AccountName,
      AccountDomain
 ```
-### Sentinel
+## Sentinel
 ```
 let EncodedList = dynamic(['-encodedcommand', '-enc']); // -e and -en can also be added, be aware of FPs
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']);

@@ -1,6 +1,6 @@
 # Find which devices have been accessed by a list of compromised accounts and which protocol was used to connect
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let ComprimsedUsers = dynamic(['user1', 'user2']);
@@ -14,7 +14,7 @@ IdentityLogonEvents
 
 
 ```
-### Sentinel
+## Sentinel
 ```
 let ComprimsedUsers = dynamic(['user1', 'user2']);
 let SearchWindow = 48h; //Customizable h = hours, d = days

@@ -1,6 +1,6 @@
 # Logon Failure Reasons
 
-### Defender XDR
+## Defender XDR
 
 ```
 DeviceLogonEvents
@@ -8,7 +8,7 @@ DeviceLogonEvents
 | summarize count() by FailureReason
 | render piechart with (title="Logon Failure Reasons")
 ```
-### Sentinel
+## Sentinel
 ```
 DeviceLogonEvents
 | where isnotempty(FailureReason)

@@ -4,7 +4,7 @@
 #### Feed information: https://osint.digitalside.it/
 #### Feed link: https://osint.digitalside.it/Threat-Intel/lists/latestips.txt
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -20,7 +20,7 @@ DeviceNetworkEvents
 | project-reorder Timestamp, DeviceName, RemoteIP, RemotePort, InitiatingProcessAccountName
 ```
 
-### Sentinel
+## Sentinel
 ```KQL
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://osint.digitalside.it/Threat-Intel/lists/latestips.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

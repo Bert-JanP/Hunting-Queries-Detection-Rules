@@ -15,7 +15,7 @@ Regsvr32 can be abused to proxy execution of malicious code. It can be spawned f
 - https://redcanary.com/threat-detection-report/threats/TA551/
 - https://threatpost.com/cybercriminals-windows-utility-regsvr32-malware/178333/
 
-### Defender XDR
+## Defender XDR
 ```
 let OfficeApplications = dynamic(['winword.exe', 'powerpnt.exe', 'excel.exe']);
 DeviceProcessEvents
@@ -30,7 +30,7 @@ DeviceProcessEvents
      InitiatingProcessCommandLine,
      InitiatingProcessFileName
 ```
-### Sentinel
+## Sentinel
 ```
 let OfficeApplications = dynamic(['winword.exe', 'powerpnt.exe', 'excel.exe']);
 DeviceProcessEvents

@@ -6,7 +6,7 @@
 
 **Preferable use the URL filter abuse detection, to prevent false positives**: [Detection](./TI%20Feed%20-%20C2URLFeedFilterAbuse.md)
 
-### Defender XDR
+## Defender XDR
 ```
 // Collect Remote data
 let C2IntelFeeds = externaldata(Domain: string, ioc:string, path:string, IP:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP.csv"] with (format="csv", ignoreFirstRecord=True);
@@ -25,7 +25,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 // Collect Remote data
 let C2IntelFeeds = externaldata(Domain: string, ioc:string, path:string, IP:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP.csv"] with (format="csv", ignoreFirstRecord=True);

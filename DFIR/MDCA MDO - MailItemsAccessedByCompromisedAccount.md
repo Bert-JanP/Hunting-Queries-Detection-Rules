@@ -8,7 +8,7 @@ This query lists the *MailItemsAccessed* actions performed by a suspicious/compr
 #### References
 - https://learn.microsoft.com/en-us/purview/audit-log-investigate-accounts
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let InputEmailDirection = pack_array("Inbound","Outbound","Intra-org","Unknown");
 let SearchWindow = 48h; //Customizable h = hours, d = days;
@@ -29,7 +29,7 @@ CloudAppEvents
 | project-reorder MailAccessedTime, EmailRecieveTime, SenderFromAddress, RecipientEmailAddress, Subject, OperationCount
 ```
 
-### Sentinel
+## Sentinel
 ```KQL
 let InputEmailDirection = pack_array("Inbound","Outbound","Intra-org","Unknown");
 let SearchWindow = 48h; //Customizable h = hours, d = days;

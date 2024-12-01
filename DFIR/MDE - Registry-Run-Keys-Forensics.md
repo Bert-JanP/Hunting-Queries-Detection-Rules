@@ -1,6 +1,6 @@
 # Forensics on Registry Run keys in Windows. Registry Run keys can be used to establish persistence on a device. 
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let RegistryRunKeys = dynamic 
@@ -17,7 +17,7 @@ DeviceRegistryEvents
 | extend RegistryChangeInfo = bag_pack("RegistryKey", RegistryKey, "Action Performed", ActionType, "Old Value", PreviousRegistryKey, "New Value", RegistryValueData)
 | summarize TotalRunKeysChanged = count(), RegistryInfo = make_set(RegistryChangeInfo) by DeviceName
 ```
-### Sentinel
+## Sentinel
 ```
 let RegistryRunKeys = dynamic 
 ([@"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run",

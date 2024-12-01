@@ -4,7 +4,7 @@
 #### Feed information: https://github.com/drb-ra/C2IntelFeeds
 #### Feed link: https://github.com/drb-ra/C2IntelFeeds/blob/master/feeds/domainC2swithURLwithIP-filter-abused.csv
 
-### Defender XDR
+## Defender XDR
 ```
 // Collect Remote data
 let C2IntelFeeds = externaldata(Domain: string, ioc:string, path:string, IP:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP-filter-abused.csv"] with (format="csv", ignoreFirstRecord=True);
@@ -23,7 +23,7 @@ DeviceNetworkEvents
 ```
 
 
-### Sentinel
+## Sentinel
 ```
 // Collect Remote data
 let C2IntelFeeds = externaldata(Domain: string, ioc:string, path:string, IP:string)[@"https://raw.githubusercontent.com/drb-ra/C2IntelFeeds/master/feeds/domainC2swithURLwithIP-filter-abused.csv"] with (format="csv", ignoreFirstRecord=True);

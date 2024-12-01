@@ -1,7 +1,7 @@
 # Display the Inspected Network Signatures
 
 
-### Defender XDR
+## Defender XDR
 
 ```
 DeviceNetworkEvents
@@ -14,7 +14,7 @@ parse_json(AdditionalFields).SignatureMatchedContent
 | render piechart with(title="Inspected Network Signatures")
 
 ```
-### Sentinel
+## Sentinel
 ```
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"

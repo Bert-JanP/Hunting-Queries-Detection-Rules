@@ -1,6 +1,6 @@
 # Show all successful SMB connections of a compromised device
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "laptop1";
@@ -11,7 +11,7 @@ DeviceNetworkEvents
 | where RemotePort == 445
 | where ActionType == "ConnectionSuccess"
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop1";
 let SearchWindow = 48h; //Customizable h = hours, d = days

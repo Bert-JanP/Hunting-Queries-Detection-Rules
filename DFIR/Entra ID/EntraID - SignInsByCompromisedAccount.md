@@ -10,7 +10,7 @@ List the interactive and noninteractive signins that have been performed by a co
 - https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932
 
 
-### Sentinel
+## Sentinel
 ```
 let CompromisedAccountUPN = "test@test.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days

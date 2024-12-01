@@ -1,7 +1,7 @@
 # List all GraphAPI requests of a suspicious user
 
 
-### Sentinel
+## Sentinel
 ```KQL
 let SuspiciousUserId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx";
 let SearchWindow = 48h; //Customizable h = hours, d = days

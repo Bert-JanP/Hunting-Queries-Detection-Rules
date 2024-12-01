@@ -4,7 +4,7 @@
 #### Feed information: https://sslbl.abuse.ch/blacklist/#ja3-fingerprints-csv
 #### Feed link: https://sslbl.abuse.ch/blacklist/ja3_fingerprints.csv
 
-### Defender XDR
+## Defender XDR
 ```KQL
 let JA3Feed = externaldata(ja3_md5:string) [@"https://sslbl.abuse.ch/blacklist/ja3_fingerprints.csv"] with (format="txt", ignoreFirstRecord=True);
 // Extract JA3 Hashes From Feed
@@ -19,7 +19,7 @@ DeviceNetworkEvents
 | project-reorder Timestamp, DeviceName, RemoteIP, RemoteUrl, JA3
 ```
 
-### Sentinel
+## Sentinel
 ```KQL
 let JA3Feed = externaldata(ja3_md5:string) [@"https://sslbl.abuse.ch/blacklist/ja3_fingerprints.csv"] with (format="txt", ignoreFirstRecord=True);
 // Extract JA3 Hashes From Feed

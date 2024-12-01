@@ -1,6 +1,6 @@
 # Show the last 100 Powershell executions from a compromised device
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedDevice = "laptop.contoso.com";
@@ -22,7 +22,7 @@ DeviceProcessEvents
      AccountName,
      InitiatingProcessCommandLine
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedDevice = "laptop.contoso.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days

@@ -1,6 +1,6 @@
 # Find all attachments that have been send from a compromised mailbox and which devices have opened that attachment.  
 ----
-### Defender XDR
+## Defender XDR
 
 ```
 let CompromisedMailbox = "test@test.com";
@@ -28,7 +28,7 @@ EmailEvents
      TotalReciepients = array_length(EmailReciepients),
      DeviceWithFileInteraction = array_length(FileOnDevices)
 ```
-### Sentinel
+## Sentinel
 ```
 let CompromisedMailbox = "test@test.com";
 let SearchWindow = 48h; //Customizable h = hours, d = days
