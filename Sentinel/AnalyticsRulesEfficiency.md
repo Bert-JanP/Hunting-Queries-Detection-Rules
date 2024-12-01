@@ -15,7 +15,7 @@ Those stats can indicate the efficiency of a detection rule. Rules that trigger 
 Also take a look at the Analytics Efficienty Workbook that is avialable on the Analytics page in Sentinel. 
 
 ## Sentinel
-```
+```KQL
 let TimeRange = 30d;
 SecurityIncident
 | where TimeGenerated > ago(TimeRange)

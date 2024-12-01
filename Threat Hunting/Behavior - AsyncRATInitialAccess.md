@@ -20,9 +20,8 @@ An malicious OneNote file was opened and resulted in running AsyncRAT
 - https://blog.osarmor.com/319/onenote-attachment-delivers-asyncrat-malware/
 - https://resources.infosecinstitute.com/topic/asyncrat-escapes-security-defenses/
 
-### Defender XDR
-
-```
+## Defender XDR
+```KQL
 EmailEvents
 // Only select inbound mails
 | where EmailDirection == "Inbound"
@@ -36,8 +35,9 @@ EmailEvents
      | project DeviceName, SHA256, FolderPath)
      on SHA256
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 EmailEvents
 // Only select inbound mails
 | where EmailDirection == "Inbound"

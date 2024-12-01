@@ -10,7 +10,7 @@ This query visualizes the incidents that have been triggered for each MITRE ATT&
 - https://attack.mitre.org/
 
 ## Sentinel
-```
+```KQL
 SecurityIncident
 // Collect last argumtent of incident
 | summarize arg_max(TimeGenerated, *) by IncidentNumber

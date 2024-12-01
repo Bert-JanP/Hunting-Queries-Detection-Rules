@@ -9,7 +9,7 @@ Based on how it's been configured and type of the delegation there are various w
 
 
 ## Sentinel
-```
+```KQL
 let exclusions = dynamic(["-" , "0x0"]);
 SecurityEvent
 | where TimeGenerated > ago(30d)

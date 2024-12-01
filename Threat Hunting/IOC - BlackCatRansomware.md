@@ -1,11 +1,19 @@
 # All BlackCat/ALPHV Ransomware IOCs with one KQL query
 
-#### Actor: BlackCat/ALPHV
-#### IOC Source: https://www.ic3.gov/Media/News/2022/220420.pdf
-#### Publish Date: 19 April 2022
+## Query Information
 
-### Defender XDR
+#### MITRE ATT&CK Technique(s)
 
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1134.002 | Access Token Manipulation: Create Process with Token | https://attack.mitre.org/techniques/T1134/002/ |
+
+#### Description
+Actor: BlackCat/ALPHV
+IOC Source: https://www.ic3.gov/Media/News/2022/220420.pdf
+Publish Date: 19 April 2022
+
+## Defender XDR
 ```KQL
 let MD5_IOCs = dynamic(['861738dd15eb7fb50568f0e39a69e107', '9f60dd752e7692a2f5c758de4eab3e6f', '09bc47d7bc5e40d40d9729cec5e39d73', 
 'f5ef5142f044b94ac5010fd883c09aa7', '84e3b5fe3863d25bb72e25b10760e861', '9f2309285e8a8471fce7330fcade8619', '6c6c46bdac6713c94debbd454d34efd9', 
@@ -33,7 +41,8 @@ let IP_IOCs = dynamic (['89.44.9.243', '142.234.157.246', '45.134.20.66', '185.2
      | where SHA256 in (SHA256_IOCs))
 )
 ```
-### Sentinel
+
+## Sentinel
 ```KQL
 let MD5_IOCs = dynamic(['861738dd15eb7fb50568f0e39a69e107', '9f60dd752e7692a2f5c758de4eab3e6f', '09bc47d7bc5e40d40d9729cec5e39d73', 
 'f5ef5142f044b94ac5010fd883c09aa7', '84e3b5fe3863d25bb72e25b10760e861', '9f2309285e8a8471fce7330fcade8619', '6c6c46bdac6713c94debbd454d34efd9', 
@@ -61,6 +70,3 @@ let IP_IOCs = dynamic (['89.44.9.243', '142.234.157.246', '45.134.20.66', '185.2
      | where SHA256 in (SHA256_IOCs))
 )
 ```
-
-
-

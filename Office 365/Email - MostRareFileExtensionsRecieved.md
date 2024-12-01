@@ -9,7 +9,7 @@ This query list the 20 rarest file extentions that have been used in email attac
 Rare file extensions may incidacte that an actor is trying trick users in opening malicious files.
 
 ## Defender XDR
-```
+```KQL
 EmailEvents
 // Only display inbound emails
 | where EmailDirection == 'Inbound'
@@ -21,8 +21,9 @@ EmailEvents
 | summarize Total = count() by FileExtension
 | top 20 by Total asc
 ```
+
 ## Sentinel
-```
+```KQL
 EmailEvents
 // Only display inbound emails
 | where EmailDirection == 'Inbound'

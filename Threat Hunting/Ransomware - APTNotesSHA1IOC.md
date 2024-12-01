@@ -28,6 +28,7 @@ DeviceFileEvents
      InitiatingProcessCommandLine,
      SHA1
 ```
+
 ## Sentinel
 ```KQL
 let APTInfo = externaldata(Filename: string, Title: string, Source: string, Link: string, SHA1: string, Date: datetime, Year: int)[@"https://raw.githubusercontent.com/aptnotes/data/master/APTnotes.csv"] 
@@ -46,5 +47,4 @@ DeviceFileEvents
      FolderPath,
      InitiatingProcessCommandLine,
      SHA1
-
 ```

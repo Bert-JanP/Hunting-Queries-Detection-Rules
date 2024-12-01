@@ -14,13 +14,14 @@ A phishing campaign has started and a user has clicked the url, the URL is block
 - https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/safe-links-about?view=o365-worldwide
 
 ## Defender XDR
-```
+```KQL
 UrlClickEvents
 | where ActionType == "ClickBlocked"
 | project Timestamp, Url, Workload, AccountUpn, ThreatTypes, IsClickedThrough
 ```
+
 ## Sentinel
-```
+```KQL
 UrlClickEvents
 | where ActionType == "ClickBlocked"
 | project TimeGenerated, Url, Workload, AccountUpn, ThreatTypes, IsClickedThrough

@@ -9,8 +9,7 @@ This query lists all accounts that have the Global Admin role assigned to their 
 - https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator
 
 ## Sentinel
-
-```
+```KQL
 IdentityInfo
 | where AssignedRoles contains "Global Admin"
 | distinct AccountName, AccountDomain, AccountUPN, AccountSID

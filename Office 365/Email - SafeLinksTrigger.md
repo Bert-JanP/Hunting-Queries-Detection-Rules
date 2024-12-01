@@ -21,7 +21,7 @@ A phishing campaign has started and a user has clicked the url, the URL is block
 - https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/safe-links-about?view=o365-worldwide
 
 ## Defender XDR
-```
+```KQL
 UrlClickEvents
 | where ActionType == 'ClickBlocked'
 // Only filter on Safe Links actions from mail
@@ -30,8 +30,9 @@ UrlClickEvents
 | join kind=leftouter (EmailEvents | project NetworkMessageId, Subject, SenderFromAddress) on NetworkMessageId
 | project Timestamp, AccountUpn, Product = Workload, Url, ThreatTypes, Subject, SenderFromAddress, UrlChain
 ```
+
 ## Sentinel
-```
+```KQL
 UrlClickEvents
 | where ActionType == 'ClickBlocked'
 // Only filter on Safe Links actions from mail

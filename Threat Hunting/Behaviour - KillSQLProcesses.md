@@ -42,6 +42,7 @@ DeviceProcessEvents
 | project-reorder Timestamp, ProcessCommandLine, TotalParameters, TotalKilledProcesses
 | where TotalKilledProcesses >= TotalKilledThreshold and TotalParameters >= TotalParametersThreshold
 ```
+
 ## Sentinel
 ```KQL
 let TotalKilledThreshold = 10;

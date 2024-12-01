@@ -1,12 +1,14 @@
 # Threat Hunting Cisco Yanluowang Ransomware IOCs 
 
-#### Actor: Yanluowang
-#### IOC Source: https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
-#### Publish Date: 10 August 2022
+## Query Information
 
-### Defender XDR
+#### Description
+Actor: Yanluowang
+IOC Source: https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
+Publish Date: 10 August 2022
 
-```
+## Defender XDR
+```KQL
 // based on https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
 let SHA256_IOC = dynamic ([
      '184a2570d71eedc3c77b63fd9d2a066cd025d20ceef0f75d428c6f7e5c6965f3',
@@ -115,8 +117,9 @@ let Domain_IOC = dynamic(['cisco-help.cf',
      | where RemoteUrl has_any (Domain_IOC))
 )
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 // based on https://blog.talosintelligence.com/2022/08/recent-cyber-attack.html
 let SHA256_IOC = dynamic ([
      '184a2570d71eedc3c77b63fd9d2a066cd025d20ceef0f75d428c6f7e5c6965f3',
@@ -225,6 +228,3 @@ let Domain_IOC = dynamic(['cisco-help.cf',
      | where RemoteUrl has_any (Domain_IOC))
 )
 ```
-
-
-

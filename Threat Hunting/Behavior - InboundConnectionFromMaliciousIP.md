@@ -18,9 +18,8 @@ An adversary which uses a already flagged IP go scan your network for point of i
 - https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/discovering-internet-facing-devices-using-microsoft-defender-for/ba-p/3778975
 - https://github.com/stamparm/ipsum
 
-### Defender XDR
-
-```
+## Defender XDR
+```KQL
 // Collect Threat Intel feed information from Ipsum (Level 4), more threat can be used. For examples see TI feeds on the page: https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/Threat%20Hunting
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/4.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -53,8 +52,9 @@ DeviceNetworkEvents
 | project-rename ThreatIntelligenceIP=RemoteIP
 | project-reorder Timestamp, DeviceName, ThreatIntelligenceIP, LocalPort, InitiatingProcessFileName
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 // Collect Threat Intel feed information from Ipsum (Level 4), more threat can be used. For examples see TI feeds on the page: https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/tree/main/Threat%20Hunting
 let ThreatIntelFeed = externaldata(DestIP: string)[@"https://raw.githubusercontent.com/stamparm/ipsum/master/levels/4.txt"] with (format="txt", ignoreFirstRecord=True);
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';

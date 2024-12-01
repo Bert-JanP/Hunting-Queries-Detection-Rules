@@ -1,11 +1,16 @@
 # MS Exchange Zero Day (Sept 2022)
 
+## Query Information
+
+#### Description
+MS Exchange Zero Day (Sept 2022)
 Blog about the (unconfirmed) zero day in Exchange: [Link](https://www.gteltsc.vn/blog/warning-new-attack-campaign-utilized-a-new-0day-rce-vulnerability-on-microsoft-exchange-server-12715.html). 
 
+#### References
+- https://www.gteltsc.vn/blog/warning-new-attack-campaign-utilized-a-new-0day-rce-vulnerability-on-microsoft-exchange-server-12715.html
 
-
-### Defender XDR
-```
+## Defender XDR
+```KQL
 let C2IP = '137.184.67.33';
 let DownloadIP = '206.188.196.77';
 let RelatedIP = dynamic(['125.212.220.48', '5.180.61.17', '47.242.39.92', '61.244.94.85', '86.48.6.69', '94.140.8.48', '86.48.12.64', '94.140.8.113', '103.9.76.208', '103.9.76.211', '104.244.79.6', '112.118.48.186', '122.155.174.188', '125.212.241.134', '185.220.101.182', '194.150.167.88','212.119.34.11']); //These can be left out, they can generate a lot of false positives.
@@ -28,10 +33,10 @@ let SHA256IOC = dynamic(['c838e77afe750d713e67ffeb4ec1b82ee9066cbe21f11181fd3442
      | extend TriggerReason = 'SHA256 IOC Found')
 | project-reorder TriggerReason // Displays which IOC triggered the rule
 )
+```
 
-```
-### Sentinel
-```
+## Sentinel
+```KQL
 let C2IP = '137.184.67.33';
 let DownloadIP = '206.188.196.77';
 let RelatedIP = dynamic(['125.212.220.48', '5.180.61.17', '47.242.39.92', '61.244.94.85', '86.48.6.69', '94.140.8.48', '86.48.12.64', '94.140.8.113', '103.9.76.208', '103.9.76.211', '104.244.79.6', '112.118.48.186', '122.155.174.188', '125.212.241.134', '185.220.101.182', '194.150.167.88','212.119.34.11']); //These can be left out, they can generate a lot of false positives.

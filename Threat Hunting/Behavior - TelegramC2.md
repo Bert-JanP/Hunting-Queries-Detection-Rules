@@ -21,8 +21,7 @@ An actor can use telgram as a Command & Control channel, while the attackers dis
 - https://twitter.com/adamtheanalyst/status/1592561452803829760?s=46&t=0s88GjPSLLjtgcGdFsC9XQ
 
 ### Defender XDR
-
-```
+```KQL
 DeviceNetworkEvents
 | where RemoteUrl contains "api.telegram.org"
 | project 
@@ -33,8 +32,9 @@ DeviceNetworkEvents
     InitiatingProcessAccountName,
     InitiatingProcessAccountDomain
 ```
+
 ### Sentinel
-```
+```KQL
 DeviceNetworkEvents
 | where RemoteUrl contains "api.telegram.org"
 | project 
