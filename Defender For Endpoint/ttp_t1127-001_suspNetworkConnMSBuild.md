@@ -32,6 +32,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 DeviceNetworkEvents
 | where InitiatingProcessFileName =~ "msbuild.exe" and (isempty(InitiatingProcessCommandLine) or InitiatingProcessCommandLine =~ "msbuild.exe")
 ```
+
 ## Sentinel
 ```KQL
 // Detection opportunity 5: MSBuild without commands

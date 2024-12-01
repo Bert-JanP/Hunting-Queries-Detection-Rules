@@ -32,6 +32,7 @@ FIN7 have been observed performing this behaviour in recent intrusions. FIN7 act
 DeviceProcessEvents
 | where ( ProcessVersionInfoCompanyName contains "netsupport" or ProcessVersionInfoProductName contains "netsupport" ProcessVersionInfoCompanyName contains "Crosstec" or ProcessVersionInfoProductName contains "Crosstec") and not ( FolderPath has_any ("Program Files (x86)\\","Program Files\\"))
 ```
+
 ## Sentinel
 ```KQL
 // Detection opportunity 2: NetSupport running from unexpected directory

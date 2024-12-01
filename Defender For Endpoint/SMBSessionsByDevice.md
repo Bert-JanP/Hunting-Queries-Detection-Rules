@@ -1,7 +1,12 @@
 # Total SMB Sessions Created by a suspicious device
 
-### Defender XDR
-```
+## Query Information
+
+#### Description
+Total SMB Sessions Created by a suspicious device
+
+## Defender XDR
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
@@ -11,8 +16,9 @@ DeviceNetworkEvents
 | where DeviceName in~ (SuspiciousDevices)
 | summarize IPsAccessed = make_set(RemoteIP), TotalIPs = dcount(RemoteIP) by DeviceName
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let SuspiciousDevices = dynamic(['server1.com', 'laptop1.com']);
 DeviceNetworkEvents
@@ -22,11 +28,3 @@ DeviceNetworkEvents
 | where DeviceName in~ (SuspiciousDevices)
 | summarize IPsAccessed = make_set(RemoteIP), TotalIPs = dcount(RemoteIP) by DeviceName
 ```
-
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
-| 1.1 | Timespan update |
-
-

@@ -32,6 +32,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 DeviceProcessEvents
 | where FileName =~ "powershell.exe" and ProcessCommandLine has_any ("Add-MpPreference","Set-MpPreference") and ProcessCommandLine has_any ("ExclusionProcess","ExclusionPath")
 ```
+
 ## Sentinel
 ```KQL
 //Detection opportunity 3: Abusing PowerShell to disable Defender components

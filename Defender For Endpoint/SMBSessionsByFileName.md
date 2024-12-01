@@ -1,7 +1,12 @@
 # Total SMB Sessions Created by FileName
 
-### Defender XDR
-```
+## Query Information
+
+#### Description
+Total SMB Sessions Created by FileName
+
+## Defender XDR
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
 | where Timestamp > ago(TimeFrame)
@@ -10,8 +15,9 @@ DeviceNetworkEvents
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery
 | summarize dcount(RemoteIP) by InitiatingProcessFileName, InitiatingProcessFolderPath
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 DeviceNetworkEvents
 | where TimeGenerated > ago(TimeFrame)
@@ -20,11 +26,3 @@ DeviceNetworkEvents
 | where InitiatingProcessFileName <> "sensendr.exe" // MDE Device Discovery
 | summarize dcount(RemoteIP) by InitiatingProcessFileName, InitiatingProcessFolderPath
 ```
-
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
-| 1.1 | Timespan update |
-
-

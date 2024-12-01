@@ -32,6 +32,7 @@ FIN7, ZLoader, and FakeBat have been observed performing this behaviour in recen
 DeviceProcessEvents
 | where FileName =~ "powershell.exe" and ProcessCommandLine has_any ("-e","-en","-enc","-enco","-encod","-encode","-encoded","-encodedc","-encodedco","-encodedcom","-encodedcomm","-encodedcomma","-encodedcomman","-encodedcommand")
 ```
+
 ## Sentinel
 ```KQL
 //this will be noisy and no good for a SIEM analytic

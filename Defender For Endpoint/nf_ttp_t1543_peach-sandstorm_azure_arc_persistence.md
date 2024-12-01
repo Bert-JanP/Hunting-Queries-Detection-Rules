@@ -38,6 +38,7 @@ DeviceEvents
 | where ServiceName has_any (ServiceNames)
 ```
 
+## Sentinel
 ```KQL
 // Unexpected installation of azure arc agent - filepaths
 let AzureArcServicePaths = datatable(name:string)[@"\\AzureConnectedMachineAgent\\GCArcService\\GC"];
