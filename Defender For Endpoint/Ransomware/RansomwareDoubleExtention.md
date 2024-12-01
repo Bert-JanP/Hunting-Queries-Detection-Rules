@@ -23,7 +23,7 @@ Ransomware is being deployed in your environment.
 
 
 ## Defender XDR
-```
+```KQL
 // Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file/file_rename/file_rename_win_ransomware.yml
 // Add your most common file extentions in this list
 let OriginalExtension = dynamic(['.pdf', '.docx', '.jpg', '.xlsx', '.pptx', '.txt']);
@@ -51,8 +51,9 @@ DeviceFileEvents
      DeviceName,
      InitiatingProcessAccountName
 ```
+
 ## Sentinel
-```
+```KQL
 // Based on https://github.com/SigmaHQ/sigma/blob/master/rules/windows/file_rename/file_rename_win_ransomware.yml
 let OriginalExtension = dynamic(['.pdf', '.docx', '.jpg', '.xlsx', '.pptx', '.txt']);
 DeviceFileEvents

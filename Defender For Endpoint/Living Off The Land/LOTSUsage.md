@@ -17,9 +17,8 @@ An actor uses Living Off Trusted Sites to host their malicious infrastructure
 #### References
 - https://lots-project.com/
 
-
 ## Defender XDR
-```
+```KQL
 // THIS QUERY IS ONLY FOR HUNTING, NOT FOR DETECTION. IT WILL GENERATE TO MUCH FPs.
 // The query levarages the Living Off Trusted Sites from: https://lots-project.com/
 let LOTS = externaldata(Data:string )[@"https://raw.githubusercontent.com/Bert-JanP/Hunting-Queries-Detection-Rules/main/Defender%20For%20Endpoint/Living%20Off%20The%20Land/lots-project.txt"] with (format="txt", ignoreFirstRecord=True);
@@ -62,7 +61,7 @@ DeviceNetworkEvents
 | project Domain, TotalCount, UniqueURLs, TotalDevices, TotalInitiatingFiles, RemotePorts, URLs, Devices, InitiatingFiles
 ```
 ## Sentinel
-```
+```KQL
 // THIS QUERY IS ONLY FOR HUNTING, NOT FOR DETECTION. IT WILL GENERATE TO MUCH FPs.
 // The query levarages the Living Off Trusted Sites from: https://lots-project.com/
 let LOTS = externaldata(Data:string )[@"https://raw.githubusercontent.com/Bert-JanP/Hunting-Queries-Detection-Rules/main/Defender%20For%20Endpoint/Living%20Off%20The%20Land/lots-project.txt"] with (format="txt", ignoreFirstRecord=True);

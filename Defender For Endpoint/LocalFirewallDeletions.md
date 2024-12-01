@@ -1,8 +1,12 @@
-# Hunt for Local Firewall Deletions
-----
-### Defender XDR
+# List Local Firewall Deletions
 
-```
+## Query Information
+
+#### Description
+List Local Firewall Deletions
+
+## Defender XDR
+```KQL
 DeviceProcessEvents
 | where ProcessCommandLine contains "firewall delete"
 | where InitiatingProcessFileName != "Microsoft.Tri.Sensor.Updater.exe" // DFI sensor
@@ -13,8 +17,9 @@ DeviceProcessEvents
      ProcessCommandLine,
      InitiatingProcessCommandLine
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 DeviceProcessEvents
 | where ProcessCommandLine contains "firewall delete"
 | where InitiatingProcessFileName != "Microsoft.Tri.Sensor.Updater.exe" // DFI sensor
@@ -25,6 +30,3 @@ DeviceProcessEvents
      ProcessCommandLine,
      InitiatingProcessCommandLine
 ```
-
-
-

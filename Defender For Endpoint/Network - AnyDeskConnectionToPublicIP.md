@@ -8,9 +8,14 @@
 | ---  | --- | --- |
 | T1219 | Remote Access Software | https://attack.mitre.org/techniques/T1219/ |
 
-### Defender XDR
+#### Description
+List devices from which AnyDesk makes a remote connection.
 
-```
+#### References
+- https://redcanary.com/threat-detection-report/trends/rmm-tools/
+
+### Defender XDR
+```KQL
 DeviceNetworkEvents
 | where InitiatingProcessFileName == "AnyDesk.exe"
 | where LocalIPType == "Private"
@@ -25,6 +30,7 @@ DeviceNetworkEvents
      RemotePort,
      RemoteUrl
 ```
+
 ### Sentinel
 ```
 DeviceNetworkEvents

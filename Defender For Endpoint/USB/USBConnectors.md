@@ -7,7 +7,7 @@ This query lists the statistics of all the connected USB devices and their descr
 
 You can filter on the description by adding:
 ```KQL
-| where DeviceDescription has "ios
+| where DeviceDescription has "ios"
 ```
 
 #### References

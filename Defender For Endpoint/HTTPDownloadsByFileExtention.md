@@ -1,8 +1,10 @@
 # List the file extentions that have been used during a HTTP GET request
-----
-### Defender XDR
 
-```
+#### Description
+List the file extentions that have been used during a HTTP GET request
+
+## Defender XDR
+```KQL
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
 | extend
@@ -16,11 +18,12 @@ DeviceNetworkEvents
 | extend DownloadContentFileExtention = extract(@'.*\.(.*)$', 1, DownloadedContent)
 // limit DownloadContentFileExtention size to reduce false positives
 | where isnotempty(DownloadContentFileExtention) and string_size(DownloadContentFileExtention) < 8
-| summarize count() by DownloadContentFileExtention
-| sort by count_
+| summarize Total = count() by DownloadContentFileExtention
+| sort by Total
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
 | extend
@@ -34,9 +37,6 @@ DeviceNetworkEvents
 | extend DownloadContentFileExtention = extract(@'.*\.(.*)$', 1, DownloadedContent)
 // limit DownloadContentFileExtention size to reduce false positives
 | where isnotempty(DownloadContentFileExtention) and string_size(DownloadContentFileExtention) < 8
-| summarize count() by DownloadContentFileExtention
-| sort by count_
+| summarize Total = count() by DownloadContentFileExtention
+| sort by Total
 ```
-
-
-

@@ -1,8 +1,24 @@
 # Triggers when a known ransomware extension has been found
-----
-### Defender XDR
 
-```
+## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1486 | Data Encrypted for Impact | https://attack.mitre.org/techniques/T1486/ |
+
+#### Description
+This query triggers when a file with a known ransomware extension has been found.
+
+#### Risk
+The file might indicate that files are encryped for ransomware.
+
+#### References
+- https://github.com/eshlomo1/Ransomware-NOTE
+
+## Defender XDR
+```KQL
 let RansomwareExtensionsInput  = externaldata(Extension: string)[@"https://raw.githubusercontent.com/eshlomo1/Ransomware-NOTE/main/ransomware-extension-list.txt"] with (format="txt", ignoreFirstRecord=True);
 let RansomwareExtensionAddition = dynamic(['.misingfromabovelist']); // Add your missing / new extensions in this list.
 let RansomwareExtensions = materialize (
@@ -27,8 +43,8 @@ DeviceFileEvents
      InitiatingProcessAccountName
 | sort by TotalFileEncrypted
 ```
-### Sentinel
-```
+## Sentinel
+```KQL
 let RansomwareExtensionsInput  = externaldata(Extension: string)[@"https://raw.githubusercontent.com/eshlomo1/Ransomware-NOTE/main/ransomware-extension-list.txt"] with (format="txt", ignoreFirstRecord=True);
 let RansomwareExtensionAddition = dynamic(['.misingfromabovelist']); // Add your missing / new extensions in this list.
 let RansomwareExtensions = materialize (
@@ -53,6 +69,3 @@ DeviceFileEvents
      InitiatingProcessAccountName
 | sort by TotalFileEncrypted
 ```
-
-
-

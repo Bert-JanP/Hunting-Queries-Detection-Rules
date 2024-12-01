@@ -9,7 +9,7 @@ This query detects the use of bloodhound based on the processes it creates. This
 - https://redcanary.com/threat-detection-report/threats/bloodhound/
 
 ## Defender XDR
-```
+```KQL
 // List with known bloodhound executions
 let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound' ,'get-bloodHounddata']);
 DeviceProcessEvents
@@ -25,7 +25,7 @@ DeviceProcessEvents
      InitiatingProcessFileName
 ```
 ## Sentinel
-```
+```KQL
 // List with known bloodhound executions
 let BloodhoundCommands = dynamic(['-collectionMethod', 'invoke-bloodhound' ,'get-bloodHounddata']);
 DeviceProcessEvents

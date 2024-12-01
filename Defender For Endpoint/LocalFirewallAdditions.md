@@ -1,10 +1,14 @@
-# Hunt for Local Firewall Additions
-----
-### Defender XDR
+# List Local Firewall Additions
 
-```
+## Query Information
+
+#### Description
+List Local Firewall Additions
+
+## Defender XDR
+```KQL
 DeviceProcessEvents
-| where ProcessCommandLine contains "firewall add"
+| where ProcessCommandLine has "firewall add"
 | where InitiatingProcessFileName != "Microsoft.Tri.Sensor.Updater.exe" // DFI sensor
 | project-reorder
      Timestamp,
@@ -12,12 +16,12 @@ DeviceProcessEvents
      AccountName,
      ProcessCommandLine,
      InitiatingProcessCommandLine
+```
 
-```
-### Sentinel
-```
+## Sentinel
+```KQL
 DeviceProcessEvents
-| where ProcessCommandLine contains "firewall add"
+| where ProcessCommandLine has "firewall add"
 | where InitiatingProcessFileName != "Microsoft.Tri.Sensor.Updater.exe" // DFI sensor
 | project-reorder
      TimeGenerated,
@@ -25,8 +29,4 @@ DeviceProcessEvents
      AccountName,
      ProcessCommandLine,
      InitiatingProcessCommandLine
-
 ```
-
-
-

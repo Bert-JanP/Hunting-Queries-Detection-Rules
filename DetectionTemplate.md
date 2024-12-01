@@ -34,6 +34,7 @@ Explain what risk this detection tries to cover
 DeviceProcessEvents
 | where FileName == "Example.File"
 ```
+
 ## Sentinel
 ```KQL
 // Paste your query here

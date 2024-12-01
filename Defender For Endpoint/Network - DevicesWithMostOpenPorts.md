@@ -1,8 +1,12 @@
 # List the devices with the most open ports
-----
-### Defender XDR
 
-```
+## Query Information
+
+#### Description
+List the devices with the most open ports.
+
+## Defender XDR
+```KQL
 DeviceNetworkEvents
 | where ActionType == "ListeningConnectionCreated"
 | where LocalPort < 5000 //Remove open TCP ports
@@ -10,8 +14,9 @@ DeviceNetworkEvents
 | summarize TotalOpenPorts = dcount(LocalPort), OpenPortsList = make_set(LocalPort) by DeviceName
 | sort by TotalOpenPorts
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 DeviceNetworkEvents
 | where ActionType == "ListeningConnectionCreated"
 | where LocalPort < 5000 //Remove open TCP ports
@@ -19,6 +24,3 @@ DeviceNetworkEvents
 | summarize TotalOpenPorts = dcount(LocalPort), OpenPortsList = make_set(LocalPort) by DeviceName
 | sort by TotalOpenPorts
 ```
-
-
-

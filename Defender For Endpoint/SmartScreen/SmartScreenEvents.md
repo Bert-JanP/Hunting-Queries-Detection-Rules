@@ -1,12 +1,18 @@
-# Hunt for SmartScreen events. What file was opened? Or which URL did they try to access?
-----
-### Defender XDR
+# List SmartScreen Events
 
+## Query Information
+
+#### Description
+This query lists all SmartScreen related events.
+
+#### References
+- https://learn.microsoft.com/en-us/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/
+
+## Defender XDR
 ```KQL
 DeviceEvents
 | where Timestamp > ago(30d)
-| where ActionType has_any('SmartScreenAppWarning', 
-'SmartScreenUrlWarning')
+| where ActionType startswith "SmartScreen"
 | extend SmartScreenTrigger = iff(ActionType == "SmartScreenUrlWarning", 
 RemoteUrl, FileName)
 | extend ReasonForTrigger = parse_json(AdditionalFields).Experience
@@ -18,12 +24,11 @@ RemoteUrl, FileName)
      ReasonForTrigger,
      InitiatingProcessCommandLine
 ```
-### Sentinel
+## Sentinel
 ```KQL
 DeviceEvents
 | where TimeGenerated > ago(30d)
-| where ActionType has_any('SmartScreenAppWarning', 
-'SmartScreenUrlWarning')
+| where ActionType startswith "SmartScreen"
 | extend SmartScreenTrigger = iff(ActionType == "SmartScreenUrlWarning", 
 RemoteUrl, FileName)
 | extend ReasonForTrigger = parse_json(AdditionalFields).Experience
@@ -35,6 +40,3 @@ RemoteUrl, FileName)
      ReasonForTrigger,
      InitiatingProcessCommandLine
 ```
-
-
-

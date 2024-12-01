@@ -17,7 +17,7 @@ An adversary creates payloads in the C:\Users\Public to stay undetected.
 - https://securelist.com/server-side-attacks-cc-in-public-clouds-mdr-cases/107826/
 
 ## Defender XDR
-```
+```KQL
 // The start of the folderpath in the Public directory.
 let PublicFolder = @'C:\Users\Public';
 // List with Executable File Extensions, can be adjusted or changed.
@@ -35,8 +35,9 @@ DeviceFileEvents
 | where GlobalPrevalence <= FilePrevalenceThreshold
 | project Timestamp, DeviceName, FileExtension, FolderPath, GlobalPrevalence, Signer, Publisher, ReportId
 ```
+
 ## Sentinel
-```
+```KQL
 // The start of the folderpath in the Public directory.
 let PublicFolder = @'C:\Users\Public';
 // List with Executable File Extensions, can be adjusted or changed.

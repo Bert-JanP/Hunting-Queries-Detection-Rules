@@ -12,7 +12,7 @@ An adversary uses a loldriver to perform malicious activities.
 - https://www.loldrivers.io/
 
 ## Defender XDR
-```
+```KQL
 let LolDriverSHA1 = externaldata(SHA1: string)[@"https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/detections/hashes/authentihash_samples.sha1"] with (format="txt", ignoreFirstRecord=False);
 // Combine results to get ImageLoads, FileActions and Process Events
 union isfuzzy=true
@@ -25,7 +25,7 @@ union isfuzzy=true
 | project-reorder Timestamp, DeviceName, FolderPath, ProcessCommandLine
 ```
 ## Sentinel
-```
+```KQL
 let LolDriverSHA1 = externaldata(SHA1: string)[@"https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/detections/hashes/authentihash_samples.sha1"] with (format="txt", ignoreFirstRecord=False);
 // Combine results to get ImageLoads, FileActions and Process Events
 union isfuzzy=true

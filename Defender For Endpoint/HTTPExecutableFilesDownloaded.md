@@ -1,8 +1,12 @@
 # Executable File Extentions downloaded via HTTP GET
-----
-### Defender XDR
 
-```
+## Query Information
+
+#### Description
+List Executable File Extentions downloaded via HTTP GET
+
+## Defender XDR
+```KQL
 let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
@@ -19,8 +23,9 @@ DeviceNetworkEvents
 | where DownloadContentFileExtention has_any (ExecutableFileExtentions)
 | project-reorder Timestamp, DeviceName, DownloadedContent, HTTP_Request_Method, RemoteIP
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 let ExecutableFileExtentions = dynamic(['bat', 'cmd', 'com', 'cpl', 'ex', 'exe', 'jse', 'lnk','msc', 'ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf']);
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
@@ -37,6 +42,3 @@ DeviceNetworkEvents
 | where DownloadContentFileExtention has_any (ExecutableFileExtentions)
 | project-reorder TimeGenerated, DeviceName, DownloadedContent, HTTP_Request_Method, RemoteIP
 ```
-
-
-

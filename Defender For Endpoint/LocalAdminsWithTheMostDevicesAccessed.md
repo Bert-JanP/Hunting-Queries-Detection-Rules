@@ -1,8 +1,15 @@
 # Hunt for Local Admins with the most RemoteInteractive logins
-----
-### Defender XDR
 
-```
+## Query Information
+
+#### Description
+Hunt for Local Admins with the most RemoteInteractive logins
+
+#### References
+- https://learn.microsoft.com/en-us/windows-server/identity/securing-privileged-access/reference-tools-logon-types
+
+## Defender XDR
+```KQL
 DeviceLogonEvents
 | where IsLocalAdmin == "True"
 | where LogonType == "RemoteInteractive"
@@ -11,8 +18,9 @@ DeviceLogonEvents
 | extend TotalDevices = array_length(DevicesAccessed)
 | sort by TotalDevices
 ```
-### Sentinel
-```
+
+## Sentinel
+```KQL
 DeviceLogonEvents
 | where IsLocalAdmin == "True"
 | where LogonType == "RemoteInteractive"
@@ -21,6 +29,3 @@ DeviceLogonEvents
 | extend TotalDevices = array_length(DevicesAccessed)
 | sort by TotalDevices
 ```
-
-
-

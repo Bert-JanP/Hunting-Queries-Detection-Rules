@@ -7,7 +7,7 @@ This hunting query lists all the devices and the unique connections they have ma
 
 ## Defender XDR
 
-```
+```KQL
 DeviceNetworkEvents
 | where RemotePort == 445
 | where ActionType == "ConnectionSuccess"
@@ -17,8 +17,9 @@ DeviceNetworkEvents
 | extend TotalSMBConnections = array_length(SMBSessions)
 | sort by TotalSMBConnections
 ```
+
 ## Sentinel
-```
+```KQL
 DeviceNetworkEvents
 | where RemotePort == 445
 | where ActionType == "ConnectionSuccess"

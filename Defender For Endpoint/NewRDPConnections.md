@@ -1,7 +1,11 @@
-# Detect new RDP connections to devices that have not been established in the past 20 days
-----
-### Defender XDR
+# Detect new RDP connections
 
+## Query Information
+
+#### Description
+Detect new RDP connections to devices that have not been established in the past 20 days
+
+## Defender XDR
 ```KQL
 let PreviousRDPConnections = materialize (
      DeviceNetworkEvents
@@ -26,7 +30,8 @@ PreviousRDPConnections
      RemoteIP
 | sort by Timestamp
 ```
-### Sentinel
+
+## Sentinel
 ```KQL
 let PreviousRDPConnections = materialize (
      DeviceNetworkEvents
@@ -51,10 +56,3 @@ PreviousRDPConnections
      RemoteIP
 | sort by TimeGenerated
 ```
-
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
-| 1.1 | Timespan update |
-

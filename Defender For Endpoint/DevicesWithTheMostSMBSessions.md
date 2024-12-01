@@ -6,8 +6,7 @@
 List all devices with the amount of SMB sessions they have.
 
 ## Defender XDR
-
-```
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let AllDomainControllers =
      DeviceNetworkEvents
@@ -21,8 +20,9 @@ DeviceNetworkEvents
 | summarize TotalRemoteConnections = dcount(RemoteIP) by DeviceName
 | sort by TotalRemoteConnections
 ```
+
 ## Sentinel
-```
+```KQL
 let TimeFrame = 24h; //Customizable h = hours, d = days
 let AllDomainControllers =
      DeviceNetworkEvents

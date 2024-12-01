@@ -1,8 +1,12 @@
 # HTTP Request Methods Statistics
-----
-### Defender XDR
 
-```
+## Query Information
+
+#### Description
+HTTP Request Methods Statistics
+
+## Defender XDR
+```KQL
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
 | extend
@@ -12,10 +16,10 @@ DeviceNetworkEvents
 | where SignatureName == "HTTP_Client"
 | extend HTTP_Request_Method = tostring(split(SignatureMatchedContent, " /", 0)[0])
 | summarize count() by HTTP_Request_Method
+```
 
-```
-### Sentinel
-```
+## Sentinel
+```KQL
 DeviceNetworkEvents
 | where ActionType == "NetworkSignatureInspected"
 | extend
@@ -26,6 +30,3 @@ DeviceNetworkEvents
 | extend HTTP_Request_Method = tostring(split(SignatureMatchedContent, " /", 0)[0])
 | summarize count() by HTTP_Request_Method
 ```
-
-
-
