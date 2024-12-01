@@ -25,7 +25,7 @@ BehaviorInfo
 // Display all Behaviour Ids in a row and collect the entities. If you only want to alert based on the amount and not get the results yet, then the rows below can be filtered.
 | mv-expand todynamic(BehaviourIds)
 | extend BehaviourIdsString = tostring(BehaviourIds)
-| join BehaviorEntities on $left.BehaviourIdsString == $right.BehaviorId
+| join kind=inner BehaviorEntities on $left.BehaviourIdsString == $right.BehaviorId
 | project-away BehaviourIds, AccountObjectId1, AdditionalFields1, ActionType1, BehaviorId1, Categories1, DataSources1, Timestamp
 | project-reorder AccountObjectId, TotalTechniques, UniqueTechniques, Techniques, Categories, Description, DetectionSource
 | sort by AccountObjectId
@@ -44,7 +44,7 @@ BehaviorInfo
 // Display all Behaviour Ids in a row and collect the entities. If you only want to alert based on the amount and not get the results yet, then the rows below can be filtered.
 | mv-expand todynamic(BehaviourIds)
 | extend BehaviourIdsString = tostring(BehaviourIds)
-| join BehaviorEntities on $left.BehaviourIdsString == $right.BehaviorId
+| join kind=inner BehaviorEntities on $left.BehaviourIdsString == $right.BehaviorId
 | project-away BehaviourIds, AccountObjectId1, AdditionalFields1, ActionType1, BehaviorId1, Categories1, DataSources1, TimeGenerated
 | project-reorder AccountObjectId, TotalTechniques, UniqueTechniques, Techniques, Categories, Description, DetectionSource
 | sort by AccountObjectId
