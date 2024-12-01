@@ -13,9 +13,8 @@ DeviceNetworkEvents
 | where ActionType == "ConnectionSuccess"
 // Collect the last event that a device has connected via SMB to a unique remote IP
 | summarize arg_max(Timestamp, *) by DeviceId, RemoteIP
-| summarize SMBSessions = make_set(RemoteUrl) by DeviceName
-| extend TotalSMBConnections = array_length(SMBSessions)
-| sort by TotalSMBConnections
+| summarize RemoteSMBUrls = make_set_if(RemoteUrl, isnotempty(RemoteUrl)), make_set_if(RemoteIP, isempty(RemoteUrl)), TotalConnections = dcount(RemoteIP) by DeviceName
+| sort by TotalConnections
 ```
 
 ## Sentinel
@@ -25,9 +24,8 @@ DeviceNetworkEvents
 | where ActionType == "ConnectionSuccess"
 // Collect the last event that a device has connected via SMB to a unique remote IP
 | summarize arg_max(TimeGenerated, *) by DeviceId, RemoteIP
-| summarize SMBSessions = make_set(RemoteUrl) by DeviceName
-| extend TotalSMBConnections = array_length(SMBSessions)
-| sort by TotalSMBConnections
+| summarize RemoteSMBUrls = make_set_if(RemoteUrl, isnotempty(RemoteUrl)), make_set_if(RemoteIP, isempty(RemoteUrl)), TotalConnections = dcount(RemoteIP) by DeviceName
+| sort by TotalConnections
 ```
 
 
