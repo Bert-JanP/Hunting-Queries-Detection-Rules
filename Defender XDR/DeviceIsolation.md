@@ -10,7 +10,7 @@ This query lists all the device isolation activities that have been performed by
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where Timestamp > ago(30d)
 | where ActionType == "IsolateDevice"
@@ -18,8 +18,9 @@ CloudAppEvents
 | project-rename InitiatedByAccountName = AccountDisplayName, InitiatedByAccounttId = AccountId
 |project-reorder Timestamp, IsolatedDevice, IsolationComment, IsolationScope, InitiatedByAccountName, InitiatedByAccounttId
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "IsolateDevice"

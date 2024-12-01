@@ -17,8 +17,7 @@ A false positive would be a aministrator that would perform legitimate SMB file 
 A actor uses a SMB file copy to distrubute malware in your environment. 
 
 ## Defender XDR
-
-```
+```KQL
 let WhitelistedAccounts = dynamic(['account1', 'account2']);
 IdentityDirectoryEvents
 | where ActionType == 'SMB file copy'
@@ -37,8 +36,9 @@ IdentityDirectoryEvents
      FileName,
      SMBFileCopyCount
 ```
+
 ## Sentinel 
-```
+```KQL
 let WhitelistedAccounts = dynamic(['account1', 'account2']);
 IdentityDirectoryEvents
 | where ActionType == 'SMB file copy'

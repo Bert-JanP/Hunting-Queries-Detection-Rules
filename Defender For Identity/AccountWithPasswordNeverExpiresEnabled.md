@@ -9,7 +9,7 @@ In Windows a password can be set so that it will never expire. This is normaly n
 A account that has as password that never exprided on and it has a weak password. That makes it vulnerable for Brute Force attacks. 
 
 ## Defender XDR
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Account Password Never Expires changed"
 | extend AdditionalInfo = parse_json(AdditionalFields)
@@ -25,8 +25,9 @@ IdentityDirectoryEvents
      ReportId,
      DeviceName
 ```
+
 ## Sentinel
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Account Password Never Expires changed"
 | extend AdditionalInfo = parse_json(AdditionalFields)

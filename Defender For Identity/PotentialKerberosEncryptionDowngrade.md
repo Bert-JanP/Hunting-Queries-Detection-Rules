@@ -27,7 +27,7 @@ An adversary has performed an downgrade attack to be able to perform kerberoasti
 - https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos
 
 ## Defender XDR
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Account Supported Encryption Types changed"
 | extend
@@ -39,8 +39,9 @@ IdentityDirectoryEvents
 | where FromAccountSupportedEncryptionTypes != "N/A"
 | project Timestamp, DeviceName, FromAccountSupportedEncryptionTypes, ToAccountSupportedEncryptionTypes, ActorDevice, TargetDevice
 ```
+
 ## Sentinel
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Account Supported Encryption Types changed"
 | extend

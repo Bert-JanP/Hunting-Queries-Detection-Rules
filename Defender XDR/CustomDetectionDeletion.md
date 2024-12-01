@@ -19,15 +19,16 @@ An actor has gotten access to an account that is able to delete custom detection
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where Timestamp > ago(30d)
 | where ActionType == "DeleteCustomDetection"
 | extend RuleName = tostring(parse_json(RawEventData).RuleName), Query = tostring(parse_json(RawEventData).Query), AlertDescription = parse_json(RawEventData).AlertDescription
 | project-reorder AccountDisplayName, AccountId, RuleName, AlertDescription, Query
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "DeleteCustomDetection"

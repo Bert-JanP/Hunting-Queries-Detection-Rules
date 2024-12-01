@@ -12,7 +12,7 @@ This query lists all the Getfile activities that have been executed. This includ
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where Timestamp > ago(30d)
 | where ActionType == "LiveResponseGetFile"
@@ -21,8 +21,9 @@ CloudAppEvents
 | invoke FileProfile(SHA256, 1000)
 | project-reorder Timestamp, FileName, SHA256, InitiatedByAccountName, InitiatedByAccounttId, GlobalPrevalence, SignatureState
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "LiveResponseGetFile"

@@ -12,15 +12,16 @@ This query lists all changes to the Live Response Unsigned Script settings in th
 
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where ActionType == "SetAdvancedFeatures"
 | extend SettingName = tostring(parse_json(RawEventData).SettingName), SettingsNewValue = tostring(parse_json(RawEventData).SettingsNewValue)
 | where SettingName == "Live Response unsigned script execution"
 | project-reorder Timestamp, AccountId, ActionType, SettingName, SettingsNewValue
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where ActionType == "SetAdvancedFeatures"
 | extend SettingName = tostring(parse_json(RawEventData).SettingName), SettingsNewValue = tostring(parse_json(RawEventData).SettingsNewValue)

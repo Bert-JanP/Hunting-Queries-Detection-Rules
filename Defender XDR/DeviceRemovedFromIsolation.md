@@ -10,7 +10,7 @@ This query lists all the devices that are removed from isolation activities that
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where Timestamp > ago(30d)
 | where ActionType == "ReleaseFromIsolation"
@@ -25,8 +25,9 @@ CloudAppEvents
     | project IsolationTime, IsolatedDevice, IsolationComment, IsolationScope, IsolationInitiatedByAccountName, IsoaltionInitiatedByAccounttId) on $left.ReleasedDevice == $right.IsolatedDevice
 |project-reorder Timestamp, ReleasedDevice, ReleaseComment, InitiatedByAccountName, InitiatedByAccounttId, IsolationTime, IsolationComment, IsolationScope, IsolationInitiatedByAccountName, IsoaltionInitiatedByAccounttId
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "ReleaseFromIsolation"

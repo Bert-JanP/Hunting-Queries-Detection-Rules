@@ -10,14 +10,15 @@ This query lists all manual (and playbook related) anvitius actions that are ini
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where ActionType == "RunAntiVirusScan"
 | extend DeviceName = tostring(parse_json(RawEventData).DeviceName), ActionComment = tostring(parse_json(RawEventData).ActionComment), ActionScope = tostring(parse_json(RawEventData).ActionScope)
 | summarize TotalAntivirusScans = count(), ScanTypes = make_set(ActionScope), Comments = make_set(ActionComment) by DeviceName
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where ActionType == "RunAntiVirusScan"
 | extend DeviceName = tostring(parse_json(RawEventData).DeviceName), ActionComment = tostring(parse_json(RawEventData).ActionComment), ActionScope = tostring(parse_json(RawEventData).ActionScope)

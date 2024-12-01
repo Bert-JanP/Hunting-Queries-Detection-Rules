@@ -18,16 +18,18 @@ An actor has gotten access to an account that is able to download an Defender Fo
 - https://learn.microsoft.com/en-us/defender-endpoint/offboard-machines
 - https://kqlquery.com/posts/audit-defender-xdr/
 
+
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where ActionType == "DownloadOffboardingPkg"
 | extend UserId = tostring(parse_json(RawEventData).UserId), ClientIP = tostring(parse_json(RawEventData).ClientIP)
 | project-rename InitiatedByAccountName = AccountDisplayName, InitiatedByAccounttId = AccountId
 | project-reorder Timestamp, InitiatedByAccountName, UserId, ClientIP, ActionType
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where ActionType == "DownloadOffboardingPkg"
 | extend UserId = tostring(parse_json(RawEventData).UserId), ClientIP = tostring(parse_json(RawEventData).ClientIP)

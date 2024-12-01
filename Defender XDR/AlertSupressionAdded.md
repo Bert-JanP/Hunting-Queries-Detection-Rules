@@ -10,7 +10,7 @@ This query lists all the supressions that have been added to Defender XDR. This 
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | where Timestamp > ago(30d)
 | where ActionType == "ExclusionConfigurationAdded"
@@ -18,8 +18,9 @@ CloudAppEvents
 | project-rename InitiatedByAccountName = AccountDisplayName, InitiatedByAccounttId = AccountId
 | project-reorder Timestamp, Workload, ResultDescription, ResultStatus,  InitiatedByAccountName, InitiatedByAccounttId
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "ExclusionConfigurationAdded"

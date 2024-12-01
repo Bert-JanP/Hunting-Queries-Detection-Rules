@@ -25,7 +25,7 @@ An adversary has successfully performed a brute force on an account and changes 
 - https://attack.mitre.org/datasources/DS0002/#User%20Account%20Modification
 
 ## Defender XDR
-```
+```KQL
 let FailedLogonsThreshold = 20;
 let SuccessfulLogonsThreshold = 1;
 let TimeWindow = 15m;
@@ -55,8 +55,9 @@ IdentityLogonEvents
 | where TimeDifference > 0
 | where TimeDifference <= SearchWindow
 ```
+
 ## Sentinel
-```
+```KQL
 let FailedLogonsThreshold = 20;
 let SuccessfulLogonsThreshold = 1;
 let TimeWindow = 15m;

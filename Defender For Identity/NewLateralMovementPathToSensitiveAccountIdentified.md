@@ -9,8 +9,7 @@ Defender For Identity identifies lateral movement paths to all sensitive account
 - https://learn.microsoft.com/en-us/defender-for-identity/understand-lateral-movement-paths
 
 ## Defender XDR
-
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Potential lateral movement path identified"
 | extend AdditionalInfo = parse_json(AdditionalFields)
@@ -24,8 +23,9 @@ IdentityDirectoryEvents
      AccountName,
      AccountDomain
 ```
+
 ## Sentinel
-```
+```KQL
 IdentityDirectoryEvents
 | where ActionType == "Potential lateral movement path identified"
 | extend AdditionalInfo = parse_json(AdditionalFields)

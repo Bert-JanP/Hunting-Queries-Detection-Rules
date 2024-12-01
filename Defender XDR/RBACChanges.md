@@ -11,7 +11,7 @@ The query below can be used to monitor RBAC changes in Defender XDR. This query 
 - https://kqlquery.com/posts/audit-defender-xdr/
 
 ## Defender XDR
-```
+```KQL
 CloudAppEvents
 | extend Workload = tostring(parse_json(RawEventData).Workload)
 | where Workload contains "Defender"
@@ -19,8 +19,9 @@ CloudAppEvents
 | extend RoleName = tostring(parse_json(RawEventData).RoleName), RolePermissions = tostring(parse_json(RawEventData).RolePermissions), AssignedGroups = tostring(parse_json(RawEventData).AssignedGroups)
 | project-reorder Timestamp, ActionType, AccountObjectId, RoleName, RolePermissions, AssignedGroups
 ```
+
 ## Sentinel
-```
+```KQL
 CloudAppEvents
 | extend Workload = tostring(parse_json(RawEventData).Workload)
 | where Workload contains "Defender"
