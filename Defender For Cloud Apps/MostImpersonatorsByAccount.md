@@ -1,8 +1,12 @@
 # List the top 10 accounts that have the most impersonators
 
-### Defender XDR
+## Query Information
 
-```
+#### Description
+This query lists the top 10 accounts that have performed the most imporsonated users. The definiation for this field is: *Indicates whether the activity was performed by one user for another (impersonated) user*.
+
+## Defender XDR
+```KQL
 CloudAppEvents
 | where IsImpersonated == 1
 | extend
@@ -13,8 +17,8 @@ CloudAppEvents
 | extend TotalImpersonators = array_length(Impersonators)
 | top 10 by TotalImpersonators
 ```
-### Sentinel
-```
+## Sentinel
+```KQL
 CloudAppEvents
 | where IsImpersonated == 1
 | extend

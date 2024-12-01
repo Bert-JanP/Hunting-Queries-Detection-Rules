@@ -1,8 +1,12 @@
-# Detect supression rule creations
+# List supression rule creations
 
-### Defender XDR
+## Query Information
 
-```
+#### Description
+This query lists supression rule creations.
+
+## Defender XDR
+```KQL
 CloudAppEvents
 | where ActionType == "Write AlertsSuppressionRules"
 | project
@@ -13,8 +17,8 @@ CloudAppEvents
      AccountDisplayName,
      CreatedSupresionRule = ObjectName
 ```
-### Sentinel
-```
+## Sentinel
+```KQL
 CloudAppEvents
 | where ActionType == "Write AlertsSuppressionRules"
 | project

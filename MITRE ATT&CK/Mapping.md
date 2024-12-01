@@ -7,8 +7,8 @@ This section only includes references to queries that can be mapped in the MITRE
 # Statistics
 | Tactic | Entry Count |
 | --- | --- |
-| Initial Access | 12 |
-| Execution | 5 |
+| Initial Access | 13 |
+| Execution | 6 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
 | Defense Evasion | 18 |
@@ -29,6 +29,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1190 | Exploit Public-Facing Application| [Internet Facing Devices With Available Exploits](../Vulnerability%20Management/InternetFacingDevicesWithAvailableExploits.md) |
 | T1190 | Exploit Public-Facing Application | [New Active CISA Known Exploited Vulnerability Detected](../Vulnerability%20Management/NewActiveCISAKnownExploitedVulnerabilityDetected.md) |
 | T1566 | Phishing | [Typosquatted Email Received](../Office%20365/Email%20-%20TyposquattedEmailRecieved.md) |
+| T1566 | Phishing | [Malicious Email Delivered In Mailbox](../Defender%20For%20Cloud%20Apps/MaliciousEmailDeliveredInMailbox.md) |
 | T1566.001 | Phishing: Spearphishing Attachment |[Executable Email Attachment Recieved](../Office%20365/Email%20-%20ExecutableFileRecieved.md)|
 | T1566.001 | Phishing: Spearphishing Attachment | [Macro Attachment Opened From Rare Sender](../Office%20365/Email%20-%20MacroAttachmentOpenedFromRareSender.md)|
 | T1566.001 | Phishing: Spearphishing Attachment | [ASR Executable Content Triggered](../Office%20365/Email%20-%20ASRExecutableContentTriggered.md) |
@@ -45,6 +46,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Invoke-Webrequest](../Defender%20For%20Endpoint/PowerShellInvokeWebrequest.md) |
+| T1204.002 | User Execution: Malicious File | [File Containing Malware Detected](../Defender%20For%20Cloud%20Apps/FileContainingMalwareDetected.md) |
 
 ## Persistence
 

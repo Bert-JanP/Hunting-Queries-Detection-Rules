@@ -1,8 +1,12 @@
 # ATP Detection events triggered
 
-### Defender XDR
+## Query Information
 
-```
+#### Description
+Displays the *AtpDetection* events in CloudAppEvents.
+
+## Defender XDR
+```KQL
 CloudAppEvents
 | where ActionType == "AtpDetection"
 | extend
@@ -18,8 +22,8 @@ CloudAppEvents
      FileData,
      EventDeepLink
 ```
-### Sentinel
-```
+## Sentinel
+```KQL
 CloudAppEvents
 | where ActionType == "AtpDetection"
 | extend
