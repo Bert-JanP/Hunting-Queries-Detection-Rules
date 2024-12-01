@@ -29,7 +29,7 @@ A user has clicked and opened a malicious link.
 - **Github: https://github.com/guys1444**
 - **LinkedIn: https://www.linkedin.com/in/guy-sukerman-2002451aa/**
 
-### Defender XDR
+## Defender XDR
 ```
 let startDate = ago(30d);
 let endDate = now();
@@ -44,7 +44,7 @@ UrlClickEvents
 | project Timestamp, ClickCount, anomalies, score, baseline
 ```
 
-### Sentinel
+## Sentinel
 ```
 let startDate = ago(30d);
 let endDate = now();

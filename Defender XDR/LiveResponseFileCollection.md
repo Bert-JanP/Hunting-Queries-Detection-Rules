@@ -29,6 +29,5 @@ CloudAppEvents
 | where ActionType == "LiveResponseGetFile"
 | extend FileName = tostring(parse_json(RawEventData).FileName), FileSHA256 = tostring(parse_json(RawEventData).FileSHA256)
 | project-rename InitiatedByAccountName = AccountDisplayName, InitiatedByAccounttId = AccountId, SHA256 = FileSHA256
-| invoke FileProfile(SHA256, 1000)
-| project-reorder TimeGenerated, FileName, SHA256, InitiatedByAccountName, InitiatedByAccounttId, GlobalPrevalence, SignatureState
+| project-reorder TimeGenerated, FileName, SHA256, InitiatedByAccountName, InitiatedByAccounttId
 ```

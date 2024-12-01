@@ -52,12 +52,3 @@ DeviceNetworkEvents
      InitiatingProcessCommandLine,
      InitiatingProcessFolderPath
 ```
-
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
-| 1.1 | Timespan update |
-
-
-

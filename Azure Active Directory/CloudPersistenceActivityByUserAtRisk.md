@@ -43,8 +43,3 @@ AuditLogs
 | where OperationName has_any (PersistenceEvents)
 | project TimeGenerated, Identity, OperationName, Category, ResultDescription, Result
 ```
-#### Versions
-| Version | Comment |
-| ---  | --- |
-| 1.0 | Initial commit |
-| 1.1 | addition confirmedCompromised to risk state & collect last event from risky user |
