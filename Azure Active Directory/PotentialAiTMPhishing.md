@@ -27,7 +27,7 @@ AADSignInEventsBeta
 | where Application == "OfficeHome"
 | where AccountUpn has "@"
 | where isempty(AadDeviceId)
-| summarize RiskLevels = make_set(RiskLevelDuringSignIn), ResultTypes = make_set(ErrorCode), IPs = make_set(IPAddress) by CorrelationId, AccountUpn
+| summarize RiskLevels = make_set(RiskLevelDuringSignIn), ResultTypes = make_set(ErrorCode), IPs = make_set(IPAddress), Useragents = make_set(UserAgent) by CorrelationId, AccountUpn, IPAddress
 // Optional to only filter on events with a RiskLevel during the sign-in
 //| where RiskLevels has_any (10, 50, 100)
 ```
@@ -38,7 +38,7 @@ SigninLogs
 | where UserPrincipalName has "@"
 | extend deviceId = tostring(DeviceDetail.deviceId), displayName = tostring(DeviceDetail.displayName)
 | where isempty(deviceId)
-| summarize RiskLevels = make_set(RiskLevelDuringSignIn), ResultTypes = make_set(ResultType), IPs = make_set(IPAddress) by CorrelationId, UserPrincipalName
+| summarize RiskLevels = make_set(RiskLevelDuringSignIn), ResultTypes = make_set(ResultType), IPs = make_set(IPAddress), Useragents = make_set(UserAgent) by CorrelationId, UserPrincipalName, IPAddress
 // Optional to only filter on events with a RiskLevel during the sign-in
 //| where RiskLevels has_any ("low", "medium", "high")
 ```
