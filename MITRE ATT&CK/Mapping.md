@@ -8,17 +8,17 @@ This section only includes references to queries that can be mapped in the MITRE
 | Tactic | Entry Count |
 | --- | --- |
 | Initial Access | 13 |
-| Execution | 6 |
+| Execution | 7 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
-| Defense Evasion | 18 |
+| Defense Evasion | 19 |
 | Credential Access | 7 |
 | Discovery | 22 |
 | Lateral Movement | 1 |
 | Collection | 2 |
 | Command and Control | 7 |
 | Exfiltration | 1 |
-| Impact | 5 |
+| Impact | 6 |
 
 ## Initial Access
 | Technique ID | Title    | Query    |
@@ -95,6 +95,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Scattered Spider Defense Evasion via Conditional Access Policies Detection](../Azure%20Active%20Directory/nf_ttp_t1562.001_scattered-spider_abuse%20conditional_access_trusted_locations.md) |
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Defender For Endpoint Offboarding Package Downloaded](../Defender%20XDR/OffboardingPackageDownloaded.md) |
+| T1562.001 | Impair Defenses: Disable or Modify Tools | [Large Number Of Analytics Rules Deleted](../Sentinel/LargeNumberOfAnalyticsRulesDeleted.md) |
 | T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 | T1578.002 | Modify Cloud Compute Infrastructure: Create Cloud Instance | [Large Number Of VMs Started](../Azure/Compute/LargeNumberOfVMsStarted.md) |
 
