@@ -22,8 +22,8 @@ DeviceEvents
 | where Timestamp > ago(30d)
 | where ActionType == "NamedPipeEvent"
 | where split(tolower(AdditionalFields.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1]
-| project-reorder Timestamp, PipeName, DeviceName, AccountName
+| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation
+| project-reorder Timestamp, PipeName, FileOperation, DeviceName, AccountName
 ```
 
 ## Sentinel
@@ -35,6 +35,6 @@ DeviceEvents
 | where TimeGenerated > ago(30d)
 | where ActionType == "NamedPipeEvent"
 | where split(tolower(AdditionalFields.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1]
-| project-reorder TimeGenerated, PipeName, DeviceName, AccountName
+| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation
+| project-reorder TimeGenerated, PipeName, FileOperation, DeviceName, AccountName
 ```
