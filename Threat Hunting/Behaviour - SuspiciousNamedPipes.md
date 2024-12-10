@@ -21,8 +21,9 @@ let StandardizedPipes = NamedPipes
 DeviceEvents
 | where Timestamp > ago(30d)
 | where ActionType == "NamedPipeEvent"
-| where split(tolower(AdditionalFields.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation
+| extend AdditionalFields_parsed = parse_json(AdditionalFields)
+| where split(tolower(AdditionalFields_parsed.PipeName), "\\")[-1] has_any(StandardizedPipes)
+| extend PipeName = AdditionalFields_parsed.PipeName, PipeNameChild = split(tolower(AdditionalFields_parsed.PipeName), "\\")[-1], FileOperation = AdditionalFields_parsed.FileOperation
 | project-reorder Timestamp, PipeName, FileOperation, DeviceName, AccountName
 ```
 
