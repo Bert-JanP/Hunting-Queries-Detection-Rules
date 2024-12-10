@@ -19,12 +19,12 @@ let NamedPipes = externaldata(pipe_name: string, metadata_description: string, m
 let StandardizedPipes = NamedPipes
     | project pipe_name = replace_string(tolower(pipe_name), "*", "");
 DeviceEvents
-| where Timestamp > ago(30d)
+| where Timestamp > ago(24h)
 | where ActionType == "NamedPipeEvent"
 | extend AdditionalFields_parsed = parse_json(AdditionalFields)
 | where split(tolower(AdditionalFields_parsed.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields_parsed.PipeName, PipeNameChild = split(tolower(AdditionalFields_parsed.PipeName), "\\")[-1], FileOperation = AdditionalFields_parsed.FileOperation
-| project-reorder Timestamp, PipeName, FileOperation, DeviceName, AccountName
+| extend PipeName = AdditionalFields_parsed.PipeName, PipeNameChild = split(tolower(AdditionalFields_parsed.PipeName), "\\")[-1], FileOperation = AdditionalFields_parsed.FileOperation, NamedPipeEnd = AdditionalFields_parsed.NamedPipeEnd
+| project-reorder Timestamp, PipeName, FileOperation, DeviceName, AccountName, NamedPipeEnd
 ```
 
 ## Sentinel
@@ -33,9 +33,9 @@ let NamedPipes = externaldata(pipe_name: string, metadata_description: string, m
 let StandardizedPipes = NamedPipes
     | project pipe_name = replace_string(tolower(pipe_name), "*", "");
 DeviceEvents
-| where TimeGenerated > ago(30d)
+| where TimeGenerated > ago(24h)
 | where ActionType == "NamedPipeEvent"
 | where split(tolower(AdditionalFields.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation
-| project-reorder TimeGenerated, PipeName, FileOperation, DeviceName, AccountName
+| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation, NamedPipeEnd = AdditionalFields_parsed.NamedPipeEnd
+| project-reorder TimeGenerated, PipeName, FileOperation, DeviceName, AccountName, NamedPipeEnd
 ```
