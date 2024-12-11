@@ -36,6 +36,6 @@ DeviceEvents
 | where TimeGenerated > ago(24h)
 | where ActionType == "NamedPipeEvent"
 | where split(tolower(AdditionalFields.PipeName), "\\")[-1] has_any(StandardizedPipes)
-| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation, NamedPipeEnd = AdditionalFields_parsed.NamedPipeEnd
+| extend PipeName = AdditionalFields.PipeName, PipeNameChild = split(tolower(AdditionalFields.PipeName), "\\")[-1], FileOperation = AdditionalFields.FileOperation, NamedPipeEnd = AdditionalFields.NamedPipeEnd
 | project-reorder TimeGenerated, PipeName, FileOperation, DeviceName, AccountName, NamedPipeEnd
 ```
