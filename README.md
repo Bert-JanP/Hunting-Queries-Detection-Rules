@@ -1,4 +1,6 @@
-# KQL Sentinel & Defender queries [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Detection%20Rules!%20MDE%20and%20Sentinel!&url=https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules)
+# KQL Sentinel & Defender queries 
+
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=KQL%20Detection%20Rules!%20MDE%20and%20Sentinel!&url=https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules)
 
 ```
 ██   ██  ██████  ██                                                                                     
