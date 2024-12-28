@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 7 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
-| Defense Evasion | 19 |
+| Defense Evasion | 20 |
 | Credential Access | 7 |
 | Discovery | 22 |
 | Lateral Movement | 1 |
@@ -86,6 +86,7 @@ This section only includes references to queries that can be mapped in the MITRE
 |  T1127.001 | Trusted Developer Utilities Proxy Execution: MSBuild | [Suspicious network connection from MSBuild](../Defender%20For%20Endpoint/ttp_t1127-001_suspNetworkConnMSBuild.md)|
 | T1027.010 | Obfuscated Files or Information: Command Obfuscation | [PowerShell Encoded Command](../Defender%20For%20Endpoint/ttp_t1027-010_powershellEncodedCommand.md)|
 | T1070.001 | Indicator Removal| [Custom Detection Deletion](../Defender%20XDR/CustomDetectionDeletion.md) |
+| T1070.001 | Indicator Removal| [Custom Detection Disabling](../Defender%20XDR/CustomDetectionDisabled.md) |
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Security Log Cleared](../Defender%20For%20Endpoint/SecurityLogCleared.md) |
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Wevutil Clear Windows Event Logs](../Defender%20For%20Endpoint/WevtutilClearLogs.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
