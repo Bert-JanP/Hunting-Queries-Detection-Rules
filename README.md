@@ -67,9 +67,6 @@ The queries in this repository are split into different categories. The MITRE AT
 - [Full Threat Hunting Cases](./Threat%20Hunting%20Cases)
 - [Vulnerability Management](./Vulnerability%20Management)
 
-## Zero Day Detections
-- [Zero Day Detection](./Zero%20Day%20Detection)
-
 ## Informational 
 
 - [KQL helpful functions](./Functions/)
