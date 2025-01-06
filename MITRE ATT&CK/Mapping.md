@@ -144,7 +144,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1021.002 | Remote Services: SMB/Windows Admin Shares | [SMB File Copy](../Defender%20For%20Identity/SMBFileCopy.md)|
-| T1210 | Exploitation of Remote Services | [LDAPNightmare Exploitation Attempt](../Vulnability%20Exploitation/CVE-2024-49113%20-%20LDAPNightmare.md) |
+| T1210 | Exploitation of Remote Services | [LDAPNightmare Exploitation Attempt](../Vulnerability%20Exploitation/CVE-2024-49113%20-%20LDAPNightmare.md) |
 
 ## Collection
 
