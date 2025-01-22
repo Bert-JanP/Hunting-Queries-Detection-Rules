@@ -14,6 +14,9 @@ This query is to hunt for the threat of Fake CAPTCHA / Bot verification social e
 #### Risk
 This query is to hunt for Fake CAPTCHA / Bot verification social engineering malicious powershell execution.
 
+#### Author
+Github: [ch4meleon](https://github.com/ch4meleon)
+
 #### References
 - https://pkcert.gov.pk/advisory/24-19.pdf
 - https://www.mcafee.com/blogs/other-blogs/mcafee-labs/behind-the-captcha-a-clever-gateway-of-malware/
@@ -34,7 +37,19 @@ clipboardEvents
 | where abs(datetime_diff('minute', TimeGenerated, TimeGenerated1)) <= 1
 | summarize by DeviceName
 ```
+
 ## Sentinel
 ```
+let clipboardEvents = 
+    DeviceEvents
+    | where ActionType contains "GetClipboardData" 
+    and InitiatingProcessFileName contains "explorer.exe";
+let powershellEvents = 
+    DeviceProcessEvents
+    | where (FileName contains "powershell.exe" and (ProcessCommandLine contains "hidden") and ProcessCommandLine contains "http" and ProcessCommandLine !contains "http://localhost") or (FileName contains "mshta.exe" and ProcessCommandLine contains "http" and ProcessCommandLine !contains "http://localhost");
+clipboardEvents
+| join kind=inner (powershellEvents) on DeviceName
+| where abs(datetime_diff('minute', TimeGenerated, TimeGenerated1)) <= 1
+| summarize by DeviceName
 ```
 

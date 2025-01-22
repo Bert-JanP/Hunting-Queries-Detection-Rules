@@ -46,6 +46,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Invoke-Webrequest](../Defender%20For%20Endpoint/PowerShellInvokeWebrequest.md) |
+| T1204.002 | User Execution: Malicious Link | [PowerShell Executions From Clipboard](../Defender%20For%20Endpoint/PowerShellExecutionsFromClipboard.md) |
 | T1204.002 | User Execution: Malicious File | [File Containing Malware Detected](../Defender%20For%20Cloud%20Apps/FileContainingMalwareDetected.md) |
 | T1204.002 | User Execution: Malicious File | [Malware File Detected Office 365](../Office%20365/MalwareFileDetected.md) |
 
