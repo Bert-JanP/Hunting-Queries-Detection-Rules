@@ -12,7 +12,7 @@
 This query is to hunt for the threat of Fake CAPTCHA / Bot verification social engineering techniques used by the actor to lure the victim to click copy-and-paste button on the website with malicious powershell for the retrieval of the second stage payload and subsequently executed on the victim's device. The idea of the query is to detect the events of clipboard data being accessed and followed by PowerShell execution under 1 minute of time window.
 
 #### Risk
-An actor uses WMIC to list the installed antivirus solutions. This query is to hunt for Fake CAPTCHA / Bot verification social engineering malicious powershell execution.
+This query is to hunt for Fake CAPTCHA / Bot verification social engineering malicious powershell execution.
 
 #### References
 - https://pkcert.gov.pk/advisory/24-19.pdf
