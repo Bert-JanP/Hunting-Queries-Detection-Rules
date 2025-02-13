@@ -45,17 +45,21 @@ DeviceFileEvents
 | summarize 
     FileCount = count(),
     RenamedFiles = make_list(FileName),
-    TimeGenerated = arg_max(Timestamp, *) 
+    Timestamp = arg_max(Timestamp, *) 
     by DeviceName, InitiatingProcessAccountName
 // Filter for more than 10 files renamed
 | where FileCount > 10
 // Display results
 | project-reorder
-    TimeGenerated,
+    Timestamp,
     FileCount,
     DeviceName,
     InitiatingProcessAccountName,
-    RenamedFiles
+    RenamedFiles,
+    PreviousFileExtension,
+    PreviousFileName,
+    NewFileExtension,
+    FileName
 ```
 
 ## Sentinel
@@ -80,17 +84,21 @@ DeviceFileEvents
 | summarize 
     FileCount = count(),
     RenamedFiles = make_list(FileName),
-    TimeGenerated = arg_max(Timestamp, *) 
+    Timestamp = arg_max(Timestamp, *) 
     by DeviceName, InitiatingProcessAccountName
 // Filter for more than 10 files renamed
 | where FileCount > 10
 // Display results
 | project-reorder
-    TimeGenerated,
+    Timestamp,
     FileCount,
     DeviceName,
     InitiatingProcessAccountName,
-    RenamedFiles
+    RenamedFiles,
+    PreviousFileExtension,
+    PreviousFileName,
+    NewFileExtension,
+    FileName
 ```
 
 
