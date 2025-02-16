@@ -84,7 +84,7 @@ DeviceFileEvents
 | summarize 
     FileCount = count(),
     RenamedFiles = make_list(FileName),
-    Timestamp = arg_max(Timestamp, *) 
+    Timestamp = arg_max(TimeGenerated, *) 
     by DeviceName, InitiatingProcessAccountName
 // Filter for more than 10 files renamed
 | where FileCount > 10
