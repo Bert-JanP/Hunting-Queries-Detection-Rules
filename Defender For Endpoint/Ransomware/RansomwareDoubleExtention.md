@@ -11,7 +11,7 @@
 #### Description
 Detects possible ransomware file changes by adding a custom extension to the encrypted files, such as ".docx.encrypted" or ".pdf.ezz". This is a technique that is used by multiple Ransomware groups, they do not change the currenct extention, but they add a new one to the current file.
 
-A false positive could be a administrator that changes a lot of files.
+A false positive could be a administrator that changes a lot of files. To avoid false positive by users, a minimum file rename count of 10 is implemented.
 
 #### Risk
 Ransomware is being deployed in your environment. 
@@ -41,15 +41,25 @@ DeviceFileEvents
 // Remove duplicate file extensions to limit false positives (e.g. .pdf.pdf or .docx.docx)
 | extend DuplicateExtensionCheck = split(NewFileExtension, ".")
 | where tostring(DuplicateExtensionCheck[1]) != tostring(DuplicateExtensionCheck[2])
+// Group by device and process to count renamed files
+| summarize 
+    FileCount = count(),
+    RenamedFiles = make_list(FileName),
+    Timestamp = arg_max(Timestamp, *) 
+    by DeviceName, InitiatingProcessAccountName
+// Filter for more than 10 files renamed
+| where FileCount > 10
 // Display results
 | project-reorder
-     Timestamp,
-     PreviousFileExtension,
-     PreviousFileName,
-     NewFileExtension,
-     FileName,
-     DeviceName,
-     InitiatingProcessAccountName
+    Timestamp,
+    FileCount,
+    DeviceName,
+    InitiatingProcessAccountName,
+    RenamedFiles,
+    PreviousFileExtension,
+    PreviousFileName,
+    NewFileExtension,
+    FileName
 ```
 
 ## Sentinel
@@ -70,15 +80,25 @@ DeviceFileEvents
 // Remove duplicate file extensions to limit false positives (e.g. .pdf.pdf or .docx.docx)
 | extend DuplicateExtensionCheck = split(NewFileExtension, ".")
 | where tostring(DuplicateExtensionCheck[1]) != tostring(DuplicateExtensionCheck[2])
+// Group by device and process to count renamed files
+| summarize 
+    FileCount = count(),
+    RenamedFiles = make_list(FileName),
+    Timestamp = arg_max(Timestamp, *) 
+    by DeviceName, InitiatingProcessAccountName
+// Filter for more than 10 files renamed
+| where FileCount > 10
 // Display results
 | project-reorder
-     TimeGenerated,
-     PreviousFileExtension,
-     PreviousFileName,
-     NewFileExtension,
-     FileName,
-     DeviceName,
-     InitiatingProcessAccountName
+    Timestamp,
+    FileCount,
+    DeviceName,
+    InitiatingProcessAccountName,
+    RenamedFiles,
+    PreviousFileExtension,
+    PreviousFileName,
+    NewFileExtension,
+    FileName
 ```
 
 
