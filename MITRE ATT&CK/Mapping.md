@@ -7,7 +7,7 @@ This section only includes references to queries that can be mapped in the MITRE
 # Statistics
 | Tactic | Entry Count |
 | --- | --- |
-| Initial Access | 13 |
+| Initial Access | 14 |
 | Execution | 7 |
 | Persistence | 11 |
 | Privilege Escalation | 5 |
@@ -36,6 +36,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1566.001 | Phishing: Spearphishing Attachment | [Hunt: AsyncRAT OneNote Delivery](../Threat%20Hunting/Behavior%20-%20AsyncRATInitialAccess.md) |
 | T1566.002 | Phishing: Spearphishing Link | [Email Safe Links Trigger](../Office%20365/Email%20-%20SafeLinksTrigger.md) |
 | T1566.002 | Phishing: Spearphishing Link | [Potential Phishing Campaign](../Office%20365/Email%20-%20PotentialPhishingCampaign.md) |
+| T1566.002 | Phishing: Spearphishing Link | [Successful Device Code Authentication Unmanaged Device](../Azure%20Active%20Directory/SuccessfulDeviceCodeAuthenticationUnmanagedDevice.md) |
 
 ## Execution
 
