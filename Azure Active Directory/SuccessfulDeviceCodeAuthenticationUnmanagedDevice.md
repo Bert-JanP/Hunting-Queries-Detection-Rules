@@ -13,6 +13,8 @@ This query lists successful Entra ID sign-ins were device code authentication is
 
 The solutions for Sentinel (SigninLogs) and Defender XDR (AADSignInEventsBeta) differ slightly, but have the same output.
 
+You can also include a filter for the Microsoft Authentication Broker application, appId = 29d9ed98-a469-4536-ade2-f981bc1d605e. This application can generate a bunch of false positives in the results, due to benign onboarding activities.
+
 #### Risk
 An adversary managed to succesfully sign-in to your organization using device code authentication.
 
