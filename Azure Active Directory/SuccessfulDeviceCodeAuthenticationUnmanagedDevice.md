@@ -30,7 +30,7 @@ AADSignInEventsBeta
 | where EndpointCall == "Cmsi:Cmsi"
 // Filter on unmanaged devices
 | where isempty(AadDeviceId)
-// Optionally filter only on sign-ins with a risklevel assiciated with the sign-in
+// Optionally filter only on sign-ins with a risklevel associated with the sign-in
 //| where RiskLevelDuringSignIn in(10, 50, 100)
 | project-reorder TimeGenerated, AccountUpn, EndpointCall, ErrorCode, RiskLevelDuringSignIn, Application, ApplicationId, Country, IPAddress
 ```
@@ -44,7 +44,7 @@ SigninLogs
 // Filter on unmanaged devices
 | where isempty(DeviceDetail.deviceId)
 | extend operatingSystem = tostring(DeviceDetail.operatingSystem)
-// Optionally filter only on sign-ins with a risklevel assiciated with the sign-in
+// Optionally filter only on sign-ins with a risklevel associated with the sign-in
 //| where RiskLevelDuringSignIn != "none"
 | project-reorder TimeGenerated, UserPrincipalName, AuthenticationProtocol, ResultType, RiskLevelDuringSignIn, AppDisplayName, AppId, Location, IPAddress
 ```
