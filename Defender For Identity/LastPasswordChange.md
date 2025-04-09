@@ -12,7 +12,7 @@ IdentityDirectoryEvents
 | where ActionType == "Account Password changed"
 | where AccountUpn =~ UPN
 | summarize arg_max(Timestamp, *) by AccountUpn
-| project PasswordChangeTime = Timestamp, Application, AccountDomain, AccountSid
+| project PasswordChangeTime = Timestamp, Application, AccountDomain, AccountSid, AccountUpn
 ```
 
 ## Sentinel
@@ -22,5 +22,5 @@ IdentityDirectoryEvents
 | where ActionType == "Account Password changed"
 | where AccountUpn =~ UPN
 | summarize arg_max(TimeGenerated, *) by AccountUpn
-| project PasswordChangeTime = TimeGenerated, Application, AccountDomain, AccountSid
+| project PasswordChangeTime = TimeGenerated, Application, AccountDomain, AccountSid, AccountUpn
 ```
