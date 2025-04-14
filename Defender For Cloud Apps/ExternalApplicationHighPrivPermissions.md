@@ -21,7 +21,6 @@ OAuthAppInfo
 ## Sentinel
 ```KQL
 OAuthAppInfo
-OAuthAppInfo
 | where AppOrigin == "External"
 | where PrivilegeLevel == "High"
 | summarize arg_max(TimeGenerated, *) by OAuthAppId
