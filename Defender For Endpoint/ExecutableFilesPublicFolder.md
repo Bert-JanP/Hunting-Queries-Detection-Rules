@@ -33,7 +33,7 @@ DeviceFileEvents
 | invoke FileProfile('SHA256', 10000)
 // Filter based on FilePrevalenceThreshold
 | where GlobalPrevalence <= FilePrevalenceThreshold
-| project Timestamp, DeviceName, FileExtension, FolderPath, GlobalPrevalence, Signer, Publisher, ReportId
+| project Timestamp, DeviceName, FileExtension, FolderPath, GlobalPrevalence, Signer, Publisher, ReportId, DeviceId
 ```
 
 ## Sentinel
