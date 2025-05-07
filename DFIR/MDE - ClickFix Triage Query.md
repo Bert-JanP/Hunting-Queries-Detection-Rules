@@ -25,50 +25,52 @@ Based on these variables the KQL query collects the following information:
 ## Defender XDR
 ```KQL
 // Input variables
-let VictimDeviceId = "xxxxxxxxx";
+let VictimDeviceId = "ad99bd95733f62294b5b76bb63b113bff44d06ef";
 let TopXEvents = 15;
 let TimeFrame = 5m;
 // Input parameters for the forensic hunting query
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", "Hidden"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w"]);
 let Executables = dynamic(["cmd", "powershell", "curl", "mshta"]);
 let FilteredSIDs = dynamic(["S-1-5-18"]);
 let RegKeyEvents =
-    DeviceRegistryEvents
-    | where DeviceId =~ VictimDeviceId
-    | where ActionType == "RegistryValueSet"
-    | where RegistryKey has "RunMRU"
-    | where RegistryValueData has_any (Parameters) and RegistryValueData has_any (Executables)
-    | extend LogType = "☢️ RunMRU Event"
-    | project Timestamp, DeviceId, DeviceName, RegistryValueData, RegistryKey, LogType;
+ DeviceRegistryEvents
+ | where DeviceId =~ VictimDeviceId
+ | where ActionType == "RegistryValueSet"
+ | where RegistryKey has "RunMRU"
+ | where RegistryValueData has_any (Parameters) and RegistryValueData has_any (Executables)
+ | extend LogType = "☢️ RunMRU Event"
+ | project Timestamp, DeviceId, DeviceName, RegistryValueData, RegistryKey, LogType;
 let RegKeyEventTimestamp = toscalar (RegKeyEvents | summarize Timestamp = max(Timestamp));
 let NetworkEventsParser = materialize (DeviceNetworkEvents
-    | where DeviceId =~ VictimDeviceId
-    | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
-    | where isnotempty(RemoteUrl)
-    | extend MatchTimeStamp = RegKeyEventTimestamp
-    | project Timestamp, RemoteIP, RemoteUrl, ReportId, DeviceId, DeviceName, MatchTimeStamp, InitiatingProcessCommandLine);
+ | where DeviceId =~ VictimDeviceId
+ | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
+ | where isnotempty(RemoteUrl)
+ | extend MatchTimeStamp = RegKeyEventTimestamp
+ | project Timestamp, RemoteIP, RemoteUrl, ReportId, DeviceId, DeviceName, MatchTimeStamp, InitiatingProcessCommandLine);
 let PreInfectionNetworkEvents =
-    NetworkEventsParser
-    | where Timestamp between ((MatchTimeStamp - TimeFrame) .. MatchTimeStamp)
-    | top TopXEvents by Timestamp desc
-    | extend LogType = "🛜 Pre Infection Network Event";
+ NetworkEventsParser
+ | where Timestamp between ((MatchTimeStamp - TimeFrame) .. MatchTimeStamp)
+ | top TopXEvents by Timestamp desc
+ | extend LogType = "🛜 Pre Infection Network Event";
 let PostInfectionNetworkEvents =
-    NetworkEventsParser
-    | where Timestamp between (MatchTimeStamp .. (MatchTimeStamp + TimeFrame))
-    | top TopXEvents by Timestamp asc
-    | extend LogType = "🛜 Post Infection Network Event";
+ NetworkEventsParser
+ | where Timestamp between (MatchTimeStamp .. (MatchTimeStamp + TimeFrame))
+ | top TopXEvents by Timestamp asc
+ | extend LogType = "🛜 Post Infection Network Event";
 let PostInfectionProcessEvents = DeviceProcessEvents
-    | where Timestamp between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
-    | top TopXEvents by Timestamp asc
-    | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
-    | extend LogType = "♻️ Post Infection Process Event"
-    | project Timestamp, ReportId, LogType, DeviceId, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine;
+ | where DeviceId =~ VictimDeviceId
+ | where Timestamp between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
+ | top TopXEvents by Timestamp asc
+ | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
+ | extend LogType = "♻️ Post Infection Process Event"
+ | project Timestamp, ReportId, LogType, DeviceId, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine;
 let PostInfectionFileEvents = DeviceFileEvents
-    | where Timestamp between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
-    | top TopXEvents by Timestamp asc
-    | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
-    | extend LogType = "📁 Post Infection File Event"
-    | project Timestamp, ReportId, LogType, DeviceId, DeviceName, ActionType, InitiatingProcessCommandLine, FolderPath;
+ | where DeviceId =~ VictimDeviceId
+ | where Timestamp between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
+ | top TopXEvents by Timestamp asc
+ | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
+ | extend LogType = "📁 Post Infection File Event"
+ | project Timestamp, ReportId, LogType, DeviceId, DeviceName, ActionType, InitiatingProcessCommandLine, FolderPath;
 union isfuzzy=false PreInfectionNetworkEvents,RegKeyEvents, PostInfectionNetworkEvents, PostInfectionProcessEvents, PostInfectionFileEvents
 | sort by Timestamp asc
 | project-reorder Timestamp, DeviceId, DeviceName, LogType, RemoteUrl, RegistryValueData, ProcessCommandLine, FolderPath, InitiatingProcessCommandLine
@@ -110,12 +112,14 @@ let PostInfectionNetworkEvents =
     | top TopXEvents by TimeGenerated asc
     | extend LogType = "🛜 Post Infection Network Event";
 let PostInfectionProcessEvents = DeviceProcessEvents
+    | where DeviceId =~ VictimDeviceId
     | where TimeGenerated between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
     | top TopXEvents by TimeGenerated asc
     | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
     | extend LogType = "♻️ Post Infection Process Event"
     | project TimeGenerated, ReportId, LogType, DeviceId, DeviceName, ProcessCommandLine, InitiatingProcessCommandLine;
 let PostInfectionFileEvents = DeviceFileEvents
+    | where DeviceId =~ VictimDeviceId
     | where TimeGenerated between (RegKeyEventTimestamp .. (RegKeyEventTimestamp + TimeFrame))
     | top TopXEvents by TimeGenerated asc
     | where not(InitiatingProcessAccountSid in~ (FilteredSIDs))
