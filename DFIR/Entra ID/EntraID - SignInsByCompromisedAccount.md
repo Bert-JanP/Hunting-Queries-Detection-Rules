@@ -1,4 +1,4 @@
-# Sign Ins by comrpomised account
+# Sign Ins by compromised account
 
 ## Query Information
 
