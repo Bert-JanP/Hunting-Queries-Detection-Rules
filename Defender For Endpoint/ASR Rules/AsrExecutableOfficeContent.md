@@ -31,7 +31,7 @@ DeviceEvents
 // Enrich results with File information
 | invoke FileProfile('SHA1', 10000)
 | where GlobalPrevalence <= FilePrevalanceThreshold
-| project Timestamp, DeviceName, InitiatingProcessAccountUpn, FileName, FolderPath, ActionType, Signer, GlobalFirstSeen, GlobalPrevalence, SHA1, InitiatingProcessCommandLine, InitiatingProcessFolderPath
+| project Timestamp, DeviceName, DeviceId, InitiatingProcessAccountUpn, FileName, FolderPath, ActionType, Signer, GlobalFirstSeen, GlobalPrevalence, SHA1, InitiatingProcessCommandLine, InitiatingProcessFolderPath
 ```
 ## Sentinel
 ```
@@ -40,5 +40,5 @@ DeviceEvents
 | where ActionType in~ ('AsrExecutableOfficeContentAudited', 'AsrExecutableOfficeContentBlocked')
 // Enrich results with File information
 | invoke FileProfile('SHA1', 10000)
-| project TimeGenerated, DeviceName, InitiatingProcessAccountUpn, FileName, FolderPath, ActionType, SHA1, InitiatingProcessCommandLine, InitiatingProcessFolderPath
+| project TimeGenerated, DeviceName, DeviceId, InitiatingProcessAccountUpn, FileName, FolderPath, ActionType, SHA1, InitiatingProcessCommandLine, InitiatingProcessFolderPath
 ```
