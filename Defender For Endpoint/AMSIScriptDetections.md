@@ -20,16 +20,16 @@ An adversary uses PowerShell to execute malicious scripts in which AMSI detects 
 - https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal
 
 ## Defender XDR
-```
-DeviceEvents
-| where ActionType == "AmsiScriptDetection"
-| extend Description = tostring(parse_json(AdditionalFields).Description)
-| project Timestamp, DeviceName, InitiatingProcessCommandLine, Description
+```KQL
+DeviceEvents 
+| where ActionType == "AmsiScriptDetection" 
+| extend Description = tostring(parse_json(AdditionalFields).Description) 
+| project Timestamp, DeviceName, DeviceId, InitiatingProcessCommandLine, Description, ReportId
 ```
 ## Sentinel
-```
-DeviceEvents
-| where ActionType == "AmsiScriptDetection"
-| extend Description = tostring(parse_json(AdditionalFields).Description)
-| project TimeGenerated, DeviceName, InitiatingProcessCommandLine, Description
+```KQL
+DeviceEvents 
+| where ActionType == "AmsiScriptDetection" 
+| extend Description = tostring(parse_json(AdditionalFields).Description) 
+| project TimeGenerated, DeviceName, DeviceId, InitiatingProcessCommandLine, Description, ReportId
 ```
