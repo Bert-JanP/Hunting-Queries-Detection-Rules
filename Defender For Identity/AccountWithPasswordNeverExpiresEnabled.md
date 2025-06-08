@@ -13,17 +13,9 @@ A account that has as password that never exprided on and it has a weak password
 IdentityDirectoryEvents
 | where ActionType == "Account Password Never Expires changed"
 | extend AdditionalInfo = parse_json(AdditionalFields)
-| extend OriginalValue = AdditionalInfo.['FROM Account Password Never Expires']
-| extend NewValue = AdditionalInfo.['TO Account Password Never Expires']
+| extend OriginalValue = AdditionalInfo.['FROM Account Password Never Expires'],  NewValue = AdditionalInfo.['TO Account Password Never Expires'], AccountSid = AdditionalFields.TargetAccountSid
 | where NewValue == true
-| project
-     Timestamp,
-     AccountName,
-     AccountDomain,
-     OriginalValue,
-     NewValue,
-     ReportId,
-     DeviceName
+| project-reorder Timestamp, TargetAccountUpn, AccountSid, OriginalValue, NewValue, ReportId, DeviceName
 ```
 
 ## Sentinel
@@ -31,17 +23,9 @@ IdentityDirectoryEvents
 IdentityDirectoryEvents
 | where ActionType == "Account Password Never Expires changed"
 | extend AdditionalInfo = parse_json(AdditionalFields)
-| extend OriginalValue = AdditionalInfo.['FROM Account Password Never Expires']
-| extend NewValue = AdditionalInfo.['TO Account Password Never Expires']
+| extend OriginalValue = AdditionalInfo.['FROM Account Password Never Expires'],  NewValue = AdditionalInfo.['TO Account Password Never Expires'], AccountSid = AdditionalFields.TargetAccountSid
 | where NewValue == true
-| project
-     TimeGenerated,
-     AccountName,
-     AccountDomain,
-     OriginalValue,
-     NewValue,
-     ReportId,
-     DeviceName
+| project-reorder TimeGenerated, TargetAccountUpn, AccountSid, OriginalValue, NewValue, ReportId, DeviceName
 ```
 
 
