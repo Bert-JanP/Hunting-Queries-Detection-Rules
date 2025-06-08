@@ -2,6 +2,12 @@
 
 ## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1098 | Account Manipulation | https://attack.mitre.org/techniques/T1098/ |
+
 #### Description
 In Active Directory a password can be set so that it will never expire. This is normaly not desirable, because a password should be changed every x period. This query detects when a useraccount is set to Account Password Never Expires.
 

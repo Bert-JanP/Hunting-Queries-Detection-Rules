@@ -9,7 +9,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | --- | --- |
 | Initial Access | 14 |
 | Execution | 7 |
-| Persistence | 11 |
+| Persistence | 12 |
 | Privilege Escalation | 5 |
 | Defense Evasion | 20 |
 | Credential Access | 7 |
@@ -55,6 +55,7 @@ This section only includes references to queries that can be mapped in the MITRE
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
+| T1098 | Account Manipulation | [Account With Password Never Expires Enabled](../Defender%20For%20Identity/AccountWithPasswordNeverExpiresEnabled.md)|
 | T1098 | Account Manipulation | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md)|
 | T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
 | T1136.001 | Create Account: Local Account | [Local Administrator Account Creations](../Defender%20For%20Endpoint/LocalAdminAdditions.md) |
