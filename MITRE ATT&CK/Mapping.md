@@ -8,7 +8,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Tactic | Entry Count |
 | --- | --- |
 | Initial Access | 14 |
-| Execution | 8 |
+| Execution | 9 |
 | Persistence | 12 |
 | Privilege Escalation | 5 |
 | Defense Evasion | 20 |
@@ -44,7 +44,8 @@ This section only includes references to queries that can be mapped in the MITRE
 | ---  | --- | --- |
 | T1047 | Windows Management Instrumentation | [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
 | T1047 | Windows Management Instrumentation | [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md) |
-| T1059.001 | Command and Scripting Interpreter | [Suspicious Browser Child Process](../Defender%20For%20Endpoint/SuspiciousBrowserChildProcess.md)|
+| T1059 | Command and Scripting Interpreter | [Suspicious Browser Child Process](../Defender%20For%20Endpoint/SuspiciousBrowserChildProcess.md)|
+| T1059 | Command and Scripting Interpreter | [Suspicious Explorer Child Process](../Defender%20For%20Endpoint/SuspiciousExplorerChildProcess.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Launching Scripts From WindowsApps Directory (FIN7)](../Defender%20For%20Endpoint/ttp_t1059-001_powershell_windowsappsdir_fin7.md)|
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [AMSI Script Detection](../Defender%20For%20Endpoint/AMSIScriptDetections.md) |
 | T1059.001 | Command and Scripting Interpreter: PowerShell | [PowerShell Invoke-Webrequest](../Defender%20For%20Endpoint/PowerShellInvokeWebrequest.md) |
