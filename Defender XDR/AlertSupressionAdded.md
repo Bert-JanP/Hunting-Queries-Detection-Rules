@@ -2,6 +2,12 @@
 
 ## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1562 | Impair Defenses | https://attack.mitre.org/techniques/T1562/ |
+
 ### Description
 This query lists all the supressions that have been added to Defender XDR. This gives you an overview of what rules are added, by who and why they have been added.
 
