@@ -2,6 +2,12 @@
 
 ## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1562.001 | Impair Defenses: Disable or Modify Tool | https://attack.mitre.org/techniques/T1562/001/ |
+
 ### Description
 Defender For Endpoint Advanced Features are very powerful, some examples are:
 - Enable/Disable EDR in block mode

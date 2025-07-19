@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 10 |
 | Persistence | 12 |
 | Privilege Escalation | 5 |
-| Defense Evasion | 21 |
+| Defense Evasion | 22 |
 | Credential Access | 7 |
 | Discovery | 22 |
 | Lateral Movement | 2 |
@@ -99,6 +99,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562 | Impair Defenses | [Alert Supression Added](../Defender%20XDR/AlertSupressionAdded.md) |
+| T1562.001 | Impair Defenses: Disable or Modify Tool | [XDR Advanced Feature Disabled](../Defender%20XDR/AdvancedFeatureDisabled.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Abusing PowerShell to disable Defender components](../Defender%20For%20Endpoint/ttp_t1562-001_disabledefender.md)|
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Scattered Spider Defense Evasion via Conditional Access Policies Detection](../Azure%20Active%20Directory/nf_ttp_t1562.001_scattered-spider_abuse%20conditional_access_trusted_locations.md) |
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Defender For Endpoint Offboarding Package Downloaded](../Defender%20XDR/OffboardingPackageDownloaded.md) |
