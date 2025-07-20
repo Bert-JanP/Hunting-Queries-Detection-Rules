@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 10 |
 | Persistence | 12 |
 | Privilege Escalation | 5 |
-| Defense Evasion | 22 |
+| Defense Evasion | 23 |
 | Credential Access | 7 |
 | Discovery | 22 |
 | Lateral Movement | 2 |
@@ -96,6 +96,9 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1070.001 | Indicator Removal: Clear Windows Event Logs | [Wevutil Clear Windows Event Logs](../Defender%20For%20Endpoint/WevtutilClearLogs.md) |
 | T1134.002 | Access Token Manipulation: Create Process with Token | [Runas With Saved Credentials](../Defender%20For%20Endpoint/RunasWithSavedCredentials.md) |
 | T1218 | System Binary Proxy Execution| [WMIC Remote Command Execution](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/WMICRemoteCommand.md) |
+| T1218 | System Binary Proxy Execution | [New LOL Bin External Connection](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/NewLOLBinExternalConnection.md) |
+| T1218 | System Binary Proxy Execution | [Certutil Remote Download](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/CertutilRemoteDownload.md) |
+| T1218 | System Binary Proxy Execution | [LOLBin Remote IP CommandLine](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/LOLBinRemoteIPCommandLine.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562 | Impair Defenses | [Alert Supression Added](../Defender%20XDR/AlertSupressionAdded.md) |

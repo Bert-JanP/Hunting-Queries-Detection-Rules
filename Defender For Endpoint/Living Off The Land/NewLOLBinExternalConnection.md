@@ -2,6 +2,12 @@
 
 ## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1218 | System Binary Proxy Execution | https://attack.mitre.org/techniques/T1218/ |
+
 #### Description
 This query searches for new lolbins that have executed external connections. This is done by first listing all lolbins that are known to execute external connections, for example msedge.exe will (of course) trigger external connections. With this query you can list rare lolbins which are uncommon to trigger external connections. The list of LOLBINS is based on the lolbas project. 
 

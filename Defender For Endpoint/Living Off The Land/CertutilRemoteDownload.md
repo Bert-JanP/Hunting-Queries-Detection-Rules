@@ -6,6 +6,12 @@
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
+| T1218 | System Binary Proxy Execution | https://attack.mitre.org/techniques/T1218/ |
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
 | T1105| Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ |
 
 #### Description

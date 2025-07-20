@@ -2,6 +2,12 @@
 
 ## Query Information
 
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1218 | System Binary Proxy Execution | https://attack.mitre.org/techniques/T1218/ |
+
 #### Description
 This query returns all LOLbins that refer to a remote IP in the commandline. These remote IPs can be used to make connections for lateral movement or to remotely upload or download files.
 
