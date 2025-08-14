@@ -2,6 +2,10 @@
 
 ## Query Information
 
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1098.007 | Account Manipulation: Additional Local or Domain Groups | https://attack.mitre.org/techniques/T1098/007/ |
+
 #### Description
 This query is aimed to detect users that are added to a group via the commandline. Adding users to a group via the commandline is a common technique used by adversaries to gain additional permissions on systems/the domain. 
 
