@@ -3,7 +3,7 @@
 ## Query Information
 
 #### Description
-This query enriches the *MicrosoftGraphActivityLogs* with Application information from the *AADNonInteractiveUserSignInLogs* table to get more context in the results.
+This query enriches the *GraphAPIAuditEvents* with Application information from the *AADNonInteractiveUserSignInLogs* table to get more context in the results.
 
 This query does have a limitation, a user must have signed in to the application to show up in the logs. An alternative KQL query is available that leverages the externaldata operator to solve this issue: [App Enrichment ExternalData](./AppEnrichmentExternalData.md)
 
@@ -18,8 +18,8 @@ let ApplicationName = AADNonInteractiveUserSignInLogs
 | summarize arg_max(TimeGenerated, *) by ResourceIdentity
 | project-rename ApplicationName = ResourceDisplayName
 | distinct ApplicationName, ResourceIdentity;
-MicrosoftGraphActivityLogs
+GraphAPIAuditEvents
 // Your filter here
-| lookup kind=leftouter ApplicationName on $left.AppId == $right.ResourceIdentity
-| project-reorder AppId, ApplicationName
+| lookup kind=leftouter ApplicationName on $left.ApplicationId == $right.ResourceIdentity
+| project-reorder ApplicationId, ApplicationName
 ```
