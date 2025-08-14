@@ -20,7 +20,7 @@ An adversary executes AzureHound to get insights into your Azure Tenant
 - https://www.cloudbrothers.info/detect-threats-microsoft-graph-logs-part-1/#azurehound
 - https://kqlquery.com/posts/graphactivitylogs/
 
-## Sentinel
+## Defender XDR
 ```KQL
 let WhitelistedObjects = dynamic(["obj1", "obj2"]);
 let UniqueRequestThreshold = 1000; // Depends on Entra ID tentant size. You can use the function 0.5 * TotalAzure Resources to get this number. KQL: arg("").Resources | count

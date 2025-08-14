@@ -1,4 +1,4 @@
-# MicrosoftGraphActivityLogs User Enrichment
+# GraphAPIAuditEvents User Enrichment
 
 ## Query Information
 
@@ -10,14 +10,14 @@ This query enriches the *MicrosoftGraphActivityLogs* with userinformation from t
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identityinfo-table?view=o365-worldwide
 - https://kqlquery.com/posts/graphactivitylogs/
 
-## Sentinel
+## Defender XDR
 ```KQL
-MicrosoftGraphActivityLogs
-| where isnotempty(UserId)
+GraphAPIAuditEvents
+| where EntityType == "user"
 | lookup kind=leftouter (IdentityInfo
     | where TimeGenerated > ago(30d)
     | summarize arg_max(TimeGenerated, *) by AccountObjectId
     | project AccountObjectId, AccountDisplayName, AccountUpn)
-    on $left.UserId == $right.AccountObjectId
+    on $left.AccountObjectId == $right.AccountObjectId
 | project-reorder AccountDisplayName, AccountUpn, RequestMethod, RequestUri
 ```

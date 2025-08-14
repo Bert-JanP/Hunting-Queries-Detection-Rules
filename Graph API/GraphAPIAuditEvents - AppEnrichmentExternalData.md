@@ -1,4 +1,4 @@
-# MicrosoftGraphActivityLogs App Enrichment ExternalData Based 
+# GraphAPIAuditEvents App Enrichment ExternalData Based 
 
 ## Query Information
 
@@ -10,7 +10,7 @@ This query enriches the *GraphAPIAuditEvents* with Application information Using
 - https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/aadnoninteractiveusersigninlogs
 - https://kqlquery.com/posts/graphactivitylogs/
 
-## Sentinel
+## Defender XDR
 ```KQL
 let ApplicationInformation = externaldata (ApplicationName: string, AppId: string, Reference: string ) [h"https://raw.githubusercontent.com/Beercow/Azure-App-IDs/master/Azure_Application_IDs.csv"] with (ignoreFirstRecord=true, format="csv");
 GraphAPIAuditEvents

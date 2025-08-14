@@ -1,4 +1,4 @@
-# MicrosoftGraphActivityLogs App Enrichment AADNonInteractiveUserSignInLogs Based 
+# GraphAPIAuditEvents App Enrichment AADNonInteractiveUserSignInLogs Based 
 
 ## Query Information
 
@@ -11,7 +11,7 @@ This query does have a limitation, a user must have signed in to the application
 - https://learn.microsoft.com/en-us/graph/microsoft-graph-activity-logs-overview#what-data-is-available-in-the-microsoft-graph-activity-logs
 - https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/aadnoninteractiveusersigninlogs
 
-## Sentinel
+## Defender XDR
 ```KQL
 let ApplicationName = AADNonInteractiveUserSignInLogs
 | where TimeGenerated > ago(30d)
