@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 10 |
 | Persistence | 12 |
 | Privilege Escalation | 6 |
-| Defense Evasion | 25 |
+| Defense Evasion | 26 |
 | Credential Access | 7 |
 | Discovery | 23 |
 | Lateral Movement | 2 |
@@ -108,6 +108,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Scattered Spider Defense Evasion via Conditional Access Policies Detection](../Azure%20Active%20Directory/nf_ttp_t1562.001_scattered-spider_abuse%20conditional_access_trusted_locations.md) |
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Defender For Endpoint Offboarding Package Downloaded](../Defender%20XDR/OffboardingPackageDownloaded.md) |
 | T1562.001 | Impair Defenses: Disable or Modify Tools | [Large Number Of Analytics Rules Deleted](../Sentinel/LargeNumberOfAnalyticsRulesDeleted.md) |
+| T1562.008 | Impair Defenses: Disable or Modify Cloud Logs | [Sentinel Workspace Disconnected](../Defender%20XDR/SentinelWorkspaceDisconnected.md) |
 | T1562.010 | Impair Defenses: Downgrade Attack | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
 | T1578.002 | Modify Cloud Compute Infrastructure: Create Cloud Instance | [Large Number Of VMs Started](../Azure/Compute/LargeNumberOfVMsStarted.md) |
 
