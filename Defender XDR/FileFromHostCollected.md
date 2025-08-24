@@ -1,6 +1,12 @@
-# File From Host Collected
+# 'File From Host Collected via Portal or Live Response
 
 ## Query Information
+
+#### MITRE ATT&CK Technique(s)
+
+| Technique ID | Title    | Link    |
+| ---  | --- | --- |
+| T1005 | Data from Local System | https://attack.mitre.org/techniques/T1005/ |
 
 ### Description
 This query lists all the file downloads from an onboarded EDR device. The query lists the two file collection methods:
