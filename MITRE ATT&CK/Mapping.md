@@ -15,7 +15,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Credential Access | 7 |
 | Discovery | 23 |
 | Lateral Movement | 2 |
-| Collection | 2 |
+| Collection | 3 |
 | Command and Control | 7 |
 | Exfiltration | 1 |
 | Impact | 6 |
@@ -163,6 +163,7 @@ This section only includes references to queries that can be mapped in the MITRE
 
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
+| T1005 | Data from Local System | [File From Host Collected](../Defender%20XDR/FileFromHostCollected.md) |
 | T1114 | Email Collection | [Big Yellow Taxi - SignIn Based ](../Office%20365/BigYellowTaxi%20-%20SignIn.md) |
 | T1530 | Data from Cloud Storage | [OneDrive Sync From Rare IP](../Defender%20For%20Cloud%20Apps/OneDriveSyncFromRareIP.md) |
 
