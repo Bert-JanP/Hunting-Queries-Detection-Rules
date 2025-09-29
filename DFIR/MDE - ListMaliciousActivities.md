@@ -111,7 +111,7 @@ let ExploitGuardEvents = DeviceEvents
      | where TimeGenerated > ago(SearchWindow)
      | where DeviceName == CompromisedDevice
      | where ActionType startswith "ExploitGuard"
-     | project TimeGenerated, DeviceName, ActionType, FileName, FolderPath, RemoteUrl;
+     | project TimeGenerated, DeviceName, ActionType, FileName, FolderPath, RemoteUrl, InitiatingProcessCommandLine;
 // List all amsi events
 let AMSIEvents = DeviceEvents
      | where TimeGenerated > ago(SearchWindow)
