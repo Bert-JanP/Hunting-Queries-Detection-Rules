@@ -23,16 +23,15 @@ A malicious actor installs a malicious app in your environment. This app can the
 ## Defender XDR
 ```KQL
 let KnownApps = AADSignInEventsBeta
-// Adjust the timerange depending on the retention period
-| where Timestamp  between (ago(30d) .. ago(2d))
-| distinct Application;
+    // Adjust the timerange depending on the retention period
+    | where Timestamp  between (ago(30d) .. ago(2d))
+    | distinct Application;
 AADSignInEventsBeta
 | where Timestamp > ago(2d)
 | where not(Application in~ (KnownApps))
 // If the AppID is empty then it is a third party App.
-| extend IsExternalApp = iff(isempty(ApplicationId), "True", "False")
-| project-reorder IsExternalApp, Application, AccountObjectId, IPAddress, ClientAppUsed
-// For ResultType Reference see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
+| extend IsExternalApp = iff(isempty(ApplicationId), 'True', 'False')
+| project-reorder Timestamp, AccountUpn, ErrorCode, IsExternalApp, Application, AccountObjectId, IPAddress, ClientAppUsed
 ```
 
 ## Sentinel
@@ -46,7 +45,5 @@ SigninLogs
 | where not(AppDisplayName in~ (KnownApps))
 // If the AppID is empty then it is a third party App.
 | extend IsExternalApp = iff(isempty(AppId), "True", "False")
-| project-reorder IsExternalApp, AppDisplayName, Identity, IPAddress, ClientAppUsed
-// For ResultType Reference see: https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-aadsts-error-codes
+| project-reorder TimeGenerated, UserPrincipalName, ResultType, IsExternalApp, AppDisplayName, Identity, IPAddress, ClientAppUsed
 ```
-
