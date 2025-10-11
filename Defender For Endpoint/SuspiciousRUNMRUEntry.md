@@ -16,7 +16,7 @@ There is high likelyhood that the command found is deploying malicious content o
 
 ## Defender XDR
 ```KQL
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", 'iex']);
 let Executables = dynamic(["cmd", "powershell", "curl", "mshta"]);
 DeviceRegistryEvents
 | where ActionType == "RegistryValueSet"
@@ -27,7 +27,7 @@ DeviceRegistryEvents
 
 ## Sentinel
 ```KQL
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", 'iex']);
 let Executables = dynamic(["cmd", "powershell", "curl", "mshta"]);
 DeviceRegistryEvents
 | where ActionType == "RegistryValueSet"
