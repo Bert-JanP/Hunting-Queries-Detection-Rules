@@ -29,7 +29,7 @@ A user at risk that also performs persistence events is more likely to be compro
 ## Sentinel
 ```KQL
 // Define PersistenceEvents, list can be appended with other events or your choosing
-let PersistenceEvents = dynamic(["add member", "add device", "register device", "add service principal", "update service principal", "add user", "enable account", "add group", "Invite external user", "Add application", "add app"]);
+let PersistenceEvents = dynamic(["add member", "add device", "register device", "add service principal", "update service principal", "add user", "enable account", "add group", "Invite external user", "Add application", "add app", "User registered security info"]);
 let RiskyUsers = AADRiskyUsers
      | where TimeGenerated > ago(90d)
      | summarize arg_max(TimeGenerated, *) by Id
