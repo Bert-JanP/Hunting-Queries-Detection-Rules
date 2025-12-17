@@ -22,8 +22,8 @@ Potential C2 or Reverse Shell activities
 ## Defender XDR
 ```KQL
 DeviceEvents
-| where ActionType =~ "CreateRemoteThreadApiCall"
-| where FileName =~ "MSBuild.exe"
+| where ActionType =~ 'CreateRemoteThreadApiCall'
+| where FileName =~ 'MSBuild.exe'
 // Exclude Visual Studio
 | where not(FolderPath has_all ('Program Files', 'Microsoft Visual Studio', @'MSBuild\Current\Bin'))
 // Enrichment based on commandline
@@ -35,8 +35,8 @@ DeviceEvents
 ## Sentinel
 ```KQL
 DeviceEvents
-| where ActionType =~ "CreateRemoteThreadApiCall"
-| where FileName =~ "MSBuild.exe"
+| where ActionType =~ 'CreateRemoteThreadApiCall'
+| where FileName =~ 'MSBuild.exe'
 // Exclude Visual Studio
 | where not(FolderPath has_all ('Program Files', 'Microsoft Visual Studio', @'MSBuild\Current\Bin'))
 // Enrichment based on commandline
