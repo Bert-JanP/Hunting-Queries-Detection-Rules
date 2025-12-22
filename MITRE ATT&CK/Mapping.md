@@ -11,7 +11,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Execution | 10 |
 | Persistence | 12 |
 | Privilege Escalation | 6 |
-| Defense Evasion | 27 |
+| Defense Evasion | 28 |
 | Credential Access | 7 |
 | Discovery | 23 |
 | Lateral Movement | 2 |
@@ -101,6 +101,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1218 | System Binary Proxy Execution | [New LOL Bin External Connection](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/NewLOLBinExternalConnection.md) |
 | T1218 | System Binary Proxy Execution | [Certutil Remote Download](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/CertutilRemoteDownload.md) |
 | T1218 | System Binary Proxy Execution | [LOLBin Remote IP CommandLine](../Defender%20For%20Endpoint/Living%20Off%20The%20Land/LOLBinRemoteIPCommandLine.md) |
+| T1218.005| System Binary Proxy Execution: Mshta | [mshta executions](../Defender%20For%20Endpoint/MshtaExecutions.md) |
 | T1218.010 | System Binary Proxy Execution: Regsvr32 | [Regsvr32 Started as Office Child](../Defender%20For%20Endpoint/Regsvr32StartedByOfficeApplication.md) |
 | T1553.005 | Subvert Trust Controls: Mark-of-the-Web Bypass | [Hunt for rare ISO files](../Defender%20For%20Endpoint/RareISOFile.md)|
 | T1562 | Impair Defenses | [Alert Supression Added](../Defender%20XDR/AlertSupressionAdded.md) |
