@@ -29,8 +29,8 @@ let VictimDeviceId = "ad99bd95733f62294b5b76bb63b113bff44d06ef";
 let TopXEvents = 15;
 let TimeFrame = 5m;
 // Input parameters for the forensic hunting query
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr']);
-let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr', '$env']);
+let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec", 'SyncAppvPublishingServer']);
 let FilteredSIDs = dynamic(["S-1-5-18"]);
 let RegKeyEvents =
  DeviceRegistryEvents
@@ -83,8 +83,8 @@ let VictimDeviceId = "xxxxxxxxx";
 let TopXEvents = 15;
 let TimeFrame = 5m;
 // Input parameters for the forensic hunting query
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", '-wind', '/wind', 'nop', '/nop', 'DownloadString', 'FromBase64String', 'iwr']);
-let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr', '$env']);
+let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec", 'SyncAppvPublishingServer']);
 let FilteredSIDs = dynamic(["S-1-5-18"]);
 let RegKeyEvents =
     DeviceRegistryEvents

@@ -16,8 +16,8 @@ There is high likelyhood that the command found is deploying malicious content o
 
 ## Defender XDR
 ```KQL
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr']);
-let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr', '$env']);
+let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec", 'SyncAppvPublishingServer']);
 DeviceRegistryEvents
 | where ActionType == "RegistryValueSet"
 | where RegistryKey has "RunMRU"
@@ -27,8 +27,8 @@ DeviceRegistryEvents
 
 ## Sentinel
 ```KQL
-let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr']);
-let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec"]);
+let Parameters = dynamic(['http', 'https', 'Encoded', 'EncodedCommand', '-e', '-eC', '-enc', "-w", '-i', '/i','/e', '/eC', '/enc', "/w", 'wind', 'nop', 'DownloadString', 'FromBase64String', 'iwr', '$env']);
+let Executables = dynamic(["cmd", "powershell", "curl", "mshta", "msiexec", 'SyncAppvPublishingServer']);
 DeviceRegistryEvents
 | where ActionType == "RegistryValueSet"
 | where RegistryKey has "RunMRU"
