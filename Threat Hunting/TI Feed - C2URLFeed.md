@@ -17,8 +17,8 @@ DeviceNetworkEvents
 // Filter only on C2 Domains
 | extend ToLowerUrl = tolower(RemoteUrl)
 | where RemoteUrl has_any (DomainList)
-// Join the C2IntelFeed information, this might skew the results, therefor they have been filtered.
-//| join C2IntelFeeds on $left.RemoteIP == $right.IP
+// Join the C2IntelFeed information for enrichment
+| join kind=leftouter C2IntelFeeds on $left.RemoteIP == $right.IP
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
 | project-reorder Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl
@@ -36,8 +36,8 @@ DeviceNetworkEvents
 // Filter only on C2 Domains
 | extend ToLowerUrl = tolower(RemoteUrl)
 | where RemoteUrl has_any (DomainList)
-// Join the C2IntelFeed information, this might skew the results, therefor they have been filtered.
-//| join C2IntelFeeds on $left.RemoteIP == $right.IP
+// Join the C2IntelFeed information for enrichment
+| join kind=leftouter C2IntelFeeds on $left.RemoteIP == $right.IP
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
 | project-reorder TimeGenerated, DeviceName, RemoteIP, RemotePort, RemoteUrl

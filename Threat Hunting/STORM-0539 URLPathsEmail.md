@@ -28,12 +28,12 @@ These URLs lead to adversary-in-the-middle (AiTM) pages that allow Storm-0539 to
 let URLs = dynamic([@'/Udlaps/', @'/Usrlop/', @'/adls/index.html', @'/saml2/index.html']);
 EmailUrlInfo
 | where Url has_any (URLs)
-| join EmailEvents on NetworkMessageId
+| join kind=inner EmailEvents on NetworkMessageId
 ```
 ## Sentinel
 ```KQL
 let URLs = dynamic([@'/Udlaps/', @'/Usrlop/', @'/adls/index.html', @'/saml2/index.html']);
 EmailUrlInfo
 | where Url has_any (URLs)
-| join EmailEvents on NetworkMessageId
+| join kind=inner EmailEvents on NetworkMessageId
 ```

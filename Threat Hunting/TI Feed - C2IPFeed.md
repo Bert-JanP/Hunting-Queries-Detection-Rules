@@ -11,7 +11,7 @@ let IPList = C2IntelFeeds
 | project IP;
 DeviceNetworkEvents
 | where RemoteIP in (IPList)
-| join C2IntelFeeds on $left.RemoteIP == $right.IP
+| join kind=inner C2IntelFeeds on $left.RemoteIP == $right.IP
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
 | project Timestamp, DeviceName, RemoteIP, RemotePort, RemoteUrl, ioc
@@ -25,7 +25,7 @@ let IPList = C2IntelFeeds
 | project IP;
 DeviceNetworkEvents
 | where RemoteIP in (IPList)
-| join C2IntelFeeds on $left.RemoteIP == $right.IP
+| join kind=inner C2IntelFeeds on $left.RemoteIP == $right.IP
 | extend GeoIPInfo = geo_info_from_ip_address(RemoteIP)
 | extend country = tostring(parse_json(GeoIPInfo).country), state = tostring(parse_json(GeoIPInfo).state), city = tostring(parse_json(GeoIPInfo).city), latitude = tostring(parse_json(GeoIPInfo).latitude), longitude = tostring(parse_json(GeoIPInfo).longitude)
 | project TimeGenerated, DeviceName, RemoteIP, RemotePort, RemoteUrl, ioc
