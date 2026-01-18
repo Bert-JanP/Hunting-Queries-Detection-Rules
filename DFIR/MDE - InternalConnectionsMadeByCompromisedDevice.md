@@ -28,7 +28,7 @@ DeviceNetworkEvents
 // This query is build to detect private IP connections and not public ip connections.
 | where IsPrivateAddress == 1
 // Filter System related activities performed by local service
-| where InitiatingProcessAccountName != "local service"
+| where InitiatingProcessAccountSid != "S-1-5-19"
 // Only list the last connection to each IP address.
 | summarize arg_max(Timestamp, *), ConnectedPorts = make_set(RemotePort) by RemoteIP
 | project
@@ -72,7 +72,7 @@ DeviceNetworkEvents
 // This query is build to detect private IP connections and not public ip connections.
 | where IsPrivateAddress == 1
 // Filter System related activities performed by local service
-| where InitiatingProcessAccountName != "local service"
+| where InitiatingProcessAccountSid != "S-1-5-19"
 // Only list the last connection to each IP address.
 | summarize arg_max(TimeGenerated, *), ConnectedPorts = make_set(RemotePort) by RemoteIP
 | project

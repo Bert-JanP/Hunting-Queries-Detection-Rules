@@ -8,7 +8,7 @@ let SearchWindow = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where Timestamp > ago(SearchWindow)
 | where DeviceName == CompromisedDevice
-| where AccountName != "system" // If you suspect that the system user is compromised, remove this filter.
+| where not(AccountSid == "S-1-5-18") // If you suspect that the system user is compromised, remove this filter.
 | where InitiatingProcessFileName == "powershell.exe"
 | sort by Timestamp
 | top 100 by Timestamp
@@ -29,7 +29,7 @@ let SearchWindow = 48h; //Customizable h = hours, d = days
 DeviceProcessEvents
 | where TimeGenerated > ago(SearchWindow)
 | where DeviceName == CompromisedDevice
-| where AccountName != "system" // If you suspect that the system user is compromised, remove this filter.
+| where not(AccountSid == "S-1-5-18") // If you suspect that the system user is compromised, remove this filter.
 | where InitiatingProcessFileName == "powershell.exe"
 | sort by TimeGenerated
 | top 100 by TimeGenerated
