@@ -1,3 +1,12 @@
+# Alert Efficiency
+
+## Query Information
+
+#### Description
+The rule below can be used to calculate the efficiency of custom detection rules in your environment. The line ```| where AlertName startswith "[DxBP]"``` should be replaced with the prefix of your custom detection rules or should be removed completely to include build in rules as well.
+
+## Sentinel
+```KQL
 let TimeRange = 365d;
 SecurityIncident
 | where TimeGenerated > ago(TimeRange)
@@ -61,3 +70,4 @@ SecurityIncident
                                        todouble(TotalTruePositive + TotalFalsePositive)), 2)
 // Sort to surface the most effective detections first: high precision, then high TP share.
 | sort by PrecisionPct desc, PctTruePositive desc
+```
