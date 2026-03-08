@@ -9,9 +9,9 @@ This section only includes references to queries that can be mapped in the MITRE
 | --- | --- |
 | Initial Access | 14 |
 | Execution | 10 |
-| Persistence | 12 |
-| Privilege Escalation | 6 |
-| Defense Evasion | 28 |
+| Persistence | 13 |
+| Privilege Escalation | 7 |
+| Defense Evasion | 30 |
 | Credential Access | 7 |
 | Discovery | 23 |
 | Lateral Movement | 2 |
