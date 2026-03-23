@@ -7,7 +7,7 @@ This section only includes references to queries that can be mapped in the MITRE
 # Statistics
 | Tactic | Entry Count |
 | --- | --- |
-| Initial Access | 14 |
+| Initial Access | 15 |
 | Execution | 10 |
 | Persistence | 13 |
 | Privilege Escalation | 7 |
@@ -26,6 +26,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1078.004 | Valid Accounts: Cloud Accounts |[New Authentication AppDetected](../Azure%20Active%20Directory/NewAuthenticationAppDetected.md)|
 | T1078.004 | Valid Accounts: Cloud Accounts | [Conditional Access Application Failures](../Azure%20Active%20Directory/ConditionalAccess%20-%20ApplicationFailures.md)|
 | T1078.004 | Valid Accounts: Cloud Accounts | [Conditional Access User Failures](../Azure%20Active%20Directory/ConditionalAccess%20-%20UserFailures.md)|
+| T1078 | Valid Accounts | [Successful Signin From Suspicious User Agent](../Azure%20Active%20Directory/SuccessfulSigninFromSuspiciousUserAgent.md) |
 | T1190 | Exploit Public-Facing Application| [Internet Facing Devices With Available Exploits](../Vulnerability%20Management/InternetFacingDevicesWithAvailableExploits.md) |
 | T1190 | Exploit Public-Facing Application | [New Active CISA Known Exploited Vulnerability Detected](../Vulnerability%20Management/NewActiveCISAKnownExploitedVulnerabilityDetected.md) |
 | T1566 | Phishing | [Typosquatted Email Received](../Office%20365/Email%20-%20TyposquattedEmailRecieved.md) |
