@@ -107,6 +107,7 @@ The *[Detection Template](./DetectionTemplate.md)* can be used to standardize th
 - https://github.com/KustoKing/Hunting-Queries-Detection-Rules - By Gianni Castaldi
 - https://github.com/SlimKQL/Hunting-Queries-Detection-Rules - By Steven Lim
 - https://github.com/SecurityAura/DE-TH-Aura - By SecurityAura
+- https://github.com/m4nbat/KustQueryLanguage_kql - By m4nbat
 
 If your repository is not yet listed, feel free to create a pull request (PR) or reach out via message to have it added.
 # Where to use KQL in Defender For Endpoint & Sentinel?
