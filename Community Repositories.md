@@ -48,3 +48,4 @@
 | [100-Days-of-KQL - Jiayang-Lai ](https://github.com/Jiayang-Lai/100-Days-of-KQL) |  |![Stars](https://img.shields.io/github/stars/Jiayang-Lai/100-Days-of-KQL?style=flat-square&labelColor=343b41) |
 | [100-Days-of-KQL - faslam1994 ](https://github.com/faslam1994/100_days_of_kql) | Bridewell Challenge of creating KQL queries over 100 days. |![Stars](https://img.shields.io/github/stars/faslam1994/100_days_of_kql?style=flat-square&labelColor=343b41) |
 | [Sentinel-And-DefenderXDR - ThomasKur ](https://github.com/ThomasKur/Sentinel-And-DefenderXDR) | Content to be used with Microsoft Sentinel.|![Stars](https://img.shields.io/github/stars/ThomasKur/Sentinel-And-DefenderXDR?style=flat-square&labelColor=343b41) |
+| [th - jkb-s](https://github.com/jkb-s/th) | Threat hunting |![Stars](https://img.shields.io/github.com/jkb-s/th?style=flat-square&labelColor=343b41) |
