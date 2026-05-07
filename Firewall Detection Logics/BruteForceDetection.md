@@ -1,15 +1,12 @@
-# *Brute Force Attempts to SSH/RDP/VPN (High)*
+# *Brute Force*
 
 ## Query Information
-**Why it matters:** Credential guessing is common and often precedes access.
-
-**Logic**: Many denies/failures from same source to auth-heavy ports.
 
 #### MITRE ATT&CK Technique(s)
 
 | Technique ID | Title    | Link    |
 | ---  | --- | --- |
-| T1110.001, T1110.002, T1110.003, T1110.004 | Brute Force Authentication Failures with Multi-Platform Log Correlation | https://attack.mitre.org/detectionstrategies/DET0463/ |
+| T1110 | Brute Force | https://attack.mitre.org/techniques/T1110/ |
 
 #### Description
 Adversaries may use brute force techniques to gain access to accounts when passwords are unknown or when password hashes are obtained. Without knowledge of the password for an account or set of accounts, an adversary may systematically guess the password using a repetitive or iterative mechanism. Brute forcing passwords can take place via interaction with a service that will check the validity of those credentials or offline against previously acquired credential data, such as password hashes.
@@ -17,6 +14,9 @@ Adversaries may use brute force techniques to gain access to accounts when passw
 Brute forcing credentials may take place at various points during a breach. For example, adversaries may attempt to brute force access to Valid Accounts within a victim environment leveraging knowledge gathered from other post-compromise behaviors such as OS Credential Dumping, Account Discovery, or Password Policy Discovery. Adversaries may also combine brute forcing activity with behaviors such as External Remote Services as part of Initial Access.
 
 If an adversary guesses the correct password but fails to login to a compromised account due to location-based conditional access policies, they may change their infrastructure until they match the victim’s location and therefore bypass those policies.
+
+**Why it matters:** Credential guessing is common and often precedes access.
+**Logic**: Many denies/failures from same source to auth-heavy ports.
 
 #### Risk
 1. Unauthorized Access: Once a password or encryption key is cracked, attackers can access sensitive accounts, impersonate users, and manipulate systems. 
@@ -43,23 +43,11 @@ If an adversary guesses the correct password but fails to login to a compromised
 
 ## Defender XDR
 ```KQL
-let Lookback = 5m;
-let AttemptThreshold = 150;
-let AuthPorts = dynamic([22, 23, 25, 53, 80, 3389, 443, 445, 8443, 500, 4500, 10443]); // various common ports to monitor for brute force attempt
-CommonSecurityLog
-| where TimeGenerated > ago(Lookback)
-| where DestinationPort in (AuthPorts)
-| where ipv4_is_private(DestinationIP) == true
-| where ipv4_is_private(SourceIP) == false
-| where DeviceAction has_any ("deny","denied","drop","dropped","fail","failed","reject","rejected")
-| summarize Attempts=count(), FirstSeen=min(TimeGenerated), LastSeen=max(TimeGenerated),
-          TargetHosts=dcount(DestinationIP), Hosts=make_set(DestinationIP, 20)
-  by SourceIP, DestinationPort, DeviceVendor, DeviceProduct
-| where Attempts >= AttemptThreshold
 ```
 
 ## Sentinel
 ```KQL
+// The logs used for testing these detection logics belong to FortiGate, Cisco ASA, Cisco FTD
 let Lookback = 5m;
 let AttemptThreshold = 150;
 let AuthPorts = dynamic([22, 23, 25, 53, 80, 3389, 443, 445, 8443, 500, 4500, 10443]); // various common ports to monitor for brute force attempt

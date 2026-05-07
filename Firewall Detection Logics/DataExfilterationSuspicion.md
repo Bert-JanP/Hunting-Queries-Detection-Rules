@@ -1,9 +1,6 @@
 # *Data Exfilteration Suspicion: Unusually High Outbound Bytes to a Single External IP (High)*
 
 ## Query Information
-**Why it matters:** Exfilteration can appear as large sustained upload from a workstation/server.
-
-**Logic**: Compare current window vs a baseline average.
 
 #### MITRE ATT&CK Technique(s)
 
@@ -15,6 +12,9 @@
 This detectin logics works to detect if any adversary is trying to steal data.
 
 Exfiltration consists of techniques that adversaries may use to steal data from your network. Once they’ve collected data, adversaries often package it to avoid detection while removing it. This can include compression and encryption. Techniques for getting data out of a target network typically include transferring it over their command and control channel or an alternate channel and may also include putting size limits on the transmission.
+
+**Why it matters:** Exfilteration can appear as large sustained upload from a workstation/server.
+**Logic**: Compare current window vs a baseline average.
 
 #### Risk
 The risks involved with data exfiltration are serious and will have permanent effects on the organizations. There are some prime risks that follow:
@@ -36,34 +36,11 @@ The risks involved with data exfiltration are serious and will have permanent ef
 
 ## Defender XDR
 ```KQL
-let CurrentWindow = 1h;
-let BaselineWindow = 7d;
-let MinBytes = 500000000; // 500MB
-let Multiplier = 5;
-
-let baseline =
-CommonSecurityLog
-| where TimeGenerated between (ago(CurrentWindow)..ago(BaselineWindow))
-| where ipv4_is_private(SourceIP) == true and ipv4_is_private(DestinationIP) == false // only outbound connections
-| where DeviceAction has_any ("Allow","Allowed","Accept","Accepted","Pass") // only allowed tarffics
-| summarize BaselineAvg = avg(todouble(SentBytes)) by SourceIP, DestinationIP;
-
-let current =
-CommonSecurityLog
-| where TimeGenerated >= ago(CurrentWindow)
-| where ipv4_is_private(SourceIP) == true and ipv4_is_private(DestinationIP) == false
-| where DeviceAction has_any ("Allow","Allowed","Accept","Accepted","Pass")
-| summarize CurrentBytes = sum(todouble(SentBytes)), EventCount=count() by SourceIP, DestinationIP;
-
-current
-| join kind=leftouter baseline on SourceIP, DestinationIP
-| extend BaselineAvg = coalesce(BaselineAvg, 1.0)
-| where CurrentBytes > MinBytes and CurrentBytes > (BaselineAvg * Multiplier)
-| order by CurrentBytes desc
 ```
 
 ## Sentinel
 ```KQL
+// The logs used for testing these detection logics belong to FortiGate, Cisco ASA, Cisco FTD
 let CurrentWindow = 1h;
 let BaselineWindow = 7d;
 let MinBytes = 500000000; // 500MB
