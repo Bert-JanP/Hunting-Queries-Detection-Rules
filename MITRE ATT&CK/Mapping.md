@@ -9,14 +9,14 @@ This section only includes references to queries that can be mapped in the MITRE
 # Statistics
 | Tactic | Entry Count |
 | --- | --- |
-| Initial Access | 15 |
+| Initial Access | 16 |
 | Execution | 10 |
 | Persistence | 14 |
 | Privilege Escalation | 7 |
 | Stealth | 20 |
 | Defense Impairment | 9 |
-| Credential Access | 7 |
-| Discovery | 23 |
+| Credential Access | 8 |
+| Discovery | 27 |
 | Lateral Movement | 2 |
 | Collection | 3 |
 | Command and Control | 9 |
@@ -29,6 +29,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1078.004 | Valid Accounts: Cloud Accounts |[New Authentication AppDetected](../Azure%20Active%20Directory/NewAuthenticationAppDetected.md)|
 | T1078.004 | Valid Accounts: Cloud Accounts | [Conditional Access Application Failures](../Azure%20Active%20Directory/ConditionalAccess%20-%20ApplicationFailures.md)|
 | T1078.004 | Valid Accounts: Cloud Accounts | [Conditional Access User Failures](../Azure%20Active%20Directory/ConditionalAccess%20-%20UserFailures.md)|
+| T1078.004 | Valid Accounts: Cloud Accounts | [EntraTrace - Sign-in UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Sign-in%20UserAgent%20Matches.md) |
 | T1078 | Valid Accounts | [Successful Signin From Suspicious User Agent](../Azure%20Active%20Directory/SuccessfulSigninFromSuspiciousUserAgent.md) |
 | T1190 | Exploit Public-Facing Application| [Internet Facing Devices With Available Exploits](../Vulnerability%20Management/InternetFacingDevicesWithAvailableExploits.md) |
 | T1190 | Exploit Public-Facing Application | [New Active CISA Known Exploited Vulnerability Detected](../Vulnerability%20Management/NewActiveCISAKnownExploitedVulnerabilityDetected.md) |
@@ -135,6 +136,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1003 |OS Credential Dumping: NTDS | [NTDS.DIT File Modifications](../Defender%20For%20Endpoint/NTDSDitFileModifications.md) |
 | T1110 | Brute Force | [Password Change After Succesful Brute Force](../Defender%20For%20Identity/PasswordChangeAfterSuccesfulBruteForce.md) |
 | T1110 | Brute Force | [Multiple Accounts Locked](../Azure%20Active%20Directory/MultipleAccountsLocked.md) |
+| T1110.003 | Brute Force: Password Spraying | [EntraTrace - Sign-in UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Sign-in%20UserAgent%20Matches.md) |
 | T1552 | Unsecured Credentials | [Commandline with cleartext password](../Defender%20For%20Endpoint/CommandlineWithClearTextPassword.md) |
 | T1557 | Adversary-in-the-Middle | [STORM-0539 URL Paths Email](../Threat%20Hunting/STORM-0539%20URLPathsEmail.md) |
 | T1557 | Adversary-in-the-Middle | [Potential Adversary in The Middle Phishing](../Azure%20Active%20Directory/PotentialAiTMPhishing.md) |
@@ -154,12 +156,16 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
 | T1069.003| Permission Groups Discovery: Cloud Groups | [AzureHound](../Graph%20API/AzureHound.md) |
 | T1069.003| Permission Groups Discovery: Cloud Groups | [GraphAPIAuditEvent - AzureHound](../Graph%20API/GraphAPIAuditEvents%20-%20AzureHound.md) |
+| T1069.003 | Permission Groups Discovery: Cloud Groups | [EntraTrace - Azure AD Graph UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Azure%20AD%20Graph%20UserAgent%20Matches.md) |
+| T1069.003 | Permission Groups Discovery: Cloud Groups | [EntraTrace - Microsoft Graph UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Microsoft%20Graph%20UserAgent%20Matches.md) |
 | T1087 | Account Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
 | T1087 | Account Discovery | [Net(1).exe Discovery Activities Detected](../Defender%20For%20Endpoint/NetDiscoveryActivitiesDetected.md) |
 | T1087.002 | Account Discovery: Domain Account | [Anomalous LDAP Traffic](../Defender%20For%20Identity/AnomalousLDAPTraffic.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 | T1087.004 | Account Discovery: Cloud Account | [GraphAPIAuditEvent - AzureHound](../Graph%20API/GraphAPIAuditEvents%20-%20AzureHound.md) |
+| T1087.004 | Account Discovery: Cloud Account | [EntraTrace - Azure AD Graph UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Azure%20AD%20Graph%20UserAgent%20Matches.md) |
+| T1087.004 | Account Discovery: Cloud Account | [EntraTrace - Microsoft Graph UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Microsoft%20Graph%20UserAgent%20Matches.md) |
 | T1518.001 | Software Discovery: Security Software Discovery| [WMIC Antivirus Discovery](../Defender%20For%20Endpoint/WMICAntivirusDiscovery.md)|
 | T1518.001 | Software Discovery: Security Software Discovery| [Defender Discovery Activities](../Defender%20For%20Endpoint/DefenderDiscoveryActivities.md)|
 | T1201 | Password Policy Discovery | [Net(1).exe Discovery Activities](../Defender%20For%20Endpoint/NetDiscoveryActivities.md) |
