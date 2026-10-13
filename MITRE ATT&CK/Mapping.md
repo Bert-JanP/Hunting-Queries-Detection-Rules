@@ -15,7 +15,7 @@ This section only includes references to queries that can be mapped in the MITRE
 | Privilege Escalation | 7 |
 | Stealth | 20 |
 | Defense Impairment | 9 |
-| Credential Access | 8 |
+| Credential Access | 10 |
 | Discovery | 27 |
 | Lateral Movement | 2 |
 | Collection | 3 |
@@ -138,9 +138,12 @@ This section only includes references to queries that can be mapped in the MITRE
 | T1110 | Brute Force | [Multiple Accounts Locked](../Azure%20Active%20Directory/MultipleAccountsLocked.md) |
 | T1110.003 | Brute Force: Password Spraying | [EntraTrace - Sign-in UserAgent Matches](../Threat%20Hunting/EntraTrace%20-%20Sign-in%20UserAgent%20Matches.md) |
 | T1552 | Unsecured Credentials | [Commandline with cleartext password](../Defender%20For%20Endpoint/CommandlineWithClearTextPassword.md) |
+| T1555.006 | Credentials from Password Stores: Cloud Secrets Management Stores | [Risky Sign-in Followed by Key Vault Activity](../Cloud%20Infrastructure/RiskySign-inFollowedbyKeyVaultActivity.md) |
+| T1555.006 | Credentials from Password Stores: Cloud Secrets Management Stores | [Suspicious Key Vault Enumeration or Reads](../Cloud%20Infrastructure/SuspiciousKeyVaultEnumerationorReads.md) |
 | T1557 | Adversary-in-the-Middle | [STORM-0539 URL Paths Email](../Threat%20Hunting/STORM-0539%20URLPathsEmail.md) |
 | T1557 | Adversary-in-the-Middle | [Potential Adversary in The Middle Phishing](../Azure%20Active%20Directory/PotentialAiTMPhishing.md) |
 | T1558.003 | Steal or Forge Kerberos Tickets: Kerberoasting | [Potential Kerberos Encryption Downgrade](../Defender%20For%20Identity/PotentialKerberosEncryptionDowngrade.md) |
+
 
 ## Discovery
 
@@ -208,7 +211,7 @@ to be implemented
 ## Impact
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
-| T1485 | Data Destruction | [(Mass) Cloud Resource Deletion](../Cloud%20Audit%20Events/CloudResourceDeletion.md) |
+| T1485 | Data Destruction | [(Mass) Cloud Resource Deletion](../Cloud%20Infrastructure/CloudResourceDeletion.md) |
 | T1486 | Data Encrypted for Impact |[ASR Ransomware](../Defender%20For%20Endpoint/ASR%20Rules/AsrRansomware.md)|
 | T1486 | Data Encrypted for Impact | [Ransomware Double Extention](../Defender%20For%20Endpoint/Ransomware/RansomwareDoubleExtention.md) |
 | T1486 | Data Encrypted for Impact | [Known Ransomware Extension Found](../Defender%20For%20Endpoint/Ransomware/RansomwareExtensionFound.md) |
