@@ -50,3 +50,4 @@
 | [Sentinel-And-DefenderXDR - ThomasKur ](https://github.com/ThomasKur/Sentinel-And-DefenderXDR) | Content to be used with Microsoft Sentinel.|![Stars](https://img.shields.io/github/stars/ThomasKur/Sentinel-And-DefenderXDR?style=flat-square&labelColor=343b41) |
 | [th - jkb-s](https://github.com/jkb-s/th) | Threat hunting |![Stars](https://img.shields.io/github.com/jkb-s/th?style=flat-square&labelColor=343b41) |
 | [sims718718](https://github.com/sims718718/UnifiedThreatHunting) | UnifiedThreatHunting |![Stars](https://img.shields.io/github.com/sims718718/UnifiedThreatHunting?style=flat-square&labelColor=343b41) |
+| [kql-threat-hunting - amitvijayan](https://github.com/amitvijayan/kql-threat-hunting) | KQL threat hunting queries for current CVEs and attacker techniques, with Splunk SPL equivalents and full write-ups |![Stars](https://img.shields.io/github/stars/amitvijayan/kql-threat-hunting?style=flat-square&labelColor=343b41) |
